@@ -1,6 +1,3 @@
-# DOTS-Samples
-Repository containing exploratory samples of the Unity DOTS preview packages.
-
 # MGM
 Stands for Modular Game Mechanics.
 
