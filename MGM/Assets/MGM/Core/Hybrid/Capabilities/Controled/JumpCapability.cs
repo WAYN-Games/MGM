@@ -5,7 +5,7 @@ using Unity.Physics.Authoring;
 namespace MGM
 {
     [RequireComponent(typeof(PhysicsBody))]
-    public class JumpCapability : Capability<JumpInputResponse>
+    public class JumpCapability : ControledCapability<JumpInputResponse>
     {
         [SerializeField] private float Force = 5;
         [SerializeField] private int MaxJumpNumber = 1;

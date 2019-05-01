@@ -5,7 +5,7 @@ using UnityEngine;
 namespace MGM
 {
     [RequireComponent(typeof(PhysicsBody))]
-    public class MouvementCapability : Capability<MouvementInputResponse>
+    public class MouvementCapability : ControledCapability<MouvementInputResponse>
     {
         [SerializeField] private float MouvementSpeed = 5;
         [SerializeField] [Range(0, 1)] private float MovementInertia = 1;

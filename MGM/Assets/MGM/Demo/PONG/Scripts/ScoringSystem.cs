@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Entities;
+﻿using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Physics;
@@ -27,8 +25,6 @@ namespace PONG {
                     physicsVelocity.Linear.x = 5;
                     position.Value = new float3();
                 }
-
-  
 
             }
         }

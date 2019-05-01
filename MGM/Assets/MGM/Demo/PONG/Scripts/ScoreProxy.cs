@@ -8,7 +8,7 @@ namespace PONG {
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             HUD.Entity = entity;
-
+            
             Score score = new Score
             {
                 Player1 = 0,

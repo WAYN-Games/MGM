@@ -10,23 +10,16 @@ using Unity.Physics.Systems;
 
 namespace MGM
 {
-    public class LockRotationSystem : JobComponentSystem
+    public class AccelerationSystem : JobComponentSystem
     {
 
         [BurstCompile]
-        struct LockRotationJob : IJobForEach<PhysicsMass, RotationLock>
+        struct LockRotationJob : IJobForEach<PhysicsVelocity, Acceleration>
         {
-             public void Execute(ref PhysicsMass  mass,[ReadOnly] ref RotationLock axis)
+             public void Execute(ref PhysicsVelocity  velocity,[ReadOnly] ref Acceleration acceleration)
             {
-
-                if (axis.AxisLocks.x)
-                    mass.InverseInertia[0] = 0;
-
-                if (axis.AxisLocks.y)
-                    mass.InverseInertia[1] = 0;
-
-                if (axis.AxisLocks.z)
-                    mass.InverseInertia[2] = 0;
+                velocity.Linear *= 1 + acceleration.Linear;
+                velocity.Angular *= 1 + acceleration.Angular;
             }
 
         }
