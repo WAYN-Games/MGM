@@ -11,7 +11,8 @@ using Unity.Jobs;
 
 namespace MGM
 {
-    [UpdateInGroup(typeof(TransformSystemGroup))]
+
+    [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class JumpSystem : JobComponentSystem
     {  
 

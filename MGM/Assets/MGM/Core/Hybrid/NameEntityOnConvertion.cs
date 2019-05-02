@@ -10,8 +10,7 @@ namespace MGM
     public class NameEntityOnConvertion : MonoBehaviour, IConvertGameObjectToEntity
     {
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
-        {
-            dstManager.SetName(entity, name);
+        { 
         }
 
     }

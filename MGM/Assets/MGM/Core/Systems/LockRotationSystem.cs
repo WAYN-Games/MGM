@@ -10,6 +10,8 @@ using Unity.Physics.Systems;
 
 namespace MGM
 {
+
+    [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class LockRotationSystem : JobComponentSystem
     {
 

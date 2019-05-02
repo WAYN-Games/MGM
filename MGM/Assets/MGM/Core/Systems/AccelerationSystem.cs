@@ -10,6 +10,7 @@ using Unity.Physics.Systems;
 
 namespace MGM
 {
+    [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class AccelerationSystem : JobComponentSystem
     {
 

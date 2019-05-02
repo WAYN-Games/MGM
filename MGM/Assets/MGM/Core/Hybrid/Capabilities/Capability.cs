@@ -11,7 +11,7 @@ namespace MGM
         [SerializeField] private InputActionProperty ActionReference;
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
-        {
+        { 
             var inputManager = GameObject.Find("InputManager_"+this.name);
             inputManager = inputManager == null ? new GameObject("InputManager_"+this.name) : inputManager;
             inputManager.AddComponent<T>();
