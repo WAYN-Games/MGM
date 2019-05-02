@@ -1,4 +1,5 @@
 ﻿using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Experimental.Input;
 namespace MGM
@@ -9,9 +10,10 @@ namespace MGM
         protected override void RespondToAction(InputAction.CallbackContext context)
         {
 
-            MouvementCapabilityParameters mcp = B_EntityManager.GetComponentData<MouvementCapabilityParameters>(B_Entity);
-            mcp.direction = context.ReadValue<Vector2>();
-            B_EntityManager.SetComponentData(B_Entity, mcp);
+            Heading heading = B_EntityManager.GetComponentData<Heading>(B_Entity);
+            var input = context.ReadValue<Vector2>();
+            heading.Value = new float3(input.x,0,input.y);
+            B_EntityManager.SetComponentData(B_Entity, heading);
         }
     }
 }

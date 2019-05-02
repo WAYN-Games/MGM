@@ -13,7 +13,7 @@ namespace MGM
         
         protected override void SetUpCapabilityParameters(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
-            var data = new MouvementCapabilityParameters
+            var mcp = new MouvementCapabilityParameters
             {
                 Speed = MouvementSpeed,
                 ShouldFaceForward = ShouldFaceForward,
@@ -21,7 +21,15 @@ namespace MGM
             };
 
 
-            dstManager.AddComponentData(entity, data);
+            dstManager.AddComponentData(entity, mcp);
+
+
+            var heading = new Heading
+            {
+
+            };
+
+            dstManager.AddComponentData(entity, heading);
 
         }
     }

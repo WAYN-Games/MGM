@@ -1,5 +1,6 @@
 ﻿using System;
 using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace MGM {
@@ -9,6 +10,6 @@ namespace MGM {
         public float Speed;
         public bool ShouldFaceForward;
         public float MovementInertia;
-        public Vector2 direction;
+        public float3 direction;
     }
 }

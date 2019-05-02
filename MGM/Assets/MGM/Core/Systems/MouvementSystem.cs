@@ -14,13 +14,13 @@ namespace MGM
     {
 
         [BurstCompile]
-        struct MoveJob : IJobForEach<MouvementCapabilityParameters, PhysicsVelocity, Rotation>
+        struct MoveJob : IJobForEach<MouvementCapabilityParameters, PhysicsVelocity, Rotation, Heading>
         {
-             public void Execute([ReadOnly]ref MouvementCapabilityParameters mcp, ref PhysicsVelocity physics, ref Rotation rotation)
+             public void Execute([ReadOnly]ref MouvementCapabilityParameters mcp, ref PhysicsVelocity physics, ref Rotation rotation,ref Heading heading)
             {
                 physics.Angular = float3.zero;
                 // Slow motion down based on inertia.
-                if (mcp.direction.x == 0 && mcp.direction.y == 0)
+                if (heading.Value.x == 0 && heading.Value.z == 0)
                 {
                     physics.Linear.x *= mcp.MovementInertia;
                     
@@ -29,14 +29,14 @@ namespace MGM
                 }
 
                 // Give linear velocity based on speed and input direction.
-                physics.Linear.x = mcp.direction.x * mcp.Speed;
-                physics.Linear.z = mcp.direction.y * mcp.Speed;
+                physics.Linear.x = heading.Value.x * mcp.Speed;
+                physics.Linear.z = heading.Value.z * mcp.Speed;
                 
                 // Rotate to face the movement direction.
                 if (mcp.ShouldFaceForward) { 
-                    rotation.Value = quaternion.LookRotationSafe(new float3() { x = mcp.direction.x , z = mcp.direction.y }, math.up());
+                    rotation.Value = quaternion.LookRotationSafe(new float3() { x = heading.Value.x , z = heading.Value.z }, math.up());
                 }
-                mcp.direction = float2.zero;
+                heading.Value = float3.zero;
             }
 
 
