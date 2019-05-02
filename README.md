@@ -1,6 +1,6 @@
 # No License
 This work is under exclusive copyright. 
-Nobody other than the owner of this repository can copy, distribute, or modify your work without being at risk of take-downs, shake-downs, or litigation.
+Nobody other than the owner of this repository can copy, distribute, or modify it without being at risk of take-downs, shake-downs, or litigation.
 
 # MGM
 Stands for Modular Game Mechanics.
