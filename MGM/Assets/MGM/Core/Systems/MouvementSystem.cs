@@ -19,27 +19,15 @@ namespace MGM
             {
                 physics.Angular = float3.zero;
 
-                if (heading.Value.x == 0)
+                if (heading.Value.x == 0 && heading.Value.z == 0)
                 {
                     // Slow motion down based on inertia.
                     physics.Linear.x *= mcp.MovementInertia;
-                }
-                else
-                {
-                    // Give linear velocity based on speed and input direction.
-                    physics.Linear.x = heading.Value.x * mcp.Speed;
-                }
-
-                if (heading.Value.x == 0)
-                {
-                    // Slow motion down based on inertia.
                     physics.Linear.z *= mcp.MovementInertia;
                 }
-                else
-                {
-                    // Give linear velocity based on speed and input direction.
-                    physics.Linear.z = heading.Value.z * mcp.Speed;
-                }
+                // Give linear velocity based on speed and input direction.
+                physics.Linear.x = heading.Value.x * mcp.Speed;
+                physics.Linear.z = heading.Value.z * mcp.Speed;
 
                 // Rotate to face the movement direction.
                 if (mcp.ShouldFaceForward)
