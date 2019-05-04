@@ -1015,7 +1015,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.6226415, g: 0.32396463, b: 0, a: 1}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1310,6 +1310,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631896864667171982, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631896864667171982, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7631896864667171979, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
         type: 3}
@@ -2200,21 +2210,6 @@ PrefabInstance:
     - target: {fileID: 7851340940172158569, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851340940172158578, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,
-        type: 3}
-      propertyPath: m_InitialLinearVelocity.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851340940172158578, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,
-        type: 3}
-      propertyPath: m_InitialLinearVelocity.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7851340940172158578, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,
-        type: 3}
-      propertyPath: m_MotionType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4283487206218367446, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,

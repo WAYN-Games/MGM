@@ -23,16 +23,16 @@ namespace MGM
                 {
                     // Slow motion down based on inertia.
                     physics.Linear.x *= mcp.MovementInertia;
-                    physics.Linear.y *= mcp.MovementInertia;
+                    physics.Linear.z *= mcp.MovementInertia;
                 }
                 // Give linear velocity based on speed and input direction.
                 physics.Linear.x = heading.Value.x * mcp.Speed;
-                physics.Linear.y = heading.Value.y * mcp.Speed;
+                physics.Linear.z = heading.Value.z * mcp.Speed;
 
                 // Rotate to face the movement direction.
-                if (mcp.ShouldFaceForward)
+                if (mcp.ShouldFaceForward && !(heading.Value.x == 0 && heading.Value.z == 0))
                 {
-                    rotation.Value = quaternion.LookRotationSafe(new float3() { x = heading.Value.x, y = heading.Value.y }, math.up());
+                    rotation.Value = quaternion.LookRotationSafe(new float3() { x = heading.Value.x, z = heading.Value.z }, math.up());
                 }
 
                 heading.Value = float3.zero;
