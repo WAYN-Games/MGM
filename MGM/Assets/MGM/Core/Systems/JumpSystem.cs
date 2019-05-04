@@ -63,12 +63,10 @@ namespace MGM
                     // Work around to check that the hit is not the ignore entity
                     if (collector.Hit.ColliderKey.Value != 0)
                     {
-                        Debug.Log("true");
                         return true;
                     }
                 }
 
-                Debug.Log("false");
                 return false;
             }
         }

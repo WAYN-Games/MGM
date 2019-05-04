@@ -82,30 +82,6 @@ namespace MGM.Demo
                     ""modifiers"": """"
                 },
                 {
-                    ""name"": ""left"",
-                    ""id"": ""b5ba6692-bafa-4c10-9a24-9c24faba7ced"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveP1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""1a94b584-f382-4079-8333-cc7b90501b3d"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveP1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
-                },
-                {
                     ""name"": ""primary"",
                     ""id"": ""7413be8e-d573-4c77-970a-cfa29b988d13"",
                     ""path"": ""2DVector"",
@@ -133,30 +109,6 @@ namespace MGM.Demo
                     ""name"": ""down"",
                     ""id"": ""b70f82df-e540-4127-8e9a-fded0fce31d2"",
                     ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveP2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""8f7bc62b-f9c2-4550-acba-48c4e677bdc3"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveP2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""6eef1172-2663-42b9-9c4b-88b6d3ae11b1"",
-                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
