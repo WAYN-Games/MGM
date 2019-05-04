@@ -13,7 +13,6 @@ namespace MGM
     [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class AccelerationSystem : JobComponentSystem
     {
-
         [BurstCompile]
         struct LockRotationJob : IJobForEach<PhysicsVelocity, Acceleration>
         {

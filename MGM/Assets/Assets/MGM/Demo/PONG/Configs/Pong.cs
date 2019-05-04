@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Experimental.Input;
 using UnityEngine.Experimental.Input.Utilities;
 
-namespace Pong
+namespace MGM.Demo
 {
     public class Pong : IInputActionCollection
     {

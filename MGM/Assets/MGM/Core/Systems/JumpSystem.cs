@@ -8,6 +8,7 @@ using Unity.Physics.Systems;
 using Unity.Rendering;
 using Unity.Burst;
 using Unity.Jobs;
+using UnityEngine;
 
 namespace MGM
 {
@@ -49,7 +50,7 @@ namespace MGM
             {
                 var RaycastInput = new RaycastInput
                 {
-                    Ray = new Ray { Origin = renderBounds.Value.Center, Direction = -math.up() },
+                    Ray = new Unity.Physics.Ray { Origin = renderBounds.Value.Center, Direction = -math.up()*(renderBounds.Value.Extents.y+0.1f) },
                     Filter = CollisionFilter.Default
                 };
 
@@ -62,10 +63,12 @@ namespace MGM
                     // Work around to check that the hit is not the ignore entity
                     if (collector.Hit.ColliderKey.Value != 0)
                     {
+                        Debug.Log("true");
                         return true;
                     }
                 }
 
+                Debug.Log("false");
                 return false;
             }
         }

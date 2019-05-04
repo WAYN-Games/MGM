@@ -1,10 +1,8 @@
 ﻿using Unity.Entities;
-using Unity.Physics.Authoring;
 using UnityEngine;
 
 namespace MGM
 {
-    [RequireComponent(typeof(PhysicsBody))]
     public class MouvementCapability : ControledCapability<MouvementInputResponse>
     {
         [SerializeField] private float MouvementSpeed = 5;

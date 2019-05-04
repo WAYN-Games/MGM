@@ -9,7 +9,6 @@ namespace MGM
 
         protected override void RespondToAction(InputAction.CallbackContext context)
         {
-
             Heading heading = B_EntityManager.GetComponentData<Heading>(B_Entity);
             var input = context.ReadValue<Vector2>();
             heading.Value = new float3(input.x,0,input.y);

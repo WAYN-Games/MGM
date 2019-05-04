@@ -10,6 +10,5 @@ namespace MGM {
         public float Speed;
         public bool ShouldFaceForward;
         public float MovementInertia;
-        public float3 direction;
     }
 }
