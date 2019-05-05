@@ -11,8 +11,9 @@ namespace MGM
     {
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
+            #if UNITY_EDITOR
             dstManager.SetName(entity, name);
+            #endif
         }
-
     }
 }
