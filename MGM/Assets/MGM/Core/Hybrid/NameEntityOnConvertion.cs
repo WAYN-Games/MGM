@@ -5,7 +5,7 @@ using UnityEngine;
 namespace MGM
 {
     /// <summary>
-    /// This allow to automaticaly rename the entity wit the name of the game object on convertion.
+    /// This allow to automatically  rename the entity wit the name of the game object on conversion.
     /// </summary>
     public class NameEntityOnConvertion : MonoBehaviour, IConvertGameObjectToEntity
     {
