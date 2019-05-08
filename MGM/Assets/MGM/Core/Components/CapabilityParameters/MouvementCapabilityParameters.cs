@@ -11,4 +11,13 @@ namespace MGM {
         public bool ShouldFaceForward;
         public float MovementInertia;
     }
+
+    [Serializable]
+    public struct Mouvement3DSystemTarget : IComponentData
+    {
+    }
+    [Serializable]
+    public struct Mouvement2DSystemTarget : IComponentData
+    {
+    }
 }

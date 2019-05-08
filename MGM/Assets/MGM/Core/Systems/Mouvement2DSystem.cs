@@ -14,6 +14,7 @@ namespace MGM
     {
 
         [BurstCompile]
+        [RequireComponentTag(typeof(Mouvement2DSystemTarget))]
         public struct MoveJob : IJobForEach<MouvementCapabilityParameters, PhysicsVelocity, Rotation, Heading>
         {
             public void Execute([ReadOnly]ref MouvementCapabilityParameters mcp, ref PhysicsVelocity physics, ref Rotation rotation, ref Heading heading)

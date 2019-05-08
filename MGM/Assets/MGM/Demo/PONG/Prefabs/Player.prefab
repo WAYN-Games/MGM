@@ -104,6 +104,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
+  Is3D: 0
   MouvementSpeed: 10
   MovementInertia: 0
   ShouldFaceForward: 0

@@ -203,6 +203,11 @@ PrefabInstance:
       propertyPath: ShouldFaceForward
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7631896864667171979, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
+        type: 3}
+      propertyPath: MovesIn3D
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7631896864667171969, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
         type: 3}
       propertyPath: m_MotionType
@@ -1340,6 +1345,11 @@ PrefabInstance:
     - target: {fileID: 7631896864667171979, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
         type: 3}
       propertyPath: ShouldFaceForward
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7631896864667171979, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
+        type: 3}
+      propertyPath: MovesIn3D
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
