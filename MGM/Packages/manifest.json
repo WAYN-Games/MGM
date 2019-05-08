@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.cinemachine": "2.3.3",
     "com.unity.entities": "0.0.12-preview.31",
     "com.unity.inputsystem": "0.2.8-preview",
     "com.unity.package-manager-ui": "2.1.2",

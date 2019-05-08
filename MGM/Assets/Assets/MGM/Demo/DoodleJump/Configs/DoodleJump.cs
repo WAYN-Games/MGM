@@ -18,7 +18,7 @@ namespace MGM.Demo
     ""name"": ""DoodleJump"",
     ""maps"": [
         {
-            ""name"": ""Character"",
+            ""name"": ""Doodle"",
             ""id"": ""d4864674-15ed-4545-9a0a-be65f9110d3e"",
             ""actions"": [
                 {
@@ -98,10 +98,10 @@ namespace MGM.Demo
     ],
     ""controlSchemes"": []
 }");
-            // Character
-            m_Character = asset.GetActionMap("Character");
-            m_Character_Jump = m_Character.GetAction("Jump");
-            m_Character_Move = m_Character.GetAction("Move");
+            // Doodle
+            m_Doodle = asset.GetActionMap("Doodle");
+            m_Doodle_Jump = m_Doodle.GetAction("Jump");
+            m_Doodle_Move = m_Doodle.GetAction("Move");
         }
         ~DoodleJump()
         {
@@ -141,35 +141,35 @@ namespace MGM.Demo
         {
             asset.Disable();
         }
-        // Character
-        private InputActionMap m_Character;
-        private ICharacterActions m_CharacterActionsCallbackInterface;
-        private InputAction m_Character_Jump;
-        private InputAction m_Character_Move;
-        public struct CharacterActions
+        // Doodle
+        private InputActionMap m_Doodle;
+        private IDoodleActions m_DoodleActionsCallbackInterface;
+        private InputAction m_Doodle_Jump;
+        private InputAction m_Doodle_Move;
+        public struct DoodleActions
         {
             private DoodleJump m_Wrapper;
-            public CharacterActions(DoodleJump wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Jump { get { return m_Wrapper.m_Character_Jump; } }
-            public InputAction @Move { get { return m_Wrapper.m_Character_Move; } }
-            public InputActionMap Get() { return m_Wrapper.m_Character; }
+            public DoodleActions(DoodleJump wrapper) { m_Wrapper = wrapper; }
+            public InputAction @Jump { get { return m_Wrapper.m_Doodle_Jump; } }
+            public InputAction @Move { get { return m_Wrapper.m_Doodle_Move; } }
+            public InputActionMap Get() { return m_Wrapper.m_Doodle; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
             public bool enabled { get { return Get().enabled; } }
             public InputActionMap Clone() { return Get().Clone(); }
-            public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
-            public void SetCallbacks(ICharacterActions instance)
+            public static implicit operator InputActionMap(DoodleActions set) { return set.Get(); }
+            public void SetCallbacks(IDoodleActions instance)
             {
-                if (m_Wrapper.m_CharacterActionsCallbackInterface != null)
+                if (m_Wrapper.m_DoodleActionsCallbackInterface != null)
                 {
-                    Jump.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
-                    Jump.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
-                    Jump.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnJump;
-                    Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                    Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                    Move.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                    Jump.started -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
+                    Jump.performed -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
+                    Jump.cancelled -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
+                    Move.started -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
+                    Move.performed -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
+                    Move.cancelled -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
                 }
-                m_Wrapper.m_CharacterActionsCallbackInterface = instance;
+                m_Wrapper.m_DoodleActionsCallbackInterface = instance;
                 if (instance != null)
                 {
                     Jump.started += instance.OnJump;
@@ -181,14 +181,14 @@ namespace MGM.Demo
                 }
             }
         }
-        public CharacterActions @Character
+        public DoodleActions @Doodle
         {
             get
             {
-                return new CharacterActions(this);
+                return new DoodleActions(this);
             }
         }
-        public interface ICharacterActions
+        public interface IDoodleActions
         {
             void OnJump(InputAction.CallbackContext context);
             void OnMove(InputAction.CallbackContext context);

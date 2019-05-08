@@ -12,10 +12,13 @@ using UnityEngine;
 
 namespace MGM
 {
+    
 
     [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class JumpSystem : JobComponentSystem
     {
+
+
         [BurstCompile]
         struct JumpJob : IJobForEachWithEntity<WorldRenderBounds, PhysicsVelocity, JumpCapabilityParameters>
         {
@@ -54,7 +57,7 @@ namespace MGM
                     Filter = CollisionFilter.Default
                 };
 
-
+                 
                 ClosestHitWithIgnoreCollector collector = new ClosestHitWithIgnoreCollector(1f, World.Bodies, entity);
 
                 // NEED Unity Fix - Cast will return true even if the hit is the ignered entity.
@@ -66,13 +69,15 @@ namespace MGM
                         return true;
                     }
                 }
-
+            
                 return false;
             }
         }
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
+
+
             return new JumpJob() { World = World.Active.GetExistingSystem<BuildPhysicsWorld>().PhysicsWorld.CollisionWorld }.Schedule(this, inputDeps);
         }
 

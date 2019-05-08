@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 7631896864667171976, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7631896864667171982, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -204,7 +209,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7631896864667171968, guid: 5cf1d2084d32c9b4eaf4f164082b9416, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 5cf1d2084d32c9b4eaf4f164082b9416, type: 3}
 --- !u!1 &129843595
@@ -1256,6 +1261,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 7631896864667171976, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7631896864667171982, guid: 5cf1d2084d32c9b4eaf4f164082b9416,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1556,6 +1566,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Upper Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 1241265642262231708, guid: bda8242b2f2bb344d8d5e9be46502812,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1241265642262231703, guid: bda8242b2f2bb344d8d5e9be46502812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1611,6 +1626,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1241265642262231705, guid: bda8242b2f2bb344d8d5e9be46502812,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca05dfc641e0871478689be6638f761f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda8242b2f2bb344d8d5e9be46502812, type: 3}
 --- !u!1 &1900950994
@@ -1969,6 +1989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lower Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 1241265642262231708, guid: bda8242b2f2bb344d8d5e9be46502812,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1241265642262231703, guid: bda8242b2f2bb344d8d5e9be46502812,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2156,6 +2181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851340940172158579, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7851340940172158569, guid: aa237ac7d1746dc40bcf59e8a3d1f95a,
         type: 3}

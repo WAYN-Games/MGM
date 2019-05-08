@@ -2,7 +2,7 @@
     "name": "DoodleJump",
     "maps": [
         {
-            "name": "Character",
+            "name": "Doodle",
             "id": "d4864674-15ed-4545-9a0a-be65f9110d3e",
             "actions": [
                 {
