@@ -42,6 +42,17 @@ namespace MGM.Demo
                     ""processors"": """",
                     ""interactions"": """",
                     ""bindings"": []
+                },
+                {
+                    ""name"": ""Fire"",
+                    ""id"": ""4b57ccae-5887-43fb-a9e1-47e1345fab4b"",
+                    ""expectedControlLayout"": ""Button"",
+                    ""continuous"": true,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""bindings"": []
                 }
             ],
             ""bindings"": [
@@ -116,6 +127,18 @@ namespace MGM.Demo
                     ""isComposite"": false,
                     ""isPartOfComposite"": false,
                     ""modifiers"": """"
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea573f57-2d7c-432e-9185-e73ba4d8b1d1"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
                 }
             ]
         }
@@ -126,6 +149,7 @@ namespace MGM.Demo
             m_Character = asset.GetActionMap("Character");
             m_Character_Move = m_Character.GetAction("Move");
             m_Character_Aim = m_Character.GetAction("Aim");
+            m_Character_Fire = m_Character.GetAction("Fire");
         }
         ~SurvivalShooter()
         {
@@ -170,12 +194,14 @@ namespace MGM.Demo
         private ICharacterActions m_CharacterActionsCallbackInterface;
         private InputAction m_Character_Move;
         private InputAction m_Character_Aim;
+        private InputAction m_Character_Fire;
         public struct CharacterActions
         {
             private SurvivalShooter m_Wrapper;
             public CharacterActions(SurvivalShooter wrapper) { m_Wrapper = wrapper; }
             public InputAction @Move { get { return m_Wrapper.m_Character_Move; } }
             public InputAction @Aim { get { return m_Wrapper.m_Character_Aim; } }
+            public InputAction @Fire { get { return m_Wrapper.m_Character_Fire; } }
             public InputActionMap Get() { return m_Wrapper.m_Character; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -192,6 +218,9 @@ namespace MGM.Demo
                     Aim.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
                     Aim.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
                     Aim.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
+                    Fire.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
+                    Fire.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
+                    Fire.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
                 }
                 m_Wrapper.m_CharacterActionsCallbackInterface = instance;
                 if (instance != null)
@@ -202,6 +231,9 @@ namespace MGM.Demo
                     Aim.started += instance.OnAim;
                     Aim.performed += instance.OnAim;
                     Aim.cancelled += instance.OnAim;
+                    Fire.started += instance.OnFire;
+                    Fire.performed += instance.OnFire;
+                    Fire.cancelled += instance.OnFire;
                 }
             }
         }
@@ -216,6 +248,7 @@ namespace MGM.Demo
         {
             void OnMove(InputAction.CallbackContext context);
             void OnAim(InputAction.CallbackContext context);
+            void OnFire(InputAction.CallbackContext context);
         }
     }
 }
