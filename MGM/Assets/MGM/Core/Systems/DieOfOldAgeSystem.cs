@@ -18,7 +18,7 @@ namespace MGM.Core
                 m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
 
-        struct SpawnJob : IJobForEachWithEntity<CurrentAge, MaxAge>
+        struct DieOfOldAgeJob : IJobForEachWithEntity<CurrentAge, MaxAge>
         {
             public EntityCommandBuffer.Concurrent CommandBuffer;
 
@@ -35,7 +35,7 @@ namespace MGM.Core
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-            var job = new SpawnJob
+            var job = new DieOfOldAgeJob
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer().ToConcurrent()
             }.Schedule(this, inputDeps);

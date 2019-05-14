@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3278686545829700718}
   - component: {fileID: 3278686545829700715}
-  - component: {fileID: 3278686545829700714}
   - component: {fileID: 5267795522252509020}
   - component: {fileID: -3952194069737592999}
   - component: {fileID: -3672763095134032871}
@@ -31,8 +30,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278686545829700709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 4.65, y: 5.53, z: 4.79}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,12 +55,12 @@ MonoBehaviour:
   m_InitialLinearVelocity:
     x: 0
     y: 0
-    z: 50
+    z: 100
   m_InitialAngularVelocity:
     x: 0
     y: 0
     z: 0
-  m_GravityFactor: 1
+  m_GravityFactor: 0
   m_OverrideDefaultMassDistribution: 0
   m_CenterOfMass:
     x: 0
@@ -77,72 +76,6 @@ MonoBehaviour:
     x: 0.4
     y: 0.4
     z: 0.4
---- !u!114 &3278686545829700714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3278686545829700709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b275e5f92732148048d7b77e264ac30e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShapeType: 2
-  m_PrimitiveCenter:
-    x: 0
-    y: 0
-    z: 0
-  m_PrimitiveSize:
-    x: 1
-    y: 1
-    z: 1
-  m_PrimitiveOrientation:
-    Value:
-      x: -0
-      y: 0
-      z: 0
-    RotationOrder: 4
-  m_Capsule:
-    Height: 1
-    Radius: 0.5
-    Axis: 2
-  m_Cylinder:
-    Height: 1
-    Radius: 0.5
-    Axis: 2
-  m_SphereRadius: 0.5
-  m_ConvexRadius: 0.05
-  m_CustomMesh: {fileID: 0}
-  m_Material:
-    m_SupportsTemplate: 1
-    m_Template: {fileID: 0}
-    m_IsTrigger:
-      m_Override: 0
-      m_Value: 0
-    m_Friction:
-      m_Override: 0
-      m_Value:
-        Value: 0.5
-        CombineMode: 0
-    m_Restitution:
-      m_Override: 0
-      m_Value:
-        Value: 0
-        CombineMode: 2
-    m_BelongsTo:
-      m_Override: 0
-      m_Value: 0101010101010101010101010101010101010101010101010101010101010101
-    m_CollidesWith:
-      m_Override: 0
-      m_Value: 0101010101010101010101010101010101010101010101010101010101010101
-    m_RaisesCollisionEvents:
-      m_Override: 0
-      m_Value: 0
-    m_CustomFlags:
-      m_Override: 0
-      m_Value: 0000000000000000
 --- !u!114 &5267795522252509020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784596b219bf1eb4aa2bd1168f3ec707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxAge: 1
+  MaxAge: 10000
 --- !u!23 &4958772640150312113
 MeshRenderer:
   m_ObjectHideFlags: 0

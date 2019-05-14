@@ -45,6 +45,8 @@ namespace MGM.Core
                 // Make it move forward
                 CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = location.Forward * shotParam.Speed });
 
+             //   CommandBuffer.AddComponent(index, instance, new DestroyOnColision());
+             
                 // Reset the cool down count
                 shotParam.spawnCapabilityParameters.TimeSinceLastTrigger = 0;
             }

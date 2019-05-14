@@ -57,7 +57,7 @@ MonoBehaviour:
     m_Reference: {fileID: 4326423176866262154, guid: 8e9e04cd99ca5d749a6640f319317165,
       type: 3}
   Bullet: {fileID: 3278686545829700709, guid: 96a20dd49231d9a41b3c4690ec9cebcc, type: 3}
-  CoolDown: 0
+  CoolDown: 0.5
   Speed: 100
 --- !u!114 &7009296763886682645
 MonoBehaviour:

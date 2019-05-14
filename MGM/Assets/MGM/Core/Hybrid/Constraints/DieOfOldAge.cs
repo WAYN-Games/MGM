@@ -20,6 +20,12 @@ namespace MGM
                 Value = MaxAge
             };
             dstManager.AddComponentData(entity, maxLifeTime);
+
+            dstManager.AddComponent(entity, typeof(DestroyOnColision));
+
+
+
+
         }
 
 
