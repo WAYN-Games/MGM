@@ -2,7 +2,7 @@
 using Unity.Mathematics;
 using Unity.Physics;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
+using UnityEngine.InputSystem;
 
 namespace MGM
 {

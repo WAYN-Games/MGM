@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
+using UnityEngine.InputSystem;
 namespace MGM
 {
     public class ShootingInputResponse : InputResponse
@@ -11,5 +11,6 @@ namespace MGM
             scp.spawnCapabilityParameters.SpawnTrigerred = true;
             B_EntityManager.SetComponentData(B_Entity, scp);
         }
+
     }
 }

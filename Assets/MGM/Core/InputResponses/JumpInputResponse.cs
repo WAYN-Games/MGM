@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
+using UnityEngine.InputSystem;
 namespace MGM
 {
     public class JumpInputResponse : InputResponse

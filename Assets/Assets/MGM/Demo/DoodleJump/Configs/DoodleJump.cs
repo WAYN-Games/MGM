@@ -4,8 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
-using UnityEngine.Experimental.Input.Utilities;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 namespace MGM.Demo
 {
@@ -103,44 +103,54 @@ namespace MGM.Demo
             m_Doodle_Jump = m_Doodle.GetAction("Jump");
             m_Doodle_Move = m_Doodle.GetAction("Move");
         }
+
         ~DoodleJump()
         {
             UnityEngine.Object.Destroy(asset);
         }
+
         public InputBinding? bindingMask
         {
             get => asset.bindingMask;
             set => asset.bindingMask = value;
         }
+
         public ReadOnlyArray<InputDevice>? devices
         {
             get => asset.devices;
             set => asset.devices = value;
         }
+
         public ReadOnlyArray<InputControlScheme> controlSchemes
         {
             get => asset.controlSchemes;
         }
+
         public bool Contains(InputAction action)
         {
             return asset.Contains(action);
         }
+
         public IEnumerator<InputAction> GetEnumerator()
         {
             return asset.GetEnumerator();
         }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
+
         public void Enable()
         {
             asset.Enable();
         }
+
         public void Disable()
         {
             asset.Disable();
         }
+
         // Doodle
         private InputActionMap m_Doodle;
         private IDoodleActions m_DoodleActionsCallbackInterface;
@@ -164,20 +174,20 @@ namespace MGM.Demo
                 {
                     Jump.started -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
                     Jump.performed -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
-                    Jump.cancelled -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
+                    Jump.canceled -= m_Wrapper.m_DoodleActionsCallbackInterface.OnJump;
                     Move.started -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
                     Move.performed -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
-                    Move.cancelled -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
+                    Move.canceled -= m_Wrapper.m_DoodleActionsCallbackInterface.OnMove;
                 }
                 m_Wrapper.m_DoodleActionsCallbackInterface = instance;
                 if (instance != null)
                 {
                     Jump.started += instance.OnJump;
                     Jump.performed += instance.OnJump;
-                    Jump.cancelled += instance.OnJump;
+                    Jump.canceled += instance.OnJump;
                     Move.started += instance.OnMove;
                     Move.performed += instance.OnMove;
-                    Move.cancelled += instance.OnMove;
+                    Move.canceled += instance.OnMove;
                 }
             }
         }

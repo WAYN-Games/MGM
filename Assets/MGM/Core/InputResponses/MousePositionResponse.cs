@@ -2,7 +2,7 @@
 using Unity.Physics;
 using Unity.Physics.Systems;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
+using UnityEngine.InputSystem;
 namespace MGM
 {
     public class MousePositionResponse : InputResponse

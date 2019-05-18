@@ -1,8 +1,8 @@
 ﻿using System;
 using Unity.Entities;
-using UnityEngine;
 
-namespace MGM {
+namespace MGM
+{
     [Serializable]
     public struct JumpCapabilityParameters : IComponentData
     {

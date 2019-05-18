@@ -4,8 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
-using UnityEngine.Experimental.Input.Utilities;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 namespace MGM.Demo
 {
@@ -127,44 +127,54 @@ namespace MGM.Demo
             m_PONG_MoveP1 = m_PONG.GetAction("MoveP1");
             m_PONG_MoveP2 = m_PONG.GetAction("MoveP2");
         }
+
         ~Pong()
         {
             UnityEngine.Object.Destroy(asset);
         }
+
         public InputBinding? bindingMask
         {
             get => asset.bindingMask;
             set => asset.bindingMask = value;
         }
+
         public ReadOnlyArray<InputDevice>? devices
         {
             get => asset.devices;
             set => asset.devices = value;
         }
+
         public ReadOnlyArray<InputControlScheme> controlSchemes
         {
             get => asset.controlSchemes;
         }
+
         public bool Contains(InputAction action)
         {
             return asset.Contains(action);
         }
+
         public IEnumerator<InputAction> GetEnumerator()
         {
             return asset.GetEnumerator();
         }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
+
         public void Enable()
         {
             asset.Enable();
         }
+
         public void Disable()
         {
             asset.Disable();
         }
+
         // PONG
         private InputActionMap m_PONG;
         private IPONGActions m_PONGActionsCallbackInterface;
@@ -188,20 +198,20 @@ namespace MGM.Demo
                 {
                     MoveP1.started -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP1;
                     MoveP1.performed -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP1;
-                    MoveP1.cancelled -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP1;
+                    MoveP1.canceled -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP1;
                     MoveP2.started -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP2;
                     MoveP2.performed -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP2;
-                    MoveP2.cancelled -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP2;
+                    MoveP2.canceled -= m_Wrapper.m_PONGActionsCallbackInterface.OnMoveP2;
                 }
                 m_Wrapper.m_PONGActionsCallbackInterface = instance;
                 if (instance != null)
                 {
                     MoveP1.started += instance.OnMoveP1;
                     MoveP1.performed += instance.OnMoveP1;
-                    MoveP1.cancelled += instance.OnMoveP1;
+                    MoveP1.canceled += instance.OnMoveP1;
                     MoveP2.started += instance.OnMoveP2;
                     MoveP2.performed += instance.OnMoveP2;
-                    MoveP2.cancelled += instance.OnMoveP2;
+                    MoveP2.canceled += instance.OnMoveP2;
                 }
             }
         }

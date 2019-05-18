@@ -4,8 +4,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Input;
-using UnityEngine.Experimental.Input.Utilities;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 namespace MGM.Demo
 {
@@ -151,44 +151,54 @@ namespace MGM.Demo
             m_Character_Aim = m_Character.GetAction("Aim");
             m_Character_Fire = m_Character.GetAction("Fire");
         }
+
         ~SurvivalShooter()
         {
             UnityEngine.Object.Destroy(asset);
         }
+
         public InputBinding? bindingMask
         {
             get => asset.bindingMask;
             set => asset.bindingMask = value;
         }
+
         public ReadOnlyArray<InputDevice>? devices
         {
             get => asset.devices;
             set => asset.devices = value;
         }
+
         public ReadOnlyArray<InputControlScheme> controlSchemes
         {
             get => asset.controlSchemes;
         }
+
         public bool Contains(InputAction action)
         {
             return asset.Contains(action);
         }
+
         public IEnumerator<InputAction> GetEnumerator()
         {
             return asset.GetEnumerator();
         }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
+
         public void Enable()
         {
             asset.Enable();
         }
+
         public void Disable()
         {
             asset.Disable();
         }
+
         // Character
         private InputActionMap m_Character;
         private ICharacterActions m_CharacterActionsCallbackInterface;
@@ -214,26 +224,26 @@ namespace MGM.Demo
                 {
                     Move.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                     Move.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
-                    Move.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
+                    Move.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnMove;
                     Aim.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
                     Aim.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
-                    Aim.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
+                    Aim.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnAim;
                     Fire.started -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
                     Fire.performed -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
-                    Fire.cancelled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
+                    Fire.canceled -= m_Wrapper.m_CharacterActionsCallbackInterface.OnFire;
                 }
                 m_Wrapper.m_CharacterActionsCallbackInterface = instance;
                 if (instance != null)
                 {
                     Move.started += instance.OnMove;
                     Move.performed += instance.OnMove;
-                    Move.cancelled += instance.OnMove;
+                    Move.canceled += instance.OnMove;
                     Aim.started += instance.OnAim;
                     Aim.performed += instance.OnAim;
-                    Aim.cancelled += instance.OnAim;
+                    Aim.canceled += instance.OnAim;
                     Fire.started += instance.OnFire;
                     Fire.performed += instance.OnFire;
-                    Fire.cancelled += instance.OnFire;
+                    Fire.canceled += instance.OnFire;
                 }
             }
         }
