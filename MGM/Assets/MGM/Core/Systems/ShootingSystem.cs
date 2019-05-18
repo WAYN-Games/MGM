@@ -1,6 +1,7 @@
 ﻿using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
+using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
 
@@ -41,11 +42,11 @@ namespace MGM.Core
                 var instance = CommandBuffer.Instantiate(index, shotParam.spawnCapabilityParameters.Spawnable);
 
                 // Place it at the end of the gun
-                CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
+                CommandBuffer.SetComponent(index, instance, new LocalToWorld { Value = location.Value });
+
                 // Make it move forward
                 CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = location.Forward * shotParam.Speed });
 
-             //   CommandBuffer.AddComponent(index, instance, new DestroyOnColision());
              
                 // Reset the cool down count
                 shotParam.spawnCapabilityParameters.TimeSinceLastTrigger = 0;

@@ -759,6 +759,7 @@ GameObject:
   - component: {fileID: 1648749933}
   - component: {fileID: 1648749932}
   - component: {fileID: 1648749935}
+  - component: {fileID: 1648749936}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -903,6 +904,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff46c8ccf029f4438f1037ddcc7f158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1648749936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648749930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d7f63bbfb453f5448229964ba6e7a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 1
+  Health: 1
 --- !u!4 &3006697886580639987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5260179666402325917, guid: 92dd30aee2150e441b75a6066357c583,
@@ -979,7 +994,7 @@ PrefabInstance:
     - target: {fileID: 7009296763886682644, guid: 92dd30aee2150e441b75a6066357c583,
         type: 3}
       propertyPath: Speed
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92dd30aee2150e441b75a6066357c583, type: 3}

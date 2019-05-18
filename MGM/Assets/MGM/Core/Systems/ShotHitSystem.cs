@@ -87,7 +87,7 @@ namespace MGM.Core
 
             public void Execute(int index)
             {
-                CommandBuffer.DestroyEntity(index, EntitiesToDestroy.Peek());
+               // CommandBuffer.DestroyEntity(index, EntitiesToDestroy.Peek());
             }
         }
 
@@ -105,7 +105,6 @@ namespace MGM.Core
                 World = World.Active.GetExistingSystem<BuildPhysicsWorld>().PhysicsWorld.CollisionWorld
             }.Schedule(this, inputDeps);
 
-
             detectionJob.Complete();
 
             var destroyBulletJob = new DestroyOnImapct
@@ -114,8 +113,8 @@ namespace MGM.Core
                 EntitiesToDestroy = BulletsThatCollided
             }.Schedule(BulletsThatCollided.Count, 64 ,detectionJob);
 
+          //  m_EntityCommandBufferSystem.AddJobHandleForProducer(destroyBulletJob);
 
-            
             destroyBulletJob.Complete();
 
             var applyDamageJob = new ApplyDamage
