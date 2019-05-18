@@ -56,6 +56,7 @@ namespace MGM.Core
                 CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
                 CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(location.Forward, math.up()) });
                 CommandBuffer.SetComponent(index, instance, location);
+                CommandBuffer.AddComponent(index, instance, new Speed() { Value = shotParam.Speed});
 
                 // Make it move forward
                 CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = location.Forward * shotParam.Speed });

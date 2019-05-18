@@ -27,21 +27,19 @@ namespace MGM.Core
         }
 
         [RequireComponentTag(typeof(DestroyOnColision))]
-        struct DetectCollisionJob : IJobForEachWithEntity<PhysicsVelocity, LocalToWorld>
+        struct DetectCollisionJob : IJobForEachWithEntity<Speed, LocalToWorld>
         {
             [WriteOnly] public NativeQueue<Entity>.Concurrent BulletsThatCollided;
             [WriteOnly] public NativeQueue<DealDamageTo>.Concurrent EntitiesHitByBullet;
             [ReadOnly] public float DeltaTime;
             [ReadOnly] public CollisionWorld World;
 
-            public void Execute(Entity entity, int index, [ReadOnly] ref PhysicsVelocity physicsVelocity,
+            public void Execute(Entity entity, int index, [ReadOnly] ref Speed speed,
                 [ReadOnly] ref LocalToWorld localToWorld)
             {
-                float speed = math.sqrt(physicsVelocity.Linear.x * physicsVelocity.Linear.x + physicsVelocity.Linear.y * physicsVelocity.Linear.y + physicsVelocity.Linear.z * physicsVelocity.Linear.z);
-
                 var RaycastInput = new RaycastInput
                 {
-                    Ray = new Unity.Physics.Ray { Origin = localToWorld.Position, Direction = - physicsVelocity.Linear * DeltaTime * speed  },
+                    Ray = new Unity.Physics.Ray { Origin = localToWorld.Position, Direction = localToWorld.Forward * DeltaTime * speed.Value  },
                     Filter = CollisionFilter.Default
                 };
 
