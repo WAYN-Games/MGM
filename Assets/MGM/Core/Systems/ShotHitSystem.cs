@@ -41,7 +41,7 @@ namespace MGM.Core
 
                 var RaycastInput = new RaycastInput
                 {
-                    Ray = new Unity.Physics.Ray { Origin = localToWorld.Position, Direction = - physicsVelocity.Linear * DeltaTime  },
+                    Ray = new Unity.Physics.Ray { Origin = localToWorld.Position, Direction = - physicsVelocity.Linear * DeltaTime * speed  },
                     Filter = CollisionFilter.Default
                 };
 
@@ -87,7 +87,7 @@ namespace MGM.Core
 
             public void Execute(int index)
             {
-               // CommandBuffer.DestroyEntity(index, EntitiesToDestroy.Peek());
+               CommandBuffer.DestroyEntity(index, EntitiesToDestroy.Peek());
             }
         }
 
@@ -113,7 +113,7 @@ namespace MGM.Core
                 EntitiesToDestroy = BulletsThatCollided
             }.Schedule(BulletsThatCollided.Count, 64 ,detectionJob);
 
-          //  m_EntityCommandBufferSystem.AddJobHandleForProducer(destroyBulletJob);
+            m_EntityCommandBufferSystem.AddJobHandleForProducer(destroyBulletJob);
 
             destroyBulletJob.Complete();
 
