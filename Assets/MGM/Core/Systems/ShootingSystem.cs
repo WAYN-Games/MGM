@@ -10,17 +10,28 @@ namespace MGM.Core
     [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class ShootingSystem : JobComponentSystem
     {
-       
+       /// <summary>
+       /// System to create a command buffer for in Job write on entities.
+       /// </summary>
         BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
 
+        /// <summary>
+        /// Initialisation of the system.
+        /// </summary>
         protected override void OnCreate()
         {
-                m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
+            // Get the system needed to create the command buffer.
+            m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
 
+        /// <summary>
+        /// Job that spawn a bullet when the player is shooting.
+        /// </summary>
         struct SpawnJob : IJobForEachWithEntity<ShootingCapabilityParameters, LocalToWorld>
         {
+            // A command buffer that support parallel writes.
             public EntityCommandBuffer.Concurrent CommandBuffer;
+            // Time since the last frame.
             [ReadOnly] public float DeltaTime;
 
             public void Execute(Entity entity, int index, [ReadOnly] ref ShootingCapabilityParameters shotParam,
@@ -57,6 +68,7 @@ namespace MGM.Core
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
+
             var job = new SpawnJob
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer().ToConcurrent(), // Pass in the command buffer allowing the creation of new entitites

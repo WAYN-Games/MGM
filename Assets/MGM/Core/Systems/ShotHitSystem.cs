@@ -41,7 +41,7 @@ namespace MGM.Core
 
                 var RaycastInput = new RaycastInput
                 {
-                    Ray = new Unity.Physics.Ray { Origin = localToWorld.Position, Direction = physicsVelocity.Linear * DeltaTime  },
+                    Ray = new Unity.Physics.Ray { Origin = localToWorld.Position, Direction = - physicsVelocity.Linear * DeltaTime  },
                     Filter = CollisionFilter.Default
                 };
 
