@@ -20,17 +20,17 @@ namespace MGM
 
 
         [BurstCompile]
-        struct JumpJob : IJobForEachWithEntity<WorldRenderBounds, PhysicsVelocity, JumpCapabilityParameters>
+        struct JumpJob : IJobForEachWithEntity<WorldRenderBounds, PhysicsVelocity, JumpCapabilityParameters,JumpTriger>
         {
             [ReadOnly] public CollisionWorld World;
 
-            public void Execute(Entity entity, int index, [ReadOnly]ref WorldRenderBounds renderBounds, ref PhysicsVelocity physics, ref JumpCapabilityParameters jcp)
+            public void Execute(Entity entity, int index, [ReadOnly]ref WorldRenderBounds renderBounds, ref PhysicsVelocity physics, ref JumpCapabilityParameters jcp, ref JumpTriger jumpTriger)
             {
                 // Do nothing if we don't try to jump
-                if (!jcp.JumpTrigerred) return;
+                if (!jumpTriger.IsTriggered) return;
 
                 // Reset the jump trigger to prevent auto jumping.
-                jcp.JumpTrigerred = false;
+                jumpTriger.IsTriggered = false;
 
                 // if we already jumped at least once
                 if (jcp.CurrentJumpCount > 0)

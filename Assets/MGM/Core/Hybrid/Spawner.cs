@@ -18,12 +18,12 @@ namespace MGM
             SpawnCapabilityParameters scp = new SpawnCapabilityParameters()
             {
                     Spawnable = conversionSystem.GetPrimaryEntity(Spawnable),
-                    SpawnTrigerred = true,
                     CoolDown = CoolDown,
                     TimeSinceLastTrigger = 0
             };
 
             dstManager.AddComponentData(entity, scp);
+
         }
 
 

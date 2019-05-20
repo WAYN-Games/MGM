@@ -27,7 +27,7 @@ namespace MGM.Core
         /// <summary>
         /// Job that spawn a bullet when the player is shooting.
         /// </summary>
-        struct SpawnJob : IJobForEachWithEntity<ShootingCapabilityParameters, LocalToWorld>
+        struct SpawnJob : IJobForEachWithEntity<ShootingCapabilityParameters, LocalToWorld, ShotTrigger>
         {
             // A command buffer that support parallel writes.
             public EntityCommandBuffer.Concurrent CommandBuffer;
@@ -35,16 +35,16 @@ namespace MGM.Core
             [ReadOnly] public float DeltaTime;
 
             public void Execute(Entity entity, int index, [ReadOnly] ref ShootingCapabilityParameters shotParam,
-                [ReadOnly] ref LocalToWorld location)
+                [ReadOnly] ref LocalToWorld location, ref ShotTrigger shotTrigger)
             {
                 // Increase the cool down count
                 shotParam.spawnCapabilityParameters.TimeSinceLastTrigger += DeltaTime;
                 
                 // Spawn object only when requested
-                if (!shotParam.spawnCapabilityParameters.SpawnTrigerred) return;
+                if (!shotTrigger.IsTriggered) return;
 
                 // Reset the input trigger
-                shotParam.spawnCapabilityParameters.SpawnTrigerred = false;
+                shotTrigger.IsTriggered = false;
 
                 // Shoot only if cooled down
                 if (shotParam.spawnCapabilityParameters.TimeSinceLastTrigger < shotParam.spawnCapabilityParameters.CoolDown) return;

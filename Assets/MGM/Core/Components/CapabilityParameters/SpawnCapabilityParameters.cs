@@ -8,7 +8,6 @@ namespace MGM {
     {
         public Entity Spawnable;
         public float CoolDown;
-        public bool SpawnTrigerred;
         public float TimeSinceLastTrigger;
     }
 
@@ -18,4 +17,10 @@ namespace MGM {
         public SpawnCapabilityParameters spawnCapabilityParameters;
         public float Speed;
     }
+    [Serializable]
+    public struct ShotTrigger : IComponentData
+    {
+        public bool IsTriggered;
+    }
+
 }

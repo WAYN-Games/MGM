@@ -9,6 +9,10 @@ namespace MGM
         public float Force;
         public int MaxJumpNumber;
         public int CurrentJumpCount;
-        public bool JumpTrigerred;
+    }
+
+    public struct JumpTriger : IComponentData
+    {
+        public bool IsTriggered;
     }
 }

@@ -8,8 +8,8 @@ namespace MGM
         protected override void RespondToAction(InputAction.CallbackContext context)
         {
 
-            JumpCapabilityParameters jcp = B_EntityManager.GetComponentData<JumpCapabilityParameters>(B_Entity);
-            jcp.JumpTrigerred = true;
+            JumpTriger jcp = B_EntityManager.GetComponentData<JumpTriger>(B_Entity);
+            jcp.IsTriggered = true;
             B_EntityManager.SetComponentData(B_Entity, jcp);
         }
     }

@@ -7,8 +7,8 @@ namespace MGM
     {
         protected override void RespondToAction(InputAction.CallbackContext context)
         {
-            ShootingCapabilityParameters scp = B_EntityManager.GetComponentData<ShootingCapabilityParameters>(B_Entity);
-            scp.spawnCapabilityParameters.SpawnTrigerred = true;
+            ShotTrigger scp = B_EntityManager.GetComponentData<ShotTrigger>(B_Entity);
+            scp.IsTriggered = true;
             B_EntityManager.SetComponentData(B_Entity, scp);
         }
 

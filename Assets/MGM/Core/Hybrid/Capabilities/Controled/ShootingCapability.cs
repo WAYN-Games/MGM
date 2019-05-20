@@ -22,7 +22,6 @@ namespace MGM
                 spawnCapabilityParameters = new SpawnCapabilityParameters()
                 {
                     Spawnable = conversionSystem.GetPrimaryEntity(Bullet),
-                    SpawnTrigerred = false,
                     CoolDown = CoolDown,
                     TimeSinceLastTrigger = 0
                 },
@@ -30,6 +29,13 @@ namespace MGM
             };
 
             dstManager.AddComponentData(entity, scp);
+
+            ShotTrigger st = new ShotTrigger()
+            {
+                IsTriggered = false
+            };
+
+            dstManager.AddComponentData(entity, st);
         }
     }
 
