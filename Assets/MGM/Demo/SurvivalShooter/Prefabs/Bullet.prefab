@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3278686545829700718}
   - component: {fileID: 3278686545829700715}
   - component: {fileID: 5267795522252509020}
-  - component: {fileID: -3952194069737592999}
   - component: {fileID: -3672763095134032871}
   - component: {fileID: 4958772640150312113}
   - component: {fileID: 5905332681237074040}
+  - component: {fileID: 7284662455291247512}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -88,19 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff46c8ccf029f4438f1037ddcc7f158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3952194069737592999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3278686545829700709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abaf1674d5d7554489927154d43728e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartAge: 0
 --- !u!114 &-3672763095134032871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxAge: 5
+  StartAge: 0
 --- !u!23 &4958772640150312113
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -159,3 +147,16 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3278686545829700709}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &7284662455291247512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278686545829700709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddfc1a1d1bbdd04184423bbbe794149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageDelt: 31

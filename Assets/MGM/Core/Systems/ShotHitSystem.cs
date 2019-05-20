@@ -27,14 +27,14 @@ namespace MGM.Core
         }
 
         [RequireComponentTag(typeof(DestroyOnColision))]
-        struct DetectCollisionJob : IJobForEachWithEntity<Speed, LocalToWorld>
+        struct DetectCollisionJob : IJobForEachWithEntity<Speed, Damage, LocalToWorld>
         {
             [WriteOnly] public NativeQueue<Entity>.Concurrent BulletsThatCollided;
             [WriteOnly] public NativeQueue<DealDamageTo>.Concurrent EntitiesHitByBullet;
             [ReadOnly] public float DeltaTime;
             [ReadOnly] public CollisionWorld World;
 
-            public void Execute(Entity entity, int index, [ReadOnly] ref Speed speed,
+            public void Execute(Entity entity, int index, [ReadOnly] ref Speed speed, [ReadOnly] ref Damage damage,
                 [ReadOnly] ref LocalToWorld localToWorld)
             {
                 var RaycastInput = new RaycastInput
@@ -50,7 +50,7 @@ namespace MGM.Core
                     DealDamageTo ddt = new DealDamageTo()
                     {
                         Entity = World.Bodies[hit.RigidBodyIndex].Entity,
-                        Amount = 1
+                        Amount = damage.Value
                     };
                     EntitiesHitByBullet.Enqueue(ddt);
                 }
