@@ -12,15 +12,20 @@ namespace MGM {
     }
 
     [Serializable]
+    [WriteGroup(typeof(ShotTrigger))]
     public struct ShootingCapabilityParameters : IComponentData
     {
         public SpawnCapabilityParameters spawnCapabilityParameters;
         public float Speed;
     }
+
+
     [Serializable]
     public struct ShotTrigger : IComponentData
     {
         public bool IsTriggered;
+        public float CoolDown;
+        public float TimeSinceLastTrigger;
     }
 
 }

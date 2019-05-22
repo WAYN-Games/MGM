@@ -8,38 +8,32 @@ using Unity.Transforms;
 namespace MGM.Core
 {
     [UpdateInGroup(typeof(SimulationSystemGroup))]
-    public class ShootingSystem : JobComponentSystem
+    public class BaseShootingSystem : JobComponentSystem
     {
-       /// <summary>
-       /// System to create a command buffer for in Job write on entities.
-       /// </summary>
-        BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
 
-        /// <summary>
-        /// Initialisation of the system.
-        /// </summary>
+        private EntityQuery m_Query;
+        
         protected override void OnCreate()
         {
-            // Get the system needed to create the command buffer.
-            m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
+            var queryDescription = new EntityQueryDesc
+            {
+                All = new ComponentType[] { typeof(ShotTrigger) },
+                Options = EntityQueryOptions.FilterWriteGroup
+            };
+            m_Query = GetEntityQuery(queryDescription);
         }
 
-        /// <summary>
-        /// Job that spawn a bullet when the player is shooting.
-        /// </summary>
-        struct SpawnJob : IJobForEachWithEntity<ShootingCapabilityParameters, LocalToWorld, ShotTrigger>
+        struct BaseShotJob : IJobForEachWithEntity<ShotTrigger>
         {
-            // A command buffer that support parallel writes.
-            public EntityCommandBuffer.Concurrent CommandBuffer;
             // Time since the last frame.
             [ReadOnly] public float DeltaTime;
+            [WriteOnly] public NativeQueue<Entity>.Concurrent EntitiesThatTriedToShoot;
 
-            public void Execute(Entity entity, int index, [ReadOnly] ref ShootingCapabilityParameters shotParam,
-                [ReadOnly] ref LocalToWorld location, ref ShotTrigger shotTrigger)
+            public void Execute(Entity entity, int index, ref ShotTrigger shotTrigger)
             {
                 // Increase the cool down count
-                shotParam.spawnCapabilityParameters.TimeSinceLastTrigger += DeltaTime;
-                
+                shotTrigger.TimeSinceLastTrigger += DeltaTime;
+
                 // Spawn object only when requested
                 if (!shotTrigger.IsTriggered) return;
 
@@ -47,7 +41,78 @@ namespace MGM.Core
                 shotTrigger.IsTriggered = false;
 
                 // Shoot only if cooled down
-                if (shotParam.spawnCapabilityParameters.TimeSinceLastTrigger < shotParam.spawnCapabilityParameters.CoolDown) return;
+                if (shotTrigger.TimeSinceLastTrigger < shotTrigger.CoolDown) return;
+
+                EntitiesThatTriedToShoot.Enqueue(entity);
+
+                // Reset the cool down count
+                shotTrigger.TimeSinceLastTrigger = 0;
+            }
+
+
+        }
+
+
+        protected override JobHandle OnUpdate(JobHandle inputDeps)
+        {
+            NativeQueue<Entity> EntitiesThatTriedToShoot = new NativeQueue<Entity>(Allocator.TempJob);
+
+            var job = new BaseShotJob
+            {
+                EntitiesThatTriedToShoot = EntitiesThatTriedToShoot.ToConcurrent(),
+                DeltaTime = UnityEngine.Time.deltaTime
+            }.ScheduleSingle(m_Query, inputDeps);
+
+            job.Complete();
+
+            for (int i = 0; i < EntitiesThatTriedToShoot.Count; i++)
+            {
+                UnityEngine.Debug.Log("Entity " + EntitiesThatTriedToShoot.Dequeue() +" tried to shoot.");
+            }
+            EntitiesThatTriedToShoot.Dispose();
+            return job;
+        }
+    }
+
+
+    [UpdateInGroup(typeof(SimulationSystemGroup))]
+    public class SingleShotSystem : JobComponentSystem
+    {
+        private EntityQuery m_Query;
+        BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
+
+        protected override void OnCreate()
+        {
+            m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
+            var queryDescription = new EntityQueryDesc
+            {
+                All = new ComponentType[] { typeof(ShotTrigger), typeof(ShootingCapabilityParameters), ComponentType.ReadOnly<LocalToWorld>()},
+                Options = EntityQueryOptions.FilterWriteGroup
+            };
+            m_Query = GetEntityQuery(queryDescription);
+        }
+
+        struct SingleShotJob : IJobForEachWithEntity<ShootingCapabilityParameters, LocalToWorld, ShotTrigger>
+        {
+            // A command buffer that support parallel writes.
+            public EntityCommandBuffer.Concurrent CommandBuffer;
+            // Time since the last frame.
+            [ReadOnly] public float DeltaTime;
+
+            public void Execute(Entity entity, int index, ref ShootingCapabilityParameters shotParam,
+                [ReadOnly] ref LocalToWorld location, ref ShotTrigger shotTrigger)
+            {
+                // Increase the cool down count
+                shotTrigger.TimeSinceLastTrigger += DeltaTime;
+
+                // Spawn object only when requested
+                if (!shotTrigger.IsTriggered) return;
+
+                // Reset the input trigger
+                shotTrigger.IsTriggered = false;
+
+                // Shoot only if cooled down
+                if (shotTrigger.TimeSinceLastTrigger < shotTrigger.CoolDown) return;
 
                 // Create teh bullet
                 var instance = CommandBuffer.Instantiate(index, shotParam.spawnCapabilityParameters.Spawnable);
@@ -56,27 +121,27 @@ namespace MGM.Core
                 CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
                 CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(location.Forward, math.up()) });
                 CommandBuffer.SetComponent(index, instance, location);
-                CommandBuffer.AddComponent(index, instance, new Speed() { Value = shotParam.Speed});
+                CommandBuffer.AddComponent(index, instance, new Speed() { Value = shotParam.Speed });
 
                 // Make it move forward
                 CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = location.Forward * shotParam.Speed });
 
-             
+
                 // Reset the cool down count
-                shotParam.spawnCapabilityParameters.TimeSinceLastTrigger = 0;
+                shotTrigger.TimeSinceLastTrigger = 0;
             }
 
-            
+
         }
+
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-
-            var job = new SpawnJob
+            var job = new SingleShotJob
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer().ToConcurrent(), // Pass in the command buffer allowing the creation of new entitites
                 DeltaTime = UnityEngine.Time.deltaTime
-            }.Schedule(this, inputDeps);
+            }.ScheduleSingle(m_Query, inputDeps);
 
 
             m_EntityCommandBufferSystem.AddJobHandleForProducer(job);
@@ -84,4 +149,8 @@ namespace MGM.Core
             return job;
         }
     }
+
+
+
+
 }
