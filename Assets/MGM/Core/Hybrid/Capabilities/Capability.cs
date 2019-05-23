@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 namespace MGM
 {
     [RequiresEntityConversion]
-    public abstract class ControledCapability<T>  : MonoBehaviour, IConvertGameObjectToEntity where T : InputResponse
+    public abstract class ControledCapability<T>  : MonoBehaviour, IConvertGameObjectToEntity where T : InputListener
     {
 
         [SerializeField] private InputActionProperty ActionReference;

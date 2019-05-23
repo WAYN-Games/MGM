@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 namespace MGM
 {
-    public class MouvementInputResponse : InputResponse
+    public class MouvementInputResponse : InputListener
     {
 
         protected override void RespondToAction(InputAction.CallbackContext context)

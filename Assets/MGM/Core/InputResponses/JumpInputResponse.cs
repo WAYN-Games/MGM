@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 namespace MGM
 {
-    public class JumpInputResponse : InputResponse
+    public class JumpInputResponse : InputListener
     {
         protected override void RespondToAction(InputAction.CallbackContext context)
         {

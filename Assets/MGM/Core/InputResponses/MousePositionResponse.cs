@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 namespace MGM
 {
-    public class MousePositionResponse : InputResponse
+    public class MousePositionResponse : InputListener
     {
 
         protected override void RespondToAction(InputAction.CallbackContext context)

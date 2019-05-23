@@ -7,7 +7,7 @@ namespace MGM
     /// <summary>
     /// Base Shoting capability to inherit from in order to customize the shooting behavior.
     /// </summary>
-    public abstract class BaseShootingCapability :   ControledCapability<ShootingInputResponse> , IDeclareReferencedPrefabs
+    public abstract class BaseShootingCapability :   ControledCapability<ShootingInputListener> , IDeclareReferencedPrefabs
     {
         public GameObject Projectile;
         public float CoolDown;
