@@ -15,3 +15,5 @@ Stands for Modular Game Mechanics.
 * Pong : A very basic Pong game to demonstrate the use of the new input systems and the Mouvement MGM.
 * DoodleJump : A simple scene to demonstrate the Jumping MGM and  raycasting. 
 * SurvivalShooter : A more complex scene to demonstrate the Shooting MGM and the use of systems to spawn entities and alter component data.
+
+> Documentation will be hosted in this [wiki](https://github.com/WAYNGROUP/MGM/wiki/Welcome-to-the-MGM-wiki!)
