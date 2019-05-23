@@ -15,7 +15,7 @@ namespace MGM
         }
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
-            SpawnCapabilityParameters scp = new SpawnCapabilityParameters()
+       /*     SpawnCapabilityParameters scp = new SpawnCapabilityParameters()
             {
                     Spawnable = conversionSystem.GetPrimaryEntity(Spawnable),
                     CoolDown = CoolDown,
@@ -23,7 +23,7 @@ namespace MGM
             };
 
             dstManager.AddComponentData(entity, scp);
-
+            */
         }
 
 

@@ -120,6 +120,40 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &300820939 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7009296763886682646, guid: 92dd30aee2150e441b75a6066357c583,
+    type: 3}
+  m_PrefabInstance: {fileID: 7009296764581330286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &300820942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300820939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7bcf3b7148f5bc49be8f26b5665bf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActionReference:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Action
+      m_ExpectedControlLayout: 
+      m_Id: bf5ccf08-6618-416c-9695-e4e2f235fc9f
+      m_Flags: 0
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 4326423176866262154, guid: 8e9e04cd99ca5d749a6640f319317165,
+      type: 3}
+  Projectile: {fileID: 3278686545829700709, guid: 96a20dd49231d9a41b3c4690ec9cebcc,
+    type: 3}
+  CoolDown: 0.5
+  Speed: 100
 --- !u!1 &314132553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1183,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7009296763886682646, guid: 92dd30aee2150e441b75a6066357c583,
+        type: 3}
+      propertyPath: m_Name
+      value: Muzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 7009296764931686832, guid: 92dd30aee2150e441b75a6066357c583,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1209,5 +1248,12 @@ PrefabInstance:
       propertyPath: Speed
       value: 1000
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7009296763886682644, guid: 92dd30aee2150e441b75a6066357c583,
+        type: 3}
+      propertyPath: ShotType
+      value: 
+      objectReference: {fileID: 11500000, guid: 2669e72f201d6454388bf081c78eba28,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 7009296763886682644, guid: 92dd30aee2150e441b75a6066357c583, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 92dd30aee2150e441b75a6066357c583, type: 3}

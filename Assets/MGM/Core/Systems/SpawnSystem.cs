@@ -17,7 +17,7 @@ namespace MGM.Core
                 m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
 
-        struct SpawnJob : IJobForEachWithEntity<SpawnCapabilityParameters, LocalToWorld>
+       /* struct SpawnJob : IJobForEachWithEntity<SpawnCapabilityParameters, LocalToWorld>
         {
             public EntityCommandBuffer.Concurrent CommandBuffer;
             [ReadOnly] public float DeltaTime;
@@ -43,10 +43,10 @@ namespace MGM.Core
 
             
         }
-
+        */
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-            var job = new SpawnJob
+          /*  var job = new SpawnJob
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer().ToConcurrent(), // Pass in the command buffer allowing the creation of new entitites
                 DeltaTime = UnityEngine.Time.deltaTime
@@ -54,8 +54,8 @@ namespace MGM.Core
 
 
             m_EntityCommandBufferSystem.AddJobHandleForProducer(job);
-
-            return job;
+            */
+            return inputDeps;
         }
     }
 }

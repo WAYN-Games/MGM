@@ -1,27 +1,21 @@
 ﻿using System;
 using Unity.Entities;
-using UnityEngine;
 
 namespace MGM {
-    [Serializable]
-    public struct SpawnCapabilityParameters : IComponentData
-    {
-        public Entity Spawnable;
-        public float CoolDown;
-        public float TimeSinceLastTrigger;
-    }
+    
+
 
     [Serializable]
-    [WriteGroup(typeof(ShotTrigger))]
-    public struct ShootingCapabilityParameters : IComponentData
+    public struct Shot : IComponentData
     {
-        public SpawnCapabilityParameters spawnCapabilityParameters;
+        public Entity Projectile;
         public float Speed;
+        public Trigger Trigger;
     }
 
 
     [Serializable]
-    public struct ShotTrigger : IComponentData
+    public struct Trigger : IComponentData
     {
         public bool IsTriggered;
         public float CoolDown;
