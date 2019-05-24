@@ -1,5 +1,6 @@
 ﻿using System;
 using Unity.Entities;
+using UnityEngine;
 
 namespace MGM
 {
@@ -35,6 +36,13 @@ namespace MGM
 
             // Add a tag component to know that we want to override the base shot system.
             dstManager.AddComponentData(entity, magazine);
+        }
+
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color= Color.magenta;
+            Gizmos.DrawLine(transform.position, transform.position + (transform.forward * 5));
         }
     }
 
