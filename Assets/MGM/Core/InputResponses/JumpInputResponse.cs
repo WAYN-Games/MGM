@@ -7,7 +7,6 @@ namespace MGM
     {
         protected override void RespondToAction(InputAction.CallbackContext context)
         {
-
             JumpTriger jcp = B_EntityManager.GetComponentData<JumpTriger>(B_Entity);
             jcp.IsTriggered = true;
             B_EntityManager.SetComponentData(B_Entity, jcp);

@@ -152,8 +152,11 @@ MonoBehaviour:
       type: 3}
   Projectile: {fileID: 3278686545829700709, guid: 96a20dd49231d9a41b3c4690ec9cebcc,
     type: 3}
-  CoolDown: 0.5
+  CoolDown: 0.1
   Speed: 100
+  MagazineCapacity: 47
+  SoundFX: {fileID: 8300000, guid: 9f4e3caf7baf33e418a36862631e5c4c, type: 3}
+  Volume: 1
 --- !u!1 &314132553
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +342,7 @@ GameObject:
   - component: {fileID: 827659928}
   - component: {fileID: 827659927}
   - component: {fileID: 827659930}
+  - component: {fileID: 827659931}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -449,6 +453,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &827659931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827659926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda42199e8f920b4db2f48865c9e31fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1018831950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7009296764931686835, guid: 92dd30aee2150e441b75a6066357c583,
@@ -1145,26 +1161,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 1
   Health: 1
---- !u!1 &2103615704 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7009296764326533512, guid: 92dd30aee2150e441b75a6066357c583,
-    type: 3}
-  m_PrefabInstance: {fileID: 7009296764581330286}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2103615710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103615704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7f63bbfb453f5448229964ba6e7a4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 1
-  Health: 1
 --- !u!4 &3006697886580639987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5260179666402325917, guid: 92dd30aee2150e441b75a6066357c583,
@@ -1254,6 +1250,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11500000, guid: 2669e72f201d6454388bf081c78eba28,
         type: 3}
+    - target: {fileID: 7009296763886682647, guid: 92dd30aee2150e441b75a6066357c583,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7009296763886682644, guid: 92dd30aee2150e441b75a6066357c583, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 92dd30aee2150e441b75a6066357c583, type: 3}

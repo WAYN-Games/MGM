@@ -3,7 +3,7 @@ using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace MGM
+namespace MGM.Core
 {
 
     [Serializable]
@@ -21,7 +21,7 @@ namespace MGM
     /// </summary>
     public class GridShotCapability : BaseShootingCapability
     {
-        public int MagazineCapacity;
+        [Header("GridShot Properties")]
         public int SizeX;
         public int SizeY;
         public int Density;
@@ -48,9 +48,6 @@ namespace MGM
                 Density  =Density
             };
             dstManager.AddComponentData(entity, gridShot);
-
-
-
         }
 
 

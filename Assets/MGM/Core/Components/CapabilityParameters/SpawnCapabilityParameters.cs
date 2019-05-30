@@ -1,5 +1,8 @@
 ﻿using System;
+using System.IO;
 using Unity.Entities;
+using Unity.Mathematics;
+using UnityEngine;
 
 namespace MGM {
     
@@ -18,6 +21,7 @@ namespace MGM {
     [Serializable]
     public struct Magazine : IComponentData
     {
+   
         public int MaxCapacity;
         public int CurrentCapacity;
     }

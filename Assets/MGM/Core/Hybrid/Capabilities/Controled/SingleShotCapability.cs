@@ -2,7 +2,7 @@
 using Unity.Entities;
 using UnityEngine;
 
-namespace MGM
+namespace MGM.Core
 {
 
     [Serializable]
@@ -18,7 +18,6 @@ namespace MGM
     /// </summary>
     public class SingleShotCapability : BaseShootingCapability
     {
-        public int MagazineCapacity;
 
         protected override void SetUpCapabilityParameters(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
@@ -28,14 +27,7 @@ namespace MGM
             // Add a tag component to know that we want to override the base shot system.
             dstManager.AddComponent(entity, typeof(SingleShot));
 
-            Magazine magazine = new Magazine()
-            {
-                CurrentCapacity = MagazineCapacity,
-                MaxCapacity = MagazineCapacity
-            };
 
-            // Add a tag component to know that we want to override the base shot system.
-            dstManager.AddComponentData(entity, magazine);
         }
 
 
