@@ -106,15 +106,22 @@ namespace MGM.Core
 
             detectionJob.Complete();
 
+            
             var destroyBulletJob = new DestroyOnImapct
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer().ToConcurrent(),
                 EntitiesToDestroy = BulletsThatCollided
             }.Schedule(BulletsThatCollided.Count, 64 ,detectionJob);
-
+            /*
             m_EntityCommandBufferSystem.AddJobHandleForProducer(destroyBulletJob);
-
+            */
             destroyBulletJob.Complete();
+
+            // Temp fix because Collection support for paralelism is to weak now. Lose perf but at least it works as expected.
+            while (BulletsThatCollided.Count != 0)
+            {
+                EntityManager.DestroyEntity(BulletsThatCollided.Dequeue());
+            }
 
             var applyDamageJob = new ApplyDamage
             {
