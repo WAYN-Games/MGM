@@ -120,43 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &300820939 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7009296763886682646, guid: 92dd30aee2150e441b75a6066357c583,
-    type: 3}
-  m_PrefabInstance: {fileID: 7009296764581330286}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &300820942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300820939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bcf3b7148f5bc49be8f26b5665bf27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActionReference:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Action
-      m_ExpectedControlLayout: 
-      m_Id: bf5ccf08-6618-416c-9695-e4e2f235fc9f
-      m_Flags: 0
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-    m_Reference: {fileID: 4326423176866262154, guid: 8e9e04cd99ca5d749a6640f319317165,
-      type: 3}
-  Projectile: {fileID: 3278686545829700709, guid: 96a20dd49231d9a41b3c4690ec9cebcc,
-    type: 3}
-  CoolDown: 0.1
-  Speed: 100
-  MagazineCapacity: 999
-  SoundFX: {fileID: 8300000, guid: 9f4e3caf7baf33e418a36862631e5c4c, type: 3}
-  Volume: 1
 --- !u!1 &314132553
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +290,12 @@ MonoBehaviour:
 --- !u!4 &354843870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7009296764931686832, guid: 92dd30aee2150e441b75a6066357c583,
+    type: 3}
+  m_PrefabInstance: {fileID: 7009296764581330286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &653535546 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7009296764326533513, guid: 92dd30aee2150e441b75a6066357c583,
     type: 3}
   m_PrefabInstance: {fileID: 7009296764581330286}
   m_PrefabAsset: {fileID: 0}
@@ -989,7 +958,6 @@ GameObject:
   - component: {fileID: 1648749933}
   - component: {fileID: 1648749932}
   - component: {fileID: 1648749935}
-  - component: {fileID: 1648749936}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -1134,20 +1102,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff46c8ccf029f4438f1037ddcc7f158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1648749936
+--- !u!1 &1778549345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1778549346}
+  - component: {fileID: 1778549348}
+  - component: {fileID: 1778549347}
+  m_Layer: 0
+  m_Name: Muzzle (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1778549346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778549345}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 653535546}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778549347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1648749930}
+  m_GameObject: {fileID: 1778549345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d7f63bbfb453f5448229964ba6e7a4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 93cd8a14fe12a71409d7437d47ba2efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 1
-  Health: 1
+  ActionReference:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Action
+      m_ExpectedControlLayout: 
+      m_Id: 822b6af1-da5e-4db2-a657-96d9ee72e7c1
+      m_Flags: 0
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 4326423176866262154, guid: 8e9e04cd99ca5d749a6640f319317165,
+      type: 3}
+  Projectile: {fileID: 3278686545829700709, guid: 96a20dd49231d9a41b3c4690ec9cebcc,
+    type: 3}
+  CoolDown: 0.5
+  Speed: 10
+  MagazineCapacity: -1
+  SoundFX: {fileID: 8300000, guid: 9f4e3caf7baf33e418a36862631e5c4c, type: 3}
+  Volume: 1
+  SizeX: 2
+  SizeY: 3
+  Density: 50
+--- !u!114 &1778549348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778549345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ff46c8ccf029f4438f1037ddcc7f158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &3006697886580639987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5260179666402325917, guid: 92dd30aee2150e441b75a6066357c583,
@@ -1165,11 +1197,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7009296763886682646, guid: 92dd30aee2150e441b75a6066357c583,
-        type: 3}
-      propertyPath: m_Name
-      value: Muzzle
       objectReference: {fileID: 0}
     - target: {fileID: 7009296764931686832, guid: 92dd30aee2150e441b75a6066357c583,
         type: 3}
@@ -1226,6 +1253,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7009296763886682646, guid: 92dd30aee2150e441b75a6066357c583,
+        type: 3}
+      propertyPath: m_Name
+      value: Muzzle
+      objectReference: {fileID: 0}
     - target: {fileID: 7009296763886682644, guid: 92dd30aee2150e441b75a6066357c583,
         type: 3}
       propertyPath: Speed
@@ -1241,6 +1273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688404997808750631, guid: 92dd30aee2150e441b75a6066357c583,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7009296763886682644, guid: 92dd30aee2150e441b75a6066357c583, type: 3}

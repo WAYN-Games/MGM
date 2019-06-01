@@ -32,14 +32,6 @@ namespace MGM.Core
             base.SetUpCapabilityParameters(entity, dstManager, conversionSystem);
 
             
-            // Add a magazine
-            Magazine magazine = new Magazine()
-            {
-                CurrentCapacity = MagazineCapacity,
-                MaxCapacity = MagazineCapacity
-            };
-            dstManager.AddComponentData(entity, magazine);
-
             // Add a tag component to know that we want to override the base shot system.
             GridShot gridShot = new GridShot()
             {

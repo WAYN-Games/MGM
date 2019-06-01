@@ -23,39 +23,25 @@ namespace MGM.Core
             // Get all entities with Shot, SingleShot and LocalToWorld components. If one entity is missing one of those component it will not be retrieved by this query.
             var queryDescription = new EntityQueryDesc
             {
-                All = new ComponentType[] { typeof(Shot), typeof(Magazine), ComponentType.ReadOnly <GridShot>(), ComponentType.ReadOnly<LocalToWorld>()},
+                All = new ComponentType[] { typeof(Shot), typeof(Magazine), typeof(SoundFX),ComponentType.ReadOnly <GridShot>(), ComponentType.ReadOnly<LocalToWorld>()},
                 Options = EntityQueryOptions.FilterWriteGroup // Enable write groups so that the system override the default behaviour of the write group system.
             };
             m_Query = GetEntityQuery(queryDescription);
         }
 
-        struct GridShotJob : IJobForEachWithEntity<Shot, Magazine,LocalToWorld, GridShot>
+        struct GridShotJob : IJobForEachWithEntity<Shot, Magazine, SoundFX,LocalToWorld, GridShot>
         {
             // A command buffer that support parallel writes.
             public EntityCommandBuffer.Concurrent CommandBuffer;
             // Time since the last frame.
             [ReadOnly] public float DeltaTime;
 
-            public void Execute(Entity entity, int index, ref Shot shot, ref Magazine magazine,
+            public void Execute(Entity entity, int index, ref Shot shot, ref Magazine magazine, ref SoundFX sfx,
                 [ReadOnly] ref LocalToWorld location, [ReadOnly] ref GridShot gridShot)
             {
-                // Increase the cool down count
-                shot.Trigger.TimeSinceLastTrigger += DeltaTime;
+                if(!Shot.IsTriggered(ref shot, DeltaTime)) return;
 
-                // Spawn object only when requested
-                if (!shot.Trigger.IsTriggered) return;
-
-                // Reset the input trigger
-                shot.Trigger.IsTriggered = false;
-
-                // Shoot only if cooled down
-                if (shot.Trigger.TimeSinceLastTrigger < shot.Trigger.CoolDown) return;
-                
-                // Shoot only if projectile left.
-                if (magazine.CurrentCapacity <= 0) return;
-
-                // remove one projectile from the magazine.
-                magazine.CurrentCapacity -= 1;
+                if (Magazine.IsMagazineEmpty(ref magazine)) return;
 
 
                 float xRange = (float)gridShot.SizeX / 2;
@@ -82,12 +68,9 @@ namespace MGM.Core
                     }
                 }
 
-              
 
 
-
-                // Reset the cool down count
-                shot.Trigger.TimeSinceLastTrigger = 0;
+                SoundFX.PlaySFXAt(ref sfx, location.Position);
             }
 
 
