@@ -19,8 +19,13 @@ namespace MGM
                 MaxJumpNumber = MaxJumpNumber,
                 CurrentJumpCount = 0
             };
+            JumpTriger jt = new JumpTriger()
+            {
+
+            };
 
             dstManager.AddComponentData(entity, data);
+            dstManager.AddComponentData(entity, jt);
         }
     }
 }

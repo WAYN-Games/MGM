@@ -13,6 +13,7 @@ namespace MGM.Core
         public GameObject Projectile;
         public float CoolDown;
         public float Speed;
+        [Range(-1, 999)]
         public int MagazineCapacity;
 
         [Header("Sound FX")]

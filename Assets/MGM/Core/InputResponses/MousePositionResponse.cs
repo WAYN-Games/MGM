@@ -17,12 +17,13 @@ namespace MGM
                         
             RaycastInput RaycastInput = new RaycastInput
             {
-                Ray = new Unity.Physics.Ray { Origin = cam.transform.position, Direction = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.farClipPlane))
-            },
-                Filter = CollisionFilter.Default
-            };
+                Start = cam.transform.position,
+                End = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.farClipPlane)),          
             
-            CollisionWorld w = World.Active.GetExistingSystem<BuildPhysicsWorld>().PhysicsWorld.CollisionWorld;
+                Filter = CollisionFilter.Default
+            }; 
+
+             CollisionWorld w = World.Active.GetExistingSystem<BuildPhysicsWorld>().PhysicsWorld.CollisionWorld;
 
             Unity.Physics.RaycastHit hit = new Unity.Physics.RaycastHit(); 
             

@@ -17,5 +17,11 @@ namespace MGM.Core
         public Vector3 EmmiterPosition;
         public bool Play;
         public float Volume;
+
+        public static void PlaySFXAt(ref SoundFX sfx,Vector3 position)
+        {
+            sfx.EmmiterPosition = position;
+            sfx.Play = true;
+        }
     }
 }

@@ -46,23 +46,12 @@ namespace MGM.Core
             public void Execute(Entity entity, int index, ref Shot shot, ref Magazine magazine,ref SoundFX sfx,
                 [ReadOnly] ref LocalToWorld location, [ReadOnly] ref SingleShot singleShot)
             {
-                // Increase the cool down count
-                shot.Trigger.TimeSinceLastTrigger += DeltaTime;
+                // If the pleayer did not shoot or the cool down has not expired, don't do anything.
+                if (!Shot.IsTriggered(ref shot, DeltaTime)) return;
 
-                // Spawn object only when requested
-                if (!shot.Trigger.IsTriggered) return;
-
-                // Reset the input trigger
-                shot.Trigger.IsTriggered = false;
-
-                // Shoot only if cooled down
-                if (shot.Trigger.TimeSinceLastTrigger < shot.Trigger.CoolDown) return;
-                
-                // Shoot only if projectile left.
-                if (magazine.CurrentCapacity <= 0) return;
-
-                // remove one projectile from the magazine.
-                magazine.CurrentCapacity -= 1;
+                // If the magazine is empty, don't do anything.
+                if (Magazine.IsMagazineEmpty(ref magazine)) return;
+              
 
                 // Create the bullet
                 var instance = CommandBuffer.Instantiate(index, shot.Projectile);
@@ -78,12 +67,10 @@ namespace MGM.Core
                 // Make it move forward
                 CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = location.Forward * shot.Speed });
 
-                // Reset the cool down count
-                shot.Trigger.TimeSinceLastTrigger = 0;
-
-                sfx.EmmiterPosition = location.Position;
-                sfx.Play = true;
+                SoundFX.PlaySFXAt(ref sfx, location.Position);
             }
+
+            
         }
 
    

@@ -53,7 +53,8 @@ namespace MGM
             {
                 var RaycastInput = new RaycastInput
                 {
-                    Ray = new Unity.Physics.Ray { Origin = renderBounds.Value.Center, Direction = -math.up()*(renderBounds.Value.Extents.y+0.1f) },
+                    Start = renderBounds.Value.Center,
+                    End = renderBounds.Value.Center  - math.up() * (renderBounds.Value.Extents.y + 0.1f),
                     Filter = CollisionFilter.Default
                 };
 

@@ -154,7 +154,7 @@ MonoBehaviour:
     type: 3}
   CoolDown: 0.1
   Speed: 100
-  MagazineCapacity: 47
+  MagazineCapacity: 999
   SoundFX: {fileID: 8300000, guid: 9f4e3caf7baf33e418a36862631e5c4c, type: 3}
   Volume: 1
 --- !u!1 &314132553
@@ -342,7 +342,6 @@ GameObject:
   - component: {fileID: 827659928}
   - component: {fileID: 827659927}
   - component: {fileID: 827659930}
-  - component: {fileID: 827659931}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -453,18 +452,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: Cinemachine.CinemachineBrain+VcamActivatedEvent, Cinemachine, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &827659931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 827659926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda42199e8f920b4db2f48865c9e31fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1018831950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7009296764931686835, guid: 92dd30aee2150e441b75a6066357c583,
