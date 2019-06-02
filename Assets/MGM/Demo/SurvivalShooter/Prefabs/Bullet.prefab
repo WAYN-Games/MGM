@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3278686545829700718}
   - component: {fileID: 3278686545829700715}
   - component: {fileID: 5267795522252509020}
-  - component: {fileID: -3672763095134032871}
   - component: {fileID: 4958772640150312113}
   - component: {fileID: 5905332681237074040}
   - component: {fileID: 7284662455291247512}
+  - component: {fileID: -1736832403527037462}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 3278686545829700709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -88,20 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff46c8ccf029f4438f1037ddcc7f158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3672763095134032871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3278686545829700709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 784596b219bf1eb4aa2bd1168f3ec707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxAge: 5
-  StartAge: 0
 --- !u!23 &4958772640150312113
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -160,3 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageDelt: 1
+--- !u!114 &-1736832403527037462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3278686545829700709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784596b219bf1eb4aa2bd1168f3ec707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxAge: 550
+  StartAge: 0

@@ -43,6 +43,10 @@ namespace MGM.Core
 
                 if (Magazine.IsMagazineEmpty(ref magazine)) return;
 
+                //Normalize verctor to match drawn gizmos and be independant of scale.
+                float3 normalizedForward = math.normalizesafe(location.Forward);
+                float3 normalizedRight = math.normalizesafe(location.Right);
+                float3 normalizedUp = math.normalizesafe(location.Up);
 
                 float xRange = (float)gridShot.SizeX / 2;
                 float yRange = (float)gridShot.SizeY / 2;
@@ -55,16 +59,15 @@ namespace MGM.Core
 
                         // Place it at the end of the gun
                         CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
-                        float3 projectileDirection = location.Position + (location.Forward * gridShot.Density) + (location.Right * (x + .5f)) + (location.Up * (y + .5f));
-                        CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(projectileDirection, math.up()) });
-                        CommandBuffer.SetComponent(index, instance, new LocalToWorld { Value = float4x4.LookAt(location.Position, projectileDirection, math.up())});
+                        float3 projectileDirection = (normalizedForward * gridShot.Density) + (normalizedRight * (x + .5f)) + (normalizedUp * (y + .5f));
+                        CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(projectileDirection, normalizedUp) });
+                        CommandBuffer.SetComponent(index, instance, new LocalToWorld { Value = float4x4.LookAt(location.Position, projectileDirection, normalizedUp) });
 
                         // Save the speed on the projectile to avoid calculating it.
                         CommandBuffer.AddComponent(index, instance, new Speed() { Value = shot.Speed });
 
                         // Make it move forward
-                        CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = (projectileDirection- location.Position) * shot.Speed });
-                        // Gizmos.DrawLine(location.position, location.position + (transform.forward * Density) + (transform.right * (x + .5f)) + (transform.up * (y + .5f)));
+                        CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = (projectileDirection) * shot.Speed });
                     }
                 }
 
