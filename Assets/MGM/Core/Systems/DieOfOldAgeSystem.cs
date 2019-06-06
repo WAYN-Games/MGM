@@ -1,4 +1,5 @@
-﻿using Unity.Collections;
+﻿using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
@@ -17,7 +18,7 @@ namespace MGM.Core
         {
                 m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
-
+        [BurstCompile]
         struct DieOfOldAgeJob : IJobForEachWithEntity<CurrentAge, MaxAge>
         {
             public EntityCommandBuffer.Concurrent CommandBuffer;

@@ -17,33 +17,35 @@ namespace MGM.Core
                 m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
 
-       /* struct SpawnJob : IJobForEachWithEntity<SpawnCapabilityParameters, LocalToWorld>
-        {
-            public EntityCommandBuffer.Concurrent CommandBuffer;
-            [ReadOnly] public float DeltaTime;
+        /* 
+                [BurstCompile]
+             struct SpawnJob : IJobForEachWithEntity<SpawnCapabilityParameters, LocalToWorld>
+         {
+             public EntityCommandBuffer.Concurrent CommandBuffer;
+             [ReadOnly] public float DeltaTime;
 
-            public void Execute(Entity entity, int index, [ReadOnly] ref SpawnCapabilityParameters spawner,
-                [ReadOnly] ref LocalToWorld location)
-            {
-                // Increase the cool down count
-                spawner.TimeSinceLastTrigger += DeltaTime;
-                
-                // Spawn only if cooled down
-                if (spawner.TimeSinceLastTrigger < spawner.CoolDown) return;
+             public void Execute(Entity entity, int index, [ReadOnly] ref SpawnCapabilityParameters spawner,
+                 [ReadOnly] ref LocalToWorld location)
+             {
+                 // Increase the cool down count
+                 spawner.TimeSinceLastTrigger += DeltaTime;
 
-                // Create the spawnable
-                var instance = CommandBuffer.Instantiate(index, spawner.Spawnable);
+                 // Spawn only if cooled down
+                 if (spawner.TimeSinceLastTrigger < spawner.CoolDown) return;
 
-                // Place it at the end of the gun
-                CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
+                 // Create the spawnable
+                 var instance = CommandBuffer.Instantiate(index, spawner.Spawnable);
 
-                // Reset the cool down count
-                spawner.TimeSinceLastTrigger = 0;
-            }
+                 // Place it at the end of the gun
+                 CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
 
-            
-        }
-        */
+                 // Reset the cool down count
+                 spawner.TimeSinceLastTrigger = 0;
+             }
+
+
+         }
+         */
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
           /*  var job = new SpawnJob

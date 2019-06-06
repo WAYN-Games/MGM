@@ -1,4 +1,5 @@
-﻿using Unity.Collections;
+﻿using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -28,7 +29,7 @@ namespace MGM.Core
             };
             m_Query = GetEntityQuery(queryDescription);
         }
-
+        [BurstCompile]
         struct GridShotJob : IJobForEachWithEntity<Shot, Magazine, SoundFX,LocalToWorld, GridShot>
         {
             // A command buffer that support parallel writes.

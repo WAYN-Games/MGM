@@ -35,7 +35,7 @@ namespace MGM.Core
             
 
         }
-
+        [BurstCompile]
         struct SingleShotJob : IJobForEachWithEntity<Shot, Magazine, SoundFX,LocalToWorld, SingleShot>
         {
             // A command buffer that support parallel writes.

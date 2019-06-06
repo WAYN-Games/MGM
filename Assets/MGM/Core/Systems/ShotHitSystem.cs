@@ -1,4 +1,5 @@
-﻿using Unity.Collections;
+﻿using Unity.Burst;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
@@ -28,6 +29,7 @@ namespace MGM.Core
             });
         }
 
+        [BurstCompile]
         struct ProjectileDamageJob : ITriggerEventsJob
         {
             [ReadOnly] public ComponentDataFromEntity<Damage> DamageDealer;
