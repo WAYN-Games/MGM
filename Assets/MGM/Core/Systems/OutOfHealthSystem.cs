@@ -26,7 +26,6 @@ namespace MGM
             m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
 
-        [BurstCompile]
         struct DieOfOldAgeJob : IJobForEachWithEntity<Health>
         {
             public EntityCommandBuffer.Concurrent CommandBuffer;
