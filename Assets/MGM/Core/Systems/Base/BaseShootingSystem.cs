@@ -1,5 +1,4 @@
 ﻿using System;
-using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -24,7 +23,6 @@ namespace MGM.Core
             m_Query = GetEntityQuery(queryDescription);
         }
 
-        [BurstCompile]
         struct BaseShotJob : IJobForEachWithEntity<Shot>
         {
             // Time since the last frame.

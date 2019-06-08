@@ -1,5 +1,4 @@
-﻿using Unity.Burst;
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -17,7 +16,7 @@ namespace MGM.Core
         {
             m_Targets = GetEntityQuery(typeof(IsTargeted), ComponentType.ReadOnly<LocalToWorld>());
         }
-        [BurstCompile]
+
         struct LookAtJob : IJobForEachWithEntity<Target, LocalToWorld, Rotation>
         {
 

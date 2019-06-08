@@ -17,35 +17,33 @@ namespace MGM.Core
                 m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
         }
 
-        /* 
-                [BurstCompile]
-             struct SpawnJob : IJobForEachWithEntity<SpawnCapabilityParameters, LocalToWorld>
-         {
-             public EntityCommandBuffer.Concurrent CommandBuffer;
-             [ReadOnly] public float DeltaTime;
+       /* struct SpawnJob : IJobForEachWithEntity<SpawnCapabilityParameters, LocalToWorld>
+        {
+            public EntityCommandBuffer.Concurrent CommandBuffer;
+            [ReadOnly] public float DeltaTime;
 
-             public void Execute(Entity entity, int index, [ReadOnly] ref SpawnCapabilityParameters spawner,
-                 [ReadOnly] ref LocalToWorld location)
-             {
-                 // Increase the cool down count
-                 spawner.TimeSinceLastTrigger += DeltaTime;
+            public void Execute(Entity entity, int index, [ReadOnly] ref SpawnCapabilityParameters spawner,
+                [ReadOnly] ref LocalToWorld location)
+            {
+                // Increase the cool down count
+                spawner.TimeSinceLastTrigger += DeltaTime;
+                
+                // Spawn only if cooled down
+                if (spawner.TimeSinceLastTrigger < spawner.CoolDown) return;
 
-                 // Spawn only if cooled down
-                 if (spawner.TimeSinceLastTrigger < spawner.CoolDown) return;
+                // Create the spawnable
+                var instance = CommandBuffer.Instantiate(index, spawner.Spawnable);
 
-                 // Create the spawnable
-                 var instance = CommandBuffer.Instantiate(index, spawner.Spawnable);
+                // Place it at the end of the gun
+                CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
 
-                 // Place it at the end of the gun
-                 CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
+                // Reset the cool down count
+                spawner.TimeSinceLastTrigger = 0;
+            }
 
-                 // Reset the cool down count
-                 spawner.TimeSinceLastTrigger = 0;
-             }
-
-
-         }
-         */
+            
+        }
+        */
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
           /*  var job = new SpawnJob
