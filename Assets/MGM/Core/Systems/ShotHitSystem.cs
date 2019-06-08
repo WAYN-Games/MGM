@@ -47,18 +47,20 @@ namespace MGM.Core
                 if (isBodyAProjectile && isBodyBProjectile)
                     return;
 
-                var projectileEntity = isBodyAProjectile ? entityA : entityB;
-                var targetEntity = isBodyAProjectile ? entityB : entityA;
+
+                var presumedProjectileEntity = isBodyAProjectile ? entityA : entityB;
+                var presumedTargetEntity = isBodyAProjectile ? entityB : entityA;
 
                 // destroy bullet.
-                CommandBuffer.DestroyEntity(projectileEntity);
+                if(DamageDealer.Exists(presumedProjectileEntity))
+                    CommandBuffer.DestroyEntity(presumedProjectileEntity);
 
-                if (Target.Exists(targetEntity)) { 
+                if (Target.Exists(presumedTargetEntity)) { 
 
                 // Decrease target HP
-                var hp = Target[targetEntity];
-                hp.Value -= DamageDealer[projectileEntity].Value;
-                Target[targetEntity] = hp;
+                var hp = Target[presumedTargetEntity];
+                hp.Value -= DamageDealer[presumedProjectileEntity].Value;
+                Target[presumedTargetEntity] = hp;
             }
             }
         }
