@@ -29,7 +29,7 @@ namespace MGM.Core
             };
             m_Query = GetEntityQuery(queryDescription);
         }
-        [BurstCompile]
+
         struct GridShotJob : IJobForEachWithEntity<Shot, Magazine, SoundFX,LocalToWorld, GridShot>
         {
             // A command buffer that support parallel writes.
