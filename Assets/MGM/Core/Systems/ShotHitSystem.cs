@@ -67,13 +67,15 @@ namespace MGM.Core
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-            return  new ProjectileDamageJob
+            var job = new ProjectileDamageJob
             {
-                    CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer(),
-                    DamageDealer = GetComponentDataFromEntity<Damage>(true),
-                    Target = GetComponentDataFromEntity<Health>()
+                CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer(),
+                DamageDealer = GetComponentDataFromEntity<Damage>(true),
+                Target = GetComponentDataFromEntity<Health>()
             }.Schedule(m_StepPhysicsWorldSystem.Simulation,
                       ref m_BuildPhysicsWorldSystem.PhysicsWorld, inputDeps);
+            job.Complete();
+            return job;
 
         }
     }
