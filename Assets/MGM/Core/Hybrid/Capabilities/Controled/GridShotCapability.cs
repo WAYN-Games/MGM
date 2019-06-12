@@ -12,7 +12,7 @@ namespace MGM.Core
     {
         public int SizeX;
         public int SizeY;
-        public int Density;
+        public float Density;
     }
 
 
@@ -24,7 +24,7 @@ namespace MGM.Core
         [Header("GridShot Properties")]
         public int SizeX;
         public int SizeY;
-        public int Density;
+        public float Density;
 
         protected override void SetUpCapabilityParameters(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {

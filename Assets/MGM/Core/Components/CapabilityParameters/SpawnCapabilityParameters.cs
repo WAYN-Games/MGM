@@ -13,6 +13,7 @@ namespace MGM {
     public struct Shot : IComponentData
     {
         public Entity Projectile; // The projectile to be shot.
+        public Entity MuzzleFlashVFX;
         public float Speed; // The speed at which the projectile will move
         public Trigger Trigger; // The trigger data to know when to shoot.
 

@@ -16,6 +16,10 @@ namespace MGM.Core
         [Range(-1, 999)]
         public int MagazineCapacity;
 
+        [Header("VFX")]
+        public GameObject MuzzleFlashVFX;
+        public float Duration;
+
         [Header("Sound FX")]
         public AudioClip SoundFX;
         [Range(0f, 1f)]
@@ -24,6 +28,7 @@ namespace MGM.Core
         public void DeclareReferencedPrefabs(List<GameObject> referencedPrefabs)
         {
             referencedPrefabs.Add(Projectile);
+            referencedPrefabs.Add(MuzzleFlashVFX);
         }
 
         protected override void SetUpCapabilityParameters(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
@@ -35,9 +40,26 @@ namespace MGM.Core
                 CoolDown = CoolDown,
                 TimeSinceLastTrigger = 0
             };
+
+
+            var vfx = conversionSystem.GetPrimaryEntity(MuzzleFlashVFX);
+
+            CurrentAge currentAge = new CurrentAge()
+            {
+                Value = 0
+            };
+            dstManager.AddComponentData(vfx, currentAge);
+
+            MaxAge maxLifeTime = new MaxAge()
+            {
+                Value = Duration
+            };
+            dstManager.AddComponentData(vfx, maxLifeTime);
+
             Shot shot = new Shot()
             {
                 Projectile = conversionSystem.GetPrimaryEntity(Projectile),
+                MuzzleFlashVFX = vfx,
                 Speed  = Speed,
                 Trigger = trigger
             };

@@ -62,9 +62,7 @@ namespace MGM.Core
                 CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(noramlizedForward, noramlizedUp) });
                 CommandBuffer.SetComponent(index, instance, location);
 
-                // Save the speed on the projectile to avoid calculating it.
-                CommandBuffer.AddComponent(index, instance, new Speed() { Value = shot.Speed });
-
+            
                 // Make it move forward
                 CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = noramlizedForward * shot.Speed });
 

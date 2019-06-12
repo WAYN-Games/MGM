@@ -39,9 +39,9 @@ namespace MGM.Core
             public void Execute(Entity entity, int index, ref Shot shot, ref Magazine magazine, ref SoundFX sfx,
                 [ReadOnly] ref LocalToWorld location, [ReadOnly] ref GridShot gridShot)
             {
-                if(!Shot.IsTriggered(ref shot, DeltaTime)) return;
+                if(!shot.IsTriggered(ref shot, DeltaTime)) return;
 
-                if (Magazine.IsMagazineEmpty(ref magazine)) return;
+                if (magazine.IsMagazineEmpty(ref magazine)) return;
 
                 //Normalize verctor to match drawn gizmos and be independant of scale.
                 float3 normalizedForward = math.normalizesafe(location.Forward);
@@ -55,24 +55,24 @@ namespace MGM.Core
                     for (float y = -yRange; y < yRange; y++)
                     {
                         // Create the bullet
-                        var instance = CommandBuffer.Instantiate(index, shot.Projectile);
+                        var Projectile = CommandBuffer.Instantiate(index, shot.Projectile);
 
                         // Place it at the end of the gun
 
 
-                        CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position});
+                        CommandBuffer.SetComponent(index, Projectile, new Translation { Value = location.Position});
                         float3 projectileDirection = (normalizedForward * gridShot.Density) + (normalizedRight * (x + .5f)) + (normalizedUp * (y + .5f));
-                        CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(projectileDirection, normalizedUp) });
-                        CommandBuffer.SetComponent(index, instance, new LocalToWorld { Value = float4x4.LookAt(location.Position, projectileDirection, normalizedUp) });
+                        CommandBuffer.SetComponent(index, Projectile, new Rotation { Value = quaternion.LookRotationSafe(projectileDirection, normalizedUp) });
+                        CommandBuffer.SetComponent(index, Projectile, new LocalToWorld { Value = float4x4.LookAt(location.Position, projectileDirection, normalizedUp) });
 
-                        // Save the speed on the projectile to avoid calculating it.
-                        CommandBuffer.AddComponent(index, instance, new Speed() { Value = shot.Speed });
-
+                
                         // Make it move forward
-                        CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = (projectileDirection) * shot.Speed / gridShot.Density });
+                        CommandBuffer.SetComponent(index, Projectile, new PhysicsVelocity { Linear = math.normalizesafe(projectileDirection) * shot.Speed });
                     }
                 }
 
+                var MuzzleFlashVFX = CommandBuffer.Instantiate(index, shot.MuzzleFlashVFX);
+                CommandBuffer.SetComponent(index, MuzzleFlashVFX, new Translation { Value = location.Position });
 
 
                 SoundFX.PlaySFXAt(ref sfx, location.Position);
