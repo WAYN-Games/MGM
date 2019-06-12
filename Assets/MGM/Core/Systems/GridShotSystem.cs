@@ -60,9 +60,7 @@ namespace MGM.Core
                         // Place it at the end of the gun
 
 
-                        //CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position}); // --> Error in that case.
-                        CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position + (normalizedRight * (x * float.Epsilon)) + (normalizedUp * (y * float.Epsilon)) }); // --> Error in that case.
-                        //CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position + (normalizedRight * (x + .5f)) + (normalizedUp * (y + .5f)) }); // --> No error in that case.
+                        CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position});
                         float3 projectileDirection = (normalizedForward * gridShot.Density) + (normalizedRight * (x + .5f)) + (normalizedUp * (y + .5f));
                         CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(projectileDirection, normalizedUp) });
                         CommandBuffer.SetComponent(index, instance, new LocalToWorld { Value = float4x4.LookAt(location.Position, projectileDirection, normalizedUp) });
@@ -71,7 +69,7 @@ namespace MGM.Core
                         CommandBuffer.AddComponent(index, instance, new Speed() { Value = shot.Speed });
 
                         // Make it move forward
-                        CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = (projectileDirection) * shot.Speed });
+                        CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = (projectileDirection) * shot.Speed / gridShot.Density });
                     }
                 }
 

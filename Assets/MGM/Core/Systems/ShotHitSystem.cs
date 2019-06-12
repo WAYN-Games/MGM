@@ -74,6 +74,7 @@ namespace MGM.Core
                 Target = GetComponentDataFromEntity<Health>()
             }.Schedule(m_StepPhysicsWorldSystem.Simulation,
                       ref m_BuildPhysicsWorldSystem.PhysicsWorld, inputDeps);
+
             job.Complete();
             return job;
 

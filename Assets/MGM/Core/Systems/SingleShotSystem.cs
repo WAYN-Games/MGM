@@ -47,25 +47,26 @@ namespace MGM.Core
                 [ReadOnly] ref LocalToWorld location, [ReadOnly] ref SingleShot singleShot)
             {
                 // If the pleayer did not shoot or the cool down has not expired, don't do anything.
-                if (!Shot.IsTriggered(ref shot, DeltaTime)) return;
+                if (!shot.IsTriggered(ref shot, DeltaTime)) return;
 
                 // If the magazine is empty, don't do anything.
-                if (Magazine.IsMagazineEmpty(ref magazine)) return;
+                if (magazine.IsMagazineEmpty(ref magazine)) return;
               
 
                 // Create the bullet
                 var instance = CommandBuffer.Instantiate(index, shot.Projectile);
-
+                var noramlizedForward = math.normalizesafe(location.Forward);
+                var noramlizedUp = math.normalizesafe(location.Up);
                 // Place it at the end of the gun
                 CommandBuffer.SetComponent(index, instance, new Translation { Value = location.Position });
-                CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(location.Forward, math.up()) });
+                CommandBuffer.SetComponent(index, instance, new Rotation { Value = quaternion.LookRotationSafe(noramlizedForward, noramlizedUp) });
                 CommandBuffer.SetComponent(index, instance, location);
 
                 // Save the speed on the projectile to avoid calculating it.
                 CommandBuffer.AddComponent(index, instance, new Speed() { Value = shot.Speed });
 
                 // Make it move forward
-                CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = location.Forward * shot.Speed });
+                CommandBuffer.SetComponent(index, instance, new PhysicsVelocity { Linear = noramlizedForward * shot.Speed });
 
                 SoundFX.PlaySFXAt(ref sfx, location.Position);
             }

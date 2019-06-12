@@ -16,7 +16,7 @@ namespace MGM {
         public float Speed; // The speed at which the projectile will move
         public Trigger Trigger; // The trigger data to know when to shoot.
 
-        public static bool IsTriggered(ref Shot shot, float DeltaTime)
+        public bool IsTriggered(ref Shot shot, float DeltaTime)
         {
             // Increase the cool down count
             shot.Trigger.TimeSinceLastTrigger += DeltaTime;
@@ -43,7 +43,7 @@ namespace MGM {
         public int MaxCapacity;
         public int CurrentCapacity;
 
-        public static bool IsMagazineEmpty(ref Magazine magazine)
+        public bool IsMagazineEmpty(ref Magazine magazine)
         {
             // Allow for infinite magazine capacity
             if (magazine.CurrentCapacity == -1) return false;

@@ -1323,8 +1323,8 @@ MonoBehaviour:
   MagazineCapacity: -1
   SoundFX: {fileID: 8300000, guid: 9f4e3caf7baf33e418a36862631e5c4c, type: 3}
   Volume: 1
-  SizeX: 5
-  SizeY: 5
+  SizeX: 1
+  SizeY: 1
   Density: 20
 --- !u!114 &1778549348
 MonoBehaviour:
