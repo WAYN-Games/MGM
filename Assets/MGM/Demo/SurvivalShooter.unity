@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: 314132556}
   - component: {fileID: 314132555}
   - component: {fileID: 314132554}
+  - component: {fileID: 314132557}
   m_Layer: 0
   m_Name: Entities
   m_TagString: Untagged
@@ -339,6 +340,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314132557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314132553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb54ea4f67dc17342bcd49954c53502d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawColliders: 0
+  DrawColliderEdges: 0
+  DrawColliderAabbs: 0
+  DrawBroadphase: 0
+  DrawMassProperties: 0
+  DrawContacts: 0
+  DrawCollisionEvents: 0
+  DrawTriggerEvents: 1
+  DrawJoints: 0
 --- !u!1 &349113762
 GameObject:
   m_ObjectHideFlags: 3
@@ -1299,7 +1321,7 @@ MonoBehaviour:
   Projectile: {fileID: 3278686545829700709, guid: 96a20dd49231d9a41b3c4690ec9cebcc,
     type: 3}
   CoolDown: 0.5
-  Speed: 100
+  Speed: 1
   MagazineCapacity: -1
   MuzzleFlashVFX: {fileID: 8966702027113059911, guid: c8dc625342806f6498c735a39efa23d6,
     type: 3}

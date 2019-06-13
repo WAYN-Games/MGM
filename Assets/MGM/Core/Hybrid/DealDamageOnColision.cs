@@ -1,6 +1,6 @@
 ﻿using Unity.Entities;
 using UnityEngine;
-
+using Unity.Physics.Authoring;
 
 namespace MGM
 {
@@ -17,7 +17,7 @@ namespace MGM
             };
 
             dstManager.AddComponentData(entity, damage);
-            dstManager.AddComponent(entity,typeof(DestroyOnColision));
+            dstManager.AddComponent(entity, typeof(DestroyOnColision));
         }
 
 

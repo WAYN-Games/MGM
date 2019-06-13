@@ -6,7 +6,7 @@ using Unity.Physics.Systems;
 
 namespace MGM.Core
 {
-    [UpdateInGroup(typeof(SimulationSystemGroup))]
+    [UpdateInGroup(typeof(SimulationSystemGroup)), UpdateAfter(typeof(StepPhysicsWorld))]
     public class DestroyOnCollisionSystem : JobComponentSystem
     {
         BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
@@ -74,8 +74,9 @@ namespace MGM.Core
                 Target = GetComponentDataFromEntity<Health>()
             }.Schedule(m_StepPhysicsWorldSystem.Simulation,
                       ref m_BuildPhysicsWorldSystem.PhysicsWorld, inputDeps);
+            // Set the command buffer to be played back effectively executing every store command during the job.
+            m_EntityCommandBufferSystem.AddJobHandleForProducer(job);
 
-            job.Complete();
             return job;
 
         }
