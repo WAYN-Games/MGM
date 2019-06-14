@@ -6,8 +6,8 @@ using Unity.Physics.Systems;
 
 namespace MGM.Core
 {
-    [UpdateInGroup(typeof(SimulationSystemGroup)), UpdateAfter(typeof(StepPhysicsWorld))]
-    public class DestroyOnCollisionSystem : JobComponentSystem
+    [UpdateAfter(typeof(EndFramePhysicsSystem))]
+    public class ShotHitSystem : JobComponentSystem
     {
         BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
         BuildPhysicsWorld m_BuildPhysicsWorldSystem;

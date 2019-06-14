@@ -19,13 +19,13 @@ namespace MGM.Core
     /// <summary>
     /// Give the capability to shoot a single bullet.
     /// </summary>
+  
     public class GridShotCapability : BaseShootingCapability
     {
         [Header("GridShot Properties")]
         public int SizeX;
         public int SizeY;
         public float Density;
-
         protected override void SetUpCapabilityParameters(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             // Setup the minimal component required for a shot mechanic.
