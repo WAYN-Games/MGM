@@ -18,7 +18,6 @@ namespace MGM
     public class OutOfHealth : JobComponentSystem
     {
 
-
         BeginInitializationEntityCommandBufferSystem m_EntityCommandBufferSystem;
 
         protected override void OnCreate()
@@ -29,16 +28,15 @@ namespace MGM
         struct DieOfOldAgeJob : IJobForEachWithEntity<Health>
         {
             public EntityCommandBuffer.Concurrent CommandBuffer;
-
             public void Execute(Entity entity, int index, [ReadOnly] ref Health health)
             {
                 if (health.Value > 0) return;
                 CommandBuffer.DestroyEntity(index, entity);
-
             }
 
 
         }
+
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {

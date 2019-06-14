@@ -3,6 +3,7 @@ using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
 using Unity.Physics.Systems;
+using Unity.Transforms;
 
 namespace MGM.Core
 {
@@ -14,8 +15,7 @@ namespace MGM.Core
         StepPhysicsWorld m_StepPhysicsWorldSystem;
 
         EntityQuery JobGroup;
-
-
+        
         protected override void OnCreate()
         {
             m_EntityCommandBufferSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
