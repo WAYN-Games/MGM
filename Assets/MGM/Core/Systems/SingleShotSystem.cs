@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -10,8 +10,9 @@ using UnityEngine;
 namespace MGM.Core
 {
     [UpdateInGroup(typeof(SimulationSystemGroup))]
-    public class SingleShotSystem : BaseShootingSystem
+    public class SingleShotSystem : JobComponentSystem
     {
+        private EntityQuery m_Query;
         /// <summary>
         /// System to create a command buffer.
         /// </summary>
@@ -81,7 +82,7 @@ namespace MGM.Core
             var job = new SingleShotJob
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer().ToConcurrent(), // Pass in the command buffer allowing the creation of new entitites and make it thread safe
-                DeltaTime = UnityEngine.Time.deltaTime
+                DeltaTime = Time.deltaTime
             }.ScheduleSingle(m_Query, inputDeps);
             
             // Set the command buffer to be played back effectively executing every store command during the job.
