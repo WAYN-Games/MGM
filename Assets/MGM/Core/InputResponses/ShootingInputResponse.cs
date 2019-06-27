@@ -1,4 +1,5 @@
-﻿using UnityEngine.InputSystem;
+﻿using MGM.Weapon;
+using UnityEngine.InputSystem;
 namespace MGM
 {
    

@@ -21,6 +21,7 @@ namespace MGM
             [ReadOnly] public NativeArray<RaycastInput> inputs;
             public NativeArray<RaycastHit> results;
 
+
             public void Execute(int index)
             {   
                 RaycastHit hit;
