@@ -279,6 +279,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 350989791394763241, guid: 676f6a9440f168649a893a7525725cdc,
         type: 3}
+    - target: {fileID: 2453065304801985511, guid: be7efdcaa93e11b4486c4ba2ff58b8a7,
+        type: 3}
+      propertyPath: ActionReference.m_Action.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Mouse>/rightButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be7efdcaa93e11b4486c4ba2ff58b8a7, type: 3}
 --- !u!1 &1201859178

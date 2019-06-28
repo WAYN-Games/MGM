@@ -40,7 +40,7 @@ namespace MGM.Core
 
             Trigger trigger = new Trigger()
             {
-                IsTriggered = false,
+                Triggered = false,
                 CoolDown = CoolDown,
                 TimeSinceLastTrigger = 0
             };

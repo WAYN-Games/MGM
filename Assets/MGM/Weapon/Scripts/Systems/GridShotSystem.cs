@@ -1,4 +1,5 @@
-﻿using MGM.Weapon;
+﻿using MGM.Common;
+using MGM.Weapon;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -40,9 +41,9 @@ namespace MGM.Core
             public void Execute(Entity entity, int index, ref Shot shot, ref Magazine magazine, ref SoundFX sfx, ref ECS_VFX vfx,
                 [ReadOnly] ref LocalToWorld location, [ReadOnly] ref GridShot gridShot)
             {
-                if(!shot.IsTriggered(ref shot, DeltaTime)) return;
+                if(!shot.Trigger.IsTriggered(DeltaTime)) return;
 
-                if (magazine.IsMagazineEmpty(ref magazine)) return;
+                if (magazine.IsMagazineEmpty()) return;
 
                 //Normalize verctor to match drawn gizmos and be independant of scale.
                 float3 normalizedForward = math.normalizesafe(location.Forward);
@@ -75,7 +76,7 @@ namespace MGM.Core
                 vfx.ltw = location;
                 vfx.play = true;
 
-                sfx.PlaySFXAt(ref sfx, location.Position);
+                sfx.PlaySFXAt(location.Position);
             }
 
 

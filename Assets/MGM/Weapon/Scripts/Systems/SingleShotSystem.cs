@@ -1,4 +1,5 @@
 ﻿
+using MGM.Common;
 using MGM.Weapon;
 using Unity.Collections;
 using Unity.Entities;
@@ -46,10 +47,10 @@ namespace MGM.Core
                 [ReadOnly] ref LocalToWorld location, [ReadOnly] ref SingleShot singleShot)
             {
                 // If the pleayer did not shoot or the cool down has not expired, don't do anything.
-                if (!shot.IsTriggered(ref shot, DeltaTime)) return;
+                if (!shot.Trigger.IsTriggered(DeltaTime)) return;
 
                 // If the magazine is empty, don't do anything.
-                if (magazine.IsMagazineEmpty(ref magazine)) return;
+                if (magazine.IsMagazineEmpty()) return;
               
 
                 // Create the bullet
@@ -68,7 +69,7 @@ namespace MGM.Core
                 vfx.ltw = location;
                 vfx.play = true;
                 
-                sfx.PlaySFXAt(ref sfx, location.Position);
+                sfx.PlaySFXAt(location.Position);
             }
 
         }

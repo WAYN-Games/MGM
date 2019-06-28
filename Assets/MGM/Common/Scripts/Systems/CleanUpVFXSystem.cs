@@ -1,4 +1,4 @@
-﻿using MGM.Weapon;
+﻿using MGM.Common;
 using System.Collections.Generic;
 using Unity.Entities;
 using Unity.Jobs;

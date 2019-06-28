@@ -6,6 +6,8 @@ using UnityEngine.Experimental.VFX;
 
 public sealed class VFXRepository
 {
+
+
     private static List<GameObject> VFXList = new List<GameObject>();
 
     public class SpawnedVFX

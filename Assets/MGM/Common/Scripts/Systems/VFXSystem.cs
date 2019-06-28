@@ -1,10 +1,8 @@
-﻿using MGM.Weapon;
-using Unity.Collections;
+﻿
 using Unity.Entities;
-using Unity.Jobs;
 
 
-namespace MGM.Core
+namespace MGM.Common
 {
     [UpdateInGroup(typeof(PresentationSystemGroup))]
     public class VFXSystem : ComponentSystem
