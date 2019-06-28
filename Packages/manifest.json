@@ -5,6 +5,7 @@
     "com.unity.inputsystem": "0.2.10-preview",
     "com.unity.package-manager-ui": "2.1.2",
     "com.unity.physics": "0.1.0-preview",
+	 "com.unity.ext.nunit": "1.0.0",
     "com.unity.render-pipelines.lightweight": "5.16.1",
     "com.unity.rendering.hybrid": "0.0.1-preview.13",
     "com.unity.shadergraph": "5.16.1",
