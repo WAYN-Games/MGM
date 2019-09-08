@@ -28,7 +28,7 @@ namespace MGM
 
             dstManager.AddComponentData(entity, health);
 
-            conversionSystem.AddLinkedEntityGroup(gameObject);
+            conversionSystem.DeclareLinkedEntityGroup(gameObject);
 
 
 
