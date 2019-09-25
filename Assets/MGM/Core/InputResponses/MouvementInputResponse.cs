@@ -12,6 +12,7 @@ namespace MGM
             Heading heading = B_EntityManager.GetComponentData<Heading>(B_Entity);
             var input = context.ReadValue<Vector2>();
             heading.Value = new float3(input.x,0,input.y);
+            Debug.Log(heading.Value);
             B_EntityManager.SetComponentData(B_Entity, heading);
         }
     }

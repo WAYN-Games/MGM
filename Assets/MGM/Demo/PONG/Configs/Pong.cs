@@ -1,9 +1,7 @@
 // GENERATED AUTOMATICALLY FROM 'Assets/MGM/Demo/PONG/Configs/Pong.inputactions'
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
@@ -23,25 +21,19 @@ namespace MGM.Demo
             ""actions"": [
                 {
                     ""name"": ""MoveP1"",
+                    ""type"": ""Value"",
                     ""id"": ""83d86f98-d164-4138-a1f7-2d5ca9806fc9"",
-                    ""expectedControlLayout"": ""Vector2"",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
-                    ""bindings"": []
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""MoveP2"",
+                    ""type"": ""Value"",
                     ""id"": ""db7679da-3357-4003-841c-49dd52bc2079"",
-                    ""expectedControlLayout"": ""Vector2"",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
-                    ""bindings"": []
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -54,8 +46,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""MoveP1"",
                     ""isComposite"": true,
-                    ""isPartOfComposite"": false,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
@@ -66,8 +57,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""MoveP1"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
@@ -78,8 +68,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""MoveP1"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""primary"",
@@ -90,8 +79,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""MoveP2"",
                     ""isComposite"": true,
-                    ""isPartOfComposite"": false,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
@@ -102,8 +90,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""MoveP2"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
@@ -114,8 +101,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""MoveP2"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -123,9 +109,9 @@ namespace MGM.Demo
     ""controlSchemes"": []
 }");
             // PONG
-            m_PONG = asset.GetActionMap("PONG");
-            m_PONG_MoveP1 = m_PONG.GetAction("MoveP1");
-            m_PONG_MoveP2 = m_PONG.GetAction("MoveP2");
+            m_PONG = asset.FindActionMap("PONG", throwIfNotFound: true);
+            m_PONG_MoveP1 = m_PONG.FindAction("MoveP1", throwIfNotFound: true);
+            m_PONG_MoveP2 = m_PONG.FindAction("MoveP2", throwIfNotFound: true);
         }
 
         ~Pong()
@@ -145,10 +131,7 @@ namespace MGM.Demo
             set => asset.devices = value;
         }
 
-        public ReadOnlyArray<InputControlScheme> controlSchemes
-        {
-            get => asset.controlSchemes;
-        }
+        public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
 
         public bool Contains(InputAction action)
         {
@@ -176,21 +159,20 @@ namespace MGM.Demo
         }
 
         // PONG
-        private InputActionMap m_PONG;
+        private readonly InputActionMap m_PONG;
         private IPONGActions m_PONGActionsCallbackInterface;
-        private InputAction m_PONG_MoveP1;
-        private InputAction m_PONG_MoveP2;
+        private readonly InputAction m_PONG_MoveP1;
+        private readonly InputAction m_PONG_MoveP2;
         public struct PONGActions
         {
             private Pong m_Wrapper;
             public PONGActions(Pong wrapper) { m_Wrapper = wrapper; }
-            public InputAction @MoveP1 { get { return m_Wrapper.m_PONG_MoveP1; } }
-            public InputAction @MoveP2 { get { return m_Wrapper.m_PONG_MoveP2; } }
+            public InputAction @MoveP1 => m_Wrapper.m_PONG_MoveP1;
+            public InputAction @MoveP2 => m_Wrapper.m_PONG_MoveP2;
             public InputActionMap Get() { return m_Wrapper.m_PONG; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
-            public bool enabled { get { return Get().enabled; } }
-            public InputActionMap Clone() { return Get().Clone(); }
+            public bool enabled => Get().enabled;
             public static implicit operator InputActionMap(PONGActions set) { return set.Get(); }
             public void SetCallbacks(IPONGActions instance)
             {
@@ -215,13 +197,7 @@ namespace MGM.Demo
                 }
             }
         }
-        public PONGActions @PONG
-        {
-            get
-            {
-                return new PONGActions(this);
-            }
-        }
+        public PONGActions @PONG => new PONGActions(this);
         public interface IPONGActions
         {
             void OnMoveP1(InputAction.CallbackContext context);

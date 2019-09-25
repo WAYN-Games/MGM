@@ -1,4 +1,5 @@
 ﻿using MGM.Weapon;
+using UnityEngine;
 using UnityEngine.InputSystem;
 namespace MGM
 {
@@ -15,7 +16,7 @@ namespace MGM
             // Get the current Shot component data to avoid reseting it to default.
             Shot shot = B_EntityManager.GetComponentData<Shot>(B_Entity);
             // Store the input.
-            shot.Trigger.Triggered = true;
+            shot.Trigger.Triggered = !shot.Trigger.Triggered;
             B_EntityManager.SetComponentData(B_Entity, shot);
         }
 

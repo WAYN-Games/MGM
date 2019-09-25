@@ -1,9 +1,7 @@
 // GENERATED AUTOMATICALLY FROM 'Assets/MGM/Demo/SurvivalShooter/Config/SurvivalShooter.inputactions'
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
@@ -23,36 +21,27 @@ namespace MGM.Demo
             ""actions"": [
                 {
                     ""name"": ""Move"",
+                    ""type"": ""Value"",
                     ""id"": ""924c4250-865d-4252-9911-f0c50d733139"",
-                    ""expectedControlLayout"": ""Vector2"",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
-                    ""bindings"": []
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Aim"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""5070d6d9-84f9-4219-9e24-924e18eaa336"",
-                    ""expectedControlLayout"": """",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": """",
-                    ""bindings"": []
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Fire"",
+                    ""type"": ""Button"",
                     ""id"": ""4b57ccae-5887-43fb-a9e1-47e1345fab4b"",
-                    ""expectedControlLayout"": ""Button"",
-                    ""continuous"": true,
-                    ""passThrough"": false,
-                    ""initialStateCheck"": false,
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """",
-                    ""bindings"": []
+                    ""interactions"": ""Press(behavior=2)""
                 }
             ],
             ""bindings"": [
@@ -60,13 +49,12 @@ namespace MGM.Demo
                     ""name"": ""2D Vector"",
                     ""id"": ""5b226dad-24c6-439a-a6e3-10b16171173f"",
                     ""path"": ""2DVector"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": true,
-                    ""isPartOfComposite"": false,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
@@ -77,8 +65,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
@@ -89,8 +76,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
@@ -101,8 +87,7 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
@@ -113,32 +98,29 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
                     ""id"": ""377ffe57-6af8-497e-9e18-dc2aa1ae1750"",
                     ""path"": ""<Mouse>/position"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Aim"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""ea573f57-2d7c-432e-9185-e73ba4d8b1d1"",
                     ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Fire"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false,
-                    ""modifiers"": """"
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -146,10 +128,10 @@ namespace MGM.Demo
     ""controlSchemes"": []
 }");
             // Character
-            m_Character = asset.GetActionMap("Character");
-            m_Character_Move = m_Character.GetAction("Move");
-            m_Character_Aim = m_Character.GetAction("Aim");
-            m_Character_Fire = m_Character.GetAction("Fire");
+            m_Character = asset.FindActionMap("Character", throwIfNotFound: true);
+            m_Character_Move = m_Character.FindAction("Move", throwIfNotFound: true);
+            m_Character_Aim = m_Character.FindAction("Aim", throwIfNotFound: true);
+            m_Character_Fire = m_Character.FindAction("Fire", throwIfNotFound: true);
         }
 
         ~SurvivalShooter()
@@ -169,10 +151,7 @@ namespace MGM.Demo
             set => asset.devices = value;
         }
 
-        public ReadOnlyArray<InputControlScheme> controlSchemes
-        {
-            get => asset.controlSchemes;
-        }
+        public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
 
         public bool Contains(InputAction action)
         {
@@ -200,23 +179,22 @@ namespace MGM.Demo
         }
 
         // Character
-        private InputActionMap m_Character;
+        private readonly InputActionMap m_Character;
         private ICharacterActions m_CharacterActionsCallbackInterface;
-        private InputAction m_Character_Move;
-        private InputAction m_Character_Aim;
-        private InputAction m_Character_Fire;
+        private readonly InputAction m_Character_Move;
+        private readonly InputAction m_Character_Aim;
+        private readonly InputAction m_Character_Fire;
         public struct CharacterActions
         {
             private SurvivalShooter m_Wrapper;
             public CharacterActions(SurvivalShooter wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Move { get { return m_Wrapper.m_Character_Move; } }
-            public InputAction @Aim { get { return m_Wrapper.m_Character_Aim; } }
-            public InputAction @Fire { get { return m_Wrapper.m_Character_Fire; } }
+            public InputAction @Move => m_Wrapper.m_Character_Move;
+            public InputAction @Aim => m_Wrapper.m_Character_Aim;
+            public InputAction @Fire => m_Wrapper.m_Character_Fire;
             public InputActionMap Get() { return m_Wrapper.m_Character; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
-            public bool enabled { get { return Get().enabled; } }
-            public InputActionMap Clone() { return Get().Clone(); }
+            public bool enabled => Get().enabled;
             public static implicit operator InputActionMap(CharacterActions set) { return set.Get(); }
             public void SetCallbacks(ICharacterActions instance)
             {
@@ -247,13 +225,7 @@ namespace MGM.Demo
                 }
             }
         }
-        public CharacterActions @Character
-        {
-            get
-            {
-                return new CharacterActions(this);
-            }
-        }
+        public CharacterActions @Character => new CharacterActions(this);
         public interface ICharacterActions
         {
             void OnMove(InputAction.CallbackContext context);

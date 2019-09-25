@@ -7,25 +7,19 @@
             "actions": [
                 {
                     "name": "MoveP1",
+                    "type": "Value",
                     "id": "83d86f98-d164-4138-a1f7-2d5ca9806fc9",
-                    "expectedControlLayout": "Vector2",
-                    "continuous": true,
-                    "passThrough": false,
-                    "initialStateCheck": false,
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
-                    "bindings": []
+                    "interactions": ""
                 },
                 {
                     "name": "MoveP2",
+                    "type": "Value",
                     "id": "db7679da-3357-4003-841c-49dd52bc2079",
-                    "expectedControlLayout": "Vector2",
-                    "continuous": true,
-                    "passThrough": false,
-                    "initialStateCheck": false,
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": "",
-                    "bindings": []
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -38,8 +32,7 @@
                     "groups": "",
                     "action": "MoveP1",
                     "isComposite": true,
-                    "isPartOfComposite": false,
-                    "modifiers": ""
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "up",
@@ -50,8 +43,7 @@
                     "groups": "",
                     "action": "MoveP1",
                     "isComposite": false,
-                    "isPartOfComposite": true,
-                    "modifiers": ""
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "down",
@@ -62,8 +54,7 @@
                     "groups": "",
                     "action": "MoveP1",
                     "isComposite": false,
-                    "isPartOfComposite": true,
-                    "modifiers": ""
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "primary",
@@ -74,8 +65,7 @@
                     "groups": "",
                     "action": "MoveP2",
                     "isComposite": true,
-                    "isPartOfComposite": false,
-                    "modifiers": ""
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "up",
@@ -86,8 +76,7 @@
                     "groups": "",
                     "action": "MoveP2",
                     "isComposite": false,
-                    "isPartOfComposite": true,
-                    "modifiers": ""
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "down",
@@ -98,8 +87,7 @@
                     "groups": "",
                     "action": "MoveP2",
                     "isComposite": false,
-                    "isPartOfComposite": true,
-                    "modifiers": ""
+                    "isPartOfComposite": true
                 }
             ]
         }
