@@ -1,17 +1,26 @@
 {
   "dependencies": {
-    "com.unity.cinemachine": "2.3.3",
-    "com.unity.entities": "0.0.12-preview.33",
-    "com.unity.inputsystem": "0.2.10-preview",
-    "com.unity.package-manager-ui": "2.1.2",
-    "com.unity.physics": "0.1.0-preview",
-	 "com.unity.ext.nunit": "1.0.0",
-    "com.unity.render-pipelines.lightweight": "5.16.1",
-    "com.unity.rendering.hybrid": "0.0.1-preview.13",
-    "com.unity.shadergraph": "5.16.1",
-    "com.unity.timeline": "1.0.0",
-    "com.unity.visualeffectgraph": "5.16.1-preview",
+    "com.unity.2d.sprite": "1.0.0",
+    "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.animation.rigging": "0.2.5-preview",
+    "com.unity.cinemachine": "2.3.4",
+    "com.unity.entities": "0.3.0-preview.4",
+    "com.unity.ext.nunit": "1.0.0",
+    "com.unity.ide.rider": "1.1.0",
+    "com.unity.ide.vscode": "1.1.3",
+    "com.unity.inputsystem": "1.0.0-preview.3",
+    "com.unity.physics": "0.2.5-preview.1",
+    "com.unity.probuilder": "4.1.2",
+    "com.unity.render-pipelines.lightweight": "7.1.5",
+    "com.unity.rendering.hybrid": "0.3.0-preview.4",
+    "com.unity.shadergraph": "7.1.5",
+    "com.unity.test-framework": "1.1.3",
+    "com.unity.timeline": "1.2.7",
+    "com.unity.ugui": "1.0.0",
+    "com.unity.visualeffectgraph": "7.1.6",
+    "com.wayngroup.requirementworkflow": "https://github.com/WAYNGROUP/UnityPackage-RequirementBasedAuthoringWorkflow.git",
     "com.unity.modules.ai": "1.0.0",
+    "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",
     "com.unity.modules.audio": "1.0.0",
@@ -41,5 +50,11 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
+  },
+  "lock": {
+    "com.wayngroup.requirementworkflow": {
+      "revision": "HEAD",
+      "hash": "6c9adc8ff0847a9b5eba21c10cd15943b4456a9b"
+    }
   }
 }

@@ -4,11 +4,8 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
-using UnityEngine.Assertions;
-using static Unity.Physics.Math;
 
-namespace MGM
-{
+
     public class RayCastJobUtils
 
     {
@@ -59,4 +56,3 @@ namespace MGM
 
 
     }
-}
