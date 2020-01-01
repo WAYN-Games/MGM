@@ -17,7 +17,7 @@ namespace MGM
         [BurstCompile]
         struct AimJob : IJobForEach<Rotation, Aim, LocalToWorld>
         {
-             public void Execute(ref Rotation rotation, ref Aim aim, [ReadOnly] ref LocalToWorld localToWorld)
+             public void Execute(ref Rotation rotation, [ReadOnly] ref Aim aim, [ReadOnly] ref LocalToWorld localToWorld)
             {
                 if (aim.Value.Equals(float3.zero)) return;
                 aim.Value = aim.Value - localToWorld.Position;

@@ -67,7 +67,6 @@ namespace MGM.Core
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-
             var job = new ProjectileDamageJob
             {
                 CommandBuffer = m_EntityCommandBufferSystem.CreateCommandBuffer(),
@@ -77,7 +76,7 @@ namespace MGM.Core
                       ref m_BuildPhysicsWorldSystem.PhysicsWorld, inputDeps);
             // Set the command buffer to be played back effectively executing every store command during the job.
             m_EntityCommandBufferSystem.AddJobHandleForProducer(job);
-  
+
             return job;
 
         }
