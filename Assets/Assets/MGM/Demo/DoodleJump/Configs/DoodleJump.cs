@@ -1,7 +1,9 @@
 // GENERATED AUTOMATICALLY FROM 'Assets/MGM/Demo/DoodleJump/Configs/DoodleJump.inputactions'
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
@@ -21,19 +23,25 @@ namespace MGM.Demo
             ""actions"": [
                 {
                     ""name"": ""Jump"",
-                    ""type"": ""Value"",
                     ""id"": ""3620cc33-4109-4255-b739-51269d9ce61e"",
-                    ""expectedControlType"": """",
+                    ""expectedControlLayout"": """",
+                    ""continuous"": false,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": """",
+                    ""bindings"": []
                 },
                 {
                     ""name"": ""Move"",
-                    ""type"": ""Value"",
                     ""id"": ""7fe6db95-bd16-485e-9593-1d9400f0b26b"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlLayout"": ""Vector2"",
+                    ""continuous"": true,
+                    ""passThrough"": false,
+                    ""initialStateCheck"": false,
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": """",
+                    ""bindings"": []
                 }
             ],
             ""bindings"": [
@@ -46,7 +54,8 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Jump"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
                 },
                 {
                     ""name"": ""2D Vector"",
@@ -57,7 +66,8 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": true,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": false,
+                    ""modifiers"": """"
                 },
                 {
                     ""name"": ""left"",
@@ -68,7 +78,8 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": true,
+                    ""modifiers"": """"
                 },
                 {
                     ""name"": ""right"",
@@ -79,7 +90,8 @@ namespace MGM.Demo
                     ""groups"": """",
                     ""action"": ""Move"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": true,
+                    ""modifiers"": """"
                 }
             ]
         }
@@ -87,9 +99,9 @@ namespace MGM.Demo
     ""controlSchemes"": []
 }");
             // Doodle
-            m_Doodle = asset.FindActionMap("Doodle", throwIfNotFound: true);
-            m_Doodle_Jump = m_Doodle.FindAction("Jump", throwIfNotFound: true);
-            m_Doodle_Move = m_Doodle.FindAction("Move", throwIfNotFound: true);
+            m_Doodle = asset.GetActionMap("Doodle");
+            m_Doodle_Jump = m_Doodle.GetAction("Jump");
+            m_Doodle_Move = m_Doodle.GetAction("Move");
         }
 
         ~DoodleJump()
@@ -109,7 +121,10 @@ namespace MGM.Demo
             set => asset.devices = value;
         }
 
-        public ReadOnlyArray<InputControlScheme> controlSchemes => asset.controlSchemes;
+        public ReadOnlyArray<InputControlScheme> controlSchemes
+        {
+            get => asset.controlSchemes;
+        }
 
         public bool Contains(InputAction action)
         {
@@ -137,20 +152,21 @@ namespace MGM.Demo
         }
 
         // Doodle
-        private readonly InputActionMap m_Doodle;
+        private InputActionMap m_Doodle;
         private IDoodleActions m_DoodleActionsCallbackInterface;
-        private readonly InputAction m_Doodle_Jump;
-        private readonly InputAction m_Doodle_Move;
+        private InputAction m_Doodle_Jump;
+        private InputAction m_Doodle_Move;
         public struct DoodleActions
         {
             private DoodleJump m_Wrapper;
             public DoodleActions(DoodleJump wrapper) { m_Wrapper = wrapper; }
-            public InputAction @Jump => m_Wrapper.m_Doodle_Jump;
-            public InputAction @Move => m_Wrapper.m_Doodle_Move;
+            public InputAction @Jump { get { return m_Wrapper.m_Doodle_Jump; } }
+            public InputAction @Move { get { return m_Wrapper.m_Doodle_Move; } }
             public InputActionMap Get() { return m_Wrapper.m_Doodle; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
-            public bool enabled => Get().enabled;
+            public bool enabled { get { return Get().enabled; } }
+            public InputActionMap Clone() { return Get().Clone(); }
             public static implicit operator InputActionMap(DoodleActions set) { return set.Get(); }
             public void SetCallbacks(IDoodleActions instance)
             {
@@ -175,7 +191,13 @@ namespace MGM.Demo
                 }
             }
         }
-        public DoodleActions @Doodle => new DoodleActions(this);
+        public DoodleActions @Doodle
+        {
+            get
+            {
+                return new DoodleActions(this);
+            }
+        }
         public interface IDoodleActions
         {
             void OnJump(InputAction.CallbackContext context);

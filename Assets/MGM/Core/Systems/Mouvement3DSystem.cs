@@ -41,7 +41,7 @@ namespace MGM
                     }
                 }
 
-                //heading.Value = float3.zero;
+                heading.Value = float3.zero;
             }
 
         }

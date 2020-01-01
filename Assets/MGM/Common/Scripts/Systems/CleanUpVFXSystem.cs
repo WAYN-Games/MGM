@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Entities;
 using Unity.Jobs;
 using UnityEngine;
-using UnityEngine.VFX;
+using UnityEngine.Experimental.VFX;
 
 namespace MGM.Core
 {

@@ -19,6 +19,9 @@ namespace MGM.Common
             // Spawn object only when requested
             if (!Triggered) return false;
 
+            // Reset the input trigger
+            Triggered = false;
+
             // Shoot only if cooled down
             if (TimeSinceLastTrigger < CoolDown) return false;
             // Reset the cool down count

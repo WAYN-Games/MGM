@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Unity.Transforms;
 using UnityEngine;
-using UnityEngine.VFX;
+using UnityEngine.Experimental.VFX;
 
 public sealed class VFXRepository
 {

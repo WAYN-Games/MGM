@@ -7,27 +7,36 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "Value",
                     "id": "924c4250-865d-4252-9911-f0c50d733139",
-                    "expectedControlType": "Vector2",
+                    "expectedControlLayout": "Vector2",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "bindings": []
                 },
                 {
                     "name": "Aim",
-                    "type": "PassThrough",
                     "id": "5070d6d9-84f9-4219-9e24-924e18eaa336",
-                    "expectedControlType": "Vector2",
+                    "expectedControlLayout": "",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "bindings": []
                 },
                 {
                     "name": "Fire",
-                    "type": "Button",
                     "id": "4b57ccae-5887-43fb-a9e1-47e1345fab4b",
-                    "expectedControlType": "Button",
+                    "expectedControlLayout": "Button",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
+                    "interactions": "",
+                    "bindings": []
                 }
             ],
             "bindings": [
@@ -35,12 +44,13 @@
                     "name": "2D Vector",
                     "id": "5b226dad-24c6-439a-a6e3-10b16171173f",
                     "path": "2DVector",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Move",
                     "isComposite": true,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 },
                 {
                     "name": "up",
@@ -51,7 +61,8 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": true,
+                    "modifiers": ""
                 },
                 {
                     "name": "down",
@@ -62,7 +73,8 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": true,
+                    "modifiers": ""
                 },
                 {
                     "name": "left",
@@ -73,7 +85,8 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": true,
+                    "modifiers": ""
                 },
                 {
                     "name": "right",
@@ -84,29 +97,32 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": true,
+                    "modifiers": ""
                 },
                 {
                     "name": "",
                     "id": "377ffe57-6af8-497e-9e18-dc2aa1ae1750",
                     "path": "<Mouse>/position",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Aim",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 },
                 {
                     "name": "",
                     "id": "ea573f57-2d7c-432e-9185-e73ba4d8b1d1",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "",
                     "action": "Fire",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 }
             ]
         }

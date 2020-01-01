@@ -7,19 +7,25 @@
             "actions": [
                 {
                     "name": "Jump",
-                    "type": "Value",
                     "id": "3620cc33-4109-4255-b739-51269d9ce61e",
-                    "expectedControlType": "",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "initialStateCheck": false,
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "bindings": []
                 },
                 {
                     "name": "Move",
-                    "type": "Value",
                     "id": "7fe6db95-bd16-485e-9593-1d9400f0b26b",
-                    "expectedControlType": "Vector2",
+                    "expectedControlLayout": "Vector2",
+                    "continuous": true,
+                    "passThrough": false,
+                    "initialStateCheck": false,
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "bindings": []
                 }
             ],
             "bindings": [
@@ -32,7 +38,8 @@
                     "groups": "",
                     "action": "Jump",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 },
                 {
                     "name": "2D Vector",
@@ -43,7 +50,8 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": true,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": false,
+                    "modifiers": ""
                 },
                 {
                     "name": "left",
@@ -54,7 +62,8 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": true,
+                    "modifiers": ""
                 },
                 {
                     "name": "right",
@@ -65,7 +74,8 @@
                     "groups": "",
                     "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": true,
+                    "modifiers": ""
                 }
             ]
         }
