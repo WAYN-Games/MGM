@@ -5,7 +5,6 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
-using static Unity.Mathematics.math;
 
 [UpdateInGroup(typeof(MouvementSystemGroup))]
 [UpdateAfter(typeof(GroundInfoCollectionSystem))]
@@ -60,8 +59,8 @@ public class MoveSystem : JobComponentSystem
                 if (new float3(0, 0, 0).Equals(direction)) return;
 
                 var speed = chunkSpeeds[i].Value;
-
-                direction = normalize(direction) * speed;
+                ;
+                direction = speed * math.select(math.normalizesafe(direction), direction, math.length(direction)>1);
                 direction.y = velocity.Linear.y;
                 
                 chunkVelocities[i] = new PhysicsVelocity

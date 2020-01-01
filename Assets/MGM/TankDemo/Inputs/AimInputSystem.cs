@@ -15,6 +15,7 @@ public class AimInputSystem : PlayerInputSystem
 
     private Camera m_Camera;
     private Vector2 m_PointerPosition;
+    private bool m_InputRelativeToEntity;
 
     protected override void OnCreate()
     {
@@ -28,7 +29,7 @@ public class AimInputSystem : PlayerInputSystem
             }
         };
         m_Query = GetEntityQuery(query);
-
+        SetInputAction(new MouvementControls().Mouvement.Aim);
     }
 
 
@@ -47,7 +48,7 @@ public class AimInputSystem : PlayerInputSystem
         public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
             var chunkAimPositions = chunk.GetNativeArray(AimPosition);
-           
+
             for (var i = 0; i < chunk.Count; i++)
             {
                 var aimPosition = chunkAimPositions[i];

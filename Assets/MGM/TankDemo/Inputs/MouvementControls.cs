@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/MGM/Mouvement/Inputs/MouvementControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Inputs/MouvementControls.inputactions'
 
 using System;
 using System.Collections;
@@ -38,7 +38,7 @@ public class @MouvementControls : IInputActionCollection, IDisposable
                     ""name"": ""Aim"",
                     ""type"": ""PassThrough"",
                     ""id"": ""d9e083d0-1c0c-4bbf-bb77-20ff6151fd6e"",
-                    ""expectedControlType"": ""Vector3"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -47,7 +47,7 @@ public class @MouvementControls : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Keyboard"",
                     ""id"": ""e374642f-da55-4cb1-bfc7-ac67eae8958f"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(normalize=false)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -100,59 +100,15 @@ public class @MouvementControls : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Gamepad"",
-                    ""id"": ""fdc8f012-0551-453a-bdfe-e74a84d6aa78"",
-                    ""path"": ""2DVector"",
+                    ""name"": """",
+                    ""id"": ""6e796870-68cd-40da-8f21-d90f1bd517ae"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MouvementDirection"",
-                    ""isComposite"": true,
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""a29b5328-898f-4609-a49e-4502999f0aa7"",
-                    ""path"": ""<XInputController>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouvementDirection"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""81b44e2b-698c-4530-b075-16b0f2c4d4a0"",
-                    ""path"": ""<XInputController>/dpad/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouvementDirection"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""aed348e6-fdfb-4aa9-88c1-7bd75640895f"",
-                    ""path"": ""<XInputController>/dpad/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouvementDirection"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""b5609f16-2cae-4b39-9c4b-c8449e27d9f4"",
-                    ""path"": ""<XInputController>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouvementDirection"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -204,6 +160,17 @@ public class @MouvementControls : IInputActionCollection, IDisposable
                     ""path"": ""<Touchscreen>/position"",
                     ""interactions"": """",
                     ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aa41c3e4-3c49-4d3e-9ee3-f8c627b4662a"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": ""ToPointerPosition"",
                     ""groups"": """",
                     ""action"": ""Aim"",
                     ""isComposite"": false,

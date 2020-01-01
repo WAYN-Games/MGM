@@ -22,10 +22,6 @@ public class AimSystem : JobComponentSystem
                 ComponentType.ReadWrite<Rotation>(),
                 ComponentType.ReadOnly<LocalToWorld>(),
                 ComponentType.ReadOnly<AimPosition>()
-            },
-            Any = new ComponentType[] {
-                ComponentType.ReadOnly<Parent>(),
-                ComponentType.ReadOnly<Entity>()
             }
         };
         m_Query = GetEntityQuery(query);
@@ -34,6 +30,7 @@ public class AimSystem : JobComponentSystem
     [BurstCompile]
     struct AimSystemJob : IJobChunk
     {
+
         public ArchetypeChunkComponentType<Rotation> Rotation;
         [ReadOnly] public ArchetypeChunkComponentType<AimPosition> AimPosition;
         [ReadOnly] public ArchetypeChunkComponentType<LocalToWorld> LocalToWorld;
@@ -51,18 +48,37 @@ public class AimSystem : JobComponentSystem
 
             for (var i = 0; i < chunk.Count; i++)
             {
-                var direction = chunkAimPositions[i].Value - chunkLocalToWorlds[i].Position;
-                direction.y = 0;
+                float3 direction = ComputeAimDirectionRelativeToEntity( chunkAimPositions[i],  chunkLocalToWorlds[i]);
 
                 var rotation = chunkRotations[i];
 
-                rotation.Value = hasParent ? 
-                    math.mul(math.inverse(ParentLocalToWorld[chunkParents[i].Value].Rotation), quaternion.LookRotationSafe(direction, ParentLocalToWorld[chunkParents[i].Value].Up))
+                rotation.Value = hasParent ?
+                    ComputeRotationRelativeToParent(chunkParents[i], i, direction)
                     :
-                    quaternion.LookRotationSafe(direction, chunkLocalToWorlds[i].Up);
-                
+                    ComputeRotationRelativeToWorld(chunkLocalToWorlds[i], i, direction);
+
                 chunkRotations[i] = rotation;
             }
+        }
+
+        private static float3 ComputeAimDirectionRelativeToEntity(AimPosition aimPositions, LocalToWorld localToWorlds)
+        {
+            var direction = aimPositions.Value - localToWorlds.Position;
+            direction.y = 0;
+            return direction;
+        }
+
+        private static quaternion ComputeRotationRelativeToWorld(LocalToWorld localToWorlds, int i, float3 direction)
+        {
+            return quaternion.LookRotationSafe(direction, localToWorlds.Up);
+        }
+
+        private quaternion ComputeRotationRelativeToParent(Parent parent, int i, float3 direction)
+        {
+            return math.mul(
+                math.inverse(ParentLocalToWorld[parent.Value].Rotation),
+                quaternion.LookRotationSafe(direction, ParentLocalToWorld[parent.Value].Up)
+                );
         }
     }
 

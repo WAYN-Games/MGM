@@ -1,5 +1,4 @@
-﻿using System;
-using Unity.Burst;
+﻿using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -28,7 +27,7 @@ public class MovementInputSystem : PlayerInputSystem
             }
         };
         m_Query = GetEntityQuery(query);
-
+        SetInputAction(new MouvementControls().Mouvement.MouvementDirection);
     }
 
 

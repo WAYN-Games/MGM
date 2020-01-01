@@ -9,18 +9,4 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(AlwaysFaceMovementDirection))]
 public class CanMove : RequirementBasedAuthoringComponent
 {
-    public InputActionReference MouvementInputControls;
-
-    private void OnEnable()
-    {
-        if (MouvementInputControls == null && GetComponent<ControledByPlayer>() != null)
-            Debug.LogError($"{name} is player controlled but miss the Input Action Reference for {GetType().Name} ");
-
-        if (MouvementInputControls != null && GetComponent<ControledByPlayer>() == null)
-            Debug.LogWarning($"{name} has an Input Action Reference for {GetType().Name} but miss the ControledByPlayer component. This will result in no action being taken into account.");
-
-        if (MouvementInputControls == null) return;
-
-        World.DefaultGameObjectInjectionWorld.GetOrCreateSystem<MovementInputSystem>().SetInputControls(MouvementInputControls);        
-    }
 }

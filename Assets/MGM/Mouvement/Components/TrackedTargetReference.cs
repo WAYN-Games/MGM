@@ -3,6 +3,7 @@ using Unity.Entities;
 
 [Serializable]
 [GenerateAuthoringComponent]
-public struct PlayerControled : IComponentData
-{
+public struct TrackedTargetReference : IComponentData
+{   
+    public Entity Value;
 }
