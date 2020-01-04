@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class AimInputForwarder : InputActionForwarder
 {
+  
     public Camera Camera;
     private Vector2 PointerPosition = new Vector2(0,0);
     public override void ForwardAction(InputAction.CallbackContext ctx)
