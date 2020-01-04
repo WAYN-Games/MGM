@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Inputs/MouvementControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Scripts/Inputs/MouvementControls.inputactions'
 
 using System;
 using System.Collections;

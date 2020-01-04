@@ -8,12 +8,16 @@ using UnityEngine.InputSystem;
 public class AimInputForwarder : InputActionForwarder
 {
     public Camera Camera;
-
+    private Vector2 PointerPosition = new Vector2(0,0);
     public override void ForwardAction(InputAction.CallbackContext ctx)
     {
-        Vector2 PointerPosition = ctx.ReadValue<Vector2>();
-        
-        EntityManager.SetComponentData(PlayerEntity, new AimPosition() { Value = MouseToWorldPosition(PointerPosition, Camera) } );
+        if(!ctx.control.IsActuated()) return;        
+        PointerPosition = ctx.ReadValue<Vector2>();
+    }
+
+    void Update()
+    {
+        EntityManager.SetComponentData(PlayerEntity, new AimPosition() { Value = MouseToWorldPosition(PointerPosition, Camera) });
     }
 
     private float3 MouseToWorldPosition(Vector2 mousePos, Camera cam)
