@@ -7,7 +7,7 @@ using Unity.Physics;
 using Unity.Transforms;
 
 [UpdateInGroup(typeof(MouvementSystemGroup))]
-[UpdateAfter(typeof(GroundInfoCollectionSystem))]
+[UpdateAfter(typeof(CollectContactInfosSystem))]
 public class MoveSystem : JobComponentSystem
 {
 
@@ -21,8 +21,8 @@ public class MoveSystem : JobComponentSystem
                 ComponentType.ReadWrite<PhysicsVelocity>(),
                 ComponentType.ReadWrite<PhysicsMass>(),
                 ComponentType.ReadOnly<MovementDirection>(),
-                ComponentType.ReadOnly<MovementSpeed>(),
-                ComponentType.ReadOnly<GroundInfo>() }
+                ComponentType.ReadOnly<MovementSpeed>()
+            }
         };
         m_Query = GetEntityQuery(query);
     
@@ -35,7 +35,6 @@ public class MoveSystem : JobComponentSystem
         public ArchetypeChunkComponentType<PhysicsMass> Mass;
         [ReadOnly] public ArchetypeChunkComponentType<MovementDirection> Direction;
         [ReadOnly] public ArchetypeChunkComponentType<MovementSpeed> Speed;
-        [ReadOnly] public ArchetypeChunkComponentType<GroundInfo> IsOnGround;
 
         public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
@@ -43,7 +42,6 @@ public class MoveSystem : JobComponentSystem
             var chunkMasses = chunk.GetNativeArray(Mass);
             var chunkDirections = chunk.GetNativeArray(Direction);
             var chunkSpeeds = chunk.GetNativeArray(Speed);
-            var chunkIsOnGrounds = chunk.GetNativeArray(IsOnGround);
 
             for (var i = 0; i < chunk.Count; i++)
             {
@@ -52,7 +50,7 @@ public class MoveSystem : JobComponentSystem
                 mass.InverseInertia = new float3(0);
                 chunkMasses[i] = mass;
 
-                if (!chunkIsOnGrounds[i].IsGrounded) return;
+               // if (!chunkIsOnGrounds[i].IsGrounded) return;
                 var velocity = chunkVelocities[i];
                 var direction = chunkDirections[i].Value;
 
@@ -83,8 +81,7 @@ public class MoveSystem : JobComponentSystem
             Velocity = GetArchetypeChunkComponentType<PhysicsVelocity>(false),
             Mass = GetArchetypeChunkComponentType<PhysicsMass>(false),
             Direction = GetArchetypeChunkComponentType<MovementDirection>(true),
-            Speed = GetArchetypeChunkComponentType<MovementSpeed>(true),
-            IsOnGround = GetArchetypeChunkComponentType<GroundInfo>(true)
+            Speed = GetArchetypeChunkComponentType<MovementSpeed>(true)
         };
 
 

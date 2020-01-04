@@ -53,9 +53,9 @@ public class AimSystem : JobComponentSystem
                 var rotation = chunkRotations[i];
 
                 rotation.Value = hasParent ?
-                    ComputeRotationRelativeToParent(chunkParents[i], i, direction)
+                    ComputeRotationRelativeToParent(chunkParents[i], direction)
                     :
-                    ComputeRotationRelativeToWorld(chunkLocalToWorlds[i], i, direction);
+                    ComputeRotationRelativeToWorld(chunkLocalToWorlds[i], direction);
 
                 chunkRotations[i] = rotation;
             }
@@ -68,12 +68,12 @@ public class AimSystem : JobComponentSystem
             return direction;
         }
 
-        private static quaternion ComputeRotationRelativeToWorld(LocalToWorld localToWorlds, int i, float3 direction)
+        private static quaternion ComputeRotationRelativeToWorld(LocalToWorld localToWorlds, float3 direction)
         {
             return quaternion.LookRotationSafe(direction, localToWorlds.Up);
         }
 
-        private quaternion ComputeRotationRelativeToParent(Parent parent, int i, float3 direction)
+        private quaternion ComputeRotationRelativeToParent(Parent parent, float3 direction)
         {
             return math.mul(
                 math.inverse(ParentLocalToWorld[parent.Value].Rotation),

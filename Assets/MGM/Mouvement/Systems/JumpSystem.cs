@@ -7,7 +7,7 @@ using Unity.Physics;
 using Unity.Transforms;
 
 [UpdateInGroup(typeof(MouvementSystemGroup))]
-[UpdateAfter(typeof(GroundInfoCollectionSystem))]
+[UpdateAfter(typeof(CollectContactInfosSystem))]
 public class JumpSystem : JobComponentSystem
 {
 
@@ -18,8 +18,7 @@ public class JumpSystem : JobComponentSystem
         var resetJumpCountQuery = new EntityQueryDesc
         {
             All = new ComponentType[] {
-                ComponentType.ReadWrite<JumpCount>(),
-                ComponentType.ReadOnly<GroundInfo>() }
+                ComponentType.ReadWrite<JumpCount>()}
         };
         m_ResetJumpCountQuery = GetEntityQuery(resetJumpCountQuery);
 
@@ -40,18 +39,14 @@ public class JumpSystem : JobComponentSystem
     struct ResetJumpCountSystemJob : IJobChunk
     {
         public ArchetypeChunkComponentType<JumpCount> JumpCount;
-        [ReadOnly] public ArchetypeChunkComponentType<GroundInfo> IsOnTheGround;
 
         public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
             var chunkJumpCount = chunk.GetNativeArray(JumpCount);
-            var chunkIsOnGround = chunk.GetNativeArray(IsOnTheGround);
      
             for (var i = 0; i < chunk.Count; i++)
             {
-                var jumpCount = chunkJumpCount[i].Value;
-                var isOnGround = chunkIsOnGround[i].IsGrounded;
-                chunkJumpCount[i] = new JumpCount() { Value = math.select(jumpCount, 0, isOnGround) };
+                chunkJumpCount[i] = new JumpCount() { Value =  0};
             }
         }
     }
@@ -103,8 +98,7 @@ public class JumpSystem : JobComponentSystem
 
         var resetJumpCountJob = new ResetJumpCountSystemJob()
         {
-            JumpCount = GetArchetypeChunkComponentType<JumpCount>(false),
-            IsOnTheGround = GetArchetypeChunkComponentType<GroundInfo>(true)
+            JumpCount = GetArchetypeChunkComponentType<JumpCount>(false)
         };
 
         inputDependencies = resetJumpCountJob.Schedule(m_ResetJumpCountQuery, inputDependencies);
