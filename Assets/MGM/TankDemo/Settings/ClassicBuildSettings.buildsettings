@@ -1,0 +1,23 @@
+{
+    "Dependencies": [],
+    "Components": [{
+        "$type": "Unity.Build.Common.GeneralSettings, Unity.Build.Common",
+        "ProductName": "Product Name",
+        "CompanyName": "Company Name"
+    }, {
+        "$type": "Unity.Build.Common.SceneList, Unity.Build.Common",
+        "BuildCurrentScene": true,
+        "Scenes": []
+    }, {
+        "$type": "Unity.Build.Common.ClassicBuildProfile, Unity.Build.Common",
+        "Target": 5,
+        "Configuration": 2,
+        "Pipeline": "GlobalObjectId_V1-1-99fe1e2a22b18e14d9dd5dacc75a0212-93214019566545601-0",
+        "ExcludedAssemblies": []
+    }, {
+        "$type": "Unity.Build.Common.ClassicScriptingSettings, Unity.Build.Common",
+        "ScriptingBackend": 0,
+        "Il2CppCompilerConfiguration": 1,
+        "UseIncrementalGC": false
+    }]
+}
