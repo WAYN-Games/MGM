@@ -1,10 +1,9 @@
-﻿using Unity.Entities;
-using UnityEngine.InputSystem;
+﻿using UnityEngine.InputSystem;
 
-public class JumpInputForwarder : InputActionForwarder
+public class JumpInputForwarder : InputActionForwarder<JumpTrigger>
 {
-    public override void ForwardAction(InputAction.CallbackContext ctx)
-    { 
-        EntityManager.SetComponentData(PlayerEntity, new JumpTrigger() { Value = ctx.ReadValue<float>() > 0 });
+    public override void ReadAction(InputAction.CallbackContext ctx)
+    {
+        ForwardAction(new JumpTrigger() { Value = ctx.ReadValue<float>() > 0 });
     }
 }

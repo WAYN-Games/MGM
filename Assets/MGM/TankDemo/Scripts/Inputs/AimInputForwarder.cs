@@ -5,12 +5,12 @@ using Unity.Physics.Systems;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class AimInputForwarder : InputActionForwarder
+public class AimInputForwarder : InputActionForwarder<AimPosition>
 {
   
     public Camera Camera;
     private Vector2 PointerPosition = new Vector2(0,0);
-    public override void ForwardAction(InputAction.CallbackContext ctx)
+    public override void ReadAction(InputAction.CallbackContext ctx)
     {
         if(!ctx.control.IsActuated()) return;        
         PointerPosition = ctx.ReadValue<Vector2>();
@@ -18,7 +18,7 @@ public class AimInputForwarder : InputActionForwarder
 
     void Update()
     {
-        EntityManager.SetComponentData(PlayerEntity, new AimPosition() { Value = MouseToWorldPosition(PointerPosition, Camera) });
+        ForwardAction(new AimPosition() { Value = MouseToWorldPosition(PointerPosition, Camera) });
     }
 
     private float3 MouseToWorldPosition(Vector2 mousePos, Camera cam)

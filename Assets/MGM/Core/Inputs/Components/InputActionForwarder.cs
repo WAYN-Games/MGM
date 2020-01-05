@@ -1,18 +1,30 @@
-﻿using Unity.Entities;
+﻿using System.Collections.Generic;
+using Unity.Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public abstract class InputActionForwarder : MonoBehaviour, IConvertGameObjectToEntity
+public abstract class InputActionForwarder<T> : MonoBehaviour, IConvertGameObjectToEntity where T : struct, IComponentData
 {
-    [SerializeField] protected GameObject PlayerGameObject;
-    protected Entity PlayerEntity;
+    [SerializeField] protected List<GameObject> PlayerGameObjects = new List<GameObject>();
+    protected List<Entity> PlayerEntity = new  List<Entity>();
     protected EntityManager EntityManager;
 
     public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
     {   
-        PlayerEntity = conversionSystem.GetPrimaryEntity(PlayerGameObject);
+        foreach(var playerGameObject in PlayerGameObjects)
+        {
+            PlayerEntity.Add(conversionSystem.GetPrimaryEntity(playerGameObject));
+        }
         EntityManager = dstManager;
     }
+    
+    protected void ForwardAction(T inputData)
+    {
+        foreach (var playerEntity in PlayerEntity)
+        {
+            EntityManager.SetComponentData(playerEntity, inputData);
+        }
+    }
 
-    public abstract void ForwardAction(InputAction.CallbackContext ctx);
+    public abstract void ReadAction(InputAction.CallbackContext ctx);
 }
