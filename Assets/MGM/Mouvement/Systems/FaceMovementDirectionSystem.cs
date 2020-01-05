@@ -7,7 +7,7 @@ using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
 
-[UpdateInGroup(typeof(MouvementSystemGroup))]
+[UpdateInGroup(typeof(MovementSystemGroup))]
 [UpdateAfter(typeof(MoveSystem))]
 public class FaceMovementDirectionSystem : JobComponentSystem
 {

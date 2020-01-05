@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MouvementInputForwarder: InputActionForwarder<MovementDirection>
+public class MovementInputForwarder: InputActionForwarder<MovementDirection>
 {
     public override void ReadAction(InputAction.CallbackContext ctx)
     {

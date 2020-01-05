@@ -5,7 +5,7 @@ using Unity.Jobs;
 using Unity.Physics;
 using Unity.Transforms;
 
-[UpdateInGroup(typeof(MouvementSystemGroup))]
+[UpdateInGroup(typeof(MovementSystemGroup))]
 public class CopyTargetEntityPositionSystem : JobComponentSystem
 {
 

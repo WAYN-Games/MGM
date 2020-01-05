@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Scripts/Inputs/MouvementControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Scripts/Inputs/MovementControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,13 +6,13 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @MouvementControls : IInputActionCollection, IDisposable
+public class @MovementControls : IInputActionCollection, IDisposable
 {
     private InputActionAsset asset;
-    public @MouvementControls()
+    public @MovementControls()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""MouvementControls"",
+    ""name"": ""MovementControls"",
     ""maps"": [
         {
             ""name"": ""Mouvement"",
@@ -246,8 +246,8 @@ public class @MouvementControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Mouvement_Aim;
     public struct MouvementActions
     {
-        private @MouvementControls m_Wrapper;
-        public MouvementActions(@MouvementControls wrapper) { m_Wrapper = wrapper; }
+        private @MovementControls m_Wrapper;
+        public MouvementActions(@MovementControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @MouvementDirection => m_Wrapper.m_Mouvement_MouvementDirection;
         public InputAction @Jump => m_Wrapper.m_Mouvement_Jump;
         public InputAction @Aim => m_Wrapper.m_Mouvement_Aim;

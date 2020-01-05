@@ -6,7 +6,7 @@ using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
 
-[UpdateInGroup(typeof(MouvementSystemGroup))]
+[UpdateInGroup(typeof(MovementSystemGroup))]
 [UpdateAfter(typeof(FaceMovementDirectionSystem))]
 public class AimSystem : JobComponentSystem
 {

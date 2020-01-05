@@ -7,7 +7,7 @@ using Unity.Physics;
 using Unity.Physics.Systems;
 using Unity.Transforms;
 
-[UpdateInGroup(typeof(MouvementSystemGroup))]
+[UpdateInGroup(typeof(MovementSystemGroup))]
 public class CollectContactInfosSystem : JobComponentSystem
 {
     private EntityQuery m_Query;
