@@ -9,5 +9,4 @@ public class MouvementInputForwarder: InputActionForwarder<MovementDirection>
         Vector2 InputMouvementDirection = ctx.ReadValue<Vector2>();
         ForwardAction(new MovementDirection() { Value = new float3(InputMouvementDirection.x, 0, InputMouvementDirection.y) });
     }
-
 }
