@@ -7,9 +7,9 @@ Stands for Modular Game Mechanics.
 * MGM/Core : Contains Components and mechanincs shared by other modules like physics cast util or base input classes
 
 * MGM/Movement : Contains basic mouvement mechanics
- * Physics based move
- * Physics based jump
- * Aim rotation
+  * Physics based move
+  * Physics based jump
+  * Aim rotation
 
 * MGM/TankDemo : Contain a small demo scene based on the Unity tank demo assets
   * Build :
