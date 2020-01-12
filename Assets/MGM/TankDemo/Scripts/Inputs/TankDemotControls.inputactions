@@ -1,12 +1,12 @@
 {
-    "name": "MouvementControls",
+    "name": "MovementControls",
     "maps": [
         {
-            "name": "Mouvement",
+            "name": "Tank",
             "id": "f7d9e26f-c90a-427d-b480-5414dac15696",
             "actions": [
                 {
-                    "name": "MouvementDirection",
+                    "name": "Move",
                     "type": "PassThrough",
                     "id": "33c5b070-a728-4b2b-acf6-41e84745aa61",
                     "expectedControlType": "Vector2",
@@ -28,6 +28,14 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Shoot",
+                    "type": "PassThrough",
+                    "id": "00af218f-a2e1-452f-b5dd-fa417495c93d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -38,7 +46,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MouvementDirection",
+                    "action": "Move",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -49,7 +57,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "MouvementDirection",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -60,7 +68,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "MouvementDirection",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -71,7 +79,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "MouvementDirection",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -82,7 +90,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "PC",
-                    "action": "MouvementDirection",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -93,7 +101,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
-                    "action": "MouvementDirection",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -138,6 +146,28 @@
                     "processors": "ToPointerPosition",
                     "groups": "GamePad",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c285fe1-7fc3-4836-b98d-db11028d619b",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PC",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d245075d-c0bb-43c1-88cd-50d3e9fc10de",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

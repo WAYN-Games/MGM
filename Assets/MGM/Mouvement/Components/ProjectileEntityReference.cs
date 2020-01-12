@@ -1,10 +1,9 @@
 ﻿using System;
 using Unity.Entities;
-using UnityEngine;
 
 [Serializable]
 [GenerateAuthoringComponent]
-public struct JumpTrigger : IComponentData
+public struct ProjectileEntityReference : IComponentData
 {
-    public bool Value;
+    public Entity Value;
 }

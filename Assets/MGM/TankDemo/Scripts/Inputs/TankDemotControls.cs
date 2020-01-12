@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Scripts/Inputs/MovementControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/MGM/TankDemo/Scripts/Inputs/TankDemotControls.inputactions'
 
 using System;
 using System.Collections;
@@ -6,20 +6,20 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @MovementControls : IInputActionCollection, IDisposable
+public class @TankDemotControls : IInputActionCollection, IDisposable
 {
     private InputActionAsset asset;
-    public @MovementControls()
+    public @TankDemotControls()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""MovementControls"",
+    ""name"": ""TankDemotControls"",
     ""maps"": [
         {
-            ""name"": ""Mouvement"",
+            ""name"": ""Tank"",
             ""id"": ""f7d9e26f-c90a-427d-b480-5414dac15696"",
             ""actions"": [
                 {
-                    ""name"": ""MouvementDirection"",
+                    ""name"": ""Move"",
                     ""type"": ""PassThrough"",
                     ""id"": ""33c5b070-a728-4b2b-acf6-41e84745aa61"",
                     ""expectedControlType"": ""Vector2"",
@@ -41,6 +41,14 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""00af218f-a2e1-452f-b5dd-fa417495c93d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -51,7 +59,7 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MouvementDirection"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -62,7 +70,7 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""MouvementDirection"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -73,7 +81,7 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""MouvementDirection"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -84,7 +92,7 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""MouvementDirection"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -95,7 +103,7 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PC"",
-                    ""action"": ""MouvementDirection"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -106,7 +114,7 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""GamePad"",
-                    ""action"": ""MouvementDirection"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -153,6 +161,28 @@ public class @MovementControls : IInputActionCollection, IDisposable
                     ""action"": ""Aim"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9c285fe1-7fc3-4836-b98d-db11028d619b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d245075d-c0bb-43c1-88cd-50d3e9fc10de"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -187,11 +217,12 @@ public class @MovementControls : IInputActionCollection, IDisposable
         }
     ]
 }");
-        // Mouvement
-        m_Mouvement = asset.FindActionMap("Mouvement", throwIfNotFound: true);
-        m_Mouvement_MouvementDirection = m_Mouvement.FindAction("MouvementDirection", throwIfNotFound: true);
-        m_Mouvement_Jump = m_Mouvement.FindAction("Jump", throwIfNotFound: true);
-        m_Mouvement_Aim = m_Mouvement.FindAction("Aim", throwIfNotFound: true);
+        // Tank
+        m_Tank = asset.FindActionMap("Tank", throwIfNotFound: true);
+        m_Tank_Move = m_Tank.FindAction("Move", throwIfNotFound: true);
+        m_Tank_Jump = m_Tank.FindAction("Jump", throwIfNotFound: true);
+        m_Tank_Aim = m_Tank.FindAction("Aim", throwIfNotFound: true);
+        m_Tank_Shoot = m_Tank.FindAction("Shoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -238,54 +269,62 @@ public class @MovementControls : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // Mouvement
-    private readonly InputActionMap m_Mouvement;
-    private IMouvementActions m_MouvementActionsCallbackInterface;
-    private readonly InputAction m_Mouvement_MouvementDirection;
-    private readonly InputAction m_Mouvement_Jump;
-    private readonly InputAction m_Mouvement_Aim;
-    public struct MouvementActions
+    // Tank
+    private readonly InputActionMap m_Tank;
+    private ITankActions m_TankActionsCallbackInterface;
+    private readonly InputAction m_Tank_Move;
+    private readonly InputAction m_Tank_Jump;
+    private readonly InputAction m_Tank_Aim;
+    private readonly InputAction m_Tank_Shoot;
+    public struct TankActions
     {
-        private @MovementControls m_Wrapper;
-        public MouvementActions(@MovementControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MouvementDirection => m_Wrapper.m_Mouvement_MouvementDirection;
-        public InputAction @Jump => m_Wrapper.m_Mouvement_Jump;
-        public InputAction @Aim => m_Wrapper.m_Mouvement_Aim;
-        public InputActionMap Get() { return m_Wrapper.m_Mouvement; }
+        private @TankDemotControls m_Wrapper;
+        public TankActions(@TankDemotControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Tank_Move;
+        public InputAction @Jump => m_Wrapper.m_Tank_Jump;
+        public InputAction @Aim => m_Wrapper.m_Tank_Aim;
+        public InputAction @Shoot => m_Wrapper.m_Tank_Shoot;
+        public InputActionMap Get() { return m_Wrapper.m_Tank; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MouvementActions set) { return set.Get(); }
-        public void SetCallbacks(IMouvementActions instance)
+        public static implicit operator InputActionMap(TankActions set) { return set.Get(); }
+        public void SetCallbacks(ITankActions instance)
         {
-            if (m_Wrapper.m_MouvementActionsCallbackInterface != null)
+            if (m_Wrapper.m_TankActionsCallbackInterface != null)
             {
-                @MouvementDirection.started -= m_Wrapper.m_MouvementActionsCallbackInterface.OnMouvementDirection;
-                @MouvementDirection.performed -= m_Wrapper.m_MouvementActionsCallbackInterface.OnMouvementDirection;
-                @MouvementDirection.canceled -= m_Wrapper.m_MouvementActionsCallbackInterface.OnMouvementDirection;
-                @Jump.started -= m_Wrapper.m_MouvementActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_MouvementActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_MouvementActionsCallbackInterface.OnJump;
-                @Aim.started -= m_Wrapper.m_MouvementActionsCallbackInterface.OnAim;
-                @Aim.performed -= m_Wrapper.m_MouvementActionsCallbackInterface.OnAim;
-                @Aim.canceled -= m_Wrapper.m_MouvementActionsCallbackInterface.OnAim;
+                @Move.started -= m_Wrapper.m_TankActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnMove;
+                @Jump.started -= m_Wrapper.m_TankActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnJump;
+                @Aim.started -= m_Wrapper.m_TankActionsCallbackInterface.OnAim;
+                @Aim.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnAim;
+                @Aim.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnAim;
+                @Shoot.started -= m_Wrapper.m_TankActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnShoot;
             }
-            m_Wrapper.m_MouvementActionsCallbackInterface = instance;
+            m_Wrapper.m_TankActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @MouvementDirection.started += instance.OnMouvementDirection;
-                @MouvementDirection.performed += instance.OnMouvementDirection;
-                @MouvementDirection.canceled += instance.OnMouvementDirection;
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
             }
         }
     }
-    public MouvementActions @Mouvement => new MouvementActions(this);
+    public TankActions @Tank => new TankActions(this);
     private int m_GamePadSchemeIndex = -1;
     public InputControlScheme GamePadScheme
     {
@@ -304,10 +343,11 @@ public class @MovementControls : IInputActionCollection, IDisposable
             return asset.controlSchemes[m_PCSchemeIndex];
         }
     }
-    public interface IMouvementActions
+    public interface ITankActions
     {
-        void OnMouvementDirection(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
 }
