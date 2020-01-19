@@ -16,7 +16,7 @@ public class MovementInputForwarder: InputActionForwarder<MovementDirection>
 
         Vector2 InputMouvementDirection = ctx.ReadValue<Vector2>();
 
-        var desiredMoveDirection =  Vector3.right * InputMouvementDirection.x + Vector3.forward* InputMouvementDirection.y;
+        var desiredMoveDirection = right * InputMouvementDirection.x + forward * InputMouvementDirection.y;
        
         ForwardAction(new MovementDirection() { Value = desiredMoveDirection });
     }
