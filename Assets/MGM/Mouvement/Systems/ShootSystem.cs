@@ -45,13 +45,10 @@ public class ShootSystem : JobComponentSystem
             {
                 if (!chunkShootTrigger[i].Value) return;
 
-              //  chunkShootTrigger[i] = new ShootTrigger() { Value = false };
                 Entity projectile = EntityCommandBuffer.Instantiate(chunkIndex, chunkProjectileEntityReference[i].Value);
                 EntityCommandBuffer.SetComponent(chunkIndex, projectile, new Translation() { Value = chunkLocalToWorld[i].Position});
                 EntityCommandBuffer.SetComponent(chunkIndex, projectile, new Rotation() { Value = chunkLocalToWorld[i].Rotation });
-                EntityCommandBuffer.SetComponent(chunkIndex, projectile, chunkLocalToWorld[i]);
                 EntityCommandBuffer.SetComponent(chunkIndex, projectile, new MovementDirection() { Value = chunkLocalToWorld[i] .Forward});
-
             }
         }
     }

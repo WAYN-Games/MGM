@@ -27,8 +27,8 @@ public class CollisionTrigerHierarchyDestructionSystem : JobComponentSystem
         public EntityCommandBuffer EntityCommandBuffer;
         public void Execute(TriggerEvent triggerEvent)
         {
-            EntityCommandBuffer.AddComponent(triggerEvent.Entities.EntityA, new DestroyHierarchy());
-            EntityCommandBuffer.AddComponent(triggerEvent.Entities.EntityB, new DestroyHierarchy());
+            //EntityCommandBuffer.AddComponent(triggerEvent.Entities.EntityA, new DestroyHierarchy());
+            //EntityCommandBuffer.AddComponent(triggerEvent.Entities.EntityB, new DestroyHierarchy());
         }
 
        

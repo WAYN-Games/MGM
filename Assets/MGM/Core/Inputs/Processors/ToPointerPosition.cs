@@ -22,13 +22,16 @@ public class ToPointerPosition : InputProcessor<Vector2>
     }
 
 
-    Camera m_Camera;
+    private Camera PlayerCamera(int deviceId)
+    {
+        return PlayerManagement.playerDataPerevice.Find(x => x.deviceId == deviceId).playerCamera;
+    }
 
     public override Vector2 Process(Vector2 value, InputControl control)
     {
-        if (m_Camera == null) m_Camera = Camera.main;
-        value.x = (value.x + 1) * m_Camera.scaledPixelWidth / 2;
-        value.y = (value.y + 1) * m_Camera.scaledPixelHeight / 2;
+        Camera m_Camera = PlayerCamera(control.device.deviceId);
+        value.x = (value.x + 1) * (m_Camera.pixelRect.min.x + m_Camera.pixelRect.width / 2);
+        value.y = (value.y + 1) * (m_Camera.pixelRect.min.y + m_Camera.pixelRect.height / 2);
         return value;
     }
 }
