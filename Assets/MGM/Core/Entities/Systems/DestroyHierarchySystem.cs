@@ -9,7 +9,6 @@ public class DestroyHierarchySystem : JobComponentSystem
 {
     private EntityQuery m_ChildRootGroup;
     private EntityQuery m_RootsGroup;
-    private EntityQueryMask m_LocalToWorldWriteGroupMask;
     private EndSimulationEntityCommandBufferSystem m_EntityCommandBufferSystem;
 
     protected override void OnCreate()

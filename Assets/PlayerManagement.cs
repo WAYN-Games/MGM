@@ -12,7 +12,6 @@ public class PlayerManagement : MonoBehaviour
         pi.camera.name = System.Guid.NewGuid().ToString();
         foreach (var device in pi.devices)
         {
-            Debug.Log($"Player joined {device.deviceId} , {pi.camera.name}");
             playerDataPerevice.Add(new PlayerData()
             {
                 deviceId = device.deviceId,

@@ -44,7 +44,6 @@ public abstract class InputActionForwarder<T> : MonoBehaviour, IConvertGameObjec
     {
         foreach (var playerEntity in PlayerEntity)
         {
-            Debug.Log($"Forwarding input {inputData} to entity {playerEntity}");
             EntityManager.SetComponentData(playerEntity, inputData);
         }
     }

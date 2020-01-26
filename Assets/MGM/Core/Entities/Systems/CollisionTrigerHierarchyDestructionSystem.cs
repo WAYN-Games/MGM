@@ -25,10 +25,19 @@ public class CollisionTrigerHierarchyDestructionSystem : JobComponentSystem
     struct CollisionEventSystemJob : ITriggerEventsJob
     {
         public EntityCommandBuffer EntityCommandBuffer;
+
+        [ReadOnly] public ComponentDataFromEntity<DestroyOnCollideTag> EntitiesToDestroy;
+        [ReadOnly] public ComponentDataFromEntity<DisableOnCollideTag> EntitiesToDisable;
+
         public void Execute(TriggerEvent triggerEvent)
         {
-            //EntityCommandBuffer.AddComponent(triggerEvent.Entities.EntityA, new DestroyHierarchy());
-            //EntityCommandBuffer.AddComponent(triggerEvent.Entities.EntityB, new DestroyHierarchy());
+            Entity entityA = triggerEvent.Entities.EntityA;
+            Entity entityB = triggerEvent.Entities.EntityB;
+
+            if (EntitiesToDestroy.Exists(entityA)) EntityCommandBuffer.AddComponent(entityA, new DestroyHierarchy());
+            if (EntitiesToDestroy.Exists(entityB)) EntityCommandBuffer.AddComponent(entityB, new DestroyHierarchy());
+            if (EntitiesToDisable.Exists(entityA)) EntityCommandBuffer.AddComponent(entityA, new DisableHierarchy());
+            if (EntitiesToDisable.Exists(entityB)) EntityCommandBuffer.AddComponent(entityB, new DisableHierarchy());
         }
 
        
@@ -39,7 +48,10 @@ public class CollisionTrigerHierarchyDestructionSystem : JobComponentSystem
     protected override JobHandle OnUpdate(JobHandle inputDependencies)
     {
         var job = new CollisionEventSystemJob() {
-           EntityCommandBuffer =  m_EntityCommandBufferSystem.CreateCommandBuffer()
+           EntityCommandBuffer =  m_EntityCommandBufferSystem.CreateCommandBuffer(),
+            EntitiesToDestroy = GetComponentDataFromEntity<DestroyOnCollideTag>(true),
+            EntitiesToDisable = GetComponentDataFromEntity<DisableOnCollideTag>(true)
+
         }.Schedule(stepPhysicsWorld.Simulation, ref buildPhysicsWorldSystem.PhysicsWorld, 
              inputDependencies);
 
