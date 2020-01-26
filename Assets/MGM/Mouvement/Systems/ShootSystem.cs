@@ -45,11 +45,19 @@ public class ShootSystem : JobComponentSystem
             {
                 if (!chunkShootTrigger[i].Value) continue;
 
-                Entity projectile = EntityCommandBuffer.Instantiate(chunkIndex, chunkProjectileEntityReference[i].Value);
-                EntityCommandBuffer.SetComponent(chunkIndex, projectile, new Translation() { Value = chunkLocalToWorld[i].Position});
-                EntityCommandBuffer.SetComponent(chunkIndex, projectile, new Rotation() { Value = chunkLocalToWorld[i].Rotation });
-                EntityCommandBuffer.SetComponent(chunkIndex, projectile, new MovementDirection() { Value = chunkLocalToWorld[i] .Forward});
+                Entity projectile = InstantiateEntityAtLocalToWorld(chunkIndex, chunkProjectileEntityReference[i], chunkLocalToWorld[i]);
+                EntityCommandBuffer.SetComponent(chunkIndex, projectile, new MovementDirection() { Value = chunkLocalToWorld[i].Forward });
             }
+        }
+
+        private Entity InstantiateEntityAtLocalToWorld(int chunkIndex, ProjectileEntityReference chunkProjectileEntityReference, LocalToWorld chunkLocalToWorld)
+        {
+            Entity entity = EntityCommandBuffer.Instantiate(chunkIndex, chunkProjectileEntityReference.Value);
+            EntityCommandBuffer.SetComponent(chunkIndex, entity, new Translation() { Value = chunkLocalToWorld.Position });
+            EntityCommandBuffer.SetComponent(chunkIndex, entity, new Rotation() { Value = chunkLocalToWorld.Rotation });
+            // Default scale is 1, setting it to 0 avoid weird visual effect, making it effectively invisible until it get the propoer scale set by the scale component.
+            EntityCommandBuffer.SetComponent(chunkIndex, entity, new LocalToWorld() { Value = math.mul(float4x4.Scale(0f), chunkLocalToWorld.Value) });
+            return entity;
         }
     }
 
