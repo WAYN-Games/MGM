@@ -42,7 +42,7 @@ public class FaceMovementDirectionSystem : JobComponentSystem
             for (var i = 0; i < chunk.Count; i++)
             {
                 var direction = chunkMovementDirections[i].Value;
-                if (math.length(direction) == 0) break;
+                if (math.length(direction) == 0) continue;
 
                 var rotation = chunkRotations[i] ;
                 rotation.Value = Quaternion.LookRotation(direction, Vector3.up);

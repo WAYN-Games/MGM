@@ -50,11 +50,11 @@ public class MoveSystem : JobComponentSystem
                 mass.InverseInertia = new float3(0);
                 chunkMasses[i] = mass;
 
-               // if (!chunkIsOnGrounds[i].IsGrounded) return;
+                // if (!chunkIsOnGrounds[i].IsGrounded) continue;
                 var velocity = chunkVelocities[i];
                 var direction = chunkDirections[i].Value;
 
-                if (new float3(0, 0, 0).Equals(direction)) return;
+                if (new float3(0, 0, 0).Equals(direction)) continue;
 
                 var speed = chunkSpeeds[i].Value;
                 ;

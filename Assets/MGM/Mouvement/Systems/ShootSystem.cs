@@ -43,7 +43,7 @@ public class ShootSystem : JobComponentSystem
 
             for (var i = 0; i < chunk.Count; i++)
             {
-                if (!chunkShootTrigger[i].Value) return;
+                if (!chunkShootTrigger[i].Value) continue;
 
                 Entity projectile = EntityCommandBuffer.Instantiate(chunkIndex, chunkProjectileEntityReference[i].Value);
                 EntityCommandBuffer.SetComponent(chunkIndex, projectile, new Translation() { Value = chunkLocalToWorld[i].Position});
