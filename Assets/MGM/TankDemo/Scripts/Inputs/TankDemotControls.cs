@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.Utilities;
 
 public class @TankDemotControls : IInputActionCollection, IDisposable
 {
-    public InputActionAsset asset { get; }
+    private InputActionAsset asset;
     public @TankDemotControls()
     {
         asset = InputActionAsset.FromJson(@"{

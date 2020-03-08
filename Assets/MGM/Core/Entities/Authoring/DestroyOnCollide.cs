@@ -5,4 +5,5 @@ using Unity.Physics.Authoring;
 [RequireComponent(typeof(PhysicsShapeAuthoring))]
 public class DestroyOnCollide : MonoBehaviour
 {
+
 }

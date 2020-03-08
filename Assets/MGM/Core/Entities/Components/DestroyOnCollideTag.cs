@@ -1,6 +1,7 @@
 ﻿using Unity.Entities;
 
-[GenerateAuthoringComponent]
-public struct DestroyOnCollideTag : IComponentData
-{
-}
+    [GenerateAuthoringComponent]
+    public struct DestroyOnCollideTag : IComponentData
+    {
+    }
+

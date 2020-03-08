@@ -7,6 +7,4 @@ public class ContactInfosAuthoring : MonoBehaviour,IConvertGameObjectToEntity
     {
         dstManager.AddBuffer<ContactInfos>(entity);
     }
-
-
 }
