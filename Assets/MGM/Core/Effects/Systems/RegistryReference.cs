@@ -3,7 +3,7 @@ using Unity.Entities;
 
 namespace Wayn.Mgm.Effects
 {
-    public struct EffectReference
+    public struct RegistryReference
     {
         public ulong TypeId;
         public int VersionId;
@@ -13,7 +13,7 @@ namespace Wayn.Mgm.Effects
             return TypeHash.CalculateStableTypeHash(t);
         }
 
-        public static int GetEffectInstanceId(IEffect effect)
+        public static int GetEffectInstanceId(IRegistryElement effect)
         {
             return effect.GetHashCode();
         }

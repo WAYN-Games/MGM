@@ -3,6 +3,6 @@ namespace Wayn.Mgm.Effects
 {
     public interface IEffectReferenceBuffer : IBufferElementData
     {
-        EffectReference EffectReference { get; set; }
+        RegistryReference EffectReference { get; set; }
     }
 }

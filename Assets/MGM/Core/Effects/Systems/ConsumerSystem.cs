@@ -22,8 +22,9 @@ namespace Wayn.Mgm.Effects
         protected override void OnCreate()
         {
             base.OnCreate();
-            m_EffectTypeId = EffectReference.GetTypeId(typeof(E));
+            m_EffectTypeId = RegistryReference.GetTypeId(typeof(E));
 
+         
 
             RefreshRegisteredEffectsCache();
             m_EffectRegistry.NewEffectRegisteredEvent += ()=> ShouldRefreshCache = true;

@@ -1,6 +1,6 @@
 ﻿namespace Wayn.Mgm.Effects
 {
-    public interface IEffect
+    public interface IEffect : IRegistryElement
     {
 
     }

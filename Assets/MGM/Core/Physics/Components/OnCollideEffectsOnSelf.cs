@@ -6,6 +6,6 @@ using Wayn.Mgm.Effects;
 [InternalBufferCapacity(1)]
 public struct OnCollideEffectsOnSelfBuffer : IEffectReferenceBuffer
 {
-    public EffectReference EffectReference { get; set; }
+    public RegistryReference EffectReference { get; set; }
 }
 

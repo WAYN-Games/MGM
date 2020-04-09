@@ -6,6 +6,6 @@ namespace Wayn.Mgm.Effects
     {
         public Entity Emitter;
         public Entity Target;
-        public EffectReference EffectReference;
+        public RegistryReference EffectReference;
     }
 }
