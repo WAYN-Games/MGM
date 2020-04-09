@@ -1,5 +1,4 @@
-﻿using System;
-using Unity.Burst;
+﻿using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -8,28 +7,25 @@ using Wayn.Mgm.Effects;
 
 namespace Wayn.Mgm.Combat.Effects
 {
-
     /// <summary>
-    /// This effect disable the Target entity and all it's children.
+    /// This effect add the Amount the the Target entity's Health
     /// </summary>
-    public struct DisableEntityHierarchyEffect : IEffect
+    public struct InflictDamageEffect : IEffect
     {
-        public bool ApplyRecursivelyToChildren;
+        /// <summary>
+        /// The amount of health changed.
+        /// </summary>
+        public float Amount;
     }
 
-    /// <summary>
-    /// This system applies the queued up DestroyEntityHirearchyEffect.
-    /// </summary>
-    /// <summary>
-    /// This system applies the queued up DisableEntityHirearchyEffect.
-    /// </summary>
-    public class DisableEntityHierarchyEffectConsumerSystem : EffectConsumerSystem<DisableEntityHierarchyEffect>
+    public class InflictDamageEffectConsumer : EffectConsumerSystem<InflictDamageEffect>
     {
+
         protected override JobHandle ScheduleJob(
             in JobHandle inputDeps,
             in ulong EffectTypeId,
             in NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap,
-            in NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects,
+            in NativeHashMap<int, InflictDamageEffect> RegisteredEffects,
             ref EntityCommandBuffer EntityCommandBuffer)
         {
             return new ConsumerJob()
@@ -37,41 +33,43 @@ namespace Wayn.Mgm.Combat.Effects
                 EffectCommandMap = EffectCommandMap,
                 EffectTypeId = EffectTypeId,
                 EntityCommandBuffer = EntityCommandBuffer,
-                RegisteredEffects = RegisteredEffects
+                RegisteredEffects = RegisteredEffects,
+                Healths = GetComponentDataFromEntity<Health>(false)
             }.Schedule(inputDeps);
         }
 
         [BurstCompile]
         public struct ConsumerJob : IJob
         {
-            
             [ReadOnly]
             public NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap;
             [ReadOnly]
             public ulong EffectTypeId;
             [ReadOnly]
-            public NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects;
+            public NativeHashMap<int, InflictDamageEffect> RegisteredEffects;
 
             public EntityCommandBuffer EntityCommandBuffer;
+
+            public ComponentDataFromEntity<Health> Healths;
 
             public void Execute()
             {
                 foreach (EffectCommand command in EffectCommandMap.GetValuesForKey(EffectTypeId))
                 {
-                    DisableEntityHierarchyEffect effect;
-                   // Debug.Log($"DisableEntityHierarchyEffectConsumer applying effect {command.Emitter}/{command.Target}/{command.EffectReference.TypeId}/{command.EffectReference.VersionId}");
+                    InflictDamageEffect effect;
+                   
                     if (RegisteredEffects.TryGetValue(command.EffectReference.VersionId, out effect))
                     {
-                        if (effect.ApplyRecursivelyToChildren)
-                        {
 
-                        }
-                        EntityCommandBuffer.AddComponent(command.Target, new Disabled());
+                        if (!Healths.Exists(command.Target)) continue;
+
+                        Health health = Healths[command.Target];
+                        health.Value -= effect.Amount;
+                        Healths[command.Target] = health;
                     }
                 }
             }
         }
-
-       
     }
+
 }

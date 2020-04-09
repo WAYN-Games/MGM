@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Security.Cryptography;
-using System.Text;
+using Unity.Entities;
 
 namespace Wayn.Mgm.Effects
 {
@@ -11,9 +10,13 @@ namespace Wayn.Mgm.Effects
 
         public static ulong GetTypeId(Type t)
         {
-            return BitConverter.ToUInt64(new MD5CryptoServiceProvider().ComputeHash(Encoding.UTF8.GetBytes(t.FullName)), 0);
+            return TypeHash.CalculateStableTypeHash(t);
         }
+
+        public static int GetEffectInstanceId(IEffect effect)
+        {
+            return effect.GetHashCode();
+        }
+
     }
-
-
 }

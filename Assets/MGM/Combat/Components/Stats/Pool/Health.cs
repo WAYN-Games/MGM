@@ -5,3 +5,4 @@ public struct Health : IComponentData
 {
     public float Value;
 }
+

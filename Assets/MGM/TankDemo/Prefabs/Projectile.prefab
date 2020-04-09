@@ -19,7 +19,8 @@ GameObject:
   - component: {fileID: 2663724114488325157}
   - component: {fileID: 5822490648232740293}
   - component: {fileID: 1456568116078423980}
-  - component: {fileID: 41436043485115907}
+  - component: {fileID: 5550588366210882016}
+  - component: {fileID: 2281295003268263903}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -35,7 +36,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5282626465209128822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -287,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e43c805a0b7997f4ca48cd61c9d3d2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &41436043485115907
+--- !u!114 &5550588366210882016
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,13 +301,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Effects:
-  - Test: 16
-    Effect:
-      id: 0
-  - Test: 9
-    Effect:
+  - Effect:
       id: 0
   references:
     version: 1
     00000000:
-      type: {class: , ns: , asm: }
+      type: {class: InflictDamageEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
+      data:
+        Amount: 1
+--- !u!114 &2281295003268263903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282626465209128822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e257e890bd6bd7d4b95b95347b716d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effects:
+  - Effect:
+      id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: DestroyEntityHierarchyEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
+      data:
+        AffectsChildren: 1

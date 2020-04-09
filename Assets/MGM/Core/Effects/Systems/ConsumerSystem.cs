@@ -1,59 +1,86 @@
-﻿using System;
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 
 namespace Wayn.Mgm.Effects
 {
-    public abstract class ConsumerSystem : JobComponentSystem
-    {
-    }
-
-    public abstract class ConsumerSystem<J, E> : ConsumerSystem
-        where J : struct, IJob
+    [UpdateInGroup(typeof(EffectConsumerSystemGroup))]
+    [UpdateAfter(typeof(EffectBufferSystem))]
+    public abstract class EffectConsumerSystem<E> : JobComponentSystem
         where E : struct, IEffect
     {
-        /// <summary>
-        /// Represent the las system of the simulation loop.
-        /// </summary>
-        protected EndSimulationEntityCommandBufferSystem m_EntityCommandBufferSystem;
+        private EffectBufferSystem m_EffectBufferSystem;
+        private EffectRegistry m_EffectRegistry;
+        private EndSimulationEntityCommandBufferSystem m_EndSimulationEntityCommandBufferSystem;
+        private NativeHashMap<int, E> m_RegisteredEffects;
+        private NativeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;
+        private ulong m_EffectTypeId;
+        private EntityCommandBuffer m_EntityCommandBuffer;
 
-        /// <summary>
-        /// Store all the effect to apply.
-        /// </summary>
-        protected NativeQueue<E> ConsumerQueue;
-
-        protected EffectBufferSystem m_EffectBufferSystem;
+        private bool ShouldRefreshCache = true;
 
         protected override void OnCreate()
         {
             base.OnCreate();
-            ConsumerQueue = new NativeQueue<E>(Allocator.Persistent);
-            m_EntityCommandBufferSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
+            m_EffectTypeId = EffectReference.GetTypeId(typeof(E));
+
+
+            RefreshRegisteredEffectsCache();
+            m_EffectRegistry.NewEffectRegisteredEvent += ()=> ShouldRefreshCache = true;
+
             m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
+            m_EndSimulationEntityCommandBufferSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
+            
         }
-
-        public NativeQueue<E>.ParallelWriter GetConsumerQueue()
+     
+        private void RefreshRegisteredEffectsCache()
         {
-            return ConsumerQueue.AsParallelWriter();
+            m_EffectRegistry = EffectRegistry.Instance;
+
+            if (m_RegisteredEffects.IsCreated) m_RegisteredEffects.Dispose();
+        
+            m_EffectRegistry.GetRegisteredEffects(ref m_RegisteredEffects);
         }
 
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            m_EffectRegistry.NewEffectRegisteredEvent -= RefreshRegisteredEffectsCache;
+            m_RegisteredEffects.Dispose();
+        }
 
+        protected abstract JobHandle ScheduleJob(
+            in JobHandle inputDeps,
+            in ulong EffectTypeId,
+            in NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap,
+            in NativeHashMap<int, E> RegisteredEffects,
+            ref EntityCommandBuffer EntityCommandBuffer);
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
-            // Schedule the job as soon as all effect initiators have completed and
-            JobHandle jh = CreateJob().Schedule(JobHandle.CombineDependencies(m_EffectBufferSystem.GetJobHandle(), inputDeps));
+            if (ShouldRefreshCache)
+            {
+                RefreshRegisteredEffectsCache();
+                ShouldRefreshCache = false;
+            }
+           
 
-            // Force the job to complete before the last system of the simulation loop.
-            // This is to make sure the job complete as late as possible while not allowing it to late longer than a frames.
-            // If it lasted longer than a frame, the ConsumerQueue could be written to while still being consumed.
-            m_EntityCommandBufferSystem.AddJobHandleForProducer(jh);
+            m_EntityCommandBuffer = m_EndSimulationEntityCommandBufferSystem.CreateCommandBuffer();
 
-            return jh;
+            m_EffectCommandMap = m_EffectBufferSystem.EffectCommandMap;
+
+            JobHandle dependencies = JobHandle.CombineDependencies(m_EffectBufferSystem.FinalJobHandle, inputDeps);
+
+            JobHandle ExecuteEffectCommandsJob = ScheduleJob(
+                in dependencies,
+                in m_EffectTypeId,
+                in m_EffectCommandMap,
+                in m_RegisteredEffects,
+                ref m_EntityCommandBuffer);
+            
+            m_EndSimulationEntityCommandBufferSystem.AddJobHandleForProducer(ExecuteEffectCommandsJob);
+            
+            return ExecuteEffectCommandsJob;
         }
-
-        protected abstract J CreateJob();
     }
-
 }
