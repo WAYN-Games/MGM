@@ -12,6 +12,7 @@ namespace Wayn.Mgm.Combat.Effects
     /// <summary>
     /// This effect disable the Target entity and all it's children.
     /// </summary>
+    [Serializable]
     public struct DisableEntityHierarchyEffect : IEffect
     {
         public bool ApplyRecursivelyToChildren;

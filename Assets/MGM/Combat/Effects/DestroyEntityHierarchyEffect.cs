@@ -1,4 +1,5 @@
-﻿using Unity.Burst;
+﻿using System;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -10,6 +11,7 @@ namespace Wayn.Mgm.Combat.Effects
     /// <summary>
     /// This effect destroy the Target entity and all it's children.
     /// </summary>
+    [Serializable]
     public struct DestroyEntityHierarchyEffect : IEffect
     {
         public bool ApplyRecursivelyToChildren;

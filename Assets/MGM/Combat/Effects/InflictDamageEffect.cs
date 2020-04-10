@@ -1,4 +1,5 @@
-﻿using Unity.Burst;
+﻿using System;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -10,6 +11,7 @@ namespace Wayn.Mgm.Combat.Effects
     /// <summary>
     /// This effect add the Amount the the Target entity's Health
     /// </summary>
+    [Serializable]
     public struct InflictDamageEffect : IEffect
     {
         /// <summary>

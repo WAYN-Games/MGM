@@ -19,6 +19,7 @@ namespace Wayn.Mgm.Effects
 
         private bool ShouldRefreshCache = true;
 
+
         protected override void OnCreate()
         {
             base.OnCreate();

@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 [DisallowMultipleComponent]
-public class OnCollideEffectsOnOtherAuthoring : EffectReferenceBufferAuthoring<OnCollideEffectsOnOtherBuffer>
+public class OnCollideEffectsOnOtherAuthoring : EffectsBufferAuthoring<OnCollideEffectsOnOtherBuffer>
 {
-
 }

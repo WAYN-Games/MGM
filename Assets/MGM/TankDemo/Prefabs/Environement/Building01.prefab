@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 5279070987979837196}
   - component: {fileID: 5279070987979837197}
   - component: {fileID: 7556202266283624774}
-  - component: {fileID: 2115246853225159942}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -172,24 +171,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 10
---- !u!114 &2115246853225159942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5279070987979837199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56799966e199724fb76fa8a157c4fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Effects:
-  - Effect:
-      id: 0
-  references:
-    version: 1
-    00000000:
-      type: {class: DestroyEntityHierarchyEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
-      data:
-        AffectsChildren: 1
