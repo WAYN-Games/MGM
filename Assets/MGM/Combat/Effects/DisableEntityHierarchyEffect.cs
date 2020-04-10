@@ -4,7 +4,7 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using UnityEngine;
-using Wayn.Mgm.Effects;
+using Wayn.Mgm.Events;
 
 namespace Wayn.Mgm.Combat.Effects
 {
@@ -61,7 +61,7 @@ namespace Wayn.Mgm.Combat.Effects
                 {
                     DisableEntityHierarchyEffect effect;
                    // Debug.Log($"DisableEntityHierarchyEffectConsumer applying effect {command.Emitter}/{command.Target}/{command.EffectReference.TypeId}/{command.EffectReference.VersionId}");
-                    if (RegisteredEffects.TryGetValue(command.EffectReference.VersionId, out effect))
+                    if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))
                     {
                         if (effect.ApplyRecursivelyToChildren)
                         {

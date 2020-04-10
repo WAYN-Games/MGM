@@ -1,21 +1,46 @@
 ﻿using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
+using Wayn.Mgm.Events.Registry;
 
-namespace Wayn.Mgm.Effects
+namespace Wayn.Mgm.Events.Registry
 {
+    public abstract class RegistryEventConsumer<COMMAND,ELEMENT,REGISTRY,DISPATCHER> : JobComponentSystem
+        where COMMAND : struct, IEventRegistryCommand
+        where ELEMENT : struct,IRegistryElement
+        where REGISTRY : Registry<REGISTRY, ELEMENT>
+        where DISPATCHER : RegistryEventDispatcher<COMMAND>
+    {
+        private NativeMultiHashMap<ulong, COMMAND> m_CommandMap;
+        private ulong m_TypeId;
+        private NativeHashMap<int, ELEMENT> m_RegisteredEffects;
+        private REGISTRY m_Registry;
+        private DISPATCHER m_DispatcherSystem;
+
+
+        private EndSimulationEntityCommandBufferSystem m_EndSimulationEntityCommandBufferSystem;
+        private EntityCommandBuffer m_EntityCommandBuffer;
+    }
+}
+
+namespace Wayn.Mgm.Events
+{
+
+
     [UpdateInGroup(typeof(EffectConsumerSystemGroup))]
     [UpdateAfter(typeof(EffectBufferSystem))]
     public abstract class EffectConsumerSystem<E> : JobComponentSystem
         where E : struct, IEffect
     {
-        private EffectBufferSystem m_EffectBufferSystem;
-        private EffectRegistry m_EffectRegistry;
-        private EndSimulationEntityCommandBufferSystem m_EndSimulationEntityCommandBufferSystem;
-        private NativeHashMap<int, E> m_RegisteredEffects;
-        private NativeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;
-        private ulong m_EffectTypeId;
-        private EntityCommandBuffer m_EntityCommandBuffer;
+        private EffectBufferSystem m_EffectBufferSystem; //
+        private EffectRegistry m_EffectRegistry; ///
+        private EndSimulationEntityCommandBufferSystem m_EndSimulationEntityCommandBufferSystem;//
+
+
+        private NativeHashMap<int, E> m_RegisteredEffects;//
+        private NativeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;//
+        private ulong m_EffectTypeId;//
+        private EntityCommandBuffer m_EntityCommandBuffer;//
 
         private bool ShouldRefreshCache = true;
 
@@ -69,7 +94,7 @@ namespace Wayn.Mgm.Effects
 
             m_EntityCommandBuffer = m_EndSimulationEntityCommandBufferSystem.CreateCommandBuffer();
 
-            m_EffectCommandMap = m_EffectBufferSystem.EffectCommandMap;
+            m_EffectCommandMap = m_EffectBufferSystem.CommandsMap;
 
             JobHandle dependencies = JobHandle.CombineDependencies(m_EffectBufferSystem.FinalJobHandle, inputDeps);
 

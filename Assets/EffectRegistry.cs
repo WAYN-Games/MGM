@@ -2,7 +2,7 @@ using System;
 using System.Collections.Concurrent;
 using Unity.Collections;
 
-namespace Wayn.Mgm.Effects
+namespace Wayn.Mgm.Events.Registry
 {
     public abstract class Registry<T, R>
         where T : Registry<T, R>

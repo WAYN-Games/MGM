@@ -1,6 +1,7 @@
 ﻿using System;
 using Unity.Entities;
-using Wayn.Mgm.Effects;
+using Wayn.Mgm.Events;
+using Wayn.Mgm.Events.Registry;
 
 [Serializable]
 [InternalBufferCapacity(1)]

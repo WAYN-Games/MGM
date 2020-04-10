@@ -1,4 +1,4 @@
-﻿using Wayn.Mgm.Effects;
+﻿using Wayn.Mgm.Events;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -47,7 +47,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                 var enumerator = EntitiesWithOnCollideEffectsOnOtherBuffer[emmiter].GetEnumerator();
                 while (enumerator.MoveNext())
                 {
-                    EffectCommandQueue.Enqueue(new EffectCommand() { EffectReference =enumerator.Current.EffectReference,
+                    EffectCommandQueue.Enqueue(new EffectCommand() { RegistryReference = enumerator.Current.EffectReference,
                     Emitter = emmiter,  Target = target});
                 }
 
@@ -62,7 +62,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                 {
                     EffectCommandQueue.Enqueue(new EffectCommand()
                     {
-                        EffectReference = enumerator.Current.EffectReference,
+                        RegistryReference = enumerator.Current.EffectReference,
                         Emitter = emmiter,
                         Target = target
                     });

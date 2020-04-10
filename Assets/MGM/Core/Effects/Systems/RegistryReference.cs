@@ -1,7 +1,7 @@
 ﻿using System;
 using Unity.Entities;
 
-namespace Wayn.Mgm.Effects
+namespace Wayn.Mgm.Events.Registry
 {
     public struct RegistryReference
     {
