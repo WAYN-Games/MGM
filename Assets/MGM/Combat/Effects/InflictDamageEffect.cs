@@ -1,9 +1,9 @@
 ﻿using System;
 using Unity.Burst;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Entities;
 using Unity.Jobs;
-using UnityEngine;
 using Wayn.Mgm.Events;
 
 namespace Wayn.Mgm.Combat.Effects
@@ -19,22 +19,18 @@ namespace Wayn.Mgm.Combat.Effects
         /// </summary>
         public float Amount;
     }
-
+    
     public class InflictDamageEffectConsumer : EffectConsumerSystem<InflictDamageEffect>
     {
 
         protected override JobHandle ScheduleJob(
             in JobHandle inputDeps,
-            in ulong EffectTypeId,
-            in NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap,
-            in NativeHashMap<int, InflictDamageEffect> RegisteredEffects,
-            ref EntityCommandBuffer EntityCommandBuffer)
+            in UnsafeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeHashMap<int, InflictDamageEffect> RegisteredEffects)
         {
             return new ConsumerJob()
             {
-                EffectCommandMap = EffectCommandMap,
-                EffectTypeId = EffectTypeId,
-                EntityCommandBuffer = EntityCommandBuffer,
+                EffectCommandEnumerator = EffectCommandEnumerator,
                 RegisteredEffects = RegisteredEffects,
                 Healths = GetComponentDataFromEntity<Health>(false)
             }.Schedule(inputDeps);
@@ -44,31 +40,25 @@ namespace Wayn.Mgm.Combat.Effects
         public struct ConsumerJob : IJob
         {
             [ReadOnly]
-            public NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap;
-            [ReadOnly]
-            public ulong EffectTypeId;
+            public UnsafeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
             public NativeHashMap<int, InflictDamageEffect> RegisteredEffects;
-
-            public EntityCommandBuffer EntityCommandBuffer;
 
             public ComponentDataFromEntity<Health> Healths;
 
             public void Execute()
             {
-                foreach (EffectCommand command in EffectCommandMap.GetValuesForKey(EffectTypeId))
+                while(EffectCommandEnumerator.MoveNext())
                 {
-                    InflictDamageEffect effect;
+                    EffectCommand command = EffectCommandEnumerator.Current;
+                    if (!Healths.Exists(command.Target)) continue;
                    
-                    if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))
-                    {
+                    Health health = Healths[command.Target];
+                    health.Value -= RegisteredEffects[command.RegistryReference.VersionId].Amount;
+                    Healths[command.Target] = health;
 
-                        if (!Healths.Exists(command.Target)) continue;
 
-                        Health health = Healths[command.Target];
-                        health.Value -= effect.Amount;
-                        Healths[command.Target] = health;
-                    }
+
                 }
             }
         }

@@ -8,7 +8,9 @@ public abstract class EffectJobSystem : JobComponentSystem
 {
 
     protected NativeQueue<EffectCommand>.ParallelWriter m_EffectCommandQueue;
-    private EffectBufferSystem m_EffectBufferSystem;
+    protected NativeQueue<EffectCommand>.ParallelWriter m_EffectCommandQueue2;
+    protected NativeQueue<EffectCommand>.ParallelWriter m_EffectCommandQueue3;
+    protected EffectBufferSystem m_EffectBufferSystem;
 
     protected override void OnCreate()
     {
@@ -17,6 +19,8 @@ public abstract class EffectJobSystem : JobComponentSystem
         {
             m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
             m_EffectCommandQueue = m_EffectBufferSystem.CreateCommandsQueue();
+            m_EffectCommandQueue2 = m_EffectBufferSystem.CreateCommandsQueue();
+            m_EffectCommandQueue3 = m_EffectBufferSystem.CreateCommandsQueue();
         }
     }
 

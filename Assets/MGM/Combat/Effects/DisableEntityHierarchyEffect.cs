@@ -1,6 +1,7 @@
 ﻿using System;
 using Unity.Burst;
 using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Entities;
 using Unity.Jobs;
 using UnityEngine;
@@ -26,20 +27,27 @@ namespace Wayn.Mgm.Combat.Effects
     /// </summary>
     public class DisableEntityHierarchyEffectConsumerSystem : EffectConsumerSystem<DisableEntityHierarchyEffect>
     {
+        private EndSimulationEntityCommandBufferSystem ECBSystem;
+
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+            ECBSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
+        }
+
         protected override JobHandle ScheduleJob(
             in JobHandle inputDeps,
-            in ulong EffectTypeId,
-            in NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap,
-            in NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects,
-            ref EntityCommandBuffer EntityCommandBuffer)
+            in UnsafeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects)
         {
-            return new ConsumerJob()
+            JobHandle jh = new ConsumerJob()
             {
-                EffectCommandMap = EffectCommandMap,
-                EffectTypeId = EffectTypeId,
-                EntityCommandBuffer = EntityCommandBuffer,
-                RegisteredEffects = RegisteredEffects
+                EffectCommandEnumerator = EffectCommandEnumerator,
+                RegisteredEffects = RegisteredEffects,
+                EntityCommandBuffer = ECBSystem.CreateCommandBuffer()
             }.Schedule(inputDeps);
+            ECBSystem.AddJobHandleForProducer(jh);
+            return jh;
         }
 
         [BurstCompile]
@@ -47,9 +55,7 @@ namespace Wayn.Mgm.Combat.Effects
         {
             
             [ReadOnly]
-            public NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap;
-            [ReadOnly]
-            public ulong EffectTypeId;
+            public UnsafeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
             public NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects;
 
@@ -57,8 +63,9 @@ namespace Wayn.Mgm.Combat.Effects
 
             public void Execute()
             {
-                foreach (EffectCommand command in EffectCommandMap.GetValuesForKey(EffectTypeId))
+                while (EffectCommandEnumerator.MoveNext())
                 {
+                    EffectCommand command = EffectCommandEnumerator.Current;
                     DisableEntityHierarchyEffect effect;
                    // Debug.Log($"DisableEntityHierarchyEffectConsumer applying effect {command.Emitter}/{command.Target}/{command.EffectReference.TypeId}/{command.EffectReference.VersionId}");
                     if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))

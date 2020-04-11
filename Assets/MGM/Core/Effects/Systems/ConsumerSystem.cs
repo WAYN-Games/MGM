@@ -1,27 +1,9 @@
-﻿using Unity.Collections;
+﻿using System.Collections.Generic;
+using Unity.Collections;
+using Unity.Collections.LowLevel.Unsafe;
 using Unity.Entities;
 using Unity.Jobs;
 using Wayn.Mgm.Events.Registry;
-
-namespace Wayn.Mgm.Events.Registry
-{
-    public abstract class RegistryEventConsumer<COMMAND,ELEMENT,REGISTRY,DISPATCHER> : JobComponentSystem
-        where COMMAND : struct, IEventRegistryCommand
-        where ELEMENT : struct,IRegistryElement
-        where REGISTRY : Registry<REGISTRY, ELEMENT>
-        where DISPATCHER : RegistryEventDispatcher<COMMAND>
-    {
-        private NativeMultiHashMap<ulong, COMMAND> m_CommandMap;
-        private ulong m_TypeId;
-        private NativeHashMap<int, ELEMENT> m_RegisteredEffects;
-        private REGISTRY m_Registry;
-        private DISPATCHER m_DispatcherSystem;
-
-
-        private EndSimulationEntityCommandBufferSystem m_EndSimulationEntityCommandBufferSystem;
-        private EntityCommandBuffer m_EntityCommandBuffer;
-    }
-}
 
 namespace Wayn.Mgm.Events
 {
@@ -32,18 +14,18 @@ namespace Wayn.Mgm.Events
     public abstract class EffectConsumerSystem<E> : JobComponentSystem
         where E : struct, IEffect
     {
-        private EffectBufferSystem m_EffectBufferSystem; //
-        private EffectRegistry m_EffectRegistry; ///
-        private EndSimulationEntityCommandBufferSystem m_EndSimulationEntityCommandBufferSystem;//
+        private EffectBufferSystem m_EffectBufferSystem; 
+        private EffectRegistry m_EffectRegistry;
 
 
-        private NativeHashMap<int, E> m_RegisteredEffects;//
-        private NativeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;//
-        private ulong m_EffectTypeId;//
-        private EntityCommandBuffer m_EntityCommandBuffer;//
+        private NativeHashMap<int, E> m_RegisteredEffects;
+        private UnsafeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;
+        
+        private EntityCommandBuffer m_EntityCommandBuffer;
 
         private bool ShouldRefreshCache = true;
 
+        private ulong m_EffectTypeId;
 
         protected override void OnCreate()
         {
@@ -56,7 +38,6 @@ namespace Wayn.Mgm.Events
             m_EffectRegistry.NewEffectRegisteredEvent += ()=> ShouldRefreshCache = true;
 
             m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
-            m_EndSimulationEntityCommandBufferSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
             
         }
      
@@ -78,10 +59,8 @@ namespace Wayn.Mgm.Events
 
         protected abstract JobHandle ScheduleJob(
             in JobHandle inputDeps,
-            in ulong EffectTypeId,
-            in NativeMultiHashMap<ulong, EffectCommand> EffectCommandMap,
-            in NativeHashMap<int, E> RegisteredEffects,
-            ref EntityCommandBuffer EntityCommandBuffer);
+            in UnsafeMultiHashMap<ulong,EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeHashMap<int, E> RegisteredEffects);
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
@@ -91,23 +70,19 @@ namespace Wayn.Mgm.Events
                 ShouldRefreshCache = false;
             }
            
-
-            m_EntityCommandBuffer = m_EndSimulationEntityCommandBufferSystem.CreateCommandBuffer();
-
             m_EffectCommandMap = m_EffectBufferSystem.CommandsMap;
 
-            JobHandle dependencies = JobHandle.CombineDependencies(m_EffectBufferSystem.FinalJobHandle, inputDeps);
 
+            JobHandle dependencies = JobHandle.CombineDependencies(m_EffectBufferSystem.FinalJobHandle, inputDeps);
+            var effectCommandEnumerator = m_EffectCommandMap.GetValuesForKey(m_EffectTypeId);
             JobHandle ExecuteEffectCommandsJob = ScheduleJob(
                 in dependencies,
-                in m_EffectTypeId,
-                in m_EffectCommandMap,
-                in m_RegisteredEffects,
-                ref m_EntityCommandBuffer);
-            
-            m_EndSimulationEntityCommandBufferSystem.AddJobHandleForProducer(ExecuteEffectCommandsJob);
-            
+                in effectCommandEnumerator,
+                in m_RegisteredEffects);
+            m_EffectBufferSystem.AddConsumerJobHandle(ExecuteEffectCommandsJob);
+         
             return ExecuteEffectCommandsJob;
         }
+
     }
 }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 4845000581992956218}
   - component: {fileID: 2663724114488325157}
   - component: {fileID: 5411516264574092016}
-  - component: {fileID: 4735256187277265762}
+  - component: {fileID: 8651248397144056478}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -283,7 +283,7 @@ MonoBehaviour:
       type: {class: InflictDamageEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
       data:
         Amount: 1
---- !u!114 &4735256187277265762
+--- !u!114 &8651248397144056478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,4 +303,4 @@ MonoBehaviour:
     00000000:
       type: {class: DestroyEntityHierarchyEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
       data:
-        ApplyRecursivelyToChildren: 0
+        ApplyRecursivelyToChildren: 1
