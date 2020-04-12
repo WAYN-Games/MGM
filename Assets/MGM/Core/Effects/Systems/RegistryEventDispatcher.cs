@@ -12,7 +12,7 @@ namespace Wayn.Mgm.Events.Registry
         where COMMAND : struct, IEventRegistryCommand
     {
         private List<NativeQueue<COMMAND>> CommandsQueues;
-        public UnsafeMultiHashMap<ulong, COMMAND> CommandsMap;
+        public NativeMultiHashMap<ulong, COMMAND> CommandsMap;
         private JobHandle JobHandle;
         public JobHandle FinalJobHandle;
 
@@ -56,11 +56,10 @@ namespace Wayn.Mgm.Events.Registry
             public NativeArray<int> TotalCommandCount;
 
             [WriteOnly]
-            public UnsafeMultiHashMap<ulong, COMMAND> CommandsMap;
+            public NativeMultiHashMap<ulong, COMMAND> CommandsMap;
 
             public void Execute()
             {
-                Debug.Log(TotalCommandCount[0]);
                 CommandsMap.Capacity = TotalCommandCount[0];
             }
         }
@@ -86,8 +85,8 @@ namespace Wayn.Mgm.Events.Registry
             public NativeQueue<COMMAND> CommandsQueue;
 
             [WriteOnly]
-            [NativeDisableParallelForRestriction]
-            public UnsafeMultiHashMap<ulong, COMMAND>.ParallelWriter CommandsMap;
+            [NativeDisableContainerSafetyRestriction]
+            public NativeMultiHashMap<ulong, COMMAND>.ParallelWriter CommandsMap;
 
             public void Execute()
             {
@@ -105,6 +104,7 @@ namespace Wayn.Mgm.Events.Registry
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
         {
+            
 
             JobHandle = JobHandle.CombineDependencies(inputDeps, JobHandle, CrossFrameJobHandle);
 
@@ -112,7 +112,7 @@ namespace Wayn.Mgm.Events.Registry
             {
                 JobHandle = CommandsMap.Dispose(JobHandle);
             }
-            CommandsMap = new UnsafeMultiHashMap<ulong, COMMAND>(0, Allocator.TempJob);
+            CommandsMap = new NativeMultiHashMap<ulong, COMMAND>(0, Allocator.TempJob);
 
             // Schedule in sequence the realocation of the necessary memory to handle each commands based on the queues sizes.
             // Not done in parallel as the resize consist of an new allocation and a copy.

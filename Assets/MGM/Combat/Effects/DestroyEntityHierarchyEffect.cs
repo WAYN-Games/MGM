@@ -34,7 +34,7 @@ namespace Wayn.Mgm.Combat.Effects
 
         protected override JobHandle ScheduleJob(
             in JobHandle inputDeps,
-            in UnsafeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, DestroyEntityHierarchyEffect> RegisteredEffects)
         {
             JobHandle jh = new ConsumerJob()
@@ -52,7 +52,7 @@ namespace Wayn.Mgm.Combat.Effects
         {
 
             [ReadOnly]
-            public UnsafeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
+            public NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
             public NativeHashMap<int, DestroyEntityHierarchyEffect> RegisteredEffects;
 

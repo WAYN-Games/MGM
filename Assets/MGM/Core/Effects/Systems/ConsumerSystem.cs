@@ -19,7 +19,7 @@ namespace Wayn.Mgm.Events
 
 
         private NativeHashMap<int, E> m_RegisteredEffects;
-        private UnsafeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;
+        private NativeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;
         
         private EntityCommandBuffer m_EntityCommandBuffer;
 
@@ -59,7 +59,7 @@ namespace Wayn.Mgm.Events
 
         protected abstract JobHandle ScheduleJob(
             in JobHandle inputDeps,
-            in UnsafeMultiHashMap<ulong,EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeMultiHashMap<ulong,EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, E> RegisteredEffects);
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using Unity.Collections;
+using UnityEngine;
 
 namespace Wayn.Mgm.Events.Registry
 {
@@ -37,8 +38,7 @@ namespace Wayn.Mgm.Events.Registry
         {
             ulong effectTypeId = RegistryReference.GetTypeId(effect.GetType());
             int effectVersionId = RegistryReference.GetEffectInstanceId(effect);
-
-
+          
 
             // Lazy initialzation
             if (!registar.ContainsKey(effectTypeId))

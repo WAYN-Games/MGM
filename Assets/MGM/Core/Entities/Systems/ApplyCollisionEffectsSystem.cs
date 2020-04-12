@@ -27,14 +27,9 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
 
 
         public NativeQueue<EffectCommand>.ParallelWriter EffectCommandQueue;
-        public NativeQueue<EffectCommand>.ParallelWriter EffectCommandQueue2;
-        public NativeQueue<EffectCommand>.ParallelWriter EffectCommandQueue3;
-
-        private int loopcount;
 
         public void Execute(TriggerEvent triggerEvent)
         {
-            loopcount = 1000;
             Entity entityA = triggerEvent.Entities.EntityA;
             Entity entityB = triggerEvent.Entities.EntityB;
             ApplyOnCollideEffectsOnOtherBuffer(entityA, entityB);
@@ -51,18 +46,12 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                 var enumerator = EntitiesWithOnCollideEffectsOnOtherBuffer[emmiter].GetEnumerator();
                 while (enumerator.MoveNext())
                 {
-                    var c = new EffectCommand()
+                    EffectCommandQueue.Enqueue(new EffectCommand()
                     {
                         RegistryReference = enumerator.Current.EffectReference,
                         Emitter = emmiter,
                         Target = target
-                    };
-                    for (int i = 0; i < loopcount; i++)
-                    {
-                        EffectCommandQueue.Enqueue(c);
-                        EffectCommandQueue2.Enqueue(c);
-                        EffectCommandQueue3.Enqueue(c);
-                    }
+                    });
                 }
 
             }
@@ -74,18 +63,12 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                 var enumerator = EntitiesWithOnCollideEffectsOnSelfBuffer[emmiter].GetEnumerator();
                 while (enumerator.MoveNext())
                 {
-                    var c = new EffectCommand()
+                    EffectCommandQueue.Enqueue(new EffectCommand()
                     {
                         RegistryReference = enumerator.Current.EffectReference,
                         Emitter = emmiter,
                         Target = target
-                    };
-                    for (int i = 0; i < loopcount; i++)
-                    {
-                        EffectCommandQueue.Enqueue(c);
-                        EffectCommandQueue2.Enqueue(c);
-                        EffectCommandQueue3.Enqueue(c);
-                    }
+                    });
                 }
 
             }
@@ -98,9 +81,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
         {
             EntitiesWithOnCollideEffectsOnOtherBuffer = GetBufferFromEntity<OnCollideEffectsOnOtherBuffer>(true),
             EntitiesWithOnCollideEffectsOnSelfBuffer = GetBufferFromEntity<OnCollideEffectsOnSelfBuffer>(true),
-            EffectCommandQueue = m_EffectCommandQueue,
-            EffectCommandQueue2 = m_EffectCommandQueue2,
-            EffectCommandQueue3 = m_EffectCommandQueue3
+            EffectCommandQueue = m_EffectCommandQueue
         }.Schedule(stepPhysicsWorld.Simulation, ref buildPhysicsWorldSystem.PhysicsWorld,
              inputDependencies);
         AddJobHandleForConsumer(job);
