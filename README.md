@@ -5,6 +5,7 @@ This is a personal learning project. It's a work in progress using lots of unity
 Stands for Modular Game Mechanics.
 
 * MGM/Core : Contains Components and mechanincs shared by other modules like physics cast util or base input classes
+  * Registry Based Evnet system : the aim is to be able to schedule prefiveied events from just a reference. This allow to make a modular effect system and trigger the effect knowing only there reference, not there content.
 
 * MGM/Movement : Contains basic mouvement mechanics
   * Physics based move
@@ -17,5 +18,7 @@ Stands for Modular Game Mechanics.
   * Inputs :
     * Keyboard/Mouse : WASD to move, mouse to aim
     * GamePad : Left Stick to move, Right Stick to aim
-  * Known issues : 
-    * subscene must be closed before entering playmode otherwise, the level art is messed up.
+    
+# Known Issue
+* the registry based event system does not support empty event types
+* the event don't get into the registry when declared in a closed subscene. This will probably require to move the registry to another implementation (maybe scriptable object.
