@@ -19,7 +19,7 @@ namespace Wayn.Mgm.Events.Registry
 
         public JobHandle finalJobHandle;
 
-        public void AddJobHandleForConsumer(JobHandle jh)
+        public void AddJobHandleFromProducer(JobHandle jh)
         {
             JobHandle = JobHandle.CombineDependencies(JobHandle, jh);
         }
@@ -34,11 +34,7 @@ namespace Wayn.Mgm.Events.Registry
             CommandsQueues.Insert(0,new NativeQueue<COMMAND>(Allocator.TempJob));
             return CommandsQueues[0].AsParallelWriter();
         }
-        protected override void OnCreate()
-        {
-            Debug.Log($"Create {GetType().FullName}");
-            CommandsQueues = new List<NativeQueue<COMMAND>>();
-        }
+
 
         protected override void OnDestroy()
         {
@@ -131,8 +127,6 @@ namespace Wayn.Mgm.Events.Registry
                 TotalCommandCount = counter,
                 CommandsMap = CommandsMap
             }.Schedule(JobHandle);
-
-            // JobHandle.Complete();
 
             JobHandle CounterDisposedJH = counter.Dispose(AllocationJH);
 

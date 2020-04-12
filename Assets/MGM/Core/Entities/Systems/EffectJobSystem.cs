@@ -1,7 +1,6 @@
 ﻿using Wayn.Mgm.Events;
 using Unity.Entities;
 using Unity.Jobs;
-using Unity.Collections;
 
 [UpdateBefore(typeof(EffectConsumerSystemGroup))]
 public abstract class EffectJobSystem : JobComponentSystem
@@ -20,7 +19,7 @@ public abstract class EffectJobSystem : JobComponentSystem
 
     protected void AddJobHandleForConsumer(JobHandle job)
     {
-        m_EffectBufferSystem.AddJobHandleForConsumer(job);
+        m_EffectBufferSystem.AddJobHandleFromProducer(job);
     }
 
 }

@@ -38,7 +38,7 @@ namespace Wayn.Mgm.Combat.Effects
                 EffectCommandQueue = m_EffectCommandSystem.CreateCommandsQueue()
             }.Schedule(inputDeps);
 
-            m_EffectCommandSystem.AddJobHandleForConsumer(jh);
+            m_EffectCommandSystem.AddJobHandleFromProducer(jh);
             return jh;
         }
 

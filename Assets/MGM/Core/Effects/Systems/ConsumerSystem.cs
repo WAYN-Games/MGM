@@ -67,7 +67,6 @@ namespace Wayn.Mgm.Events
             }
            
             m_EffectCommandMap = m_EffectBufferSystem.CommandsMap;
-            Debug.Log($"Same dependancy {m_EffectBufferSystem.finalJobHandle.Equals(inputDeps)}");
             var effectCommandEnumerator = m_EffectCommandMap.GetValuesForKey(m_EffectTypeId);
             JobHandle ExecuteEffectCommandsJob = ScheduleJob(
                 m_EffectBufferSystem.finalJobHandle,

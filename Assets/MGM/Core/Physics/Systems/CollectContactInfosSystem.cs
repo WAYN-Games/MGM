@@ -66,7 +66,8 @@ public class CollectContactInfosSystem : JobComponentSystem
                 {
                     foreach(var hit in hits)
                     {
-                        if (Bodies[hit.RigidBodyIndex].Collider == colliderCastInput.Collider) break;
+                        if (Bodies[hit.RigidBodyIndex].Collider.GetUnsafePtr() == colliderCastInput.Collider) continue;
+
                         contactInfosBuffer.Add(new ContactInfos()
                         {
                             Entity = Bodies[hit.RigidBodyIndex].Entity,
