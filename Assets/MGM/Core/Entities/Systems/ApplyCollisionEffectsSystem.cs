@@ -81,7 +81,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
         {
             EntitiesWithOnCollideEffectsOnOtherBuffer = GetBufferFromEntity<OnCollideEffectsOnOtherBuffer>(true),
             EntitiesWithOnCollideEffectsOnSelfBuffer = GetBufferFromEntity<OnCollideEffectsOnSelfBuffer>(true),
-            EffectCommandQueue = m_EffectCommandQueue
+            EffectCommandQueue = m_EffectBufferSystem.CreateCommandsQueue()
         }.Schedule(stepPhysicsWorld.Simulation, ref buildPhysicsWorldSystem.PhysicsWorld,
              inputDependencies);
         AddJobHandleForConsumer(job);

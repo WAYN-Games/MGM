@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
+﻿using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
+using UnityEngine;
 using Wayn.Mgm.Events.Registry;
 
 namespace Wayn.Mgm.Events
@@ -10,7 +9,6 @@ namespace Wayn.Mgm.Events
 
 
     [UpdateInGroup(typeof(EffectConsumerSystemGroup))]
-    [UpdateAfter(typeof(EffectBufferSystem))]
     public abstract class EffectConsumerSystem<E> : JobComponentSystem
         where E : struct, IEffect
     {
@@ -30,14 +28,12 @@ namespace Wayn.Mgm.Events
         protected override void OnCreate()
         {
             base.OnCreate();
+            m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
             m_EffectTypeId = RegistryReference.GetTypeId(typeof(E));
-
-         
 
             RefreshRegisteredEffectsCache();
             m_EffectRegistry.NewEffectRegisteredEvent += ()=> ShouldRefreshCache = true;
 
-            m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
             
         }
      
@@ -58,7 +54,7 @@ namespace Wayn.Mgm.Events
         }
 
         protected abstract JobHandle ScheduleJob(
-            in JobHandle inputDeps,
+            JobHandle inputDeps,
             in NativeMultiHashMap<ulong,EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, E> RegisteredEffects);
 
@@ -71,12 +67,10 @@ namespace Wayn.Mgm.Events
             }
            
             m_EffectCommandMap = m_EffectBufferSystem.CommandsMap;
-
-
-            JobHandle dependencies = JobHandle.CombineDependencies(m_EffectBufferSystem.FinalJobHandle, inputDeps);
+            Debug.Log($"Same dependancy {m_EffectBufferSystem.finalJobHandle.Equals(inputDeps)}");
             var effectCommandEnumerator = m_EffectCommandMap.GetValuesForKey(m_EffectTypeId);
             JobHandle ExecuteEffectCommandsJob = ScheduleJob(
-                in dependencies,
+                m_EffectBufferSystem.finalJobHandle,
                 in effectCommandEnumerator,
                 in m_RegisteredEffects);
             m_EffectBufferSystem.AddConsumerJobHandle(ExecuteEffectCommandsJob);

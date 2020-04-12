@@ -22,10 +22,10 @@ namespace Wayn.Mgm.Combat.Effects
     public class InflictDamageEffectConsumer : EffectConsumerSystem<InflictDamageEffect>
     {
         private EffectBufferSystem m_EffectCommandSystem;
-        private NativeQueue<EffectCommand>.ParallelWriter m_EffectCommandQueue;
+
 
         protected override JobHandle ScheduleJob(
-            in JobHandle inputDeps,
+            JobHandle inputDeps,
             in NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, InflictDamageEffect> RegisteredEffects)
         {
@@ -35,7 +35,7 @@ namespace Wayn.Mgm.Combat.Effects
                 RegisteredEffects = RegisteredEffects,
                 Healths = GetComponentDataFromEntity<Health>(false),
                 OnDeathBuffer = GetBufferFromEntity<OnDeath>(true),
-                EffectCommandQueue = m_EffectCommandQueue
+                EffectCommandQueue = m_EffectCommandSystem.CreateCommandsQueue()
             }.Schedule(inputDeps);
 
             m_EffectCommandSystem.AddJobHandleForConsumer(jh);
@@ -46,7 +46,6 @@ namespace Wayn.Mgm.Combat.Effects
         {
             base.OnCreate();
             m_EffectCommandSystem = World.GetOrCreateSystem<EffectBufferSystem>();
-            m_EffectCommandQueue = m_EffectCommandSystem.CreateCommandsQueue();
         }
 
         [BurstCompile]

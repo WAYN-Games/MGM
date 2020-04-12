@@ -8,17 +8,16 @@ using UnityEngine;
 
 namespace Wayn.Mgm.Events.Registry
 {
-    public abstract class RegistryEventDispatcher<COMMAND> : JobComponentSystem
+    public abstract class RegistryEventDispatcher<COMMAND> : SystemBase
         where COMMAND : struct, IEventRegistryCommand
     {
-        private List<NativeQueue<COMMAND>> CommandsQueues;
+        private List<NativeQueue<COMMAND>> CommandsQueues = new List<NativeQueue<COMMAND>>();
         public NativeMultiHashMap<ulong, COMMAND> CommandsMap;
         private JobHandle JobHandle;
-        public JobHandle FinalJobHandle;
 
         private JobHandle CrossFrameJobHandle;
 
-
+        public JobHandle finalJobHandle;
 
         public void AddJobHandleForConsumer(JobHandle jh)
         {
@@ -32,12 +31,12 @@ namespace Wayn.Mgm.Events.Registry
 
         public NativeQueue<COMMAND>.ParallelWriter CreateCommandsQueue()
         {
-            NativeQueue<COMMAND> NewCommandsQueue = new NativeQueue<COMMAND>(Allocator.Persistent);
-            CommandsQueues.Add(NewCommandsQueue);
-            return NewCommandsQueue.AsParallelWriter();
+            CommandsQueues.Insert(0,new NativeQueue<COMMAND>(Allocator.TempJob));
+            return CommandsQueues[0].AsParallelWriter();
         }
         protected override void OnCreate()
         {
+            Debug.Log($"Create {GetType().FullName}");
             CommandsQueues = new List<NativeQueue<COMMAND>>();
         }
 
@@ -102,15 +101,14 @@ namespace Wayn.Mgm.Events.Registry
 
 
 
-        protected override JobHandle OnUpdate(JobHandle inputDeps)
+        protected override void OnUpdate()
         {
             
-
-            JobHandle = JobHandle.CombineDependencies(inputDeps, JobHandle, CrossFrameJobHandle);
+            var inputDeps = JobHandle.CombineDependencies(Dependency, JobHandle, CrossFrameJobHandle);
 
             if (CommandsMap.IsCreated)
             {
-                JobHandle = CommandsMap.Dispose(JobHandle);
+                JobHandle = CommandsMap.Dispose(inputDeps);
             }
             CommandsMap = new NativeMultiHashMap<ulong, COMMAND>(0, Allocator.TempJob);
 
@@ -128,32 +126,37 @@ namespace Wayn.Mgm.Events.Registry
                 }.Schedule(JobHandle);
             }
 
-            JobHandle = new AllocateCommandsMap()
+            JobHandle AllocationJH = new AllocateCommandsMap()
             {
                 TotalCommandCount = counter,
                 CommandsMap = CommandsMap
             }.Schedule(JobHandle);
 
-            counter.Dispose(JobHandle);
+            // JobHandle.Complete();
+
+            JobHandle CounterDisposedJH = counter.Dispose(AllocationJH);
 
             NativeArray<JobHandle> MapperJobHanldes = new NativeArray<JobHandle>(CommandsQueues.Count, Allocator.TempJob);
             var CommandsMapParallelWriter = CommandsMap.AsParallelWriter();
            
             for (int i = 0; i < CommandsQueues.Count; i++)
             {
-                MapperJobHanldes[i] = new MapCommands()
+                var jh = new MapCommands()
                 {
                     CommandsMap = CommandsMapParallelWriter,
                     CommandsQueue = CommandsQueues[i]
-                }.Schedule(JobHandle);
+                }.Schedule(AllocationJH);
+
+                MapperJobHanldes[i] = CommandsQueues[i].Dispose(jh);
             }
 
+            CommandsQueues.Clear();
 
-            FinalJobHandle = JobHandle.CombineDependencies(MapperJobHanldes);
-
-
+            Dependency = JobHandle.CombineDependencies(AllocationJH, JobHandle.CombineDependencies(MapperJobHanldes));
+            finalJobHandle = Dependency;
             MapperJobHanldes.Dispose();
-            return FinalJobHandle;
+
+
         }
 
     }

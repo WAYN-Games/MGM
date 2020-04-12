@@ -69,3 +69,15 @@ The following packages were updated:
   com.unity.shadergraph from version 7.1.8 to 7.3.1
   com.unity.test-framework from version 1.1.11 to 1.1.13
   com.unity.visualeffectgraph from version 7.1.8 to 7.3.1
+
+=== Sun Apr 12 15:38:22 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.ide.visualstudio@2.0.0
+The following packages were updated:
+  com.unity.render-pipelines.universal from version 7.3.1 to 8.0.1
+  com.unity.shadergraph from version 7.3.1 to 8.0.1
+  com.unity.visualeffectgraph from version 7.3.1 to 8.0.1

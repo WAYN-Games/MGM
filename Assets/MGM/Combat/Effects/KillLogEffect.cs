@@ -21,7 +21,7 @@ namespace Wayn.Mgm.Combat.Effects
     public class KillLogEffectConsumer : EffectConsumerSystem<KillLogEffect>
     {
         protected override JobHandle ScheduleJob(
-            in JobHandle inputDeps,
+            JobHandle inputDeps,
             in NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, KillLogEffect> RegisteredEffects)
         {

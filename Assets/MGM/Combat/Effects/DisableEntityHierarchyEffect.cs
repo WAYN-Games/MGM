@@ -36,7 +36,7 @@ namespace Wayn.Mgm.Combat.Effects
         }
 
         protected override JobHandle ScheduleJob(
-            in JobHandle inputDeps,
+            JobHandle inputDeps,
             in NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects)
         {
