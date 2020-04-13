@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Concurrent;
 using Unity.Collections;
-using UnityEngine;
 
 namespace Wayn.Mgm.Events.Registry
 {
@@ -12,7 +11,7 @@ namespace Wayn.Mgm.Events.Registry
         private static readonly Lazy<T> Lazy =
             new Lazy<T>(Init
         );
-
+         
         private static T Init()
         {
             T i = Activator.CreateInstance(typeof(T), true) as T;
@@ -65,7 +64,9 @@ namespace Wayn.Mgm.Events.Registry
         /// <typeparam name="T">The type of effect to extract.</typeparam>
         /// <param name="type">The type of effect to extract.</param>
         /// <param name="result">The NativeHashmap to copy the effects to.</param>
+        #pragma warning disable CS0693
         public void GetRegisteredEffects<T>(ref NativeHashMap<int, T> result) where T : struct, R
+        #pragma warning restore CS0693
         {
             ulong effectTypeId = RegistryReference.GetTypeId(typeof(T));
             // If no effect are registered for that type return.

@@ -1,0 +1,1024 @@
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Marc HANICOT"
+Entitlement-based licensing initiated
+[LicensingClient] Licenses updated successfully
+
+LICENSE SYSTEM [2020412 17:59:45] Next license update check is after 2019-05-12T10:57:54
+
+Built from '2020.1/staging' branch; Version is '2020.1.0b5 (f017efceb459) revision 15734767'; Using compiler version '192227905'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'fr' Physical Memory: 16308 MB
+[Licensing::Module] Serial number assigned to: "F4-WVTD-88Q5-KE4F-F9EE-XXXX"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.1.0b5\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/Marc HANICOT/Documents/GitHub/MGM
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+52397
+Successfully changed project path to: C:/Users/Marc HANICOT/Documents/GitHub/MGM
+C:/Users/Marc HANICOT/Documents/GitHub/MGM
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 59.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.1.0b5 (f017efceb459)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Marc HANICOT/Documents/GitHub/MGM/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 (ID=0x1c20)
+    Vendor:   
+    VRAM:     6054 MB
+    Driver:   23.21.13.9140
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002712 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 45.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.672 seconds
+Registering precompiled user dll's ...
+Registered in 0.264108 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 58.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.186 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4165 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 174.1 MB.
+System memory in use after: 174.2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 4577.
+Total: 4.616300 ms (FindLiveObjects: 0.687500 ms CreateObjectMapping: 0.328700 ms MarkObjects: 3.549100 ms  DeleteObjects: 0.043300 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/MGM/TankDemo/Scenes/Playground.unity
+  artifactKey: Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground.unity using Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground.unity'
+	Deserialize:            40.215 ms
+	Integration:            99.517 ms
+	Integration of assets:  25.522 ms
+	Thread Wait Time:       29.147 ms
+	Total Operation Time:   194.401 ms
+Uploading Crash Report
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: '783572a0557d222edf8998063ce4ed05') in 0.285870 seconds
+  Import took 0.298598 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006024 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 184.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.462 seconds
+Registering precompiled user dll's ...
+Registered in 0.658679 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  8.132 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.6 MB.
+System memory in use after: 93.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4586.
+Total: 5.923400 ms (FindLiveObjects: 0.811400 ms CreateObjectMapping: 0.423200 ms MarkObjects: 4.659300 ms  DeleteObjects: 0.028500 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004445 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 114.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.690 seconds
+Registering precompiled user dll's ...
+Registered in 0.365881 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.383 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.03 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.6 MB.
+System memory in use after: 93.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4594.
+Total: 5.726100 ms (FindLiveObjects: 0.755200 ms CreateObjectMapping: 0.374500 ms MarkObjects: 4.563000 ms  DeleteObjects: 0.032100 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005015 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 86.33 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.309 seconds
+Registering precompiled user dll's ...
+Registered in 0.427041 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.731 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.6 MB.
+System memory in use after: 93.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4602.
+Total: 5.253600 ms (FindLiveObjects: 0.744400 ms CreateObjectMapping: 0.218900 ms MarkObjects: 4.262900 ms  DeleteObjects: 0.026400 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4602.
+Total: 6.967300 ms (FindLiveObjects: 1.398900 ms CreateObjectMapping: 0.324800 ms MarkObjects: 5.218600 ms  DeleteObjects: 0.024000 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.82 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4602.
+Total: 7.739000 ms (FindLiveObjects: 1.906000 ms CreateObjectMapping: 0.486700 ms MarkObjects: 5.312800 ms  DeleteObjects: 0.031700 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.64 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.1 MB.
+System memory in use after: 89.3 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4602.
+Total: 5.221600 ms (FindLiveObjects: 0.933600 ms CreateObjectMapping: 0.358300 ms MarkObjects: 3.904100 ms  DeleteObjects: 0.024700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004036 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 56.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.857 seconds
+Registering precompiled user dll's ...
+Registered in 0.312642 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.079 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.6 MB.
+System memory in use after: 93.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4610.
+Total: 4.931900 ms (FindLiveObjects: 0.809600 ms CreateObjectMapping: 0.341200 ms MarkObjects: 3.757500 ms  DeleteObjects: 0.022800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1226.906561 seconds.
+  path: Assets/MGM/TankDemo/Scenes/Playground.unity
+  artifactKey: Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground.unity using Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground.unity'
+	Deserialize:            41.649 ms
+	Integration:            78.487 ms
+	Integration of assets:  19.531 ms
+	Thread Wait Time:       27.213 ms
+	Total Operation Time:   166.880 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: 'c2bacc7cd64e05e10a8baaaf8777083f') in 0.275503 seconds
+  Import took 0.294420 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.98 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.7 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4610.
+Total: 5.616900 ms (FindLiveObjects: 0.697200 ms CreateObjectMapping: 0.323900 ms MarkObjects: 4.574500 ms  DeleteObjects: 0.020400 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.005914 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 102.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.275 seconds
+Registering precompiled user dll's ...
+Registered in 0.737193 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.01 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.819 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4618.
+Total: 11.807600 ms (FindLiveObjects: 1.254700 ms CreateObjectMapping: 0.605600 ms MarkObjects: 9.874700 ms  DeleteObjects: 0.070200 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002366 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 54.08 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.155 seconds
+Registering precompiled user dll's ...
+Registered in 0.269597 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.078 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4626.
+Total: 4.654600 ms (FindLiveObjects: 0.633600 ms CreateObjectMapping: 0.189400 ms MarkObjects: 3.809100 ms  DeleteObjects: 0.021500 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002551 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 50.83 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.479 seconds
+Registering precompiled user dll's ...
+Registered in 0.298311 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.363 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4634.
+Total: 4.772800 ms (FindLiveObjects: 0.686100 ms CreateObjectMapping: 0.324900 ms MarkObjects: 3.734600 ms  DeleteObjects: 0.025700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003130 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 71.93 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.500 seconds
+Registering precompiled user dll's ...
+Registered in 0.402528 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.306 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.86 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4642.
+Total: 5.552400 ms (FindLiveObjects: 0.849700 ms CreateObjectMapping: 0.403700 ms MarkObjects: 4.272500 ms  DeleteObjects: 0.025200 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003015 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 67.85 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.169 seconds
+Registering precompiled user dll's ...
+Registered in 0.450967 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.768 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4650.
+Total: 6.608200 ms (FindLiveObjects: 0.795000 ms CreateObjectMapping: 0.331300 ms MarkObjects: 5.445400 ms  DeleteObjects: 0.035500 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002555 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 95.12 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.349 seconds
+Registering precompiled user dll's ...
+Registered in 0.751036 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.708 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4658.
+Total: 5.455800 ms (FindLiveObjects: 0.753400 ms CreateObjectMapping: 0.297600 ms MarkObjects: 4.377400 ms  DeleteObjects: 0.026600 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003793 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 86.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.584 seconds
+Registering precompiled user dll's ...
+Registered in 1.422334 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.186 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.10 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4666.
+Total: 8.253500 ms (FindLiveObjects: 1.041000 ms CreateObjectMapping: 0.506700 ms MarkObjects: 6.670900 ms  DeleteObjects: 0.033400 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003384 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 129.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.199 seconds
+Registering precompiled user dll's ...
+Registered in 0.325327 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.001 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4674.
+Total: 4.860200 ms (FindLiveObjects: 0.713800 ms CreateObjectMapping: 0.269300 ms MarkObjects: 3.834900 ms  DeleteObjects: 0.041300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002739 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 73.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.023 seconds
+Registering precompiled user dll's ...
+Registered in 0.303928 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.718 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.8 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4682.
+Total: 5.015600 ms (FindLiveObjects: 0.653200 ms CreateObjectMapping: 0.250200 ms MarkObjects: 4.086400 ms  DeleteObjects: 0.024700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004360 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 55.74 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.455 seconds
+Registering precompiled user dll's ...
+Registered in 0.265700 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.892 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4690.
+Total: 5.188000 ms (FindLiveObjects: 0.748400 ms CreateObjectMapping: 0.330100 ms MarkObjects: 4.083900 ms  DeleteObjects: 0.024300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002673 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 119.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.049 seconds
+Registering precompiled user dll's ...
+Registered in 0.280171 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.122 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4698.
+Total: 5.073100 ms (FindLiveObjects: 0.772700 ms CreateObjectMapping: 0.424200 ms MarkObjects: 3.849200 ms  DeleteObjects: 0.026200 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004205 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 92.12 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.514 seconds
+Registering precompiled user dll's ...
+Registered in 0.363775 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.909 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4706.
+Total: 4.927300 ms (FindLiveObjects: 0.671700 ms CreateObjectMapping: 0.176300 ms MarkObjects: 4.054300 ms  DeleteObjects: 0.023500 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4706.
+Total: 6.684200 ms (FindLiveObjects: 1.557500 ms CreateObjectMapping: 0.313700 ms MarkObjects: 4.790500 ms  DeleteObjects: 0.021500 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.30 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4706.
+Total: 7.560400 ms (FindLiveObjects: 1.652400 ms CreateObjectMapping: 0.378000 ms MarkObjects: 5.502000 ms  DeleteObjects: 0.026500 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.57 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4706.
+Total: 5.127400 ms (FindLiveObjects: 1.031200 ms CreateObjectMapping: 0.291300 ms MarkObjects: 3.781900 ms  DeleteObjects: 0.021700 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002973 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 102.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.326 seconds
+Registering precompiled user dll's ...
+Registered in 0.409776 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.53 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.320 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4714.
+Total: 5.436700 ms (FindLiveObjects: 0.915900 ms CreateObjectMapping: 0.283700 ms MarkObjects: 4.211500 ms  DeleteObjects: 0.024800 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004721 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 64.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.184 seconds
+Registering precompiled user dll's ...
+Registered in 0.280694 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.463 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4722.
+Total: 5.049800 ms (FindLiveObjects: 0.722700 ms CreateObjectMapping: 0.331700 ms MarkObjects: 3.960800 ms  DeleteObjects: 0.033500 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4722.
+Total: 5.691000 ms (FindLiveObjects: 1.616200 ms CreateObjectMapping: 0.353500 ms MarkObjects: 3.696600 ms  DeleteObjects: 0.023400 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.62 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4722.
+Total: 5.388200 ms (FindLiveObjects: 0.730300 ms CreateObjectMapping: 0.359800 ms MarkObjects: 4.254500 ms  DeleteObjects: 0.042300 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002584 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 56.07 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.925 seconds
+Registering precompiled user dll's ...
+Registered in 0.542887 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.823 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.1 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4730.
+Total: 4.304000 ms (FindLiveObjects: 0.685000 ms CreateObjectMapping: 0.294700 ms MarkObjects: 3.303000 ms  DeleteObjects: 0.020800 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002693 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 91.00 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.024 seconds
+Registering precompiled user dll's ...
+Registered in 0.264832 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.539 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4738.
+Total: 4.506800 ms (FindLiveObjects: 0.538300 ms CreateObjectMapping: 0.161000 ms MarkObjects: 3.786100 ms  DeleteObjects: 0.020700 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 89.4 MB.
+System memory in use after: 89.6 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4738.
+Total: 5.920100 ms (FindLiveObjects: 0.780400 ms CreateObjectMapping: 0.374300 ms MarkObjects: 4.742500 ms  DeleteObjects: 0.022000 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002444 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 57.84 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.683 seconds
+Registering precompiled user dll's ...
+Registered in 0.350065 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.617 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4746.
+Total: 5.109300 ms (FindLiveObjects: 0.762600 ms CreateObjectMapping: 0.326600 ms MarkObjects: 3.993300 ms  DeleteObjects: 0.025500 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002697 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 45.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.641 seconds
+Registering precompiled user dll's ...
+Registered in 0.269569 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.369 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 93.9 MB.
+System memory in use after: 94.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4754.
+Total: 4.925300 ms (FindLiveObjects: 0.727600 ms CreateObjectMapping: 0.297300 ms MarkObjects: 3.873500 ms  DeleteObjects: 0.026000 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

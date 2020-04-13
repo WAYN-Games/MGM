@@ -44,6 +44,7 @@ public abstract class InputActionForwarder<T> : MonoBehaviour, IConvertGameObjec
     {
         foreach (var playerEntity in PlayerEntity)
         {
+            if (!EntityManager.Exists(playerEntity)) continue;
             EntityManager.SetComponentData(playerEntity, inputData);
         }
     }

@@ -5,6 +5,7 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
+using UnityEngine;
 
 [UpdateInGroup(typeof(MovementSystemGroup))]
 [UpdateAfter(typeof(CollectContactInfosSystem))]
@@ -51,16 +52,19 @@ public class MoveSystem : JobComponentSystem
                 chunkMasses[i] = mass;
 
                 // if (!chunkIsOnGrounds[i].IsGrounded) continue;
-                var velocity = chunkVelocities[i];
+             
                 var direction = chunkDirections[i].Value;
 
-                if (new float3(0, 0, 0).Equals(direction)) continue;
+                if (float3.zero.Equals(direction)) continue;
+
+                var velocity = chunkVelocities[i];
 
                 var speed = chunkSpeeds[i].Value;
-                ;
-                direction = speed * math.select(math.normalizesafe(direction), direction, math.length(direction)>1);
+          
+                direction = speed * math.normalizesafe(direction);
                 direction.y = velocity.Linear.y;
-                
+
+              
                 chunkVelocities[i] = new PhysicsVelocity
                 {
                     Angular = velocity.Angular,

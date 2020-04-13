@@ -58,10 +58,14 @@ MonoBehaviour:
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4163301363625064864}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ReadAction
         m_Mode: 0
         m_Arguments:
@@ -81,6 +85,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4163301363625064867}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ReadAction
         m_Mode: 0
         m_Arguments:
@@ -96,6 +101,7 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4163301363625064868}
+        m_TargetAssemblyTypeName: 
         m_MethodName: ReadAction
         m_Mode: 0
         m_Arguments:
@@ -334,6 +340,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -359,6 +366,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7345933103153749848
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +422,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -440,6 +449,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7345933103337426226
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +542,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -557,6 +568,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2108970791825723447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -638,7 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MotionType: 0
   m_Mass: 1
-  m_LinearDamping: 0.01
+  m_LinearDamping: 10
   m_AngularDamping: 0.05
   m_InitialLinearVelocity:
     x: 0
@@ -756,7 +768,7 @@ MonoBehaviour:
   m_Capsule:
     Height: 2.2
     Radius: 1.1
-    Axis: 1
+    Axis: 2
   m_Cylinder:
     Height: 2.2
     Radius: 1.1
@@ -879,6 +891,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -904,6 +917,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &9218330149266798340
 GameObject:
   m_ObjectHideFlags: 0
