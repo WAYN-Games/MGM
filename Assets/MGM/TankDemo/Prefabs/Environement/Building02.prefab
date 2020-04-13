@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7657338251039733376}
   - component: {fileID: 7657338251039733377}
   - component: {fileID: 7304794662843842555}
+  - component: {fileID: 3340375248425863132}
+  - component: {fileID: 4342172345803438652}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -56,6 +58,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -85,6 +88,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7304794662843842555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +162,43 @@ MonoBehaviour:
       m_Override: 0
       m_Value: 0000000000000000
   m_ConvexRadius_Deprecated: -1
+--- !u!114 &3340375248425863132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657338251039733389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fc232f342bf5b64f9fadb53c232e49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Value: 50
+--- !u!114 &4342172345803438652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657338251039733389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52154c3ee88d649458424012c9a94ae0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Entries:
+  - Entry:
+      id: 0
+  - Entry:
+      id: 1
+  references:
+    version: 1
+    00000000:
+      type: {class: KillLogEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
+      data:
+        dummy: 0
+    00000001:
+      type: {class: DestroyEntityHierarchyEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
+      data:
+        ApplyRecursivelyToChildren: 1

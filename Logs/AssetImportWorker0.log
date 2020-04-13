@@ -2,7 +2,7 @@
 Entitlement-based licensing initiated
 [LicensingClient] Licenses updated successfully
 
-LICENSE SYSTEM [2020413 9:59:35] Next license update check is after 2019-05-12T10:57:54
+LICENSE SYSTEM [2020413 10:29:43] Next license update check is after 2020-04-14T08:10:27
 
 Built from '2020.1/staging' branch; Version is '2020.1.0b5 (f017efceb459) revision 15734767'; Using compiler version '192227905'; Build Type 'Release'
 OS: 'Windows 10  (10.0.0) 64bit' Language: 'fr' Physical Memory: 16308 MB
@@ -21,11 +21,11 @@ C:/Users/Marc HANICOT/Documents/GitHub/MGM
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56297
+50194
 Successfully changed project path to: C:/Users/Marc HANICOT/Documents/GitHub/MGM
 C:/Users/Marc HANICOT/Documents/GitHub/MGM
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 58.11 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 104.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.1.0b5 (f017efceb459)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/Resources/UnitySubsystems
@@ -42,52 +42,88 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002786 seconds.
+Registered in 0.003681 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 43.78 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 72.92 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.614 seconds
+- Completed reload, in  2.606 seconds
 Registering precompiled user dll's ...
-Registered in 0.271228 seconds.
+Registered in 0.285321 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 55.39 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 60.08 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.042 seconds
+- Completed reload, in  2.100 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.66 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4171 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 174.1 MB.
-System memory in use after: 174.2 MB.
+System memory in use before: 174.2 MB.
+System memory in use after: 174.3 MB.
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 4583.
-Total: 4.731000 ms (FindLiveObjects: 0.713400 ms CreateObjectMapping: 0.358500 ms MarkObjects: 3.615100 ms  DeleteObjects: 0.036300 ms)
+Total: 5.424800 ms (FindLiveObjects: 0.684300 ms CreateObjectMapping: 0.338000 ms MarkObjects: 4.353800 ms  DeleteObjects: 0.041900 ms)
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002411 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 66.15 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.876 seconds
+Registering precompiled user dll's ...
+Registered in 0.274096 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.69 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.656 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.9 MB.
+System memory in use after: 93.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4591.
+Total: 8.017100 ms (FindLiveObjects: 1.254000 ms CreateObjectMapping: 0.624400 ms MarkObjects: 6.103900 ms  DeleteObjects: 0.033400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/MGM/TankDemo/Scenes/Playground.unity
-  artifactKey: Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
-Start importing Assets/MGM/TankDemo/Scenes/Playground.unity using Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground.unity additively'
-Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground.unity'
-	Deserialize:            42.773 ms
-	Integration:            99.652 ms
-	Integration of assets:  22.865 ms
-	Thread Wait Time:       25.619 ms
-	Total Operation Time:   190.909 ms
+  path: Assets/SceneDependencyCache/25682bf429a74f4f57f7b177a6703665.sceneWithBuildSettings
+  artifactKey: Guid(25682bf429a74f4f57f7b177a6703665) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/25682bf429a74f4f57f7b177a6703665.sceneWithBuildSettings using Guid(25682bf429a74f4f57f7b177a6703665) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity'
+	Deserialize:            1.321 ms
+	Integration:            59.020 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       18.084 ms
+	Total Operation Time:   78.430 ms
 Uploading Crash Report
 InvalidOperationException: Stack empty.
   at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
@@ -95,89 +131,216 @@ InvalidOperationException: Stack empty.
  
 (Filename: <4f004251610247e68900eb710906a95e> Line: 0)
 
- -> (target hash: '507ab321534ae152d1600665ff1c80a3') in 0.294836 seconds
-  Import took 0.307306 seconds .
+ -> (target hash: 'f891fd7915980036bbd67136c6de0e3e') in 3.796000 seconds
+  Import took 3.864519 seconds .
 
 ========================================================================
 Received Prepare
-Refreshing native plugins compatible for Editor in 3.47 ms, found 0 plugins.
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002922 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 58.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.308 seconds
+Registering precompiled user dll's ...
+Registered in 0.267605 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.142 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 48 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.3 MB.
+System memory in use after: 157.5 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4632.
+Total: 5.582400 ms (FindLiveObjects: 0.703000 ms CreateObjectMapping: 0.320700 ms MarkObjects: 4.530500 ms  DeleteObjects: 0.027500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 185.291508 seconds.
+  path: Assets/MGM/TankDemo/Scenes/Playground.unity
+  artifactKey: Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground.unity using Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground.unity'
+	Deserialize:            42.920 ms
+	Integration:            171.590 ms
+	Integration of assets:  13.663 ms
+	Thread Wait Time:       15.737 ms
+	Total Operation Time:   243.910 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: '666d2b562b0773130319e2d27d809afe') in 0.350815 seconds
+  Import took 0.363089 seconds .
+
+========================================================================
+Received Prepare
+Reloading mono domain
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002376 seconds.
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 49.16 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.064 seconds
+Registering precompiled user dll's ...
+Registered in 0.264698 seconds.
+Platform modules already initialized, skipping
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.927 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 156.3 MB.
+System memory in use after: 156.6 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4641.
+Total: 5.092000 ms (FindLiveObjects: 0.633600 ms CreateObjectMapping: 0.166500 ms MarkObjects: 4.268000 ms  DeleteObjects: 0.022600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.704626 seconds.
+  path: Assets/SceneDependencyCache/6dd33e1c5688b12bdaed94616c3aec9a.sceneWithBuildSettings
+  artifactKey: Guid(6dd33e1c5688b12bdaed94616c3aec9a) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/6dd33e1c5688b12bdaed94616c3aec9a.sceneWithBuildSettings using Guid(6dd33e1c5688b12bdaed94616c3aec9a) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity'
+	Deserialize:            0.953 ms
+	Integration:            32.378 ms
+	Integration of assets:  0.003 ms
+	Thread Wait Time:       18.347 ms
+	Total Operation Time:   51.681 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: '62525bd5939042c0d9252359d4975ded') in 0.733770 seconds
+  Import took 0.745646 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.63 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 90.3 MB.
-System memory in use after: 90.5 MB.
+System memory in use before: 211.6 MB.
+System memory in use after: 211.9 MB.
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4584.
-Total: 5.571800 ms (FindLiveObjects: 1.539800 ms CreateObjectMapping: 0.182900 ms MarkObjects: 3.823600 ms  DeleteObjects: 0.024500 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4642.
+Total: 6.271500 ms (FindLiveObjects: 0.692600 ms CreateObjectMapping: 0.279500 ms MarkObjects: 5.273600 ms  DeleteObjects: 0.024800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 168.183575 seconds.
+  path: Assets/MGM/TankDemo/Scenes/Playground.unity
+  artifactKey: Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground.unity using Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground.unity'
+	Deserialize:            66.780 ms
+	Integration:            79.540 ms
+	Integration of assets:  6.745 ms
+	Thread Wait Time:       12.057 ms
+	Total Operation Time:   165.122 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: '097d54645a84627d3b85c0669c214360') in 0.250541 seconds
+  Import took 0.266834 seconds .
 
 ========================================================================
 Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003577 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 70.66 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 3.73 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.662 seconds
-Registering precompiled user dll's ...
-Registered in 0.375378 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.96 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.541 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.8 MB.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.5 MB.
+System memory in use after: 237.7 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4592.
-Total: 4.830700 ms (FindLiveObjects: 0.726300 ms CreateObjectMapping: 0.339300 ms MarkObjects: 3.740000 ms  DeleteObjects: 0.024100 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4645.
+Total: 6.683200 ms (FindLiveObjects: 0.721200 ms CreateObjectMapping: 0.362100 ms MarkObjects: 5.570100 ms  DeleteObjects: 0.028700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 596.720844 seconds.
+  path: Assets/MGM/TankDemo/Scenes/Playground.unity
+  artifactKey: Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground.unity using Guid(8ac7e27517f56604aab209b39c2c4e76) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground.unity'
+	Deserialize:            5.890 ms
+	Integration:            18.930 ms
+	Integration of assets:  4.651 ms
+	Thread Wait Time:       12.857 ms
+	Total Operation Time:   42.328 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: '1d83ec8fe1368ba7c881e48cb4e4febf') in 0.113287 seconds
+  Import took 0.132276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001218 seconds.
+  path: Assets/MGM/TankDemo/Scenes/Playground/Environement.unity
+  artifactKey: Guid(70c6c9c3d5a85c44080ead715eeaa776) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground/Environement.unity using Guid(70c6c9c3d5a85c44080ead715eeaa776) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity'
+	Deserialize:            0.740 ms
+	Integration:            17.854 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       18.773 ms
+	Total Operation Time:   37.371 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: 'f0acd68c656403a877b21c073b8513d8') in 0.090157 seconds
+  Import took 0.100428 seconds .
 
 ========================================================================
 Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002914 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 56.05 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 3.44 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.200 seconds
-Registering precompiled user dll's ...
-Registered in 0.290924 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.915 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.6 MB.
-System memory in use after: 93.9 MB.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.7 MB.
+System memory in use after: 238.0 MB.
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4600.
-Total: 9.609200 ms (FindLiveObjects: 1.394100 ms CreateObjectMapping: 0.868800 ms MarkObjects: 7.301900 ms  DeleteObjects: 0.041200 ms)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4645.
+Total: 7.385400 ms (FindLiveObjects: 0.732600 ms CreateObjectMapping: 0.275100 ms MarkObjects: 6.355400 ms  DeleteObjects: 0.021500 ms)
 

@@ -99,7 +99,7 @@ namespace Wayn.Mgm.Events.Registry
 
         protected override void OnUpdate()
         {
-            
+    
             var inputDeps = JobHandle.CombineDependencies(Dependency, JobHandle, CrossFrameJobHandle);
 
             if (CommandsMap.IsCreated)

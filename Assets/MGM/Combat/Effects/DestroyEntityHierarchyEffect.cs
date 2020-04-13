@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
 using Unity.Entities;
 using Unity.Jobs;
+using Unity.Transforms;
 using UnityEngine;
 using Wayn.Mgm.Events;
 
@@ -41,7 +42,8 @@ namespace Wayn.Mgm.Combat.Effects
             {
                 EffectCommandEnumerator = EffectCommandEnumerator,
                 RegisteredEffects = RegisteredEffects,
-                EntityCommandBuffer = ECBSystem.CreateCommandBuffer()
+                EntityCommandBuffer = ECBSystem.CreateCommandBuffer(),
+                Children = GetBufferFromEntity<Child>(true)
             }.Schedule(inputDeps);
             ECBSystem.AddJobHandleForProducer(jh);
             return jh;
@@ -55,8 +57,11 @@ namespace Wayn.Mgm.Combat.Effects
             public NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
             public NativeHashMap<int, DestroyEntityHierarchyEffect> RegisteredEffects;
+            [ReadOnly]
+            public BufferFromEntity<Child> Children;
 
             public EntityCommandBuffer EntityCommandBuffer;
+
 
             public void Execute()
             {
@@ -66,11 +71,21 @@ namespace Wayn.Mgm.Combat.Effects
                     DestroyEntityHierarchyEffect effect;
                     if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))
                     {
-                        if (effect.ApplyRecursivelyToChildren)
-                        {
+                        RecursiveChildEffect(command.Target, effect);
+                    }
+                }
+            }
 
-                        }
-                        EntityCommandBuffer.AddComponent(command.Target, new Disabled());
+            private void RecursiveChildEffect(Entity target, DestroyEntityHierarchyEffect effect)
+            {
+                EntityCommandBuffer.DestroyEntity(target);
+                if (effect.ApplyRecursivelyToChildren && Children.Exists(target))
+                {
+                    var enumerator = Children[target].GetEnumerator();
+                    while (enumerator.MoveNext())
+                    {
+                        Entity e = enumerator.Current.Value;
+                        RecursiveChildEffect(e, effect);
                     }
                 }
             }
