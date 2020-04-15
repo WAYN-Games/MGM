@@ -133,17 +133,21 @@ namespace Wayn.Mgm.Events.Registry
 
         private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator)
         {
+
+            
             while (enumerator.MoveNext())
             {
+
                 Entity entity = enumerator.Current;
                 EffectComponentData<IEffect> EffectComponentData = EntityManager.GetComponentData<EffectComponentData<IEffect>>(entity);
+                ExclusiveEntityTransaction transaction = EntityManager.BeginExclusiveEntityTransaction();
                 foreach (ManagedBuffer<IEffect> managedBuffer in EffectComponentData.listOfManagedBuffer)
                 {
                     Type bufferType = Type.GetType(managedBuffer.BufferAssemblyQualifiedName);
     
                     object buffer = MethodCache.GetOrAdd(managedBuffer.BufferAssemblyQualifiedName + "AddBuffer",
-                            typeof(EntityManager).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType })).Invoke(EntityManager, new object[] { entity });
-
+                            typeof(ExclusiveEntityTransaction).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType })).Invoke(transaction, new object[] { entity });
+                    
                     MethodInfo AddBufferElementMethod = MethodCache.GetOrAdd(buffer.GetType().AssemblyQualifiedName+"Add", buffer.GetType().GetMethod("Add"));
      
                     List<IEffect> elements = managedBuffer.Effects;
@@ -154,9 +158,11 @@ namespace Wayn.Mgm.Events.Registry
                         AddBufferElementMethod.Invoke(buffer, new object[] { b });
                     }
                 }
-                EntityManager.RemoveComponent<EffectComponentData<IEffect>>(entity);
+                transaction.RemoveComponent(entity, typeof(EffectComponentData<IEffect>));
+                EntityManager.EndExclusiveEntityTransaction();
             }
         }
+
     }
     
     public abstract class BaseRegisteryReferenceBufferAuthoringForCutomEditor : MonoBehaviour
