@@ -21,4 +21,4 @@ Stands for Modular Game Mechanics.
     
 # Known Issue
 * the registry based event system does not support empty event types (see kill log event)
-* the event don't get into the registry when declared in a closed subscene (see Building01 prefab). This will probably require to move the registry to another implementation (maybe scriptable object).
+* ~~the event don't get into the registry when declared in a closed subscene (see Building01 prefab). This will probably require to move the registry to another implementation (maybe scriptable object).~~ --> Fixed by delaying the registration to runtime initialization through RegisterElementsSystem adn the use of class IComponentData (EffectComponentData). This step is just a POC, it will need refactoring to optimize perf and abstraction for easy extension/replication.
