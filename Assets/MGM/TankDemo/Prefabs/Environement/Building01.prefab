@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5279070987979837197}
   - component: {fileID: 7556202266283624774}
   - component: {fileID: -1867028431061672503}
-  - component: {fileID: 3124704675010788358}
+  - component: {fileID: 7236463106603353710}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
@@ -59,6 +59,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -87,6 +88,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5279070987979837197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +202,7 @@ MonoBehaviour:
       type: {class: DisableEntityHierarchyEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
       data:
         ApplyRecursivelyToChildren: 1
---- !u!114 &3124704675010788358
+--- !u!114 &7236463106603353710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,6 +211,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 5279070987979837199}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7866449d1e8071f4691a801a890d4faf, type: 3}
+  m_Script: {fileID: 11500000, guid: 31b4e17ccbc2928408c037486a987aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Entries:
+  - Entry:
+      id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: InflictDamageEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
+      data:
+        Amount: 3

@@ -4,7 +4,6 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
-using UnityEngine;
 using Wayn.Mgm.Events;
 
 namespace Wayn.Mgm.Combat.Effects
@@ -73,21 +72,21 @@ namespace Wayn.Mgm.Combat.Effects
                     DisableEntityHierarchyEffect effect;
                     if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))
                     {
-                        RecursiveChildEffect(command.Target, effect);
+                        RecursiveChildEffect(command.Target, effect.ApplyRecursivelyToChildren);
                     }
                 }
             }
 
-            private void RecursiveChildEffect(Entity target, DisableEntityHierarchyEffect effect)
+            private void RecursiveChildEffect(Entity target, bool applyRecursivelyToChildren)
             {
                 EntityCommandBuffer.AddComponent(target, new Disabled());
-                if (effect.ApplyRecursivelyToChildren && Children.Exists(target))
+                if (applyRecursivelyToChildren && Children.Exists(target))
                 {
                     var enumerator = Children[target].GetEnumerator();
                     while (enumerator.MoveNext())
                     {
                         Entity e = enumerator.Current.Value;
-                        RecursiveChildEffect(e, effect);
+                        RecursiveChildEffect(e, applyRecursivelyToChildren);
                     }
                 }
             }
