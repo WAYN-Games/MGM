@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
@@ -48,7 +49,7 @@ namespace Wayn.Mgm.Events.Registry
             REGISTRY er = GetRegisteryInstance();
 
             // Add dynamic buffer to store Effect References on the entity
-           // DynamicBuffer<BUFFER> effectBuffer = dstManager.AddBuffer<BUFFER>(entity);
+           
             // Fore each effect defined in hte inspector
             List<ELEMENT> listOfElements = new List<ELEMENT>();
             foreach (AUTHORING effectAuthoring in Entries)
@@ -75,46 +76,50 @@ namespace Wayn.Mgm.Events.Registry
     [UpdateAfter(typeof(ConvertToEntitySystem))]
     public class RegisterElementsSystem : SystemBase
     {
+        private EntityQuery m_PrefabsQuery;
+        private EntityQuery m_EntitiesQuery;
+
+        private ConcurrentDictionary<string, MethodInfo> MethodCache;
+
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+            MethodCache = new ConcurrentDictionary<string, MethodInfo>();
+
+            m_PrefabsQuery = GetEntityQuery(new EntityQueryDesc
+            {
+                All = new ComponentType[] {
+                ComponentType.ReadOnly< EffectComponentData<IEffect>>(),
+                ComponentType.ReadOnly< Prefab>()
+                }
+            });
+
+            m_EntitiesQuery = GetEntityQuery(new EntityQueryDesc
+            {
+                All = new ComponentType[] {
+                ComponentType.ReadOnly< EffectComponentData<IEffect>>()
+                }
+            });
+        }
+
         protected override void OnUpdate()
         {
             Stopwatch sw = new Stopwatch();
 
             sw.Start();
 
-            NativeArray<Entity> prefabs = GetEntityQuery(new EntityQueryDesc
-            {
-                All = new ComponentType[] {
-                ComponentType.ReadOnly< EffectComponentData<IEffect>>(),
-                ComponentType.ReadOnly< Prefab>()
-                }
-            }).ToEntityArray(Allocator.TempJob);
-
-            var prefabEnumerator = prefabs.GetEnumerator();
-
-
-
-            RemapBuffers(prefabEnumerator);
-
+            NativeArray<Entity> prefabs = m_PrefabsQuery.ToEntityArray(Allocator.TempJob);
+            RemapBuffers(prefabs.GetEnumerator());
             prefabs.Dispose();
 
             var t1 = sw.ElapsedTicks;
+            
+            UnityEngine.Debug.Log($"Prefabs {t1} ticks");
             sw.Reset();
 
-            UnityEngine.Debug.Log($"Prefabs {t1 / 10000} ms");
 
-            NativeArray<Entity> entities = GetEntityQuery(new EntityQueryDesc
-            {
-                All = new ComponentType[] {
-                ComponentType.ReadOnly< EffectComponentData<IEffect>>(),
-                }
-            }).ToEntityArray(Allocator.TempJob);
-
-            var entitiesEnumerator = entities.GetEnumerator();
-
-
-
-            RemapBuffers(entitiesEnumerator);
-
+            NativeArray<Entity> entities = m_EntitiesQuery.ToEntityArray(Allocator.TempJob);
+            RemapBuffers(entities.GetEnumerator());
             entities.Dispose();
 
             sw.Stop();
@@ -122,8 +127,8 @@ namespace Wayn.Mgm.Events.Registry
             var t2 = sw.ElapsedTicks;
             sw.Stop();
 
-            UnityEngine.Debug.Log($"Entities {t2 / 10000} ms");
-            UnityEngine.Debug.Log($"Total {(t1+t2) / 10000} ms");
+            UnityEngine.Debug.Log($"Entities {t2} ticks");
+            UnityEngine.Debug.Log($"Total {(t1+t2)} ticks");
         }
 
         private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator)
@@ -136,26 +141,17 @@ namespace Wayn.Mgm.Events.Registry
                 {
                     Type bufferType = Type.GetType(managedBuffer.BufferAssemblyQualifiedName);
     
-                    object buffer;
-                    if (!EntityManager.HasComponent(entity, bufferType))
-                    {
-                        buffer = typeof(EntityManager).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType }).Invoke(EntityManager, new object[] { entity });
-                        UnityEngine.Debug.Log(buffer == null);
-                        UnityEngine.Debug.Log(buffer == default);
-                    }
-                    else
-                    {
-                        buffer = typeof(EntityManager).GetMethod("GetBuffer").MakeGenericMethod(new Type[] { bufferType }).Invoke(EntityManager, new object[] { entity });
-                    }
+                    object buffer = MethodCache.GetOrAdd(managedBuffer.BufferAssemblyQualifiedName + "AddBuffer",
+                            typeof(EntityManager).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType })).Invoke(EntityManager, new object[] { entity });
 
-                    MethodInfo m = buffer.GetType().GetMethod("Add");
+                    MethodInfo AddBufferElementMethod = MethodCache.GetOrAdd(buffer.GetType().AssemblyQualifiedName+"Add", buffer.GetType().GetMethod("Add"));
      
                     List<IEffect> elements = managedBuffer.Effects;
                     foreach (IEffect effect in elements)
                     {
                         IEffectReferenceBuffer b = Activator.CreateInstance(bufferType) as IEffectReferenceBuffer;
                         b.EffectReference = EffectRegistry.Instance.AddEffect(effect);
-                        m.Invoke(buffer, new object[] { b });
+                        AddBufferElementMethod.Invoke(buffer, new object[] { b });
                     }
                 }
                 EntityManager.RemoveComponent<EffectComponentData<IEffect>>(entity);
