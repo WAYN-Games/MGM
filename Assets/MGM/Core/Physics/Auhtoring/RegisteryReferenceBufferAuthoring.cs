@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
@@ -102,50 +103,55 @@ namespace Wayn.Mgm.Events.Registry
                 ComponentType.ReadOnly< EffectComponentData<IEffect>>()
                 }
             });
-
+           
             m_EndInitializationEntityCommandBufferSystem = World.GetOrCreateSystem<EndInitializationEntityCommandBufferSystem>();
         }
 
         protected override void OnUpdate()
         {
-            var ECB = m_EndInitializationEntityCommandBufferSystem.CreateCommandBuffer();
             Stopwatch sw = new Stopwatch();
-
+            List<Task> Tasks = new List<Task>();
             sw.Start();
 
             NativeArray<Entity> prefabs = m_PrefabsQuery.ToEntityArray(Allocator.TempJob);
-            RemapBuffers(prefabs.GetEnumerator(), ECB);
+            RemapBuffers(prefabs.GetEnumerator(), Tasks);
             prefabs.Dispose();
 
-            var t1 = sw.ElapsedMilliseconds;
+            var t1 = sw.ElapsedTicks;
             
-            UnityEngine.Debug.Log($"Prefabs {t1} ms");
+            UnityEngine.Debug.Log($"Schedule Prefabs {t1} ticks");
             sw.Reset();
 
             NativeArray<Entity> entities = m_EntitiesQuery.ToEntityArray(Allocator.TempJob);
-            RemapBuffers(entities.GetEnumerator(), ECB);
+            RemapBuffers(entities.GetEnumerator(), Tasks);
             entities.Dispose();
 
-            var t2 = sw.ElapsedMilliseconds;
+            var t2 = sw.ElapsedTicks;
 
-            UnityEngine.Debug.Log($"Entities {t2} ms");
+            UnityEngine.Debug.Log($"Schedule Entities {t2} ticks");
+            sw.Reset();
+            Task.WaitAll(Tasks.ToArray());
 
+            var t3 = sw.ElapsedTicks;
+
+            UnityEngine.Debug.Log($"Wait {t3} ticks");
 
             sw.Stop();
 
-            UnityEngine.Debug.Log($"Total {(t1+t2)} ms");
+            UnityEngine.Debug.Log($"Total {(t1+t2+t3)} ticks");
         }
 
 
 
-        private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator, EntityCommandBuffer ecb)
+        private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator, List<Task> Tasks)
         {
-            List<Thread> threads = new List<Thread>();
+       
             while (enumerator.MoveNext())
             {
                 Entity entity = enumerator.Current;
-                ProcessEntity(entity, ecb);
+                Tasks.Add(Task.Run(() => ProcessEntity(entity, m_EndInitializationEntityCommandBufferSystem.CreateCommandBuffer())));
             }
+      
         }
         private void ProcessEntity(Entity entity, EntityCommandBuffer ecb)
         {
