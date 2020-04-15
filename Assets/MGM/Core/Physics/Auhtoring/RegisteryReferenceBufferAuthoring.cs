@@ -3,8 +3,10 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Threading;
 using Unity.Collections;
 using Unity.Entities;
+using Unity.Jobs;
 using UnityEngine;
 using Wayn.Mgm.Events;
 using Wayn.Mgm.Events.Registry;
@@ -78,7 +80,7 @@ namespace Wayn.Mgm.Events.Registry
     {
         private EntityQuery m_PrefabsQuery;
         private EntityQuery m_EntitiesQuery;
-
+        private EndInitializationEntityCommandBufferSystem m_EndInitializationEntityCommandBufferSystem;
         private ConcurrentDictionary<string, MethodInfo> MethodCache;
 
         protected override void OnCreate()
@@ -100,68 +102,72 @@ namespace Wayn.Mgm.Events.Registry
                 ComponentType.ReadOnly< EffectComponentData<IEffect>>()
                 }
             });
+
+            m_EndInitializationEntityCommandBufferSystem = World.GetOrCreateSystem<EndInitializationEntityCommandBufferSystem>();
         }
 
         protected override void OnUpdate()
         {
+            var ECB = m_EndInitializationEntityCommandBufferSystem.CreateCommandBuffer();
             Stopwatch sw = new Stopwatch();
 
             sw.Start();
 
             NativeArray<Entity> prefabs = m_PrefabsQuery.ToEntityArray(Allocator.TempJob);
-            RemapBuffers(prefabs.GetEnumerator());
+            RemapBuffers(prefabs.GetEnumerator(), ECB);
             prefabs.Dispose();
 
-            var t1 = sw.ElapsedTicks;
+            var t1 = sw.ElapsedMilliseconds;
             
-            UnityEngine.Debug.Log($"Prefabs {t1} ticks");
+            UnityEngine.Debug.Log($"Prefabs {t1} ms");
             sw.Reset();
 
-
             NativeArray<Entity> entities = m_EntitiesQuery.ToEntityArray(Allocator.TempJob);
-            RemapBuffers(entities.GetEnumerator());
+            RemapBuffers(entities.GetEnumerator(), ECB);
             entities.Dispose();
 
+            var t2 = sw.ElapsedMilliseconds;
+
+            UnityEngine.Debug.Log($"Entities {t2} ms");
+
+
             sw.Stop();
 
-            var t2 = sw.ElapsedTicks;
-            sw.Stop();
-
-            UnityEngine.Debug.Log($"Entities {t2} ticks");
-            UnityEngine.Debug.Log($"Total {(t1+t2)} ticks");
+            UnityEngine.Debug.Log($"Total {(t1+t2)} ms");
         }
 
-        private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator)
-        {
 
-            
+
+        private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator, EntityCommandBuffer ecb)
+        {
+            List<Thread> threads = new List<Thread>();
             while (enumerator.MoveNext())
             {
-
                 Entity entity = enumerator.Current;
-                EffectComponentData<IEffect> EffectComponentData = base.EntityManager.GetComponentData<EffectComponentData<IEffect>>(entity);
-                foreach (ManagedBuffer<IEffect> managedBuffer in EffectComponentData.listOfManagedBuffer)
-                {
-                    Type bufferType = Type.GetType(managedBuffer.BufferAssemblyQualifiedName);
-    
-                    object buffer = MethodCache.GetOrAdd(managedBuffer.BufferAssemblyQualifiedName + "AddBuffer",
-                            typeof(EntityManager).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType })).Invoke(EntityManager, new object[] { entity });
-                    
-                    MethodInfo AddBufferElementMethod = MethodCache.GetOrAdd(buffer.GetType().AssemblyQualifiedName+"Add", buffer.GetType().GetMethod("Add"));
-     
-                    List<IEffect> elements = managedBuffer.Effects;
-                    foreach (IEffect effect in elements)
-                    {
-                        IEffectReferenceBuffer b = Activator.CreateInstance(bufferType) as IEffectReferenceBuffer;
-                        b.EffectReference = EffectRegistry.Instance.AddEffect(effect);
-                        AddBufferElementMethod.Invoke(buffer, new object[] { b });
-                    }
-                }
-                EntityManager.RemoveComponent(entity, typeof(EffectComponentData<IEffect>));
+                ProcessEntity(entity, ecb);
             }
-
         }
+        private void ProcessEntity(Entity entity, EntityCommandBuffer ecb)
+        {
+            EffectComponentData<IEffect> EffectComponentData = EntityManager.GetComponentData<EffectComponentData<IEffect>>(entity);
+            foreach (ManagedBuffer<IEffect> managedBuffer in EffectComponentData.listOfManagedBuffer)
+            {
+                Type bufferType = Type.GetType(managedBuffer.BufferAssemblyQualifiedName);
+                object buffer = MethodCache.GetOrAdd(managedBuffer.BufferAssemblyQualifiedName + "AddBuffer",
+                        typeof(EntityCommandBuffer).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType })).Invoke(ecb, new object[] { entity });
 
+                MethodInfo AddBufferElementMethod = MethodCache.GetOrAdd(buffer.GetType().AssemblyQualifiedName + "Add", buffer.GetType().GetMethod("Add"));
+
+                List<IEffect> elements = managedBuffer.Effects;
+                foreach (IEffect effect in elements)
+                {
+                    IEffectReferenceBuffer b = Activator.CreateInstance(bufferType) as IEffectReferenceBuffer;
+                    b.EffectReference = EffectRegistry.Instance.AddEffect(effect);
+                    AddBufferElementMethod.Invoke(buffer, new object[] { b });
+                }
+            }
+            ecb.RemoveComponent(entity, typeof(EffectComponentData<IEffect>));
+        }
     }
     
     public abstract class BaseRegisteryReferenceBufferAuthoringForCutomEditor : MonoBehaviour
