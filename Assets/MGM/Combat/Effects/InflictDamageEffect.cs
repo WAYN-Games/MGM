@@ -3,6 +3,7 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
+using Unity.Mathematics;
 using Wayn.Mgm.Events;
 
 namespace Wayn.Mgm.Combat.Effects
@@ -48,6 +49,8 @@ namespace Wayn.Mgm.Combat.Effects
             m_EffectCommandSystem = World.GetOrCreateSystem<EffectBufferSystem>();
         }
 
+
+
         [BurstCompile]
         public struct ConsumerJob : IJob
         {
@@ -68,25 +71,23 @@ namespace Wayn.Mgm.Combat.Effects
                     Entity target = command.Target;
 
                     if (!Healths.Exists(target)) continue;
-                   
-                    Health health = Healths[target];
-                    health.Value -= RegisteredEffects[command.RegistryReference.VersionId].Amount;
-                    Healths[target] = health;
 
-                    if (health.Value > 0) continue;
+                    Healths[target] = PoolMethods.SubtractValue(Healths[target], RegisteredEffects[command.RegistryReference.VersionId].Amount);
+
+                    if (Healths[target].Value > 0) continue;
 
                     if (!OnDeathBuffer.Exists(target)) continue;
+
                     NativeArray<OnDeath>.Enumerator OnDeathEnum = OnDeathBuffer[target].GetEnumerator();
 
                     while (OnDeathEnum.MoveNext())
                     {
-                        var c = new EffectCommand()
+                        EffectCommandQueue.Enqueue(new EffectCommand()
                         {
                             RegistryReference = OnDeathEnum.Current.EffectReference,
                             Emitter = command.Emitter,
                             Target = target
-                        };
-                        EffectCommandQueue.Enqueue(c);
+                        });
                     }
                 }
             }

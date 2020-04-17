@@ -49,6 +49,14 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ToogleGraphy"",
+                    ""type"": ""Button"",
+                    ""id"": ""74c44634-f362-46d9-8883-e461fbc71d2b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -183,6 +191,28 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8af4a17f-dd9f-4a8d-b665-707a0226a29e"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PC"",
+                    ""action"": ""ToogleGraphy"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c8d0f94-6e06-458b-ad38-b75115903382"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""ToogleGraphy"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -223,6 +253,7 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
         m_Tank_Jump = m_Tank.FindAction("Jump", throwIfNotFound: true);
         m_Tank_Aim = m_Tank.FindAction("Aim", throwIfNotFound: true);
         m_Tank_Shoot = m_Tank.FindAction("Shoot", throwIfNotFound: true);
+        m_Tank_ToogleGraphy = m_Tank.FindAction("ToogleGraphy", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -276,6 +307,7 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Tank_Jump;
     private readonly InputAction m_Tank_Aim;
     private readonly InputAction m_Tank_Shoot;
+    private readonly InputAction m_Tank_ToogleGraphy;
     public struct TankActions
     {
         private @TankDemotControls m_Wrapper;
@@ -284,6 +316,7 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Tank_Jump;
         public InputAction @Aim => m_Wrapper.m_Tank_Aim;
         public InputAction @Shoot => m_Wrapper.m_Tank_Shoot;
+        public InputAction @ToogleGraphy => m_Wrapper.m_Tank_ToogleGraphy;
         public InputActionMap Get() { return m_Wrapper.m_Tank; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -305,6 +338,9 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
                 @Shoot.started -= m_Wrapper.m_TankActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnShoot;
+                @ToogleGraphy.started -= m_Wrapper.m_TankActionsCallbackInterface.OnToogleGraphy;
+                @ToogleGraphy.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnToogleGraphy;
+                @ToogleGraphy.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnToogleGraphy;
             }
             m_Wrapper.m_TankActionsCallbackInterface = instance;
             if (instance != null)
@@ -321,6 +357,9 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
+                @ToogleGraphy.started += instance.OnToogleGraphy;
+                @ToogleGraphy.performed += instance.OnToogleGraphy;
+                @ToogleGraphy.canceled += instance.OnToogleGraphy;
             }
         }
     }
@@ -349,5 +388,6 @@ public class @TankDemotControls : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnToogleGraphy(InputAction.CallbackContext context);
     }
 }
