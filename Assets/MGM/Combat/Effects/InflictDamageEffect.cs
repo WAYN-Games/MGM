@@ -3,7 +3,6 @@ using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
-using Unity.Mathematics;
 using Wayn.Mgm.Events;
 
 namespace Wayn.Mgm.Combat.Effects
@@ -14,10 +13,12 @@ namespace Wayn.Mgm.Combat.Effects
     [Serializable]
     public struct InflictDamageEffect : IEffect
     {
-        /// <summary>
-        /// The amount of health changed.
-        /// </summary>
-        public float Amount;
+
+            /// <summary>
+            /// The amount of health changed.
+            /// </summary>
+            public float Amount;
+
     }
     
     public class InflictDamageEffectConsumer : EffectConsumerSystem<InflictDamageEffect>

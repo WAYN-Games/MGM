@@ -6,6 +6,7 @@ using Unity.Jobs;
 using UnityEngine;
 using Wayn.Mgm.Events;
 
+
 namespace Wayn.Mgm.Combat.Effects
 {
     /// <summary>

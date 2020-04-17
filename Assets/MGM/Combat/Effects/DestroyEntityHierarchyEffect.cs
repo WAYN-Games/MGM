@@ -1,11 +1,9 @@
 ﻿using System;
 using Unity.Burst;
 using Unity.Collections;
-using Unity.Collections.LowLevel.Unsafe;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
-using UnityEngine;
 using Wayn.Mgm.Events;
 
 namespace Wayn.Mgm.Combat.Effects

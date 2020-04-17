@@ -15,21 +15,6 @@
             "$type": "Unity.Build.Common.GeneralSettings, Unity.Build.Common",
             "ProductName": "OilWar W64",
             "CompanyName": "WAYN Group"
-        },
-        {
-            "$type": "Unity.Build.Common.SceneList, Unity.Build.Common",
-            "$version": 1,
-            "BuildCurrentScene": true,
-            "SceneInfos": [
-                {
-                    "Scene": "GlobalObjectId_V1-1-8ac7e27517f56604aab209b39c2c4e76-102900000-0",
-                    "AutoLoad": true
-                },
-                {
-                    "Scene": "GlobalObjectId_V1-1-70c6c9c3d5a85c44080ead715eeaa776-102900000-0",
-                    "AutoLoad": true
-                }
-            ]
         }
     ]
 }

@@ -54,21 +54,21 @@ namespace Wayn.Mgm.Events.Registry
             // Add dynamic buffer to store Effect References on the entity
            
             // Fore each effect defined in hte inspector
-            List<ELEMENT> listOfElements = new List<ELEMENT>();
+            List<object> listOfElements = new List<object>();
             foreach (AUTHORING effectAuthoring in Entries)
             {
               //  effectBuffer.Add(new BUFFER() { EffectReference = er.AddEffect(effectAuthoring.Entry) });
                 listOfElements.Add(effectAuthoring.Entry);
             }
 
-            EffectComponentData<ELEMENT> component;
-            if (!dstManager.HasComponent<EffectComponentData<ELEMENT>>(entity))
+            EffectComponentData component;
+            if (!dstManager.HasComponent<EffectComponentData>(entity))
             {
-                dstManager.AddComponentData(entity,new EffectComponentData<ELEMENT>() { listOfManagedBuffer = new List<ManagedBuffer<ELEMENT>>()});
+                dstManager.AddComponentData(entity,new EffectComponentData() { listOfManagedBuffer = new List<ManagedBuffer>()});
             }
-            component = dstManager.GetComponentData<EffectComponentData<ELEMENT>>(entity);
+            component = dstManager.GetComponentData<EffectComponentData>(entity);
 
-            component.listOfManagedBuffer.Add(new ManagedBuffer<ELEMENT>() { BufferAssemblyQualifiedName = typeof(BUFFER).AssemblyQualifiedName, Effects = listOfElements });
+            component.listOfManagedBuffer.Add(new ManagedBuffer() { BufferAssemblyQualifiedName = typeof(BUFFER).AssemblyQualifiedName, Effects = listOfElements });
 
             dstManager.SetComponentData(entity, component);
 
@@ -92,7 +92,7 @@ namespace Wayn.Mgm.Events.Registry
             m_PrefabsQuery = GetEntityQuery(new EntityQueryDesc
             {
                 All = new ComponentType[] {
-                ComponentType.ReadOnly< EffectComponentData<IEffect>>(),
+                ComponentType.ReadOnly< EffectComponentData>(),
                 ComponentType.ReadOnly< Prefab>()
                 }
             });
@@ -100,7 +100,7 @@ namespace Wayn.Mgm.Events.Registry
             m_EntitiesQuery = GetEntityQuery(new EntityQueryDesc
             {
                 All = new ComponentType[] {
-                ComponentType.ReadOnly< EffectComponentData<IEffect>>()
+                ComponentType.ReadOnly< EffectComponentData>()
                 }
             });
            
@@ -155,8 +155,8 @@ namespace Wayn.Mgm.Events.Registry
         }
         private void ProcessEntity(Entity entity, EntityCommandBuffer ecb)
         {
-            EffectComponentData<IEffect> EffectComponentData = EntityManager.GetComponentData<EffectComponentData<IEffect>>(entity);
-            foreach (ManagedBuffer<IEffect> managedBuffer in EffectComponentData.listOfManagedBuffer)
+            EffectComponentData EffectComponentData = EntityManager.GetComponentData<EffectComponentData>(entity);
+            foreach (ManagedBuffer managedBuffer in EffectComponentData.listOfManagedBuffer)
             {
                 Type bufferType = Type.GetType(managedBuffer.BufferAssemblyQualifiedName);
                 object buffer = MethodCache.GetOrAdd(managedBuffer.BufferAssemblyQualifiedName + "AddBuffer",
@@ -164,7 +164,7 @@ namespace Wayn.Mgm.Events.Registry
 
                 MethodInfo AddBufferElementMethod = MethodCache.GetOrAdd(buffer.GetType().AssemblyQualifiedName + "Add", buffer.GetType().GetMethod("Add"));
 
-                List<IEffect> elements = managedBuffer.Effects;
+                List<object> elements = managedBuffer.Effects;
                 foreach (IEffect effect in elements)
                 {
                     IEffectReferenceBuffer b = Activator.CreateInstance(bufferType) as IEffectReferenceBuffer;
@@ -172,7 +172,7 @@ namespace Wayn.Mgm.Events.Registry
                     AddBufferElementMethod.Invoke(buffer, new object[] { b });
                 }
             }
-            ecb.RemoveComponent(entity, typeof(EffectComponentData<IEffect>));
+            ecb.RemoveComponent(entity, typeof(EffectComponentData));
         }
     }
     
