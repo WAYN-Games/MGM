@@ -2,23 +2,23 @@
 
 public class Bilboard : MonoBehaviour
 {
-    public Camera camera;
+    public Camera m_camera;
 
     // Start is called before the first frame update
     void Start()
     {
-        if(camera == null) {
-            camera= GetComponent<Canvas>().worldCamera;
+        if(m_camera == null) {
+            m_camera= GetComponent<Canvas>().worldCamera;
         }
-        if (camera == null)
+        if (m_camera == null)
         {
-            camera = Camera.main;
+            m_camera = Camera.main;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.LookAt(this.transform.position + camera.transform.forward);
+        this.transform.LookAt(this.transform.position + m_camera.transform.forward);
     }
 }
