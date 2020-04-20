@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UpdatePoolFillValue : MonoBehaviour,IConvertGameObjectToEntity
+public abstract class UpdatePoolFillValue<T> : MonoBehaviour,IConvertGameObjectToEntity where T : struct,IPool
 {
     public Slider Fill;
 
@@ -27,12 +27,16 @@ public class UpdatePoolFillValue : MonoBehaviour,IConvertGameObjectToEntity
     {
         if (Entity.Null.Equals(Entity)) return;
 
-        Health health = World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentData<Health>(Entity);
-        Fill.value = health.Value / health.MaxValue;
+        T pool = World.DefaultGameObjectInjectionWorld.EntityManager.GetComponentData<T>(Entity); 
+        Fill.value = pool.Value / pool.MaxValue;
 
         if(Fill.value <= 0)
         {
             Fill.gameObject.SetActive(false);
+        }
+        else
+        {
+            Fill.gameObject.SetActive(true);
         }
     }
 }

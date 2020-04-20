@@ -188,6 +188,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 00af218f-a2e1-452f-b5dd-fa417495c93d
     m_ActionName: Tank/Shoot[/Mouse/leftButton,/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 74c44634-f362-46d9-8883-e461fbc71d2b
+    m_ActionName: Tank/ToogleGraphy[/Keyboard/g,/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Tank
@@ -471,7 +475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c4dbc4fd78da7419c5175a592b4213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 9218330149266798342}
+  m_camera: {fileID: 0}
 --- !u!1 &7096275858916099496
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +487,7 @@ GameObject:
   - component: {fileID: 4924029854136945928}
   - component: {fileID: 8172545971889580676}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,9 +1232,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6443943049874429776}
   - component: {fileID: 1840646039625869739}
-  - component: {fileID: 1709403249626312087}
+  - component: {fileID: 9180861632012574631}
   m_Layer: 0
-  m_Name: HealthBarUiUpdater
+  m_Name: BarUiUpdater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1243,7 +1247,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7956034946075862066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1263,7 +1267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 1
---- !u!114 &1709403249626312087
+--- !u!114 &9180861632012574631
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1272,7 +1276,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7956034946075862066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80a00cfd9659d7046ac2a05b20a59532, type: 3}
+  m_Script: {fileID: 11500000, guid: ab5cdcc8580316340b047042e044dfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Fill: {fileID: 8172545971889580676}

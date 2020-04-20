@@ -20,7 +20,7 @@ namespace Wayn.Mgm.Combat.Effects
             public float Amount;
 
     }
-    
+
     public class InflictDamageEffectConsumer : EffectConsumerSystem<InflictDamageEffect>
     {
         private EffectBufferSystem m_EffectCommandSystem;

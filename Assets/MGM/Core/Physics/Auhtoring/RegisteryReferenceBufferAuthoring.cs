@@ -3,12 +3,11 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
 using Unity.Collections;
 using Unity.Entities;
-using Unity.Jobs;
 using UnityEngine;
+using UnityEngine.Profiling;
 using Wayn.Mgm.Events;
 using Wayn.Mgm.Events.Registry;
 
@@ -109,36 +108,22 @@ namespace Wayn.Mgm.Events.Registry
 
         protected override void OnUpdate()
         {
-            Stopwatch sw = new Stopwatch();
+            Profiler.BeginSample("RegisterElementsSystem.OnUpdate()");
             List<Task> Tasks = new List<Task>();
-            sw.Start();
-
+            
             NativeArray<Entity> prefabs = m_PrefabsQuery.ToEntityArray(Allocator.TempJob);
             RemapBuffers(prefabs.GetEnumerator(), Tasks);
             prefabs.Dispose();
 
-            var t1 = sw.ElapsedTicks;
             
-            UnityEngine.Debug.Log($"Schedule Prefabs {t1} ticks");
-            sw.Reset();
-
+           
             NativeArray<Entity> entities = m_EntitiesQuery.ToEntityArray(Allocator.TempJob);
             RemapBuffers(entities.GetEnumerator(), Tasks);
             entities.Dispose();
 
-            var t2 = sw.ElapsedTicks;
-
-            UnityEngine.Debug.Log($"Schedule Entities {t2} ticks");
-            sw.Reset();
             Task.WaitAll(Tasks.ToArray());
+            Profiler.EndSample();
 
-            var t3 = sw.ElapsedTicks;
-
-            UnityEngine.Debug.Log($"Wait {t3} ticks");
-
-            sw.Stop();
-
-            UnityEngine.Debug.Log($"Total {(t1+t2+t3)} ticks");
         }
 
 
@@ -161,7 +146,7 @@ namespace Wayn.Mgm.Events.Registry
                 Type bufferType = Type.GetType(managedBuffer.BufferAssemblyQualifiedName);
                 object buffer = MethodCache.GetOrAdd(managedBuffer.BufferAssemblyQualifiedName + "AddBuffer",
                         typeof(EntityCommandBuffer).GetMethod("AddBuffer").MakeGenericMethod(new Type[] { bufferType })).Invoke(ecb, new object[] { entity });
-
+                
                 MethodInfo AddBufferElementMethod = MethodCache.GetOrAdd(buffer.GetType().AssemblyQualifiedName + "Add", buffer.GetType().GetMethod("Add"));
 
                 List<object> elements = managedBuffer.Effects;

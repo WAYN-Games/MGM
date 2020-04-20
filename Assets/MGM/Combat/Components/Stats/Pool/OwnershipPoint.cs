@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public struct Health : IPool
+public struct OwnershipPoint : IPool
 {
     public float _value;
     public float _maxValue;
