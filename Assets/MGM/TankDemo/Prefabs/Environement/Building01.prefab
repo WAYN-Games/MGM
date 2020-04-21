@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 5279070987979837196}
   - component: {fileID: 5279070987979837197}
   - component: {fileID: 7556202266283624774}
-  - component: {fileID: -1867028431061672503}
+  - component: {fileID: 4201172144189532677}
   m_Layer: 0
   m_Name: Building01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5279070987979837198
 Transform:
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _value: 50
   _maxValue: 500
---- !u!114 &-1867028431061672503
+--- !u!114 &4201172144189532677
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
