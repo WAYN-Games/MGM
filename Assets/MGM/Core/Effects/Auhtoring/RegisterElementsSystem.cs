@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.Collections;
 using Unity.Entities;
@@ -34,7 +32,8 @@ namespace Wayn.Mgm.Events.Registry
                 ComponentType.ReadOnly<EffectComponentData>()
                 }
             });
-          
+
+
             m_EndInitializationEntityCommandBufferSystem = World.GetOrCreateSystem<EndInitializationEntityCommandBufferSystem>();
         }
 
@@ -42,40 +41,41 @@ namespace Wayn.Mgm.Events.Registry
         {
 
             Profiler.BeginSample("RegisterElementsSystem.OnUpdate()");
-            List<Task> Tasks = new List<Task>();
             
             NativeArray<Entity> prefabs = m_PrefabsQuery.ToEntityArray(Allocator.TempJob);
-            RemapBuffers(prefabs.GetEnumerator(), Tasks);
+            RemapBuffers(prefabs.GetEnumerator());
             prefabs.Dispose();
 
             
            
             NativeArray<Entity> entities = m_EntitiesQuery.ToEntityArray(Allocator.TempJob);
-            RemapBuffers(entities.GetEnumerator(), Tasks);
+            RemapBuffers(entities.GetEnumerator());
             entities.Dispose();
 
-            Task.WaitAll(Tasks.ToArray());
+
             Profiler.EndSample();
 
         }
 
 
 
-        private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator, List<Task> Tasks)
+        private void RemapBuffers(NativeArray<Entity>.Enumerator enumerator)
         {
             
             while (enumerator.MoveNext())
             {
                 Entity entity = enumerator.Current;
-                Tasks.Add(Task.Run(() => ProcessEntity(entity, m_EndInitializationEntityCommandBufferSystem.CreateCommandBuffer())));
+                ProcessEntity(entity, m_EndInitializationEntityCommandBufferSystem.CreateCommandBuffer());
             }
       
         }
         private void ProcessEntity(Entity entity, EntityCommandBuffer ecb)
         {
             EffectComponentData EffectComponentData = EntityManager.GetComponentData<EffectComponentData>(entity);
-            foreach(var e in EffectComponentData.listOfManagedBuffer)
+    
+            foreach (ISelfRegistringAuhtoringComponent e in EffectComponentData.listOfManagedBuffer)
             {
+                Debug.Log($"{entity}//{EffectComponentData}//{e}");
                 e.Register(ecb, entity);
             }
            

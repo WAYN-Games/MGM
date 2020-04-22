@@ -2,7 +2,7 @@
 Entitlement-based licensing initiated
 [LicensingClient] Licenses updated successfully
 
-LICENSE SYSTEM [2020421 17:27:23] Next license update check is after 2020-04-19T17:25:56
+LICENSE SYSTEM [2020422 9:33:13] Next license update check is after 2020-04-19T17:25:56
 
 Built from '2020.1/staging' branch; Version is '2020.1.0b5 (f017efceb459) revision 15734767'; Using compiler version '192227905'; Build Type 'Release'
 OS: 'Windows 10  (10.0.0) 64bit' Language: 'fr' Physical Memory: 16308 MB
@@ -21,11 +21,11 @@ C:/Users/Marc HANICOT/Documents/GitHub/MGM
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62923
+54165
 Successfully changed project path to: C:/Users/Marc HANICOT/Documents/GitHub/MGM
 C:/Users/Marc HANICOT/Documents/GitHub/MGM
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 64.02 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 76.66 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.1.0b5 (f017efceb459)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/Resources/UnitySubsystems
@@ -42,40 +42,40 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56292
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56000
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002532 seconds.
+Registered in 0.003273 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 50.51 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 79.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.554 seconds
+- Completed reload, in  2.043 seconds
 Registering precompiled user dll's ...
-Registered in 0.437360 seconds.
+Registered in 0.374302 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 105.13 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 84.45 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.355 seconds
+- Completed reload, in  3.124 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Refreshing native plugins compatible for Editor in 1.17 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4269 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 180.9 MB.
 System memory in use after: 181.0 MB.
 
 Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 4684.
-Total: 6.375200 ms (FindLiveObjects: 0.873400 ms CreateObjectMapping: 0.475600 ms MarkObjects: 4.974400 ms  DeleteObjects: 0.042000 ms)
+Total: 9.075400 ms (FindLiveObjects: 3.393600 ms CreateObjectMapping: 0.602800 ms MarkObjects: 5.018100 ms  DeleteObjects: 0.046500 ms)
 
 ========================================================================
 Received Import Request.
@@ -83,212 +83,11 @@ Received Import Request.
   artifactKey: Guid(25682bf429a74f4f57f7b177a6703665) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
 Start importing Assets/SceneDependencyCache/25682bf429a74f4f57f7b177a6703665.sceneWithBuildSettings using Guid(25682bf429a74f4f57f7b177a6703665) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
 Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity'
-	Deserialize:            2.472 ms
-	Integration:            103.698 ms
-	Integration of assets:  0.010 ms
-	Thread Wait Time:       33.127 ms
-	Total Operation Time:   139.307 ms
-Uploading Crash Report
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at Wayn.Mgm.Events.Registry.BaseRegisteryReferenceBufferAuthoring`4[BUFFER,ELEMENT,AUTHORING,REGISTRY].Convert (Unity.Entities.Entity entity, Unity.Entities.EntityManager dstManager, GameObjectConversionSystem conversionSystem) [0x00029] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Assets\MGM\Core\Effects\Auhtoring\RegisteryReferenceBufferAuthoring.cs:62 
-  at Unity.Entities.Conversion.ConvertGameObjectToEntitySystem.Convert (UnityEngine.Transform transform, System.Collections.Generic.List`1[T] convertibles) [0x0004b] in C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:43 
-UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
-UnityEngine.DebugLogHandler:LogException(Exception, Object)
-Unity.Entities.Conversion.JournalingUnityLogger:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\JournalingUnityLogger.cs:50)
-UnityEngine.Logger:LogException(Exception, Object)
-UnityEngine.Debug:LogException(Exception, Object)
-Unity.Debug:LogException(Exception, Object) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:29)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:Convert(Transform, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:48)
-Unity.Entities.Conversion.<>c__DisplayClass1_0:<OnUpdate>b__0(Transform) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.EntityQueryBuilder:ForEach(F_C`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\EntityQueryBuilder_ForEach.gen.cs:215)
-Unity.Entities.Conversion.ConvertGameObjectToEntitySystem:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\ConvertGameObjectToEntitySystem.cs:56)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.ComponentSystemGroup:UpdateAllSystems() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:134)
-Unity.Entities.ComponentSystemGroup:OnUpdate() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystemGroup.cs:114)
-Unity.Entities.ComponentSystem:Update() (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\ComponentSystem.cs:108)
-Unity.Entities.GameObjectConversionUtility:Convert(World) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:145)
-Unity.Entities.GameObjectConversionUtility:ConvertScene(Scene, GameObjectConversionSettings) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities.Hybrid\GameObjectConversion\GameObjectConversionUtility.cs:255)
-Unity.Scenes.Editor.EditorEntityScenes:ConvertAndWriteEntityScene(Scene, GameObjectConversionSettings, List`1) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\EditorEntityScenes.cs:107)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:119)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Assets/MGM/Core/Effects/Auhtoring/RegisteryReferenceBufferAuthoring.cs Line: 62)
-
+	Deserialize:            2.112 ms
+	Integration:            116.308 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       16.270 ms
+	Total Operation Time:   134.694 ms
 Uploading Crash Report
 InvalidOperationException: Stack empty.
   at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
@@ -296,8 +95,8 @@ InvalidOperationException: Stack empty.
  
 (Filename: <4f004251610247e68900eb710906a95e> Line: 0)
 
- -> (target hash: 'b52676a0da2b12a3a5f170b2328e1c12') in 1.602313 seconds
-  Import took 1.621872 seconds .
+ -> (target hash: '1185d94ce8f8c5f8792e29d8d6538e45') in 1.411340 seconds
+  Import took 1.438086 seconds .
 
 ========================================================================
 Received Prepare
@@ -306,34 +105,34 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002868 seconds.
+Registered in 0.003341 seconds.
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 63.35 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 102.16 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.488 seconds
+- Completed reload, in  3.098 seconds
 Registering precompiled user dll's ...
-Registered in 0.416743 seconds.
+Registered in 0.457289 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.81 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.53 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.312 seconds
+- Completed reload, in  2.738 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 51 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 163.3 MB.
-System memory in use after: 163.5 MB.
+System memory in use before: 163.1 MB.
+System memory in use after: 163.4 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4728.
-Total: 7.271500 ms (FindLiveObjects: 0.837500 ms CreateObjectMapping: 0.449800 ms MarkObjects: 5.951900 ms  DeleteObjects: 0.030900 ms)
+Total: 6.480400 ms (FindLiveObjects: 0.726000 ms CreateObjectMapping: 0.446000 ms MarkObjects: 5.280800 ms  DeleteObjects: 0.026400 ms)
 
 ========================================================================
 Received Prepare
@@ -342,34 +141,34 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002454 seconds.
+Registered in 0.010333 seconds.
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 54.57 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 156.93 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.977 seconds
+- Completed reload, in  5.051 seconds
 Registering precompiled user dll's ...
-Registered in 0.285648 seconds.
+Registered in 0.864028 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.74 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.806 seconds
+- Completed reload, in  5.080 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.7 MB.
-System memory in use after: 162.0 MB.
+System memory in use before: 161.6 MB.
+System memory in use after: 161.8 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4736.
-Total: 5.825200 ms (FindLiveObjects: 0.737600 ms CreateObjectMapping: 0.339200 ms MarkObjects: 4.721500 ms  DeleteObjects: 0.025700 ms)
+Total: 5.507400 ms (FindLiveObjects: 0.692500 ms CreateObjectMapping: 0.346400 ms MarkObjects: 4.437200 ms  DeleteObjects: 0.030500 ms)
 
 ========================================================================
 Received Prepare
@@ -378,34 +177,34 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004118 seconds.
+Registered in 0.003445 seconds.
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 89.79 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 76.09 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.725 seconds
+- Completed reload, in  3.036 seconds
 Registering precompiled user dll's ...
-Registered in 0.297951 seconds.
+Registered in 0.390002 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.90 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.13 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.475 seconds
+- Completed reload, in  2.429 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
+System memory in use before: 161.6 MB.
+System memory in use after: 161.8 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4744.
-Total: 5.502700 ms (FindLiveObjects: 0.655600 ms CreateObjectMapping: 0.399900 ms MarkObjects: 4.419800 ms  DeleteObjects: 0.025900 ms)
+Total: 5.621300 ms (FindLiveObjects: 0.839500 ms CreateObjectMapping: 0.402200 ms MarkObjects: 4.350600 ms  DeleteObjects: 0.027400 ms)
 
 ========================================================================
 Received Prepare
@@ -414,445 +213,85 @@ Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003161 seconds.
+Registered in 0.003751 seconds.
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 86.24 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 87.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.481 seconds
+- Completed reload, in  3.714 seconds
 Registering precompiled user dll's ...
-Registered in 0.303532 seconds.
+Registered in 0.407065 seconds.
 Platform modules already initialized, skipping
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.92 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.944 seconds
+- Completed reload, in  3.457 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.64 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 1.15 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
+System memory in use before: 161.6 MB.
+System memory in use after: 161.8 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4752.
-Total: 5.647800 ms (FindLiveObjects: 0.721900 ms CreateObjectMapping: 0.365300 ms MarkObjects: 4.531300 ms  DeleteObjects: 0.028100 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002324 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 62.04 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.200 seconds
-Registering precompiled user dll's ...
-Registered in 0.286035 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.204 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4760.
-Total: 4.811600 ms (FindLiveObjects: 0.749900 ms CreateObjectMapping: 0.233600 ms MarkObjects: 3.807500 ms  DeleteObjects: 0.019500 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002585 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 55.97 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.489 seconds
-Registering precompiled user dll's ...
-Registered in 0.284778 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.591 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4768.
-Total: 6.163700 ms (FindLiveObjects: 0.882600 ms CreateObjectMapping: 0.311400 ms MarkObjects: 4.937900 ms  DeleteObjects: 0.030300 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002667 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 64.84 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.505 seconds
-Registering precompiled user dll's ...
-Registered in 0.291964 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.77 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.240 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4776.
-Total: 5.398600 ms (FindLiveObjects: 0.815700 ms CreateObjectMapping: 0.228100 ms MarkObjects: 4.330500 ms  DeleteObjects: 0.022200 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002790 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 56.14 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.434 seconds
-Registering precompiled user dll's ...
-Registered in 0.331755 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.293 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4784.
-Total: 5.321800 ms (FindLiveObjects: 0.833700 ms CreateObjectMapping: 0.308900 ms MarkObjects: 4.156300 ms  DeleteObjects: 0.021700 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002606 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 56.57 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.713 seconds
-Registering precompiled user dll's ...
-Registered in 0.287827 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.744 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4792.
-Total: 4.544900 ms (FindLiveObjects: 0.620500 ms CreateObjectMapping: 0.293000 ms MarkObjects: 3.606300 ms  DeleteObjects: 0.024000 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003181 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 88.03 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.702 seconds
-Registering precompiled user dll's ...
-Registered in 0.285627 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.571 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4800.
-Total: 19.586600 ms (FindLiveObjects: 0.986000 ms CreateObjectMapping: 0.602400 ms MarkObjects: 17.955800 ms  DeleteObjects: 0.040400 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002633 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 52.63 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.870 seconds
-Registering precompiled user dll's ...
-Registered in 0.304677 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.239 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4808.
-Total: 5.696800 ms (FindLiveObjects: 0.775600 ms CreateObjectMapping: 0.339100 ms MarkObjects: 4.558300 ms  DeleteObjects: 0.023200 ms)
-
-========================================================================
-Received Prepare
-Reloading mono domain
-Begin MonoManager ReloadAssembly
-Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.1.0b5/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004082 seconds.
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 78.94 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  4.117 seconds
-Registering precompiled user dll's ...
-Registered in 0.398643 seconds.
-Platform modules already initialized, skipping
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\Marc HANICOT\Documents\GitHub\MGM\Library\PackageCache\com.unity.ext.nunit@1.0.0\net35\unity-custom\nunit.framework.dll
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.98 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  3.773 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.81 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 161.8 MB.
-System memory in use after: 162.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 4816.
-Total: 8.617000 ms (FindLiveObjects: 1.142300 ms CreateObjectMapping: 0.904500 ms MarkObjects: 6.540100 ms  DeleteObjects: 0.028900 ms)
+Total: 6.408300 ms (FindLiveObjects: 0.721300 ms CreateObjectMapping: 0.372700 ms MarkObjects: 5.283000 ms  DeleteObjects: 0.029600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1162.679110 seconds.
-  path: Assets/SceneDependencyCache/25682bf429a74f4f57f7b177a6703665.sceneWithBuildSettings
-  artifactKey: Guid(25682bf429a74f4f57f7b177a6703665) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
-Start importing Assets/SceneDependencyCache/25682bf429a74f4f57f7b177a6703665.sceneWithBuildSettings using Guid(25682bf429a74f4f57f7b177a6703665) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
+  Time since last request: 476.632783 seconds.
+  path: Assets/MGM/TankDemo/Scenes/Playground/Environement.unity
+  artifactKey: Guid(70c6c9c3d5a85c44080ead715eeaa776) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62)
+Start importing Assets/MGM/TankDemo/Scenes/Playground/Environement.unity using Guid(70c6c9c3d5a85c44080ead715eeaa776) Importer(2089858483,8f48ca04252c70920f641c4e591f7c62) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
 Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity'
-	Deserialize:            2.171 ms
-	Integration:            46.095 ms
-	Integration of assets:  0.009 ms
-	Thread Wait Time:       45.838 ms
-	Total Operation Time:   94.113 ms
-Building01 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Building01 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Building01 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Building01 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Building02 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Building02 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Building02 (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
-Radar (OnDeathAuthoring) is part of a scene, LiveLink can't transfer scene objects. (Note: LiveConvertSceneView currently triggers this)
-UnityEngine.DebugLogHandler:Internal_Log(LogType, LogOption, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:LogWarning(Object)
-Unity.Debug:LogWarning(String) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Entities\Stubs\Unity\Debug.cs:15)
-Unity.Scenes.Editor.SubSceneImporter:ReferencedUnityObjectsToRuntimeGlobalObjectIds(ReferencedUnityObjects, Allocator) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:36)
-Unity.Scenes.Editor.SubSceneImporter:WriteRefGuids(List`1, SceneSectionData[], AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:66)
-Unity.Scenes.Editor.SubSceneImporter:OnImportAsset(AssetImportContext) (at Library\PackageCache\com.unity.entities@0.9.1-preview.15\Unity.Scenes.Editor\SubSceneImporter.cs:120)
-UnityEditor.Experimental.AssetImporters.ScriptedImporter:GenerateAssetData(AssetImportContext)
- 
-(Filename: Library/PackageCache/com.unity.entities@0.9.1-preview.15/Unity.Entities/Stubs/Unity/Debug.cs Line: 15)
-
+	Deserialize:            1.873 ms
+	Integration:            72.033 ms
+	Integration of assets:  0.004 ms
+	Thread Wait Time:       16.918 ms
+	Total Operation Time:   90.828 ms
 InvalidOperationException: Stack empty.
   at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
   at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
  
 (Filename: <4f004251610247e68900eb710906a95e> Line: 0)
 
- -> (target hash: '834e23a08494098228e3e48568d74fe0') in 1.020612 seconds
-  Import took 1.038620 seconds .
+ -> (target hash: 'eb2cb42f0ecc21db9293d76d4ed2bee4') in 0.220777 seconds
+  Import took 0.239212 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.302228 seconds.
+  path: Assets/SceneDependencyCache/6dd33e1c5688b12bdaed94616c3aec9a.sceneWithBuildSettings
+  artifactKey: Guid(6dd33e1c5688b12bdaed94616c3aec9a) Importer(2089858483,52bed625d08a7023a15481c3fbd73797)
+Start importing Assets/SceneDependencyCache/6dd33e1c5688b12bdaed94616c3aec9a.sceneWithBuildSettings using Guid(6dd33e1c5688b12bdaed94616c3aec9a) Importer(2089858483,52bed625d08a7023a15481c3fbd73797) Opening scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity additively'
+Loaded scene 'Assets/MGM/TankDemo/Scenes/Playground/Environement.unity'
+	Deserialize:            2.008 ms
+	Integration:            18.913 ms
+	Integration of assets:  0.005 ms
+	Thread Wait Time:       17.205 ms
+	Total Operation Time:   38.132 ms
+InvalidOperationException: Stack empty.
+  at System.Collections.Generic.Stack`1[T].Peek () [0x00008] in <4f004251610247e68900eb710906a95e>:0 
+  at UnityEditor.AssetPostprocessingInternal.CleanupPostprocessors () [0x00060] in <92f998fbb4ca4d8dab7793d6e003b794>:0 
+ 
+(Filename: <4f004251610247e68900eb710906a95e> Line: 0)
+
+ -> (target hash: 'be5bd0b9b37584208ec1364f553070a3') in 1.373364 seconds
+  Import took 1.391932 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 3.99 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 217.1 MB.
+System memory in use after: 217.4 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4753.
+Total: 8.070700 ms (FindLiveObjects: 0.702200 ms CreateObjectMapping: 0.421500 ms MarkObjects: 6.922500 ms  DeleteObjects: 0.023300 ms)
 

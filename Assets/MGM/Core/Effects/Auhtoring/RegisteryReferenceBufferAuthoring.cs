@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 using Wayn.Mgm.Events;
@@ -8,6 +9,7 @@ using Wayn.Mgm.Events.Registry;
 /// This class hides the complexity of all the types necessary for handeling the population of the buffer.
 /// </summary>
 /// <typeparam name="BUFFER"></typeparam>
+[Serializable]
 public abstract class RegisteryReferenceBufferAuthoring<BUFFER> : BaseRegisteryReferenceBufferAuthoring<BUFFER, IEffect, EffectAuthoring, EffectRegistry>
         where BUFFER : struct, IEffectReferenceBuffer
     {
@@ -24,6 +26,8 @@ namespace Wayn.Mgm.Events.Registry
         void Register(EntityCommandBuffer ecb, Entity entity);
     }
 
+ 
+
     /// <summary>
     ///  This class handle all lhte complexity of managing the population of the DynamicBuffer with the correct RegistryReference
     /// </summary>
@@ -31,7 +35,7 @@ namespace Wayn.Mgm.Events.Registry
     /// <typeparam name="ELEMENT"></typeparam>
     /// <typeparam name="AUTHORING"></typeparam>
     /// <typeparam name="REGISTRY"></typeparam>
-    public abstract class BaseRegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY> : BaseRegisteryReferenceBufferAuthoringForCutomEditor, ISelfRegistringAuhtoringComponent, IConvertGameObjectToEntity
+    public abstract class BaseRegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY> : BaseRegisteryReferenceBufferAuthoringForCutomEditor, IConvertGameObjectToEntity
         where BUFFER : struct, IEffectReferenceBuffer
         where ELEMENT : IRegistryElement
         where AUTHORING : RegisteryReferenceAuthoring<ELEMENT>
@@ -41,7 +45,7 @@ namespace Wayn.Mgm.Events.Registry
         public List<AUTHORING> Entries = new List<AUTHORING>();
 
         protected abstract REGISTRY GetRegisteryInstance();
-
+        /*
         public void Register(EntityCommandBuffer ecb, Entity entity)
         {
             var buffer = ecb.AddBuffer<BUFFER>(entity);
@@ -49,27 +53,37 @@ namespace Wayn.Mgm.Events.Registry
             {
                 buffer.Add(new BUFFER() { EffectReference = GetRegisteryInstance().AddEffect(effect.Entry) });
             }
-        }
+        }*/
 
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
-           
-            if(!dstManager.HasComponent<EffectComponentData>(entity)){
+            
+            if (!dstManager.HasComponent<EffectComponentData>(entity)){
                 dstManager.AddComponentData(entity, new EffectComponentData());
             }
 
             EffectComponentData component = dstManager.GetComponentData<EffectComponentData>(entity);
-            component.listOfManagedBuffer.Add(this);
+
+            List<ELEMENT> elems = new List<ELEMENT>();
+
+            foreach(var entry in Entries)
+            {
+                elems.Add(entry.Entry);
+            }
+
+            EffectComponentDataElement<ELEMENT, BUFFER> elem = new EffectComponentDataElement<ELEMENT, BUFFER>(elems);
+            component.listOfManagedBuffer.Add(elem);
             dstManager.SetComponentData(entity,component);
         }
     }
-    
+
+
     public abstract class BaseRegisteryReferenceBufferAuthoringForCutomEditor : MonoBehaviour
     {
 
     }
 
-
+    [Serializable]
     public abstract class RegisteryReferenceAuthoring<ELEMENT> where ELEMENT : IRegistryElement
     {
         [SerializeReference]

@@ -4,7 +4,12 @@ using Unity.Collections;
 
 namespace Wayn.Mgm.Events.Registry
 {
-    public abstract class Registry<T, R>
+    public interface IRegistry<ELEMENT>
+             where ELEMENT : IRegistryElement
+    {
+        RegistryReference AddEffect(ELEMENT element);
+    }
+    public abstract class Registry<T, R> : IRegistry<R>
         where T : Registry<T, R>
         where R : IRegistryElement
     {
