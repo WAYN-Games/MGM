@@ -75,7 +75,6 @@ namespace Wayn.Mgm.Events.Registry
     
             foreach (ISelfRegistringAuhtoringComponent e in EffectComponentData.listOfManagedBuffer)
             {
-                Debug.Log($"{entity}//{EffectComponentData}//{e}");
                 e.Register(ecb, entity);
             }
            
