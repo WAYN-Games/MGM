@@ -41,9 +41,11 @@ namespace Wayn.Mgm.Combat.Effects
             {
                 while (EffectCommandEnumerator.MoveNext())
                 {
-                    Debug.Log($"{EffectCommandEnumerator.Current.Emitter} killed {EffectCommandEnumerator.Current.Target}.");
+                   // Debug.Log($"{EffectCommandEnumerator.Current.Emitter} killed {EffectCommandEnumerator.Current.Target}.");
                 }
             }
+
+
         }
     }
 }

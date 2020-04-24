@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using Unity.Collections;
+using Unity.Entities;
 
 namespace Wayn.Mgm.Events.Registry
 {

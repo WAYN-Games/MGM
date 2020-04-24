@@ -51,10 +51,7 @@ namespace Wayn.Mgm.Events.Registry
             NativeArray<Entity> entities = m_EntitiesQuery.ToEntityArray(Allocator.TempJob);
             RemapBuffers(entities.GetEnumerator());
             entities.Dispose();
-
-
             Profiler.EndSample();
-
         }
 
 
