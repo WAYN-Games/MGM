@@ -1,7 +1,6 @@
 ﻿using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
-using UnityEngine;
 using Wayn.Mgm.Events.Registry;
 
 namespace Wayn.Mgm.Events
@@ -17,13 +16,13 @@ namespace Wayn.Mgm.Events
 
 
         private NativeHashMap<int, E> m_RegisteredEffects;
-        private NativeMultiHashMap<ulong, EffectCommand> m_EffectCommandMap;
+        private NativeMultiHashMap<MapKey, EffectCommand> m_EffectCommandMap;
         
         private EntityCommandBuffer m_EntityCommandBuffer;
 
         private bool ShouldRefreshCache = true;
 
-        private ulong m_EffectTypeId;
+        private int m_EffectTypeId;
 
         protected override void OnCreate()
         {
@@ -55,7 +54,7 @@ namespace Wayn.Mgm.Events
 
         protected abstract JobHandle ScheduleJob(
             JobHandle inputDeps,
-            in NativeMultiHashMap<ulong,EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeMultiHashMap<MapKey,EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, E> RegisteredEffects);
 
         protected override JobHandle OnUpdate(JobHandle inputDeps)
@@ -67,9 +66,9 @@ namespace Wayn.Mgm.Events
             }
            
             m_EffectCommandMap = m_EffectBufferSystem.CommandsMap;
-            var effectCommandEnumerator = m_EffectCommandMap.GetValuesForKey(m_EffectTypeId);
+            var effectCommandEnumerator = m_EffectCommandMap.GetValuesForKey(new MapKey() { Value = m_EffectTypeId });
             JobHandle ExecuteEffectCommandsJob = ScheduleJob(
-                m_EffectBufferSystem.finalJobHandle,
+                JobHandle.CombineDependencies(inputDeps,m_EffectBufferSystem.finalJobHandle),
                 in effectCommandEnumerator,
                 in m_RegisteredEffects);
             m_EffectBufferSystem.AddConsumerJobHandle(ExecuteEffectCommandsJob);

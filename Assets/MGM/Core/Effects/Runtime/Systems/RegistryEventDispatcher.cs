@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Collections.LowLevel.Unsafe;
@@ -11,7 +12,7 @@ namespace Wayn.Mgm.Events.Registry
         where COMMAND : struct, IEventRegistryCommand
     {
         private List<NativeQueue<COMMAND>> CommandsQueues = new List<NativeQueue<COMMAND>>();
-        public NativeMultiHashMap<ulong, COMMAND> CommandsMap;
+        public NativeMultiHashMap<MapKey, COMMAND> CommandsMap;
         private JobHandle JobHandle;
 
         private JobHandle CrossFrameJobHandle;
@@ -50,7 +51,7 @@ namespace Wayn.Mgm.Events.Registry
             public NativeArray<int> TotalCommandCount;
 
             [WriteOnly]
-            public NativeMultiHashMap<ulong, COMMAND> CommandsMap;
+            public NativeMultiHashMap<MapKey, COMMAND> CommandsMap;
 
             public void Execute()
             {
@@ -80,14 +81,14 @@ namespace Wayn.Mgm.Events.Registry
 
             [WriteOnly]
             [NativeDisableContainerSafetyRestriction]
-            public NativeMultiHashMap<ulong, COMMAND>.ParallelWriter CommandsMap;
+            public NativeMultiHashMap<MapKey, COMMAND>.ParallelWriter CommandsMap;
 
             public void Execute()
             {
                 COMMAND command;
                 while (CommandsQueue.TryDequeue(out command))
                 {
-                    CommandsMap.Add(command.RegistryReference.TypeId, command);
+                    CommandsMap.Add(new MapKey() { Value = command.RegistryReference.TypeId }, command);
                 }
 
             }
@@ -105,7 +106,7 @@ namespace Wayn.Mgm.Events.Registry
             {
                 JobHandle = CommandsMap.Dispose(inputDeps);
             }
-            CommandsMap = new NativeMultiHashMap<ulong, COMMAND>(0, Allocator.TempJob);
+            CommandsMap = new NativeMultiHashMap<MapKey, COMMAND>(0, Allocator.TempJob);
 
             // Schedule in sequence the realocation of the necessary memory to handle each commands based on the queues sizes.
             // Not done in parallel as the resize consist of an new allocation and a copy.
@@ -153,5 +154,32 @@ namespace Wayn.Mgm.Events.Registry
         }
 
     }
+
+    public struct MapKey : IEquatable<MapKey>
+    {
+        public int Value;
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is MapKey))
+            {
+                return false;
+            }
+
+            var key = (MapKey)obj;
+            return Value == key.Value;
+        }
+
+        public bool Equals(MapKey other)
+        {
+            return Value == other.Value;
+        }
+
+        public override int GetHashCode()
+        {
+            return Value;
+        }
+    }
+
 
 }

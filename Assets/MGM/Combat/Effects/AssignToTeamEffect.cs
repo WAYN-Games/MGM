@@ -4,6 +4,7 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Wayn.Mgm.Events;
+using Wayn.Mgm.Events.Registry;
 
 namespace Wayn.Mgm.Combat.Effects
 {
@@ -26,7 +27,7 @@ namespace Wayn.Mgm.Combat.Effects
 
         protected override JobHandle ScheduleJob(
             JobHandle inputDeps,
-            in NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, AssignToTeamEffect> RegisteredEffects)
         {
             var jh = new ConsumerJob()
@@ -50,7 +51,7 @@ namespace Wayn.Mgm.Combat.Effects
         public struct ConsumerJob : IJob
         {
             [ReadOnly]
-            public NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
+            public NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
             public NativeHashMap<int, AssignToTeamEffect> RegisteredEffects;
 

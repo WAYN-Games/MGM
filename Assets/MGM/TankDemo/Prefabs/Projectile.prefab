@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 4845000581992956218}
   - component: {fileID: 2663724114488325157}
   - component: {fileID: 5411516264574092016}
-  - component: {fileID: 8651248397144056478}
+  - component: {fileID: -3286293686283546711}
+  - component: {fileID: 8533897755801658689}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -63,7 +64,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -88,7 +88,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &6595019629279830368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +284,19 @@ MonoBehaviour:
       type: {class: InflictDamageEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
       data:
         Amount: 1
---- !u!114 &8651248397144056478
+--- !u!114 &-3286293686283546711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5282626465209128822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8927daa09674f094aadc68fd74631727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8533897755801658689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

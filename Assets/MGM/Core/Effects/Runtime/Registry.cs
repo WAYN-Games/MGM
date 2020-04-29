@@ -1,15 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Concurrent;
 using Unity.Collections;
-using Unity.Entities;
 
 namespace Wayn.Mgm.Events.Registry
 {
-    public interface IRegistry<ELEMENT>
-             where ELEMENT : IRegistryElement
-    {
-        RegistryReference AddEffect(ELEMENT element);
-    }
     public abstract class Registry<T, R> : IRegistry<R>
         where T : Registry<T, R>
         where R : IRegistryElement
@@ -21,7 +15,7 @@ namespace Wayn.Mgm.Events.Registry
         private static T Init()
         {
             T i = Activator.CreateInstance(typeof(T), true) as T;
-            i.registar = new ConcurrentDictionary<ulong, ConcurrentDictionary<int, R>>();
+            i.registar = new ConcurrentDictionary<int, ConcurrentDictionary<int, R>>();
             return i;
         }
 
@@ -30,7 +24,7 @@ namespace Wayn.Mgm.Events.Registry
         /// <summary>
         /// Tree to store all effect by Type and Version.
         /// </summary>
-        protected ConcurrentDictionary<ulong, ConcurrentDictionary<int, R>> registar;
+        protected ConcurrentDictionary<int, ConcurrentDictionary<int, R>> registar;
 
 
         /// <summary>
@@ -41,7 +35,7 @@ namespace Wayn.Mgm.Events.Registry
         /// <returns><see cref="RegistryReference"/> A unique reference to that version of the effect.</returns>
         public RegistryReference AddEffect(R effect)
         {
-            ulong effectTypeId = RegistryReference.GetTypeId(effect.GetType());
+            int effectTypeId = RegistryReference.GetTypeId(effect.GetType());
             int effectVersionId = RegistryReference.GetEffectInstanceId(effect);
           
 
@@ -74,7 +68,7 @@ namespace Wayn.Mgm.Events.Registry
         public void GetRegisteredEffects<T>(ref NativeHashMap<int, T> result) where T : struct, R
         #pragma warning restore CS0693
         {
-            ulong effectTypeId = RegistryReference.GetTypeId(typeof(T));
+            int effectTypeId = RegistryReference.GetTypeId(typeof(T));
             // If no effect are registered for that type return.
             if (!registar.ContainsKey(effectTypeId))
             {
@@ -104,29 +98,6 @@ namespace Wayn.Mgm.Events.Registry
         protected Registry()
         {
         }
-
-    }
-
-    public interface IRegistryElement
-    {
-
-    }
-
-    public class EffectRegistry : Registry<EffectRegistry, IEffect>
-    {
-        // This is mandatory to enfore the singleton.
-        private EffectRegistry() { }
-
-        // Declare the event and delegate.
-        public delegate void NewEffectRegisteredHandler();
-        public event NewEffectRegisteredHandler NewEffectRegisteredEvent;
-
-        protected override void OnNewElementRegistered()
-        {   
-            NewEffectRegisteredEvent?.Invoke();
-        }
-
-  
 
     }
 }

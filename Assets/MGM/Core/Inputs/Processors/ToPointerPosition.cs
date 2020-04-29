@@ -22,8 +22,8 @@ public class ToPointerPosition : InputProcessor<Vector2>
     }
     public override Vector2 Process(Vector2 value, InputControl control)
     {
-        value.x = (value.x + 1) * (Screen.width / 2);
-        value.y = (value.y + 1) * (Screen.height / 2);
+        value.x = (value.x + 1) * (Screen.width);
+        value.y = (value.y + 1) * (Screen.height);        
         return value;
     }
 }

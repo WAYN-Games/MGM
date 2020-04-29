@@ -4,7 +4,9 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
+using UnityEngine;
 using Wayn.Mgm.Events;
+using Wayn.Mgm.Events.Registry;
 
 namespace Wayn.Mgm.Combat.Effects
 {
@@ -23,17 +25,17 @@ namespace Wayn.Mgm.Combat.Effects
     /// </summary>
     public class DestroyEntityHirearchyEffectConsumerSystem : EffectConsumerSystem<DestroyEntityHierarchyEffect>
     {
-        private EndSimulationEntityCommandBufferSystem ECBSystem;
+        private BeginSimulationEntityCommandBufferSystem ECBSystem;
 
         protected override void OnCreate()
         {
             base.OnCreate();
-            ECBSystem = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>();
+            ECBSystem = World.GetOrCreateSystem<BeginSimulationEntityCommandBufferSystem>();
         }
 
         protected override JobHandle ScheduleJob(
             JobHandle inputDeps,
-            in NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator,
+            in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, DestroyEntityHierarchyEffect> RegisteredEffects)
         {
             JobHandle jh = new ConsumerJob()
@@ -52,7 +54,7 @@ namespace Wayn.Mgm.Combat.Effects
         {
 
             [ReadOnly]
-            public NativeMultiHashMap<ulong, EffectCommand>.Enumerator EffectCommandEnumerator;
+            public NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
             public NativeHashMap<int, DestroyEntityHierarchyEffect> RegisteredEffects;
             [ReadOnly]

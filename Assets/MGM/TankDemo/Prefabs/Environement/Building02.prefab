@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7304794662843842555}
   - component: {fileID: 3340375248425863132}
   - component: {fileID: 4342172345803438652}
+  - component: {fileID: 703434415066006271}
   m_Layer: 0
   m_Name: Building02
   m_TagString: Untagged
@@ -58,7 +59,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -88,7 +88,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7304794662843842555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +202,15 @@ MonoBehaviour:
       type: {class: DestroyEntityHierarchyEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
       data:
         ApplyRecursivelyToChildren: 1
+--- !u!114 &703434415066006271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7657338251039733389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8927daa09674f094aadc68fd74631727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
