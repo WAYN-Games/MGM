@@ -26,6 +26,11 @@ namespace Wayn.Mgm.Combat.Effects
     {
         private EffectDisptacherSystem m_EffectCommandSystem;
 
+        protected override void OnCreate()
+        {
+            base.OnCreate();
+            m_EffectCommandSystem = World.GetOrCreateSystem<EffectDisptacherSystem>();
+        }
 
         protected override JobHandle ScheduleJob(
             in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
@@ -42,14 +47,6 @@ namespace Wayn.Mgm.Combat.Effects
             m_EffectCommandSystem.AddJobHandleFromProducer(jh);
             return jh;
         }
-
-        protected override void OnCreate()
-        {
-            base.OnCreate();
-            m_EffectCommandSystem = World.GetOrCreateSystem<EffectDisptacherSystem>();
-        }
-
-
 
         [BurstCompile]
         public struct ConsumerJob : IJob
