@@ -1,12 +1,11 @@
 {
-    "name": "mgm.core.effect.editor",
+    "name": "wayn.mgm.core.event.editor",
     "references": [
-        "GUID:98bb69fecaf2456458cff6e7b45bdf33",
-        "GUID:1bd524fdfade8c245a632e1a52dd22fd",
         "GUID:709f50f6df67d954dacc4b3c142ab558"
     ],
     "includePlatforms": [
-        "Editor"
+        "Editor",
+        "LinuxStandalone64"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -14,12 +13,6 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [
-        {
-            "name": "Select...",
-            "expression": "",
-            "define": ""
-        }
-    ],
+    "versionDefines": [],
     "noEngineReferences": false
 }

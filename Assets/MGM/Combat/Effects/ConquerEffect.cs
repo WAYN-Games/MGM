@@ -24,11 +24,10 @@ namespace Wayn.Mgm.Combat.Effects
 
     public class ConquerEffectConsumer : EffectConsumerSystem<ConquerEffect>
     {
-        private EffectBufferSystem m_EffectCommandSystem;
+        private EffectDisptacherSystem m_EffectCommandSystem;
 
 
         protected override JobHandle ScheduleJob(
-            JobHandle inputDeps,
             in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, ConquerEffect> RegisteredEffects)
         {
@@ -38,7 +37,7 @@ namespace Wayn.Mgm.Combat.Effects
                 RegisteredEffects = RegisteredEffects,
                 OwnershipPoints = GetComponentDataFromEntity<OwnershipPoint>(false),
                 Time = Time.DeltaTime
-            }.Schedule(inputDeps);
+            }.Schedule(Dependency);
 
             m_EffectCommandSystem.AddJobHandleFromProducer(jh);
             return jh;
@@ -47,7 +46,7 @@ namespace Wayn.Mgm.Combat.Effects
         protected override void OnCreate()
         {
             base.OnCreate();
-            m_EffectCommandSystem = World.GetOrCreateSystem<EffectBufferSystem>();
+            m_EffectCommandSystem = World.GetOrCreateSystem<EffectDisptacherSystem>();
         }
 
 

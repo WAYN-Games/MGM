@@ -4,13 +4,13 @@ using Wayn.Mgm.Events;
 public class ApplyInitialisationEffectsSystem : SystemBase
 {
     private BeginInitializationEntityCommandBufferSystem initialisationSystem;
-    private EffectBufferSystem effectBufferSystem;
+    private EffectDisptacherSystem effectBufferSystem;
 
     protected override void OnCreate()
     {
         base.OnCreate();
         initialisationSystem = World.GetOrCreateSystem<BeginInitializationEntityCommandBufferSystem>();
-        effectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
+        effectBufferSystem = World.GetOrCreateSystem<EffectDisptacherSystem>();
     }
 
     protected override void OnUpdate()
@@ -30,7 +30,7 @@ public class ApplyInitialisationEffectsSystem : SystemBase
                        EffectCommandQueue.Enqueue(new EffectCommand() {
                            Emitter = Entity.Null,
                            Target = entity,
-                           RegistryReference = command.EffectReference });
+                           RegistryReference = command.RegistryEventReference });
                    }
                    PostUpdateCommand.RemoveComponent<OnInitEffectBuffer>(entityInQueryIndex, entity);
                }

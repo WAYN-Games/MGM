@@ -21,7 +21,7 @@ namespace Wayn.Mgm.Events.Registry
             m_PrefabsQuery = GetEntityQuery(new EntityQueryDesc
             {
                 All = new ComponentType[] {
-                ComponentType.ReadOnly<EffectComponentData>(),
+                ComponentType.ReadOnly<RegistryEventReferenceComponentData>(),
                 ComponentType.ReadOnly<Prefab>()
                 }
             });
@@ -29,7 +29,7 @@ namespace Wayn.Mgm.Events.Registry
             m_EntitiesQuery = GetEntityQuery(new EntityQueryDesc
             {
                 All = new ComponentType[] {
-                ComponentType.ReadOnly<EffectComponentData>()
+                ComponentType.ReadOnly<RegistryEventReferenceComponentData>()
                 }
             });
 
@@ -68,14 +68,14 @@ namespace Wayn.Mgm.Events.Registry
         }
         private void ProcessEntity(Entity entity, EntityCommandBuffer ecb)
         {
-            EffectComponentData EffectComponentData = EntityManager.GetComponentData<EffectComponentData>(entity);
+            RegistryEventReferenceComponentData EffectComponentData = EntityManager.GetComponentData<RegistryEventReferenceComponentData>(entity);
     
             foreach (ISelfRegistringAuhtoringComponent e in EffectComponentData.listOfManagedBuffer)
             {
                 e.Register(ecb, entity);
             }
            
-            ecb.RemoveComponent(entity, typeof(EffectComponentData));
+            ecb.RemoveComponent(entity, typeof(RegistryEventReferenceComponentData));
         }
     }
 }

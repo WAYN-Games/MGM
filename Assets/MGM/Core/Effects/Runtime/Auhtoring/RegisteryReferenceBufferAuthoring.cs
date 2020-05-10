@@ -7,17 +7,17 @@ namespace Wayn.Mgm.Events.Registry
 
 
     /// <summary>
-    ///  This class handle all lhte complexity of managing the population of the DynamicBuffer with the correct RegistryReference
+    ///  This class handle all the complexity of managing the population of the DynamicBuffer with the correct RegistryReference
     /// </summary>
     /// <typeparam name="BUFFER"></typeparam>
     /// <typeparam name="ELEMENT"></typeparam>
     /// <typeparam name="AUTHORING"></typeparam>
     /// <typeparam name="REGISTRY"></typeparam>
     public abstract class RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY> : MonoBehaviour, IConvertGameObjectToEntity
-        where BUFFER : struct, IEffectReferenceBuffer
+        where BUFFER : struct, IRegistryReferenceBuffer
         where ELEMENT : IRegistryElement
         where AUTHORING : RegisteryReferenceAuthoring<ELEMENT>
-        where REGISTRY : Registry<REGISTRY, ELEMENT>
+        where REGISTRY : Registry<REGISTRY>
     {
         [SerializeField]
         public List<AUTHORING> Entries = new List<AUTHORING>();
@@ -27,11 +27,11 @@ namespace Wayn.Mgm.Events.Registry
         public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
         {
             
-            if (!dstManager.HasComponent<EffectComponentData>(entity)){
-                dstManager.AddComponentData(entity, new EffectComponentData());
+            if (!dstManager.HasComponent<RegistryEventReferenceComponentData>(entity)){
+                dstManager.AddComponentData(entity, new RegistryEventReferenceComponentData());
             }
 
-            EffectComponentData component = dstManager.GetComponentData<EffectComponentData>(entity);
+            RegistryEventReferenceComponentData component = dstManager.GetComponentData<RegistryEventReferenceComponentData>(entity);
 
             List<ELEMENT> elems = new List<ELEMENT>();
 
@@ -40,7 +40,8 @@ namespace Wayn.Mgm.Events.Registry
                 elems.Add(entry.Entry);
             }
 
-            EffectComponentDataElement<ELEMENT, BUFFER> elem = new EffectComponentDataElement<ELEMENT, BUFFER>(elems);
+            RegistryEventComponentDataElement<ELEMENT, BUFFER> elem = new EffectComponentDataElement<ELEMENT, BUFFER>();
+            elem.SetElementList(elems);
             component.listOfManagedBuffer.Add(elem);
             dstManager.SetComponentData(entity,component);
         }

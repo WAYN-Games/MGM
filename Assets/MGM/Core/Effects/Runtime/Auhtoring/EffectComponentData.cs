@@ -4,7 +4,7 @@ using Unity.Entities;
 using System.Collections.Generic;
 
 [Serializable]
-public class EffectComponentData : IComponentData
+public class RegistryEventReferenceComponentData : IComponentData
 {
     public List<ISelfRegistringAuhtoringComponent> listOfManagedBuffer = new List<ISelfRegistringAuhtoringComponent> ();
 }

@@ -5,8 +5,8 @@ using Wayn.Mgm.Events.Registry;
 
 [Serializable]
 [InternalBufferCapacity(1)]
-public struct OnCollideEffectsOnSelfBuffer : IEffectReferenceBuffer
+public struct OnCollideEffectsOnSelfBuffer : IRegistryReferenceBuffer
 {
-    public RegistryReference EffectReference { get; set; }
+    public RegistryReference RegistryEventReference { get; set; }
 }
 

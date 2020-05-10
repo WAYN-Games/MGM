@@ -9,9 +9,4 @@ namespace Wayn.Mgm.Events
         public Entity Target;
         public RegistryReference RegistryReference { get ; set; }
     }
-
-    public interface IEventRegistryCommand
-    {
-        RegistryReference RegistryReference { get; set; }
-    }
 }

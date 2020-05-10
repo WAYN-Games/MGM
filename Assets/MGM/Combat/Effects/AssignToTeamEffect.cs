@@ -22,11 +22,10 @@ namespace Wayn.Mgm.Combat.Effects
 
     public class AssignToTeamEffectConsumer : EffectConsumerSystem<AssignToTeamEffect>
     {
-        private EffectBufferSystem m_EffectCommandSystem;
+        private EffectDisptacherSystem m_EffectCommandSystem;
 
 
         protected override JobHandle ScheduleJob(
-            JobHandle inputDeps,
             in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, AssignToTeamEffect> RegisteredEffects)
         {
@@ -34,7 +33,7 @@ namespace Wayn.Mgm.Combat.Effects
             {
                 EffectCommandEnumerator = EffectCommandEnumerator,
                 RegisteredEffects = RegisteredEffects
-            }.Schedule(inputDeps);
+            }.Schedule(Dependency);
 
             m_EffectCommandSystem.AddJobHandleFromProducer(jh);
             return jh;
@@ -43,7 +42,7 @@ namespace Wayn.Mgm.Combat.Effects
         protected override void OnCreate()
         {
             base.OnCreate();
-            m_EffectCommandSystem = World.GetOrCreateSystem<EffectBufferSystem>();
+            m_EffectCommandSystem = World.GetOrCreateSystem<EffectDisptacherSystem>();
         }
 
 

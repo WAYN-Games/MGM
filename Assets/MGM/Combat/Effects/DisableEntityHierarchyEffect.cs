@@ -37,7 +37,6 @@ namespace Wayn.Mgm.Combat.Effects
         }
 
         protected override JobHandle ScheduleJob(
-            JobHandle inputDeps,
             in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, DisableEntityHierarchyEffect> RegisteredEffects)
         {
@@ -47,7 +46,7 @@ namespace Wayn.Mgm.Combat.Effects
                 RegisteredEffects = RegisteredEffects,
                 EntityCommandBuffer = ECBSystem.CreateCommandBuffer(),
                 Children = GetBufferFromEntity<Child>(true)
-            }.Schedule(inputDeps);
+            }.Schedule(Dependency);
             ECBSystem.AddJobHandleForProducer(jh);
             return jh;
         }

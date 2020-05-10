@@ -3,8 +3,8 @@ using Wayn.Mgm.Events.Registry;
 
 namespace Wayn.Mgm.Events
 {
-    public interface IEffectReferenceBuffer : IBufferElementData
+    public interface IRegistryReferenceBuffer : IBufferElementData
     {
-        RegistryReference EffectReference { get; set; }
+        RegistryReference RegistryEventReference { get; set; }
     }
 }

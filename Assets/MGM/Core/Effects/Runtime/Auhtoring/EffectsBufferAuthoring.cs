@@ -5,7 +5,7 @@ using Wayn.Mgm.Events.Registry;
 
 [Serializable]
 public abstract class EffectsBufferAuthoring<BUFFER> : RegisteryReferenceBufferAuthoring<BUFFER, IEffect, EffectAuthoring, EffectRegistry>
-    where BUFFER : struct,IEffectReferenceBuffer
+    where BUFFER : struct,IRegistryReferenceBuffer
 {
 
     protected override EffectRegistry GetRegisteryInstance()

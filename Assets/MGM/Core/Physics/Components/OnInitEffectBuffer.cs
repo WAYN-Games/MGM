@@ -5,7 +5,7 @@ using Wayn.Mgm.Events.Registry;
 
 [Serializable]
 [InternalBufferCapacity(1)]
-public struct OnInitEffectBuffer : IEffectReferenceBuffer
+public struct OnInitEffectBuffer : IRegistryReferenceBuffer
 {
-    public RegistryReference EffectReference { get; set; }
+    public RegistryReference RegistryEventReference { get; set; }
 }

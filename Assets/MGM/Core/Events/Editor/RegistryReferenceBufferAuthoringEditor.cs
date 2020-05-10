@@ -7,8 +7,9 @@ using UnityEngine;
 namespace Wayn.Mgm.Events.Registry
 {
 
-    public abstract class RegistryReferenceBufferAuthoringEditor<ELEMENT, AUTHORING> : Editor where ELEMENT : class, IRegistryElement
-         where AUTHORING : RegisteryReferenceAuthoring<ELEMENT>, new()
+    public abstract class RegistryReferenceBufferAuthoringEditor<ELEMENT, AUTHORING> : Editor 
+        where ELEMENT : IRegistryElement
+        where AUTHORING : RegisteryReferenceAuthoring<ELEMENT>, new()
     {
 
         private List<Type> AvailableTypes = new List<Type>();
@@ -57,7 +58,7 @@ namespace Wayn.Mgm.Events.Registry
                 entryList.InsertArrayElementAtIndex(0);
                 _serializedObject.ApplyModifiedProperties();
 
-                entryList.GetArrayElementAtIndex(0).FindPropertyRelative("Entry").managedReferenceValue = Activator.CreateInstance(AvailableTypes[selectedIndex]) as ELEMENT;
+                entryList.GetArrayElementAtIndex(0).FindPropertyRelative("Entry").managedReferenceValue = (ELEMENT)Activator.CreateInstance(AvailableTypes[selectedIndex]);
 
                 _serializedObject.ApplyModifiedProperties();
                 Debug.Log(_serializedObject.FindProperty("Entries.Array.data[0].Entry").managedReferenceFullTypename);

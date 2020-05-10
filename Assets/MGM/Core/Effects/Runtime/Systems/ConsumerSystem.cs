@@ -1,80 +1,109 @@
-﻿using Unity.Collections;
+﻿using System;
+using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
+using UnityEngine;
 using Wayn.Mgm.Events.Registry;
 
 namespace Wayn.Mgm.Events
 {
 
-
-    [UpdateInGroup(typeof(EffectConsumerSystemGroup))]
-    public abstract class EffectConsumerSystem<E> : JobComponentSystem
-        where E : struct, IEffect
+    public abstract class RegisteredEventConsumer<DISPATCHER,COMMAND, ELEMENT> : SystemBase
+        where COMMAND : IEventRegistryCommand
+        where ELEMENT : struct, IRegistryElement
+        where DISPATCHER : RegistryEventDispatcher<EffectCommand>
     {
-        private EffectBufferSystem m_EffectBufferSystem; 
-        private EffectRegistry m_EffectRegistry;
+        /// <summary>
+        /// System that takes care of dispatching the event based on their type.
+        /// </summary>
+        protected DISPATCHER _dispatcherSystem;
+        /// <summary>
+        /// The registry containing all the registered event types and instances.
+        /// </summary>
+        protected IRegistry _registry;
+        /// <summary>
+        /// A cached map of all the event instanced handled by this consumer.
+        /// </summary>
+        protected NativeHashMap<int, ELEMENT> _registeredEvents;
 
+        /// <summary>
+        /// Indicated whether the _registeredEvents should be refreshed in hte next Onpdate loop.
+        /// </summary>
+        protected bool _shouldRefreshCache = true;
 
-        private NativeHashMap<int, E> m_RegisteredEffects;
-        private NativeMultiHashMap<MapKey, EffectCommand> m_EffectCommandMap;
+        protected int _eventTypeId;
+
+        protected override void OnUpdate()
+        {
+            if (_shouldRefreshCache)
+            {
+                RefreshRegisteredEffectsCache();
+                _shouldRefreshCache = false;
+            }
+
+            NativeMultiHashMap<MapKey, EffectCommand>.Enumerator eventCommandEnumerator = _dispatcherSystem.CommandsMap.GetValuesForKey(new MapKey() { Value = _eventTypeId });
+            Dependency = JobHandle.CombineDependencies(Dependency, _dispatcherSystem.finalJobHandle);
+            Dependency = ScheduleJob(in eventCommandEnumerator, in _registeredEvents);
+            _dispatcherSystem.AddConsumerJobHandle(Dependency);
+        }
+
+        protected abstract JobHandle ScheduleJob(
+            in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator effectCommandEnumerator,
+            in NativeHashMap<int, ELEMENT> m_RegisteredEffects);
+
+        /// <summary>
+        /// Method to delegate the registery instance retreival to the child class
+        /// because the singleton instance cand be retreived from the generic type.
+        /// </summary>
+        /// <returns>An instance of the registry containing all the registered event types and instances.</returns>
+        protected abstract IRegistry GetRegistryInstance();
+
+        /// <summary>
+        /// Refesh the cached map of all the event instanced handled by this consumer.
+        /// </summary>
+        private void RefreshRegisteredEffectsCache()
+        {
+            _registry = GetRegistryInstance();
+
+            if (_registeredEvents.IsCreated) _registeredEvents.Dispose();
+
+            _registry.GetRegisteredEffects(ref _registeredEvents);
         
-        private EntityCommandBuffer m_EntityCommandBuffer;
-
-        private bool ShouldRefreshCache = true;
-
-        private int m_EffectTypeId;
+        }
 
         protected override void OnCreate()
         {
             base.OnCreate();
-            m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
-            m_EffectTypeId = RegistryReference.GetTypeId(typeof(E));
+            _dispatcherSystem = World.GetOrCreateSystem<DISPATCHER>();
+            _eventTypeId = RegistryReference.GetTypeId(typeof(ELEMENT));
 
             RefreshRegisteredEffectsCache();
-            m_EffectRegistry.NewEffectRegisteredEvent += ()=> ShouldRefreshCache = true;
-
-            
+            _registry.SubscribeToElementRegisteredEvent(TriggerCacheRefresh);
         }
-     
-        private void RefreshRegisteredEffectsCache()
+
+        private void TriggerCacheRefresh(object sender, EventArgs e)
         {
-            m_EffectRegistry = EffectRegistry.Instance;
-
-            if (m_RegisteredEffects.IsCreated) m_RegisteredEffects.Dispose();
-        
-            m_EffectRegistry.GetRegisteredEffects(ref m_RegisteredEffects);
+            _shouldRefreshCache = true;
         }
+
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            m_EffectRegistry.NewEffectRegisteredEvent -= RefreshRegisteredEffectsCache;
-            m_RegisteredEffects.Dispose();
+
+            _registry.UnsubscribeToElementRegisteredEvent(TriggerCacheRefresh);
+            _registeredEvents.Dispose();
         }
+    }
 
-        protected abstract JobHandle ScheduleJob(
-            JobHandle inputDeps,
-            in NativeMultiHashMap<MapKey,EffectCommand>.Enumerator EffectCommandEnumerator,
-            in NativeHashMap<int, E> RegisteredEffects);
 
-        protected override JobHandle OnUpdate(JobHandle inputDeps)
+    [UpdateInGroup(typeof(EffectConsumerSystemGroup))]
+    public abstract class EffectConsumerSystem<ELEMENT> : RegisteredEventConsumer<EffectDisptacherSystem, EffectCommand, ELEMENT>
+        where ELEMENT : struct, IEffect
+    {
+        protected override IRegistry GetRegistryInstance()
         {
-            if (ShouldRefreshCache)
-            {
-                RefreshRegisteredEffectsCache();
-                ShouldRefreshCache = false;
-            }
-           
-            m_EffectCommandMap = m_EffectBufferSystem.CommandsMap;
-            var effectCommandEnumerator = m_EffectCommandMap.GetValuesForKey(new MapKey() { Value = m_EffectTypeId });
-            JobHandle ExecuteEffectCommandsJob = ScheduleJob(
-                JobHandle.CombineDependencies(inputDeps,m_EffectBufferSystem.finalJobHandle),
-                in effectCommandEnumerator,
-                in m_RegisteredEffects);
-            m_EffectBufferSystem.AddConsumerJobHandle(ExecuteEffectCommandsJob);
-         
-            return ExecuteEffectCommandsJob;
+            return (IRegistry) EffectRegistry.Instance;
         }
-
     }
 }

@@ -48,7 +48,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                 {
                     EffectCommandQueue.Enqueue(new EffectCommand()
                     {
-                        RegistryReference = enumerator.Current.EffectReference,
+                        RegistryReference = enumerator.Current.RegistryEventReference,
                         Emitter = emmiter,
                         Target = target
                     });
@@ -65,7 +65,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                 {
                     EffectCommandQueue.Enqueue(new EffectCommand()
                     {
-                        RegistryReference = enumerator.Current.EffectReference,
+                        RegistryReference = enumerator.Current.RegistryEventReference,
                         Emitter = emmiter,
                         Target = target
                     });

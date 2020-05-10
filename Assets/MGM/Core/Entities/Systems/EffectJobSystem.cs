@@ -6,13 +6,13 @@ using Unity.Jobs;
 public abstract class EffectJobSystem : JobComponentSystem
 {
 
-    protected EffectBufferSystem m_EffectBufferSystem;
+    protected EffectDisptacherSystem m_EffectBufferSystem;
 
     protected override void OnCreate()
     {
         base.OnCreate();
 
-        m_EffectBufferSystem = World.GetOrCreateSystem<EffectBufferSystem>();
+        m_EffectBufferSystem = World.GetOrCreateSystem<EffectDisptacherSystem>();
 
 
     }
