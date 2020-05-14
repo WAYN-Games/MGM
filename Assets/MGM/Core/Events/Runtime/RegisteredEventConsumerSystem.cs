@@ -12,7 +12,7 @@ namespace Wayn.Mgm.Events
     /// <typeparam name="DISPATCHER">The type of the dispatcher for the registry based event system..</typeparam>
     /// <typeparam name="COMMAND">The type of the command for the registry based event system.</typeparam>
     /// <typeparam name="ELEMENT">The type of the event consumed by the system.</typeparam>
-    public abstract class RegisteredEventConsumer<DISPATCHER,COMMAND, ELEMENT> : SystemBase
+    public abstract class RegisteredEventConsumerSystem<DISPATCHER,COMMAND, ELEMENT> : SystemBase
         where COMMAND : struct, IEventRegistryCommand
         where ELEMENT : struct, IRegistryElement
         where DISPATCHER : RegistryEventDispatcher<COMMAND>

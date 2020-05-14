@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using Unity.Collections;
+﻿using Unity.Collections;
 using Unity.Entities;
 
 using UnityEngine.Profiling;
@@ -68,9 +66,9 @@ namespace Wayn.Mgm.Events.Registry
         }
         private void ProcessEntity(Entity entity, EntityCommandBuffer ecb)
         {
-            RegistryEventReferenceComponentData EffectComponentData = EntityManager.GetComponentData<RegistryEventReferenceComponentData>(entity);
+            RegistryEventReferenceComponentData registryEventReference = EntityManager.GetComponentData<RegistryEventReferenceComponentData>(entity);
     
-            foreach (ISelfRegistringAuhtoringComponent e in EffectComponentData.listOfManagedBuffer)
+            foreach (ISelfRegistringAuhtoringComponent e in registryEventReference.listOfManagedBuffer)
             {
                 e.Register(ecb, entity);
             }

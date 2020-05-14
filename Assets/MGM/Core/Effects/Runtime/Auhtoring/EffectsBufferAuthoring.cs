@@ -4,7 +4,7 @@ using Wayn.Mgm.Events;
 using Wayn.Mgm.Events.Registry;
 
 [Serializable]
-public abstract class EffectsBufferAuthoring<BUFFER> : RegisteryReferenceBufferAuthoring<BUFFER, IEffect, EffectAuthoring, EffectRegistry>
+public abstract class EffectsBufferAuthoring<BUFFER> : RegisteryReferenceBufferAuthoring<BUFFER, IEffect, EffectAuthoring, EffectRegistry,EffectComponentDataElement<IEffect,BUFFER>>
     where BUFFER : struct,IRegistryReferenceBuffer
 {
 

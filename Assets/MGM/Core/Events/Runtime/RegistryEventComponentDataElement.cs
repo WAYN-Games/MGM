@@ -12,7 +12,7 @@ public abstract class RegistryEventComponentDataElement<ELEMENT, BUFFER> : ISelf
     public int number; // Without this, the subscene fails to load
 
     public List<ELEMENT> elements;
-
+    
     public RegistryEventComponentDataElement()
     {
         elements = new List<ELEMENT>();

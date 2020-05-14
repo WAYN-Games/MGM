@@ -7,6 +7,7 @@ public class EffectComponentDataElement<ELEMENT, BUFFER> : RegistryEventComponen
      where ELEMENT : IRegistryElement
      where BUFFER : struct, IRegistryReferenceBuffer
 {
+
     protected override RegistryReference AddEventToRegistry(ELEMENT registeryEvent)
     {
         return EffectRegistry.Instance.AddEffect((IEffect)registeryEvent);

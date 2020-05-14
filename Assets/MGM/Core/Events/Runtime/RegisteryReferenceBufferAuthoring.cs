@@ -13,11 +13,12 @@ namespace Wayn.Mgm.Events.Registry
     /// <typeparam name="ELEMENT"></typeparam>
     /// <typeparam name="AUTHORING"></typeparam>
     /// <typeparam name="REGISTRY"></typeparam>
-    public abstract class RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY> : MonoBehaviour, IConvertGameObjectToEntity
+    public abstract class RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT> : MonoBehaviour, IConvertGameObjectToEntity
         where BUFFER : struct, IRegistryReferenceBuffer
         where ELEMENT : IRegistryElement
         where AUTHORING : RegisteryReferenceAuthoring<ELEMENT>
         where REGISTRY : Registry<REGISTRY>
+        where EFFECT_COMPONENT_DATA_ELEMENT : RegistryEventComponentDataElement<ELEMENT, BUFFER>, new()
     {
         [SerializeField]
         public List<AUTHORING> Entries = new List<AUTHORING>();
@@ -40,7 +41,7 @@ namespace Wayn.Mgm.Events.Registry
                 elems.Add(entry.Entry);
             }
 
-            RegistryEventComponentDataElement<ELEMENT, BUFFER> elem = new EffectComponentDataElement<ELEMENT, BUFFER>();
+            RegistryEventComponentDataElement<ELEMENT, BUFFER> elem = new EFFECT_COMPONENT_DATA_ELEMENT();
             elem.SetElementList(elems);
             component.listOfManagedBuffer.Add(elem);
             dstManager.SetComponentData(entity,component);
