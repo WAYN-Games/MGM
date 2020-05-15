@@ -1,7 +1,7 @@
 ﻿using Unity.Entities;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event.Registry;
 
-namespace Wayn.Mgm.Events
+namespace Wayn.Mgm.Event
 {
     [UpdateInGroup(typeof(EffectConsumerSystemGroup))]
     public class EffectDisptacherSystem : RegistryEventDispatcher<EffectCommand>

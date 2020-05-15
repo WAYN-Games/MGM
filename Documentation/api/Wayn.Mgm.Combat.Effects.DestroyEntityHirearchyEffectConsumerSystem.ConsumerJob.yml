@@ -1,0 +1,407 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  commentId: T:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  id: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  - Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  - Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  - Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  - Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  langs:
+  - csharp
+  - vb
+  name: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  type: Struct
+  source:
+    id: ConsumerJob
+    path: ''
+    startLine: 377
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: 'public struct ConsumerJob : IJob'
+    content.vb: >-
+      Public Structure ConsumerJob
+          Implements IJob
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  id: EffectCommandEnumerator
+  parent: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: EffectCommandEnumerator
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  type: Field
+  source:
+    id: EffectCommandEnumerator
+    path: ''
+    startLine: 382
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator
+    return:
+      type: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    content.vb: Public EffectCommandEnumerator As NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  id: RegisteredEffects
+  parent: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: RegisteredEffects
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  type: Field
+  source:
+    id: RegisteredEffects
+    path: ''
+    startLine: 384
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeHashMap<int, DestroyEntityHierarchyEffect> RegisteredEffects
+    return:
+      type: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect}
+    content.vb: Public RegisteredEffects As NativeHashMap(Of Integer, DestroyEntityHierarchyEffect)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  id: Children
+  parent: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  type: Field
+  source:
+    id: Children
+    path: ''
+    startLine: 386
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public BufferFromEntity<Child> Children
+    return:
+      type: Global.BufferFromEntity{Child}
+    content.vb: Public Children As BufferFromEntity(Of Child)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  id: EntityCommandBuffer
+  parent: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: EntityCommandBuffer
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  type: Field
+  source:
+    id: EntityCommandBuffer
+    path: ''
+    startLine: 388
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public EntityCommandBuffer EntityCommandBuffer
+    return:
+      type: Global.EntityCommandBuffer
+    content.vb: Public EntityCommandBuffer As EntityCommandBuffer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  id: Execute
+  parent: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute()
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute()
+  type: Method
+  source:
+    id: Execute
+    path: ''
+    startLine: 391
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public void Execute()
+    content.vb: Public Sub Execute
+  overload: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+  isExternal: true
+  name: NativeMultiHashMap.Enumerator<>
+  nameWithType: NativeMultiHashMap.Enumerator<>
+  fullName: NativeMultiHashMap.Enumerator<>
+  nameWithType.vb: NativeMultiHashMap.Enumerator(Of )
+  fullName.vb: NativeMultiHashMap.Enumerator(Of )
+  name.vb: NativeMultiHashMap.Enumerator(Of )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect}
+  commentId: '!:Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect}'
+  definition: Global.NativeHashMap`2
+  name: NativeHashMap<Int32, DestroyEntityHierarchyEffect>
+  nameWithType: NativeHashMap<Int32, DestroyEntityHierarchyEffect>
+  fullName: NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect>
+  nameWithType.vb: NativeHashMap(Of Int32, DestroyEntityHierarchyEffect)
+  fullName.vb: NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect)
+  name.vb: NativeHashMap(Of Int32, DestroyEntityHierarchyEffect)
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+    name: DestroyEntityHierarchyEffect
+    nameWithType: DestroyEntityHierarchyEffect
+    fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+    name: DestroyEntityHierarchyEffect
+    nameWithType: DestroyEntityHierarchyEffect
+    fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap`2
+  isExternal: true
+  name: NativeHashMap<, >
+  nameWithType: NativeHashMap<, >
+  fullName: NativeHashMap<, >
+  nameWithType.vb: NativeHashMap(Of , )
+  fullName.vb: NativeHashMap(Of , )
+  name.vb: NativeHashMap(Of , )
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.BufferFromEntity{Child}
+  commentId: '!:Global.BufferFromEntity{Child}'
+  definition: Global.BufferFromEntity`1
+  name: BufferFromEntity<Child>
+  nameWithType: BufferFromEntity<Child>
+  fullName: BufferFromEntity<Child>
+  nameWithType.vb: BufferFromEntity(Of Child)
+  fullName.vb: BufferFromEntity(Of Child)
+  name.vb: BufferFromEntity(Of Child)
+  spec.csharp:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Child
+    name: Child
+    nameWithType: Child
+    fullName: Child
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Child
+    name: Child
+    nameWithType: Child
+    fullName: Child
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.BufferFromEntity`1
+  isExternal: true
+  name: BufferFromEntity<>
+  nameWithType: BufferFromEntity<>
+  fullName: BufferFromEntity<>
+  nameWithType.vb: BufferFromEntity(Of )
+  fullName.vb: BufferFromEntity(Of )
+  name.vb: BufferFromEntity(Of )
+  spec.csharp:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.EntityCommandBuffer
+  isExternal: true
+  name: EntityCommandBuffer
+  nameWithType: EntityCommandBuffer
+  fullName: EntityCommandBuffer
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute*
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  name: Execute
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute

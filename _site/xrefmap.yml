@@ -1,0 +1,1468 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  href: api/Wayn.Mgm.Combat.Effects.html
+  commentId: N:Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  name: AssignementStrategy
+  href: api/Wayn.Mgm.Combat.Effects.AssignementStrategy.html
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignementStrategy
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  nameWithType: AssignementStrategy
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  name: FewestMembers
+  href: api/Wayn.Mgm.Combat.Effects.AssignementStrategy.html#Wayn_Mgm_Combat_Effects_AssignementStrategy_FewestMembers
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  nameWithType: AssignementStrategy.FewestMembers
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  name: LosingTeam
+  href: api/Wayn.Mgm.Combat.Effects.AssignementStrategy.html#Wayn_Mgm_Combat_Effects_AssignementStrategy_LosingTeam
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  nameWithType: AssignementStrategy.LosingTeam
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+  name: AssignToTeamEffect
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffect.html
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+  nameWithType: AssignToTeamEffect
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffect.AssignementStrategy
+  name: AssignementStrategy
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffect.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffect_AssignementStrategy
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignToTeamEffect.AssignementStrategy
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffect.AssignementStrategy
+  nameWithType: AssignToTeamEffect.AssignementStrategy
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer
+  name: AssignToTeamEffectConsumer
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.html
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer
+  nameWithType: AssignToTeamEffectConsumer
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  name: AssignToTeamEffectConsumer.ConsumerJob
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.html
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  name: EffectCommandEnumerator
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_ConsumerJob_EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  name: Execute()
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_ConsumerJob_Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute()
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.Execute()
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute*
+  name: Execute
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_ConsumerJob_Execute_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.Execute
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  name: RegisteredEffects
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_ConsumerJob_RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_OnCreate
+  commentId: M:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.OnCreate
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.OnCreate()
+  nameWithType: AssignToTeamEffectConsumer.OnCreate()
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_OnCreate_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.OnCreate
+  nameWithType: AssignToTeamEffectConsumer.OnCreate
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.AssignToTeamEffect}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, AssignToTeamEffect>)
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_ScheduleJob_NativeMultiHashMap_MapKey_EffectCommand__Enumerator__NativeHashMap_System_Int32_Wayn_Mgm_Combat_Effects_AssignToTeamEffect___
+  commentId: M:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.AssignToTeamEffect}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, AssignToTeamEffect))
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.AssignToTeamEffect>)
+  fullName.vb: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.AssignToTeamEffect))
+  nameWithType: AssignToTeamEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, AssignToTeamEffect>)
+  nameWithType.vb: AssignToTeamEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, AssignToTeamEffect))
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.html#Wayn_Mgm_Combat_Effects_AssignToTeamEffectConsumer_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ScheduleJob
+  nameWithType: AssignToTeamEffectConsumer.ScheduleJob
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffect
+  name: ConquerEffect
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffect.html
+  commentId: T:Wayn.Mgm.Combat.Effects.ConquerEffect
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffect
+  nameWithType: ConquerEffect
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  name: Amount
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffect.html#Wayn_Mgm_Combat_Effects_ConquerEffect_Amount
+  commentId: F:Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  nameWithType: ConquerEffect.Amount
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer
+  name: ConquerEffectConsumer
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.html
+  commentId: T:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer
+  nameWithType: ConquerEffectConsumer
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob
+  name: ConquerEffectConsumer.ConsumerJob
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html
+  commentId: T:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob
+  nameWithType: ConquerEffectConsumer.ConsumerJob
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  name: EffectCommandEnumerator
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ConsumerJob_EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  nameWithType: ConquerEffectConsumer.ConsumerJob.EffectCommandEnumerator
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Execute
+  name: Execute()
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ConsumerJob_Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Execute()
+  nameWithType: ConquerEffectConsumer.ConsumerJob.Execute()
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Execute*
+  name: Execute
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ConsumerJob_Execute_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Execute
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Execute
+  nameWithType: ConquerEffectConsumer.ConsumerJob.Execute
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.OwnershipPoints
+  name: OwnershipPoints
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ConsumerJob_OwnershipPoints
+  commentId: F:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.OwnershipPoints
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.OwnershipPoints
+  nameWithType: ConquerEffectConsumer.ConsumerJob.OwnershipPoints
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.RegisteredEffects
+  name: RegisteredEffects
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ConsumerJob_RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.RegisteredEffects
+  nameWithType: ConquerEffectConsumer.ConsumerJob.RegisteredEffects
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Time
+  name: Time
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ConsumerJob_Time
+  commentId: F:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Time
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.Time
+  nameWithType: ConquerEffectConsumer.ConsumerJob.Time
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_OnCreate
+  commentId: M:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.OnCreate
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.OnCreate()
+  nameWithType: ConquerEffectConsumer.OnCreate()
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_OnCreate_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.OnCreate
+  nameWithType: ConquerEffectConsumer.OnCreate
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.ConquerEffect}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, ConquerEffect>)
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ScheduleJob_NativeMultiHashMap_MapKey_EffectCommand__Enumerator__NativeHashMap_System_Int32_Wayn_Mgm_Combat_Effects_ConquerEffect___
+  commentId: M:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.ConquerEffect}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, ConquerEffect))
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.ConquerEffect>)
+  fullName.vb: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.ConquerEffect))
+  nameWithType: ConquerEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, ConquerEffect>)
+  nameWithType.vb: ConquerEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, ConquerEffect))
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.html#Wayn_Mgm_Combat_Effects_ConquerEffectConsumer_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ScheduleJob
+  nameWithType: ConquerEffectConsumer.ScheduleJob
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+  name: DestroyEntityHierarchyEffect
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.html
+  commentId: T:Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+  nameWithType: DestroyEntityHierarchyEffect
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.ApplyRecursivelyToChildren
+  name: ApplyRecursivelyToChildren
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.html#Wayn_Mgm_Combat_Effects_DestroyEntityHierarchyEffect_ApplyRecursivelyToChildren
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.ApplyRecursivelyToChildren
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.ApplyRecursivelyToChildren
+  nameWithType: DestroyEntityHierarchyEffect.ApplyRecursivelyToChildren
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem
+  name: DestroyEntityHirearchyEffectConsumerSystem
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.html
+  commentId: T:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  name: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html
+  commentId: T:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  name: Children
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ConsumerJob_Children
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Children
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  name: EffectCommandEnumerator
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ConsumerJob_EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  name: EntityCommandBuffer
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ConsumerJob_EntityCommandBuffer
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  name: Execute()
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ConsumerJob_Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute()
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute()
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute*
+  name: Execute
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ConsumerJob_Execute_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.Execute
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  name: RegisteredEffects
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ConsumerJob_RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_OnCreate
+  commentId: M:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.OnCreate
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.OnCreate()
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.OnCreate()
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_OnCreate_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.OnCreate
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.OnCreate
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, DestroyEntityHierarchyEffect>)
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ScheduleJob_NativeMultiHashMap_MapKey_EffectCommand__Enumerator__NativeHashMap_System_Int32_Wayn_Mgm_Combat_Effects_DestroyEntityHierarchyEffect___
+  commentId: M:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, DestroyEntityHierarchyEffect))
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect>)
+  fullName.vb: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect))
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, DestroyEntityHierarchyEffect>)
+  nameWithType.vb: DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, DestroyEntityHierarchyEffect))
+- uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DestroyEntityHirearchyEffectConsumerSystem_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob
+  nameWithType: DestroyEntityHirearchyEffectConsumerSystem.ScheduleJob
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  name: DisableEntityHierarchyEffect
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.html
+  commentId: T:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  nameWithType: DisableEntityHierarchyEffect
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  name: ApplyRecursivelyToChildren
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffect_ApplyRecursivelyToChildren
+  commentId: F:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  nameWithType: DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem
+  name: DisableEntityHierarchyEffectConsumerSystem
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.html
+  commentId: T:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+  name: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html
+  commentId: T:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Children
+  name: Children
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ConsumerJob_Children
+  commentId: F:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Children
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Children
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Children
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  name: EffectCommandEnumerator
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ConsumerJob_EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EffectCommandEnumerator
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  name: EntityCommandBuffer
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ConsumerJob_EntityCommandBuffer
+  commentId: F:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.EntityCommandBuffer
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute
+  name: Execute()
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ConsumerJob_Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute()
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute()
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute*
+  name: Execute
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ConsumerJob_Execute_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.Execute
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  name: RegisteredEffects
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ConsumerJob_RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.RegisteredEffects
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_OnCreate
+  commentId: M:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.OnCreate
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.OnCreate()
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.OnCreate()
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_OnCreate_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.OnCreate
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.OnCreate
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, DisableEntityHierarchyEffect>)
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ScheduleJob_NativeMultiHashMap_MapKey_EffectCommand__Enumerator__NativeHashMap_System_Int32_Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffect___
+  commentId: M:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, DisableEntityHierarchyEffect))
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect>)
+  fullName.vb: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect))
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, DisableEntityHierarchyEffect>)
+  nameWithType.vb: DisableEntityHierarchyEffectConsumerSystem.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, DisableEntityHierarchyEffect))
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.html#Wayn_Mgm_Combat_Effects_DisableEntityHierarchyEffectConsumerSystem_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ScheduleJob
+  nameWithType: DisableEntityHierarchyEffectConsumerSystem.ScheduleJob
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  name: InflictDamageEffect
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffect.html
+  commentId: T:Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  nameWithType: InflictDamageEffect
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  name: Amount
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffect.html#Wayn_Mgm_Combat_Effects_InflictDamageEffect_Amount
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  nameWithType: InflictDamageEffect.Amount
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer
+  name: InflictDamageEffectConsumer
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.html
+  commentId: T:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer
+  nameWithType: InflictDamageEffectConsumer
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  name: InflictDamageEffectConsumer.ConsumerJob
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html
+  commentId: T:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  name: EffectCommandEnumerator
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  name: EffectCommandQueue
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_EffectCommandQueue
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  name: Execute()
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute()
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.Execute()
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute*
+  name: Execute
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_Execute_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.Execute
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  name: Healths
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_Healths
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.Healths
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  name: OnDeathBuffer
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_OnDeathBuffer
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  name: RegisteredEffects
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ConsumerJob_RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_OnCreate
+  commentId: M:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.OnCreate
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.OnCreate()
+  nameWithType: InflictDamageEffectConsumer.OnCreate()
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_OnCreate_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.OnCreate
+  nameWithType: InflictDamageEffectConsumer.OnCreate
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.InflictDamageEffect}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, InflictDamageEffect>)
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ScheduleJob_NativeMultiHashMap_MapKey_EffectCommand__Enumerator__NativeHashMap_System_Int32_Wayn_Mgm_Combat_Effects_InflictDamageEffect___
+  commentId: M:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.InflictDamageEffect}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, InflictDamageEffect))
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.InflictDamageEffect>)
+  fullName.vb: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.InflictDamageEffect))
+  nameWithType: InflictDamageEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, InflictDamageEffect>)
+  nameWithType.vb: InflictDamageEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, InflictDamageEffect))
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.html#Wayn_Mgm_Combat_Effects_InflictDamageEffectConsumer_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ScheduleJob
+  nameWithType: InflictDamageEffectConsumer.ScheduleJob
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffect
+  name: KillLogEffect
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffect.html
+  commentId: T:Wayn.Mgm.Combat.Effects.KillLogEffect
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffect
+  nameWithType: KillLogEffect
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffect.dummy
+  name: dummy
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffect.html#Wayn_Mgm_Combat_Effects_KillLogEffect_dummy
+  commentId: F:Wayn.Mgm.Combat.Effects.KillLogEffect.dummy
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffect.dummy
+  nameWithType: KillLogEffect.dummy
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  name: KillLogEffectConsumer
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.html
+  commentId: T:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  nameWithType: KillLogEffectConsumer
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob
+  name: KillLogEffectConsumer.ConsumerJob
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.html
+  commentId: T:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob
+  nameWithType: KillLogEffectConsumer.ConsumerJob
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  name: EffectCommandEnumerator
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_KillLogEffectConsumer_ConsumerJob_EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  nameWithType: KillLogEffectConsumer.ConsumerJob.EffectCommandEnumerator
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.EntityNames
+  name: EntityNames
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_KillLogEffectConsumer_ConsumerJob_EntityNames
+  commentId: F:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.EntityNames
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.EntityNames
+  nameWithType: KillLogEffectConsumer.ConsumerJob.EntityNames
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.Execute
+  name: Execute()
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_KillLogEffectConsumer_ConsumerJob_Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.Execute()
+  nameWithType: KillLogEffectConsumer.ConsumerJob.Execute()
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.Execute*
+  name: Execute
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.html#Wayn_Mgm_Combat_Effects_KillLogEffectConsumer_ConsumerJob_Execute_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.Execute
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.Execute
+  nameWithType: KillLogEffectConsumer.ConsumerJob.Execute
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, KillLogEffect>)
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.html#Wayn_Mgm_Combat_Effects_KillLogEffectConsumer_ScheduleJob_NativeMultiHashMap_MapKey_EffectCommand__Enumerator__NativeHashMap_System_Int32_Wayn_Mgm_Combat_Effects_KillLogEffect___
+  commentId: M:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, KillLogEffect))
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.KillLogEffect>)
+  fullName.vb: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.KillLogEffect))
+  nameWithType: KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, KillLogEffect>)
+  nameWithType.vb: KillLogEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, KillLogEffect))
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.html#Wayn_Mgm_Combat_Effects_KillLogEffectConsumer_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob
+  nameWithType: KillLogEffectConsumer.ScheduleJob
+- uid: Wayn.Mgm.Event
+  name: Wayn.Mgm.Event
+  href: api/Wayn.Mgm.Event.html
+  commentId: N:Wayn.Mgm.Event
+  fullName: Wayn.Mgm.Event
+  nameWithType: Wayn.Mgm.Event
+- uid: Wayn.Mgm.Event.EffectCommand
+  name: EffectCommand
+  href: api/Wayn.Mgm.Event.EffectCommand.html
+  commentId: T:Wayn.Mgm.Event.EffectCommand
+  fullName: Wayn.Mgm.Event.EffectCommand
+  nameWithType: EffectCommand
+- uid: Wayn.Mgm.Event.EffectCommand.Emitter
+  name: Emitter
+  href: api/Wayn.Mgm.Event.EffectCommand.html#Wayn_Mgm_Event_EffectCommand_Emitter
+  commentId: F:Wayn.Mgm.Event.EffectCommand.Emitter
+  fullName: Wayn.Mgm.Event.EffectCommand.Emitter
+  nameWithType: EffectCommand.Emitter
+- uid: Wayn.Mgm.Event.EffectCommand.RegistryReference
+  name: RegistryReference
+  href: api/Wayn.Mgm.Event.EffectCommand.html#Wayn_Mgm_Event_EffectCommand_RegistryReference
+  commentId: P:Wayn.Mgm.Event.EffectCommand.RegistryReference
+  fullName: Wayn.Mgm.Event.EffectCommand.RegistryReference
+  nameWithType: EffectCommand.RegistryReference
+- uid: Wayn.Mgm.Event.EffectCommand.RegistryReference*
+  name: RegistryReference
+  href: api/Wayn.Mgm.Event.EffectCommand.html#Wayn_Mgm_Event_EffectCommand_RegistryReference_
+  commentId: Overload:Wayn.Mgm.Event.EffectCommand.RegistryReference
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.EffectCommand.RegistryReference
+  nameWithType: EffectCommand.RegistryReference
+- uid: Wayn.Mgm.Event.EffectCommand.Target
+  name: Target
+  href: api/Wayn.Mgm.Event.EffectCommand.html#Wayn_Mgm_Event_EffectCommand_Target
+  commentId: F:Wayn.Mgm.Event.EffectCommand.Target
+  fullName: Wayn.Mgm.Event.EffectCommand.Target
+  nameWithType: EffectCommand.Target
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1
+  name: EffectConsumerSystem<ELEMENT>
+  href: api/Wayn.Mgm.Event.EffectConsumerSystem-1.html
+  commentId: T:Wayn.Mgm.Event.EffectConsumerSystem`1
+  name.vb: EffectConsumerSystem(Of ELEMENT)
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT)
+  nameWithType: EffectConsumerSystem<ELEMENT>
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT)
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  name: GetRegistryInstance()
+  href: api/Wayn.Mgm.Event.EffectConsumerSystem-1.html#Wayn_Mgm_Event_EffectConsumerSystem_1_GetRegistryInstance
+  commentId: M:Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>.GetRegistryInstance()
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT).GetRegistryInstance()
+  nameWithType: EffectConsumerSystem<ELEMENT>.GetRegistryInstance()
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT).GetRegistryInstance()
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance*
+  name: GetRegistryInstance
+  href: api/Wayn.Mgm.Event.EffectConsumerSystem-1.html#Wayn_Mgm_Event_EffectConsumerSystem_1_GetRegistryInstance_
+  commentId: Overload:Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>.GetRegistryInstance
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT).GetRegistryInstance
+  nameWithType: EffectConsumerSystem<ELEMENT>.GetRegistryInstance
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT).GetRegistryInstance
+- uid: Wayn.Mgm.Event.EffectDisptacherSystem
+  name: EffectDisptacherSystem
+  href: api/Wayn.Mgm.Event.EffectDisptacherSystem.html
+  commentId: T:Wayn.Mgm.Event.EffectDisptacherSystem
+  fullName: Wayn.Mgm.Event.EffectDisptacherSystem
+  nameWithType: EffectDisptacherSystem
+- uid: Wayn.Mgm.Event.IEffect
+  name: IEffect
+  href: api/Wayn.Mgm.Event.IEffect.html
+  commentId: T:Wayn.Mgm.Event.IEffect
+  fullName: Wayn.Mgm.Event.IEffect
+  nameWithType: IEffect
+- uid: Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  href: api/Wayn.Mgm.Event.Registry.html
+  commentId: N:Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+- uid: Wayn.Mgm.Event.Registry.Editor
+  name: Wayn.Mgm.Event.Registry.Editor
+  href: api/Wayn.Mgm.Event.Registry.Editor.html
+  commentId: N:Wayn.Mgm.Event.Registry.Editor
+  fullName: Wayn.Mgm.Event.Registry.Editor
+  nameWithType: Wayn.Mgm.Event.Registry.Editor
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  name: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  href: api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.html
+  commentId: T:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  name.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  name: OnEnable()
+  href: api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.html#Wayn_Mgm_Event_Registry_Editor_RegistryReferenceBufferAuthoringEditor_1_OnEnable
+  commentId: M:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable()
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable()
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable()
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable()
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable*
+  name: OnEnable
+  href: api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.html#Wayn_Mgm_Event_Registry_Editor_RegistryReferenceBufferAuthoringEditor_1_OnEnable_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.html#Wayn_Mgm_Event_Registry_Editor_RegistryReferenceBufferAuthoringEditor_1_OnInspectorGUI
+  commentId: M:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI()
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI()
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI()
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI()
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.html#Wayn_Mgm_Event_Registry_Editor_RegistryReferenceBufferAuthoringEditor_1_OnInspectorGUI_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI
+- uid: Wayn.Mgm.Event.Registry.EffectRegistry
+  name: EffectRegistry
+  href: api/Wayn.Mgm.Event.Registry.EffectRegistry.html
+  commentId: T:Wayn.Mgm.Event.Registry.EffectRegistry
+  fullName: Wayn.Mgm.Event.Registry.EffectRegistry
+  nameWithType: EffectRegistry
+- uid: Wayn.Mgm.Event.Registry.IEventRegistryCommand
+  name: IEventRegistryCommand
+  href: api/Wayn.Mgm.Event.Registry.IEventRegistryCommand.html
+  commentId: T:Wayn.Mgm.Event.Registry.IEventRegistryCommand
+  fullName: Wayn.Mgm.Event.Registry.IEventRegistryCommand
+  nameWithType: IEventRegistryCommand
+- uid: Wayn.Mgm.Event.Registry.IEventRegistryCommand.RegistryReference
+  name: RegistryReference
+  href: api/Wayn.Mgm.Event.Registry.IEventRegistryCommand.html#Wayn_Mgm_Event_Registry_IEventRegistryCommand_RegistryReference
+  commentId: P:Wayn.Mgm.Event.Registry.IEventRegistryCommand.RegistryReference
+  fullName: Wayn.Mgm.Event.Registry.IEventRegistryCommand.RegistryReference
+  nameWithType: IEventRegistryCommand.RegistryReference
+- uid: Wayn.Mgm.Event.Registry.IEventRegistryCommand.RegistryReference*
+  name: RegistryReference
+  href: api/Wayn.Mgm.Event.Registry.IEventRegistryCommand.html#Wayn_Mgm_Event_Registry_IEventRegistryCommand_RegistryReference_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IEventRegistryCommand.RegistryReference
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IEventRegistryCommand.RegistryReference
+  nameWithType: IEventRegistryCommand.RegistryReference
+- uid: Wayn.Mgm.Event.Registry.IRegistry
+  name: IRegistry
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistry
+  fullName: Wayn.Mgm.Event.Registry.IRegistry
+  nameWithType: IRegistry
+- uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  name: AddEventInstance(IRegistryEvent)
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_AddEventInstance_Wayn_Mgm_Event_Registry_IRegistryEvent_
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  nameWithType: IRegistry.AddEventInstance(IRegistryEvent)
+- uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance*
+  name: AddEventInstance
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_AddEventInstance_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance
+  nameWithType: IRegistry.AddEventInstance
+- uid: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects*
+  name: GetRegisteredEffects
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_GetRegisteredEffects_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects
+  nameWithType: IRegistry.GetRegisteredEffects
+- uid: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects``1(Unity.Collections.NativeHashMap{System.Int32,``0}@)
+  name: GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<Int32, EVENT_TYPE>)
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_GetRegisteredEffects__1_Unity_Collections_NativeHashMap_System_Int32___0___
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects``1(Unity.Collections.NativeHashMap{System.Int32,``0}@)
+  name.vb: GetRegisteredEffects(Of EVENT_TYPE)(ByRef Unity.Collections.NativeHashMap(Of Int32, EVENT_TYPE))
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<System.Int32, EVENT_TYPE>)
+  fullName.vb: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects(Of EVENT_TYPE)(ByRef Unity.Collections.NativeHashMap(Of System.Int32, EVENT_TYPE))
+  nameWithType: IRegistry.GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<Int32, EVENT_TYPE>)
+  nameWithType.vb: IRegistry.GetRegisteredEffects(Of EVENT_TYPE)(ByRef Unity.Collections.NativeHashMap(Of Int32, EVENT_TYPE))
+- uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  name: OnNewElementRegistered()
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_OnNewElementRegistered
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered()
+  nameWithType: IRegistry.OnNewElementRegistered()
+- uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered*
+  name: OnNewElementRegistered
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_OnNewElementRegistered_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  nameWithType: IRegistry.OnNewElementRegistered
+- uid: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  name: SubscribeToElementRegisteredEvent(EventHandler)
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_SubscribeToElementRegisteredEvent_EventHandler_
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+- uid: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent*
+  name: SubscribeToElementRegisteredEvent
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_SubscribeToElementRegisteredEvent_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent
+  nameWithType: IRegistry.SubscribeToElementRegisteredEvent
+- uid: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  name: UnsubscribeToElementRegisteredEvent(EventHandler)
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_UnsubscribeToElementRegisteredEvent_EventHandler_
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+- uid: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent*
+  name: UnsubscribeToElementRegisteredEvent
+  href: api/Wayn.Mgm.Event.Registry.IRegistry.html#Wayn_Mgm_Event_Registry_IRegistry_UnsubscribeToElementRegisteredEvent_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent
+  nameWithType: IRegistry.UnsubscribeToElementRegisteredEvent
+- uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+  name: IRegistryEvent
+  href: api/Wayn.Mgm.Event.Registry.IRegistryEvent.html
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  nameWithType: IRegistryEvent
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  name: IRegistryReferenceBuffer
+  href: api/Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.html
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  nameWithType: IRegistryReferenceBuffer
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  name: RegistryEventReference
+  href: api/Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.html#Wayn_Mgm_Event_Registry_IRegistryReferenceBuffer_RegistryEventReference
+  commentId: P:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  nameWithType: IRegistryReferenceBuffer.RegistryEventReference
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference*
+  name: RegistryEventReference
+  href: api/Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.html#Wayn_Mgm_Event_Registry_IRegistryReferenceBuffer_RegistryEventReference_
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  nameWithType: IRegistryReferenceBuffer.RegistryEventReference
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  name: ISelfRegistringAuhtoringComponent
+  href: api/Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.html
+  commentId: T:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  nameWithType: ISelfRegistringAuhtoringComponent
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  name: Register(EntityCommandBuffer, Entity)
+  href: api/Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.html#Wayn_Mgm_Event_Registry_ISelfRegistringAuhtoringComponent_Register_EntityCommandBuffer_Entity_
+  commentId: M:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer, Entity)
+  nameWithType: ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer, Entity)
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register*
+  name: Register
+  href: api/Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.html#Wayn_Mgm_Event_Registry_ISelfRegistringAuhtoringComponent_Register_
+  commentId: Overload:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register
+  nameWithType: ISelfRegistringAuhtoringComponent.Register
+- uid: Wayn.Mgm.Event.Registry.MapKey
+  name: MapKey
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html
+  commentId: T:Wayn.Mgm.Event.Registry.MapKey
+  fullName: Wayn.Mgm.Event.Registry.MapKey
+  nameWithType: MapKey
+- uid: Wayn.Mgm.Event.Registry.MapKey.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html#Wayn_Mgm_Event_Registry_MapKey_Equals_System_Object_
+  commentId: M:Wayn.Mgm.Event.Registry.MapKey.Equals(System.Object)
+  fullName: Wayn.Mgm.Event.Registry.MapKey.Equals(System.Object)
+  nameWithType: MapKey.Equals(Object)
+- uid: Wayn.Mgm.Event.Registry.MapKey.Equals(Wayn.Mgm.Event.Registry.MapKey)
+  name: Equals(MapKey)
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html#Wayn_Mgm_Event_Registry_MapKey_Equals_Wayn_Mgm_Event_Registry_MapKey_
+  commentId: M:Wayn.Mgm.Event.Registry.MapKey.Equals(Wayn.Mgm.Event.Registry.MapKey)
+  fullName: Wayn.Mgm.Event.Registry.MapKey.Equals(Wayn.Mgm.Event.Registry.MapKey)
+  nameWithType: MapKey.Equals(MapKey)
+- uid: Wayn.Mgm.Event.Registry.MapKey.Equals*
+  name: Equals
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html#Wayn_Mgm_Event_Registry_MapKey_Equals_
+  commentId: Overload:Wayn.Mgm.Event.Registry.MapKey.Equals
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.MapKey.Equals
+  nameWithType: MapKey.Equals
+- uid: Wayn.Mgm.Event.Registry.MapKey.GetHashCode
+  name: GetHashCode()
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html#Wayn_Mgm_Event_Registry_MapKey_GetHashCode
+  commentId: M:Wayn.Mgm.Event.Registry.MapKey.GetHashCode
+  fullName: Wayn.Mgm.Event.Registry.MapKey.GetHashCode()
+  nameWithType: MapKey.GetHashCode()
+- uid: Wayn.Mgm.Event.Registry.MapKey.GetHashCode*
+  name: GetHashCode
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html#Wayn_Mgm_Event_Registry_MapKey_GetHashCode_
+  commentId: Overload:Wayn.Mgm.Event.Registry.MapKey.GetHashCode
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.MapKey.GetHashCode
+  nameWithType: MapKey.GetHashCode
+- uid: Wayn.Mgm.Event.Registry.MapKey.Value
+  name: Value
+  href: api/Wayn.Mgm.Event.Registry.MapKey.html#Wayn_Mgm_Event_Registry_MapKey_Value
+  commentId: F:Wayn.Mgm.Event.Registry.MapKey.Value
+  fullName: Wayn.Mgm.Event.Registry.MapKey.Value
+  nameWithType: MapKey.Value
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  name: RegisteryReferenceAuthoring<ELEMENT>
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring-1.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  name.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring<ELEMENT>
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring(Of ELEMENT)
+  nameWithType: RegisteryReferenceAuthoring<ELEMENT>
+  nameWithType.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1.Entry
+  name: Entry
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring-1.html#Wayn_Mgm_Event_Registry_RegisteryReferenceAuthoring_1_Entry
+  commentId: F:Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1.Entry
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring<ELEMENT>.Entry
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring(Of ELEMENT).Entry
+  nameWithType: RegisteryReferenceAuthoring<ELEMENT>.Entry
+  nameWithType.vb: RegisteryReferenceAuthoring(Of ELEMENT).Entry
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  name: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  name.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert(Entity,EntityManager,GameObjectConversionSystem)
+  name: Convert(Entity, EntityManager, GameObjectConversionSystem)
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html#Wayn_Mgm_Event_Registry_RegisteryReferenceBufferAuthoring_5_Convert_Entity_EntityManager_GameObjectConversionSystem_
+  commentId: M:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert(Entity,EntityManager,GameObjectConversionSystem)
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert(Entity, EntityManager, GameObjectConversionSystem)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert(Entity, EntityManager, GameObjectConversionSystem)
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert(Entity, EntityManager, GameObjectConversionSystem)
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert(Entity, EntityManager, GameObjectConversionSystem)
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert*
+  name: Convert
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html#Wayn_Mgm_Event_Registry_RegisteryReferenceBufferAuthoring_5_Convert_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Entries
+  name: Entries
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html#Wayn_Mgm_Event_Registry_RegisteryReferenceBufferAuthoring_5_Entries
+  commentId: F:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Entries
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Entries
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Entries
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Entries
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Entries
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  name: GetRegisteryInstance()
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html#Wayn_Mgm_Event_Registry_RegisteryReferenceBufferAuthoring_5_GetRegisteryInstance
+  commentId: M:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance()
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance()
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance()
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance*
+  name: GetRegisteryInstance
+  href: api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html#Wayn_Mgm_Event_Registry_RegisteryReferenceBufferAuthoring_5_GetRegisteryInstance_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance
+- uid: Wayn.Mgm.Event.Registry.Registry`1
+  name: Registry<T>
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html
+  commentId: T:Wayn.Mgm.Event.Registry.Registry`1
+  name.vb: Registry(Of T)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T)
+  nameWithType: Registry<T>
+  nameWithType.vb: Registry(Of T)
+- uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  name: AddEventInstance(IRegistryEvent)
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_AddEventInstance_Wayn_Mgm_Event_Registry_IRegistryEvent_
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  nameWithType: Registry<T>.AddEventInstance(IRegistryEvent)
+  nameWithType.vb: Registry(Of T).AddEventInstance(IRegistryEvent)
+- uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance*
+  name: AddEventInstance
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_AddEventInstance_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.AddEventInstance
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).AddEventInstance
+  nameWithType: Registry<T>.AddEventInstance
+  nameWithType.vb: Registry(Of T).AddEventInstance
+- uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects*
+  name: GetRegisteredEffects
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_GetRegisteredEffects_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.GetRegisteredEffects
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).GetRegisteredEffects
+  nameWithType: Registry<T>.GetRegisteredEffects
+  nameWithType.vb: Registry(Of T).GetRegisteredEffects
+- uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+  name: GetRegisteredEffects<EVENT_TYPE>(ref NativeHashMap<Int32, EVENT_TYPE>)
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_GetRegisteredEffects__1_NativeHashMap_System_Int32___0___
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+  name.vb: GetRegisteredEffects(Of EVENT_TYPE)(ByRef NativeHashMap(Of Int32, EVENT_TYPE))
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.GetRegisteredEffects<EVENT_TYPE>(ref NativeHashMap<System.Int32, EVENT_TYPE>)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).GetRegisteredEffects(Of EVENT_TYPE)(ByRef NativeHashMap(Of System.Int32, EVENT_TYPE))
+  nameWithType: Registry<T>.GetRegisteredEffects<EVENT_TYPE>(ref NativeHashMap<Int32, EVENT_TYPE>)
+  nameWithType.vb: Registry(Of T).GetRegisteredEffects(Of EVENT_TYPE)(ByRef NativeHashMap(Of Int32, EVENT_TYPE))
+- uid: Wayn.Mgm.Event.Registry.Registry`1.Instance
+  name: Instance
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_Instance
+  commentId: P:Wayn.Mgm.Event.Registry.Registry`1.Instance
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.Instance
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).Instance
+  nameWithType: Registry<T>.Instance
+  nameWithType.vb: Registry(Of T).Instance
+- uid: Wayn.Mgm.Event.Registry.Registry`1.Instance*
+  name: Instance
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_Instance_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Registry`1.Instance
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.Instance
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).Instance
+  nameWithType: Registry<T>.Instance
+  nameWithType.vb: Registry(Of T).Instance
+- uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+  name: OnNewElementRegistered()
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_OnNewElementRegistered
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.OnNewElementRegistered()
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).OnNewElementRegistered()
+  nameWithType: Registry<T>.OnNewElementRegistered()
+  nameWithType.vb: Registry(Of T).OnNewElementRegistered()
+- uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered*
+  name: OnNewElementRegistered
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_OnNewElementRegistered_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.OnNewElementRegistered
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).OnNewElementRegistered
+  nameWithType: Registry<T>.OnNewElementRegistered
+  nameWithType.vb: Registry(Of T).OnNewElementRegistered
+- uid: Wayn.Mgm.Event.Registry.Registry`1.registar
+  name: registar
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_registar
+  commentId: F:Wayn.Mgm.Event.Registry.Registry`1.registar
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.registar
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).registar
+  nameWithType: Registry<T>.registar
+  nameWithType.vb: Registry(Of T).registar
+- uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+  name: SubscribeToElementRegisteredEvent(EventHandler)
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_SubscribeToElementRegisteredEvent_EventHandler_
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.SubscribeToElementRegisteredEvent(EventHandler)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: Registry<T>.SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType.vb: Registry(Of T).SubscribeToElementRegisteredEvent(EventHandler)
+- uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent*
+  name: SubscribeToElementRegisteredEvent
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_SubscribeToElementRegisteredEvent_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.SubscribeToElementRegisteredEvent
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).SubscribeToElementRegisteredEvent
+  nameWithType: Registry<T>.SubscribeToElementRegisteredEvent
+  nameWithType.vb: Registry(Of T).SubscribeToElementRegisteredEvent
+- uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+  name: UnsubscribeToElementRegisteredEvent(EventHandler)
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_UnsubscribeToElementRegisteredEvent_EventHandler_
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: Registry<T>.UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType.vb: Registry(Of T).UnsubscribeToElementRegisteredEvent(EventHandler)
+- uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent*
+  name: UnsubscribeToElementRegisteredEvent
+  href: api/Wayn.Mgm.Event.Registry.Registry-1.html#Wayn_Mgm_Event_Registry_Registry_1_UnsubscribeToElementRegisteredEvent_
+  commentId: Overload:Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.UnsubscribeToElementRegisteredEvent
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).UnsubscribeToElementRegisteredEvent
+  nameWithType: Registry<T>.UnsubscribeToElementRegisteredEvent
+  nameWithType.vb: Registry(Of T).UnsubscribeToElementRegisteredEvent
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  name: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  name.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  name: RegistryEventComponentDataElement()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2__ctor
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement()
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement()
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor*
+  name: RegistryEventComponentDataElement
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2__ctor_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry(`0)
+  name: AddEventToRegistry(ELEMENT)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_AddEventToRegistry__0_
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry(`0)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry(ELEMENT)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry(ELEMENT)
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry(ELEMENT)
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry(ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry*
+  name: AddEventToRegistry
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_AddEventToRegistry_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.elements
+  name: elements
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_elements
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.elements
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.elements
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).elements
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.elements
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).elements
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.number
+  name: number
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_number
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.number
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.number
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).number
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.number
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).number
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register(EntityCommandBuffer,Entity)
+  name: Register(EntityCommandBuffer, Entity)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_Register_EntityCommandBuffer_Entity_
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register(EntityCommandBuffer,Entity)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register(EntityCommandBuffer, Entity)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register(EntityCommandBuffer, Entity)
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register(EntityCommandBuffer, Entity)
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register(EntityCommandBuffer, Entity)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register*
+  name: Register
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_Register_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList(List{`0})
+  name: SetElementList(List<ELEMENT>)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_SetElementList_List__0__
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList(List{`0})
+  name.vb: SetElementList(List(Of ELEMENT))
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList(List<ELEMENT>)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList(List(Of ELEMENT))
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList(List<ELEMENT>)
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList(List(Of ELEMENT))
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList*
+  name: SetElementList
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html#Wayn_Mgm_Event_Registry_RegistryEventComponentDataElement_2_SetElementList_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  name: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  name.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._dispatcherSystem
+  name: _dispatcherSystem
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3__dispatcherSystem
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._dispatcherSystem
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._dispatcherSystem
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._dispatcherSystem
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._dispatcherSystem
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._dispatcherSystem
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._eventTypeId
+  name: _eventTypeId
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3__eventTypeId
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._eventTypeId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._eventTypeId
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._eventTypeId
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._eventTypeId
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._eventTypeId
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registeredEvents
+  name: _registeredEvents
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3__registeredEvents
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registeredEvents
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registeredEvents
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registeredEvents
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registeredEvents
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registeredEvents
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registry
+  name: _registry
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3__registry
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registry
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registry
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registry
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registry
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registry
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._shouldRefreshCache
+  name: _shouldRefreshCache
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3__shouldRefreshCache
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._shouldRefreshCache
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._shouldRefreshCache
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._shouldRefreshCache
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._shouldRefreshCache
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._shouldRefreshCache
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  name: GetRegistryInstance()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_GetRegistryInstance
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance()
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance*
+  name: GetRegistryInstance
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_GetRegistryInstance_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_OnCreate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate()
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_OnCreate_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  name: OnDestroy()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_OnDestroy
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy()
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy*
+  name: OnDestroy
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_OnDestroy_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  name: OnUpdate()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_OnUpdate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate()
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate*
+  name: OnUpdate
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_OnUpdate_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob(NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator@,NativeHashMap{System.Int32,`2}@)
+  name: ScheduleJob(NativeMultiHashMap<MapKey, COMMAND>.Enumerator, NativeHashMap<Int32, ELEMENT>)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_ScheduleJob_NativeMultiHashMap_Wayn_Mgm_Event_Registry_MapKey__1__Enumerator__NativeHashMap_System_Int32__2___
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob(NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator@,NativeHashMap{System.Int32,`2}@)
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, COMMAND).Enumerator, ByRef NativeHashMap(Of Int32, ELEMENT))
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob(NativeMultiHashMap<Wayn.Mgm.Event.Registry.MapKey, COMMAND>.Enumerator, NativeHashMap<System.Int32, ELEMENT>)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob(ByRef NativeMultiHashMap(Of Wayn.Mgm.Event.Registry.MapKey, COMMAND).Enumerator, ByRef NativeHashMap(Of System.Int32, ELEMENT))
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob(NativeMultiHashMap<MapKey, COMMAND>.Enumerator, NativeHashMap<Int32, ELEMENT>)
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, COMMAND).Enumerator, ByRef NativeHashMap(Of Int32, ELEMENT))
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob*
+  name: ScheduleJob
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html#Wayn_Mgm_Event_Registry_RegistryEventConsumerSystem_3_ScheduleJob_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  name: RegistryEventDispatcher<COMMAND>
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  name.vb: RegistryEventDispatcher(Of COMMAND)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND)
+  nameWithType: RegistryEventDispatcher<COMMAND>
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle(JobHandle)
+  name: AddConsumerJobHandle(JobHandle)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_AddConsumerJobHandle_JobHandle_
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle(JobHandle)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle(JobHandle)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle(JobHandle)
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle(JobHandle)
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle(JobHandle)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle*
+  name: AddConsumerJobHandle
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_AddConsumerJobHandle_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer(JobHandle)
+  name: AddJobHandleFromProducer(JobHandle)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_AddJobHandleFromProducer_JobHandle_
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer(JobHandle)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer(JobHandle)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer(JobHandle)
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer(JobHandle)
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer(JobHandle)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer*
+  name: AddJobHandleFromProducer
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_AddJobHandleFromProducer_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CommandsMap
+  name: CommandsMap
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_CommandsMap
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CommandsMap
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.CommandsMap
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).CommandsMap
+  nameWithType: RegistryEventDispatcher<COMMAND>.CommandsMap
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).CommandsMap
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  name: CreateCommandsQueue()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_CreateCommandsQueue
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.CreateCommandsQueue()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue()
+  nameWithType: RegistryEventDispatcher<COMMAND>.CreateCommandsQueue()
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue*
+  name: CreateCommandsQueue
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_CreateCommandsQueue_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.CreateCommandsQueue
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue
+  nameWithType: RegistryEventDispatcher<COMMAND>.CreateCommandsQueue
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.finalJobHandle
+  name: finalJobHandle
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_finalJobHandle
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.finalJobHandle
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.finalJobHandle
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).finalJobHandle
+  nameWithType: RegistryEventDispatcher<COMMAND>.finalJobHandle
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).finalJobHandle
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  name: OnDestroy()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_OnDestroy
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnDestroy()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnDestroy()
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnDestroy()
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnDestroy()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy*
+  name: OnDestroy
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_OnDestroy_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnDestroy
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnDestroy
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnDestroy
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnDestroy
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  name: OnUpdate()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_OnUpdate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnUpdate()
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnUpdate()
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnUpdate()
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnUpdate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate*
+  name: OnUpdate
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html#Wayn_Mgm_Event_Registry_RegistryEventDispatcher_1_OnUpdate_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnUpdate
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnUpdate
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnUpdate
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnUpdate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  name: RegistryEventInitializationSystem
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  nameWithType: RegistryEventInitializationSystem
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  name: OnCreate()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.html#Wayn_Mgm_Event_Registry_RegistryEventInitializationSystem_OnCreate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate()
+  nameWithType: RegistryEventInitializationSystem.OnCreate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate*
+  name: OnCreate
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.html#Wayn_Mgm_Event_Registry_RegistryEventInitializationSystem_OnCreate_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  nameWithType: RegistryEventInitializationSystem.OnCreate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  name: OnUpdate()
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.html#Wayn_Mgm_Event_Registry_RegistryEventInitializationSystem_OnUpdate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate()
+  nameWithType: RegistryEventInitializationSystem.OnUpdate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate*
+  name: OnUpdate
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.html#Wayn_Mgm_Event_Registry_RegistryEventInitializationSystem_OnUpdate_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  nameWithType: RegistryEventInitializationSystem.OnUpdate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+  name: RegistryEventReference
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference
+  nameWithType: RegistryEventReference
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  name: GetEffectInstanceId(IRegistryEvent)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html#Wayn_Mgm_Event_Registry_RegistryEventReference_GetEffectInstanceId_Wayn_Mgm_Event_Registry_IRegistryEvent_
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  nameWithType: RegistryEventReference.GetEffectInstanceId(IRegistryEvent)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId*
+  name: GetEffectInstanceId
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html#Wayn_Mgm_Event_Registry_RegistryEventReference_GetEffectInstanceId_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId
+  nameWithType: RegistryEventReference.GetEffectInstanceId
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  name: GetTypeId(Type)
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html#Wayn_Mgm_Event_Registry_RegistryEventReference_GetTypeId_Type_
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  nameWithType: RegistryEventReference.GetTypeId(Type)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId*
+  name: GetTypeId
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html#Wayn_Mgm_Event_Registry_RegistryEventReference_GetTypeId_
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId
+  isSpec: "True"
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId
+  nameWithType: RegistryEventReference.GetTypeId
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  name: TypeId
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html#Wayn_Mgm_Event_Registry_RegistryEventReference_TypeId
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  nameWithType: RegistryEventReference.TypeId
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  name: VersionId
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReference.html#Wayn_Mgm_Event_Registry_RegistryEventReference_VersionId
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  nameWithType: RegistryEventReference.VersionId
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  name: RegistryEventReferenceComponentData
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.html
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  nameWithType: RegistryEventReferenceComponentData
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  name: listOfManagedBuffer
+  href: api/Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.html#Wayn_Mgm_Event_Registry_RegistryEventReferenceComponentData_listOfManagedBuffer
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  nameWithType: RegistryEventReferenceComponentData.listOfManagedBuffer

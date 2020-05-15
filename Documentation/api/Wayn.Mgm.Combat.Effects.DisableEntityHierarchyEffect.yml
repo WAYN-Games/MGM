@@ -1,0 +1,81 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  commentId: T:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  id: DisableEntityHierarchyEffect
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  langs:
+  - csharp
+  - vb
+  name: DisableEntityHierarchyEffect
+  nameWithType: DisableEntityHierarchyEffect
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  type: Struct
+  source:
+    id: DisableEntityHierarchyEffect
+    path: ''
+    startLine: 438
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  summary: "\nThis effect disable the Target entity and all it&apos;s children.\n"
+  example: []
+  syntax:
+    content: 'public struct DisableEntityHierarchyEffect : IEffect'
+    content.vb: >-
+      Public Structure DisableEntityHierarchyEffect
+          Implements IEffect
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  commentId: F:Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  id: ApplyRecursivelyToChildren
+  parent: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+  langs:
+  - csharp
+  - vb
+  name: ApplyRecursivelyToChildren
+  nameWithType: DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  fullName: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.ApplyRecursivelyToChildren
+  type: Field
+  source:
+    id: ApplyRecursivelyToChildren
+    path: ''
+    startLine: 441
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public bool ApplyRecursivelyToChildren
+    return:
+      type: System.Boolean
+    content.vb: Public ApplyRecursivelyToChildren As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

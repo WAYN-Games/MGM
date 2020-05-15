@@ -1,0 +1,540 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  commentId: T:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  id: InflictDamageEffectConsumer.ConsumerJob
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  langs:
+  - csharp
+  - vb
+  name: InflictDamageEffectConsumer.ConsumerJob
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  type: Struct
+  source:
+    id: ConsumerJob
+    path: ''
+    startLine: 574
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: 'public struct ConsumerJob : IJob'
+    content.vb: >-
+      Public Structure ConsumerJob
+          Implements IJob
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  id: EffectCommandEnumerator
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: EffectCommandEnumerator
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  type: Field
+  source:
+    id: EffectCommandEnumerator
+    path: ''
+    startLine: 578
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator
+    return:
+      type: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    content.vb: Public EffectCommandEnumerator As NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  id: RegisteredEffects
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: RegisteredEffects
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.RegisteredEffects
+  type: Field
+  source:
+    id: RegisteredEffects
+    path: ''
+    startLine: 580
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeHashMap<int, InflictDamageEffect> RegisteredEffects
+    return:
+      type: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.InflictDamageEffect}
+    content.vb: Public RegisteredEffects As NativeHashMap(Of Integer, InflictDamageEffect)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  id: Healths
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: Healths
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.Healths
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Healths
+  type: Field
+  source:
+    id: Healths
+    path: ''
+    startLine: 582
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public ComponentDataFromEntity<Health> Healths
+    return:
+      type: Global.ComponentDataFromEntity{Health}
+    content.vb: Public Healths As ComponentDataFromEntity(Of Health)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  id: EffectCommandQueue
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: EffectCommandQueue
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.EffectCommandQueue
+  type: Field
+  source:
+    id: EffectCommandQueue
+    path: ''
+    startLine: 583
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeQueue<EffectCommand>.ParallelWriter EffectCommandQueue
+    return:
+      type: Global.NativeQueue{EffectCommand}.ParallelWriter
+    content.vb: Public EffectCommandQueue As NativeQueue(Of EffectCommand).ParallelWriter
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  id: OnDeathBuffer
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: OnDeathBuffer
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.OnDeathBuffer
+  type: Field
+  source:
+    id: OnDeathBuffer
+    path: ''
+    startLine: 584
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public BufferFromEntity<OnDeath> OnDeathBuffer
+    return:
+      type: Global.BufferFromEntity{OnDeath}
+    content.vb: Public OnDeathBuffer As BufferFromEntity(Of OnDeath)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  id: Execute
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.Execute()
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute()
+  type: Method
+  source:
+    id: Execute
+    path: ''
+    startLine: 586
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public void Execute()
+    content.vb: Public Sub Execute
+  overload: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+  isExternal: true
+  name: NativeMultiHashMap.Enumerator<>
+  nameWithType: NativeMultiHashMap.Enumerator<>
+  fullName: NativeMultiHashMap.Enumerator<>
+  nameWithType.vb: NativeMultiHashMap.Enumerator(Of )
+  fullName.vb: NativeMultiHashMap.Enumerator(Of )
+  name.vb: NativeMultiHashMap.Enumerator(Of )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.InflictDamageEffect}
+  commentId: '!:Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.InflictDamageEffect}'
+  definition: Global.NativeHashMap`2
+  name: NativeHashMap<Int32, InflictDamageEffect>
+  nameWithType: NativeHashMap<Int32, InflictDamageEffect>
+  fullName: NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.InflictDamageEffect>
+  nameWithType.vb: NativeHashMap(Of Int32, InflictDamageEffect)
+  fullName.vb: NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.InflictDamageEffect)
+  name.vb: NativeHashMap(Of Int32, InflictDamageEffect)
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+    name: InflictDamageEffect
+    nameWithType: InflictDamageEffect
+    fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+    name: InflictDamageEffect
+    nameWithType: InflictDamageEffect
+    fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap`2
+  isExternal: true
+  name: NativeHashMap<, >
+  nameWithType: NativeHashMap<, >
+  fullName: NativeHashMap<, >
+  nameWithType.vb: NativeHashMap(Of , )
+  fullName.vb: NativeHashMap(Of , )
+  name.vb: NativeHashMap(Of , )
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ComponentDataFromEntity{Health}
+  commentId: '!:Global.ComponentDataFromEntity{Health}'
+  definition: Global.ComponentDataFromEntity`1
+  name: ComponentDataFromEntity<Health>
+  nameWithType: ComponentDataFromEntity<Health>
+  fullName: ComponentDataFromEntity<Health>
+  nameWithType.vb: ComponentDataFromEntity(Of Health)
+  fullName.vb: ComponentDataFromEntity(Of Health)
+  name.vb: ComponentDataFromEntity(Of Health)
+  spec.csharp:
+  - uid: Global.ComponentDataFromEntity`1
+    name: ComponentDataFromEntity
+    nameWithType: ComponentDataFromEntity
+    fullName: ComponentDataFromEntity
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.Health
+    name: Health
+    nameWithType: Health
+    fullName: Health
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.ComponentDataFromEntity`1
+    name: ComponentDataFromEntity
+    nameWithType: ComponentDataFromEntity
+    fullName: ComponentDataFromEntity
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.Health
+    name: Health
+    nameWithType: Health
+    fullName: Health
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.ComponentDataFromEntity`1
+  isExternal: true
+  name: ComponentDataFromEntity<>
+  nameWithType: ComponentDataFromEntity<>
+  fullName: ComponentDataFromEntity<>
+  nameWithType.vb: ComponentDataFromEntity(Of )
+  fullName.vb: ComponentDataFromEntity(Of )
+  name.vb: ComponentDataFromEntity(Of )
+  spec.csharp:
+  - uid: Global.ComponentDataFromEntity`1
+    name: ComponentDataFromEntity
+    nameWithType: ComponentDataFromEntity
+    fullName: ComponentDataFromEntity
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.ComponentDataFromEntity`1
+    name: ComponentDataFromEntity
+    nameWithType: ComponentDataFromEntity
+    fullName: ComponentDataFromEntity
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeQueue{EffectCommand}.ParallelWriter
+  commentId: '!:Global.NativeQueue{EffectCommand}.ParallelWriter'
+  isExternal: true
+  name: NativeQueue.ParallelWriter<>
+  nameWithType: NativeQueue.ParallelWriter<>
+  fullName: NativeQueue.ParallelWriter<>
+  nameWithType.vb: NativeQueue.ParallelWriter(Of )
+  fullName.vb: NativeQueue.ParallelWriter(Of )
+  name.vb: NativeQueue.ParallelWriter(Of )
+  spec.csharp:
+  - uid: Global.NativeQueue{EffectCommand}.ParallelWriter
+    name: NativeQueue.ParallelWriter
+    nameWithType: NativeQueue.ParallelWriter
+    fullName: NativeQueue.ParallelWriter
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeQueue{EffectCommand}.ParallelWriter
+    name: NativeQueue.ParallelWriter
+    nameWithType: NativeQueue.ParallelWriter
+    fullName: NativeQueue.ParallelWriter
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.BufferFromEntity{OnDeath}
+  commentId: '!:Global.BufferFromEntity{OnDeath}'
+  definition: Global.BufferFromEntity`1
+  name: BufferFromEntity<OnDeath>
+  nameWithType: BufferFromEntity<OnDeath>
+  fullName: BufferFromEntity<OnDeath>
+  nameWithType.vb: BufferFromEntity(Of OnDeath)
+  fullName.vb: BufferFromEntity(Of OnDeath)
+  name.vb: BufferFromEntity(Of OnDeath)
+  spec.csharp:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Global.OnDeath
+    name: OnDeath
+    nameWithType: OnDeath
+    fullName: OnDeath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Global.OnDeath
+    name: OnDeath
+    nameWithType: OnDeath
+    fullName: OnDeath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.BufferFromEntity`1
+  isExternal: true
+  name: BufferFromEntity<>
+  nameWithType: BufferFromEntity<>
+  fullName: BufferFromEntity<>
+  nameWithType.vb: BufferFromEntity(Of )
+  fullName.vb: BufferFromEntity(Of )
+  name.vb: BufferFromEntity(Of )
+  spec.csharp:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.BufferFromEntity`1
+    name: BufferFromEntity
+    nameWithType: BufferFromEntity
+    fullName: BufferFromEntity
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute*
+  commentId: Overload:Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute
+  name: Execute
+  nameWithType: InflictDamageEffectConsumer.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.Execute

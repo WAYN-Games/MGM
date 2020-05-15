@@ -1,0 +1,160 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  id: RegistryEventReferenceComponentData
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventReferenceComponentData
+  nameWithType: RegistryEventReferenceComponentData
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  type: Class
+  source:
+    id: RegistryEventReferenceComponentData
+    path: ''
+    startLine: 1885
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: 'public class RegistryEventReferenceComponentData : IComponentData'
+    content.vb: >-
+      Public Class RegistryEventReferenceComponentData
+          Inherits IComponentData
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  id: listOfManagedBuffer
+  parent: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  langs:
+  - csharp
+  - vb
+  name: listOfManagedBuffer
+  nameWithType: RegistryEventReferenceComponentData.listOfManagedBuffer
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.listOfManagedBuffer
+  type: Field
+  source:
+    id: listOfManagedBuffer
+    path: ''
+    startLine: 1888
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public List<ISelfRegistringAuhtoringComponent> listOfManagedBuffer
+    return:
+      type: Global.List{Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent}
+    content.vb: Public listOfManagedBuffer As List(Of ISelfRegistringAuhtoringComponent)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.List{Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent}
+  commentId: '!:Global.List{Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent}'
+  definition: Global.List`1
+  name: List<ISelfRegistringAuhtoringComponent>
+  nameWithType: List<ISelfRegistringAuhtoringComponent>
+  fullName: List<Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent>
+  nameWithType.vb: List(Of ISelfRegistringAuhtoringComponent)
+  fullName.vb: List(Of Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent)
+  name.vb: List(Of ISelfRegistringAuhtoringComponent)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+    name: ISelfRegistringAuhtoringComponent
+    nameWithType: ISelfRegistringAuhtoringComponent
+    fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+    name: ISelfRegistringAuhtoringComponent
+    nameWithType: ISelfRegistringAuhtoringComponent
+    fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

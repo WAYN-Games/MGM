@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  id: RegistryEventInitializationSystem
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  - Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventInitializationSystem
+  nameWithType: RegistryEventInitializationSystem
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  type: Class
+  source:
+    id: RegistryEventInitializationSystem
+    path: ''
+    startLine: 2218
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: 'public class RegistryEventInitializationSystem : SystemBase'
+    content.vb: >-
+      Public Class RegistryEventInitializationSystem
+          Inherits SystemBase
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  id: OnCreate
+  parent: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  langs:
+  - csharp
+  - vb
+  name: OnCreate()
+  nameWithType: RegistryEventInitializationSystem.OnCreate()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate()
+  type: Method
+  source:
+    id: OnCreate
+    path: ''
+    startLine: 2226
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected override void OnCreate()
+    content.vb: Protected Overrides Sub OnCreate
+  overload: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  id: OnUpdate
+  parent: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: RegistryEventInitializationSystem.OnUpdate()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate()
+  type: Method
+  source:
+    id: OnUpdate
+    path: ''
+    startLine: 2249
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected override void OnUpdate()
+    content.vb: Protected Overrides Sub OnUpdate
+  overload: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+  name: OnCreate
+  nameWithType: RegistryEventInitializationSystem.OnCreate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnCreate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate
+  name: OnUpdate
+  nameWithType: RegistryEventInitializationSystem.OnUpdate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.OnUpdate

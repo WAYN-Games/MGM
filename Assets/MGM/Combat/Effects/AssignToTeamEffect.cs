@@ -1,10 +1,12 @@
 ﻿using System;
+
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+
+using Wayn.Mgm.Event;
+using Wayn.Mgm.Event.Registry;
 
 namespace Wayn.Mgm.Combat.Effects
 {
@@ -29,7 +31,7 @@ namespace Wayn.Mgm.Combat.Effects
             in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator,
             in NativeHashMap<int, AssignToTeamEffect> RegisteredEffects)
         {
-            var jh = new ConsumerJob()
+            JobHandle jh = new ConsumerJob()
             {
                 EffectCommandEnumerator = EffectCommandEnumerator,
                 RegisteredEffects = RegisteredEffects

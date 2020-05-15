@@ -1,0 +1,79 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  commentId: T:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  id: ISelfRegistringAuhtoringComponent
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  langs:
+  - csharp
+  - vb
+  name: ISelfRegistringAuhtoringComponent
+  nameWithType: ISelfRegistringAuhtoringComponent
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  type: Interface
+  source:
+    id: ISelfRegistringAuhtoringComponent
+    path: ''
+    startLine: 1638
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public interface ISelfRegistringAuhtoringComponent
+    content.vb: Public Interface ISelfRegistringAuhtoringComponent
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  commentId: M:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  id: Register(EntityCommandBuffer,Entity)
+  parent: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  langs:
+  - csharp
+  - vb
+  name: Register(EntityCommandBuffer, Entity)
+  nameWithType: ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer, Entity)
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer, Entity)
+  type: Method
+  source:
+    id: Register
+    path: ''
+    startLine: 1640
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: void Register(EntityCommandBuffer ecb, Entity entity)
+    parameters:
+    - id: ecb
+      type: Global.EntityCommandBuffer
+    - id: entity
+      type: Global.Entity
+    content.vb: Sub Register(ecb As EntityCommandBuffer, entity As Entity)
+  overload: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register*
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register*
+  commentId: Overload:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register
+  name: Register
+  nameWithType: ISelfRegistringAuhtoringComponent.Register
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register
+- uid: Global.EntityCommandBuffer
+  isExternal: true
+  name: EntityCommandBuffer
+  nameWithType: EntityCommandBuffer
+  fullName: EntityCommandBuffer
+- uid: Global.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: Entity
+  fullName: Entity

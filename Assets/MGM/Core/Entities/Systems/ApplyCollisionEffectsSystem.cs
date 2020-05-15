@@ -1,10 +1,12 @@
-﻿using Wayn.Mgm.Events;
+﻿
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
 using Unity.Physics.Systems;
+
+using Wayn.Mgm.Event;
 
 [UpdateAfter(typeof(EndFramePhysicsSystem))]
 public class ApplyCollisionEffectsSystem : EffectJobSystem
@@ -43,7 +45,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
         {
             if (EntitiesWithOnCollideEffectsOnOtherBuffer.Exists(emmiter))
             {
-                var enumerator = EntitiesWithOnCollideEffectsOnOtherBuffer[emmiter].GetEnumerator();
+                NativeArray<OnCollideEffectsOnOtherBuffer>.Enumerator enumerator = EntitiesWithOnCollideEffectsOnOtherBuffer[emmiter].GetEnumerator();
                 while (enumerator.MoveNext())
                 {
                     EffectCommandQueue.Enqueue(new EffectCommand()
@@ -60,7 +62,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
         {
             if (EntitiesWithOnCollideEffectsOnSelfBuffer.Exists(emmiter))
             {
-                var enumerator = EntitiesWithOnCollideEffectsOnSelfBuffer[emmiter].GetEnumerator();
+                NativeArray<OnCollideEffectsOnSelfBuffer>.Enumerator enumerator = EntitiesWithOnCollideEffectsOnSelfBuffer[emmiter].GetEnumerator();
                 while (enumerator.MoveNext())
                 {
                     EffectCommandQueue.Enqueue(new EffectCommand()
@@ -77,7 +79,7 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
 
     protected override JobHandle OnUpdate(JobHandle inputDependencies)
     {
-        var job = new CollisionEventSystemJob()
+        JobHandle job = new CollisionEventSystemJob()
         {
             EntitiesWithOnCollideEffectsOnOtherBuffer = GetBufferFromEntity<OnCollideEffectsOnOtherBuffer>(true),
             EntitiesWithOnCollideEffectsOnSelfBuffer = GetBufferFromEntity<OnCollideEffectsOnSelfBuffer>(true),
@@ -90,5 +92,5 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
 
 
 
-    
+
 }

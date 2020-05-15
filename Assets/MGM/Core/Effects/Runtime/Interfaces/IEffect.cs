@@ -1,12 +1,12 @@
-﻿using Wayn.Mgm.Events.Registry;
+﻿using Wayn.Mgm.Event.Registry;
 
 
 
-namespace Wayn.Mgm.Events
+namespace Wayn.Mgm.Event
 {
 
 
-    public interface IEffect : IRegistryElement
+    public interface IEffect : IRegistryEvent
     {
 
     }

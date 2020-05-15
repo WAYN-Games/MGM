@@ -1,12 +1,12 @@
 ﻿using Unity.Entities;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event.Registry;
 
-namespace Wayn.Mgm.Events
+namespace Wayn.Mgm.Event
 {
     public struct EffectCommand : IEventRegistryCommand
     {
         public Entity Emitter;
         public Entity Target;
-        public RegistryReference RegistryReference { get ; set; }
+        public RegistryEventReference RegistryReference { get ; set; }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using UnityEditor;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event.Registry.Editor;
+using Wayn.Mgm.Event;
 
 [CustomEditor(typeof(EffectsBufferAuthoring<>), true)]
-public class EffectsBufferAuthoringEditor : RegistryReferenceBufferAuthoringEditor<IEffect,EffectAuthoring>
+public class EffectsBufferAuthoringEditor : RegistryReferenceBufferAuthoringEditor<IEffect>
 {
       
 }

@@ -1,0 +1,71 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event
+  commentId: N:Wayn.Mgm.Event
+  id: Wayn.Mgm.Event
+  children:
+  - Wayn.Mgm.Event.EffectCommand
+  - Wayn.Mgm.Event.EffectConsumerSystem`1
+  - Wayn.Mgm.Event.EffectDisptacherSystem
+  - Wayn.Mgm.Event.IEffect
+  langs:
+  - csharp
+  - vb
+  name: Wayn.Mgm.Event
+  nameWithType: Wayn.Mgm.Event
+  fullName: Wayn.Mgm.Event
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Wayn.Mgm.Event.IEffect
+  commentId: T:Wayn.Mgm.Event.IEffect
+  name: IEffect
+  nameWithType: IEffect
+  fullName: Wayn.Mgm.Event.IEffect
+- uid: Wayn.Mgm.Event.EffectCommand
+  commentId: T:Wayn.Mgm.Event.EffectCommand
+  name: EffectCommand
+  nameWithType: EffectCommand
+  fullName: Wayn.Mgm.Event.EffectCommand
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1
+  commentId: T:Wayn.Mgm.Event.EffectConsumerSystem`1
+  name: EffectConsumerSystem<ELEMENT>
+  nameWithType: EffectConsumerSystem<ELEMENT>
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT)
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT)
+  name.vb: EffectConsumerSystem(Of ELEMENT)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.EffectConsumerSystem`1
+    name: EffectConsumerSystem
+    nameWithType: EffectConsumerSystem
+    fullName: Wayn.Mgm.Event.EffectConsumerSystem
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.EffectConsumerSystem`1
+    name: EffectConsumerSystem
+    nameWithType: EffectConsumerSystem
+    fullName: Wayn.Mgm.Event.EffectConsumerSystem
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.EffectDisptacherSystem
+  commentId: T:Wayn.Mgm.Event.EffectDisptacherSystem
+  name: EffectDisptacherSystem
+  nameWithType: EffectDisptacherSystem
+  fullName: Wayn.Mgm.Event.EffectDisptacherSystem

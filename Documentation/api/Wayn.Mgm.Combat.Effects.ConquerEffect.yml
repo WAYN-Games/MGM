@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffect
+  commentId: T:Wayn.Mgm.Combat.Effects.ConquerEffect
+  id: ConquerEffect
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  langs:
+  - csharp
+  - vb
+  name: ConquerEffect
+  nameWithType: ConquerEffect
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffect
+  type: Struct
+  source:
+    id: ConquerEffect
+    path: ''
+    startLine: 253
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  summary: "\nThis effect add the Amount the the Target entity&apos;s Health\n"
+  example: []
+  syntax:
+    content: 'public struct ConquerEffect : IEffect'
+    content.vb: >-
+      Public Structure ConquerEffect
+          Implements IEffect
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  commentId: F:Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  id: Amount
+  parent: Wayn.Mgm.Combat.Effects.ConquerEffect
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: ConquerEffect.Amount
+  fullName: Wayn.Mgm.Combat.Effects.ConquerEffect.Amount
+  type: Field
+  source:
+    id: Amount
+    path: ''
+    startLine: 260
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  summary: "\nThe amount of ownerqhip changed per second.\n"
+  example: []
+  syntax:
+    content: public float Amount
+    return:
+      type: System.Single
+    content.vb: Public Amount As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,456 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  id: RegistryEventComponentDataElement`2
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry(`0)
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.elements
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.number
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register(EntityCommandBuffer,Entity)
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList(List{`0})
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  type: Class
+  source:
+    id: RegistryEventComponentDataElement
+    path: ''
+    startLine: 1847
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: 'public abstract class RegistryEventComponentDataElement<ELEMENT, BUFFER> : ISelfRegistringAuhtoringComponent where ELEMENT : IRegistryEvent where BUFFER : struct, IRegistryReferenceBuffer'
+    typeParameters:
+    - id: ELEMENT
+    - id: BUFFER
+    content.vb: >-
+      Public MustInherit Class RegistryEventComponentDataElement(Of ELEMENT As IRegistryEvent, BUFFER As {Structure, IRegistryReferenceBuffer})
+          Implements ISelfRegistringAuhtoringComponent
+  inheritance:
+  - System.Object
+  implements:
+  - Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  name.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.number
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.number
+  id: number
+  parent: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  langs:
+  - csharp
+  - vb
+  name: number
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.number
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.number
+  type: Field
+  source:
+    id: number
+    path: ''
+    startLine: 1852
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public int number
+    return:
+      type: System.Int32
+    content.vb: Public number As Integer
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).number
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).number
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.elements
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.elements
+  id: elements
+  parent: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  langs:
+  - csharp
+  - vb
+  name: elements
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.elements
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.elements
+  type: Field
+  source:
+    id: elements
+    path: ''
+    startLine: 1854
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public List<ELEMENT> elements
+    return:
+      type: Global.List{{ELEMENT}}
+    content.vb: Public elements As List(Of ELEMENT)
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).elements
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).elements
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  id: '#ctor'
+  parent: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventComponentDataElement()
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement()
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 1856
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public RegistryEventComponentDataElement()
+    content.vb: Public Sub New
+  overload: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor*
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList(List{`0})
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList(List{`0})
+  id: SetElementList(List{`0})
+  parent: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  langs:
+  - csharp
+  - vb
+  name: SetElementList(List<ELEMENT>)
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList(List<ELEMENT>)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList(List<ELEMENT>)
+  type: Method
+  source:
+    id: SetElementList
+    path: ''
+    startLine: 1861
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public void SetElementList(List<ELEMENT> elements)
+    parameters:
+    - id: elements
+      type: Global.List{{ELEMENT}}
+    content.vb: Public Sub SetElementList(elements As List(Of ELEMENT))
+  overload: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList*
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList(List(Of ELEMENT))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList(List(Of ELEMENT))
+  name.vb: SetElementList(List(Of ELEMENT))
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register(EntityCommandBuffer,Entity)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register(EntityCommandBuffer,Entity)
+  id: Register(EntityCommandBuffer,Entity)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  langs:
+  - csharp
+  - vb
+  name: Register(EntityCommandBuffer, Entity)
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register(EntityCommandBuffer, Entity)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register(EntityCommandBuffer, Entity)
+  type: Method
+  source:
+    id: Register
+    path: ''
+    startLine: 1866
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public void Register(EntityCommandBuffer ecb, Entity entity)
+    parameters:
+    - id: ecb
+      type: Global.EntityCommandBuffer
+    - id: entity
+      type: Global.Entity
+    content.vb: Public Sub Register(ecb As EntityCommandBuffer, entity As Entity)
+  overload: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register*
+  implements:
+  - Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register(EntityCommandBuffer, Entity)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register(EntityCommandBuffer, Entity)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry(`0)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry(`0)
+  id: AddEventToRegistry(`0)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  langs:
+  - csharp
+  - vb
+  name: AddEventToRegistry(ELEMENT)
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry(ELEMENT)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry(ELEMENT)
+  type: Method
+  source:
+    id: AddEventToRegistry
+    path: ''
+    startLine: 1875
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected abstract RegistryEventReference AddEventToRegistry(ELEMENT registeryEvent)
+    parameters:
+    - id: registeryEvent
+      type: '{ELEMENT}'
+    return:
+      type: Wayn.Mgm.Event.Registry.RegistryEventReference
+    content.vb: Protected MustOverride Function AddEventToRegistry(registeryEvent As ELEMENT) As RegistryEventReference
+  overload: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry*
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry(ELEMENT)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry(ELEMENT)
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  commentId: T:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  parent: Wayn.Mgm.Event.Registry
+  name: ISelfRegistringAuhtoringComponent
+  nameWithType: ISelfRegistringAuhtoringComponent
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Global.List{{ELEMENT}}
+  commentId: '!:Global.List{`0}'
+  definition: Global.List`1
+  name: List<ELEMENT>
+  nameWithType: List<ELEMENT>
+  fullName: List<ELEMENT>
+  nameWithType.vb: List(Of ELEMENT)
+  fullName.vb: List(Of ELEMENT)
+  name.vb: List(Of ELEMENT)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.#ctor
+  name: RegistryEventComponentDataElement
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.RegistryEventComponentDataElement
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).RegistryEventComponentDataElement
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.SetElementList
+  name: SetElementList
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.SetElementList
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).SetElementList
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.Register
+  name: Register
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.Register
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).Register
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  commentId: M:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+  parent: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  isExternal: true
+  name: Register(EntityCommandBuffer, Entity)
+  nameWithType: ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer, Entity)
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer, Entity)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+    name: Register
+    nameWithType: ISelfRegistringAuhtoringComponent.Register
+    fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EntityCommandBuffer
+    name: EntityCommandBuffer
+    nameWithType: EntityCommandBuffer
+    fullName: EntityCommandBuffer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Entity
+    name: Entity
+    nameWithType: Entity
+    fullName: Entity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register(EntityCommandBuffer,Entity)
+    name: Register
+    nameWithType: ISelfRegistringAuhtoringComponent.Register
+    fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.Register
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EntityCommandBuffer
+    name: EntityCommandBuffer
+    nameWithType: EntityCommandBuffer
+    fullName: EntityCommandBuffer
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Global.Entity
+    name: Entity
+    nameWithType: Entity
+    fullName: Entity
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.EntityCommandBuffer
+  isExternal: true
+  name: EntityCommandBuffer
+  nameWithType: EntityCommandBuffer
+  fullName: EntityCommandBuffer
+- uid: Global.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: Entity
+  fullName: Entity
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2.AddEventToRegistry
+  name: AddEventToRegistry
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>.AddEventToRegistry
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER).AddEventToRegistry
+- uid: '{ELEMENT}'
+  commentId: '!:ELEMENT'
+  definition: ELEMENT
+  name: ELEMENT
+  nameWithType: ELEMENT
+  fullName: ELEMENT
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReference
+  parent: Wayn.Mgm.Event.Registry
+  name: RegistryEventReference
+  nameWithType: RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference
+- uid: ELEMENT
+  name: ELEMENT
+  nameWithType: ELEMENT
+  fullName: ELEMENT

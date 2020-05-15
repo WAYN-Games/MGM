@@ -1,0 +1,16 @@
+apiRules:
+- include:
+    uidRegex: ^wayn
+    type: Namespace
+- include:
+    uidRegex: ^Wayn
+    type: Namespace
+- include:
+    uidRegex: ^mgm
+    type: Namespace
+- include:
+    uidRegex: ^Mgm
+    type: Namespace
+- exclude:
+    uidRegex: .*
+    type: Namespace

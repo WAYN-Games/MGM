@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  id: AssignToTeamEffectConsumer.ConsumerJob
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  - Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  - Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  langs:
+  - csharp
+  - vb
+  name: AssignToTeamEffectConsumer.ConsumerJob
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  type: Struct
+  source:
+    id: ConsumerJob
+    path: ''
+    startLine: 220
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: 'public struct ConsumerJob : IJob'
+    content.vb: >-
+      Public Structure ConsumerJob
+          Implements IJob
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  id: EffectCommandEnumerator
+  parent: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: EffectCommandEnumerator
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.EffectCommandEnumerator
+  type: Field
+  source:
+    id: EffectCommandEnumerator
+    path: ''
+    startLine: 224
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator
+    return:
+      type: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    content.vb: Public EffectCommandEnumerator As NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  id: RegisteredEffects
+  parent: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: RegisteredEffects
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.RegisteredEffects
+  type: Field
+  source:
+    id: RegisteredEffects
+    path: ''
+    startLine: 226
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public NativeHashMap<int, AssignToTeamEffect> RegisteredEffects
+    return:
+      type: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.AssignToTeamEffect}
+    content.vb: Public RegisteredEffects As NativeHashMap(Of Integer, AssignToTeamEffect)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  commentId: M:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  id: Execute
+  parent: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.Execute()
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute()
+  type: Method
+  source:
+    id: Execute
+    path: ''
+    startLine: 228
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public void Execute()
+    content.vb: Public Sub Execute
+  overload: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+  isExternal: true
+  name: NativeMultiHashMap.Enumerator<>
+  nameWithType: NativeMultiHashMap.Enumerator<>
+  fullName: NativeMultiHashMap.Enumerator<>
+  nameWithType.vb: NativeMultiHashMap.Enumerator(Of )
+  fullName.vb: NativeMultiHashMap.Enumerator(Of )
+  name.vb: NativeMultiHashMap.Enumerator(Of )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.AssignToTeamEffect}
+  commentId: '!:Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.AssignToTeamEffect}'
+  definition: Global.NativeHashMap`2
+  name: NativeHashMap<Int32, AssignToTeamEffect>
+  nameWithType: NativeHashMap<Int32, AssignToTeamEffect>
+  fullName: NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.AssignToTeamEffect>
+  nameWithType.vb: NativeHashMap(Of Int32, AssignToTeamEffect)
+  fullName.vb: NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.AssignToTeamEffect)
+  name.vb: NativeHashMap(Of Int32, AssignToTeamEffect)
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+    name: AssignToTeamEffect
+    nameWithType: AssignToTeamEffect
+    fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+    name: AssignToTeamEffect
+    nameWithType: AssignToTeamEffect
+    fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap`2
+  isExternal: true
+  name: NativeHashMap<, >
+  nameWithType: NativeHashMap<, >
+  fullName: NativeHashMap<, >
+  nameWithType.vb: NativeHashMap(Of , )
+  fullName.vb: NativeHashMap(Of , )
+  name.vb: NativeHashMap(Of , )
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute*
+  commentId: Overload:Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute
+  name: Execute
+  nameWithType: AssignToTeamEffectConsumer.ConsumerJob.Execute
+  fullName: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.Execute

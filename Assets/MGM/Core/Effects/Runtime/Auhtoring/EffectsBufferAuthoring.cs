@@ -1,15 +1,10 @@
 ﻿using System;
-using Unity.Entities;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event;
+using Wayn.Mgm.Event.Registry;
 
 [Serializable]
-public abstract class EffectsBufferAuthoring<BUFFER> : RegisteryReferenceBufferAuthoring<BUFFER, IEffect, EffectAuthoring, EffectRegistry,EffectComponentDataElement<IEffect,BUFFER>>
+public abstract class EffectsBufferAuthoring<BUFFER> : RegisteryReferenceBufferAuthoring<BUFFER, IEffect, EffectAuthoring, EffectComponentDataElement<IEffect,BUFFER>>
     where BUFFER : struct,IRegistryReferenceBuffer
 {
 
-    protected override EffectRegistry GetRegisteryInstance()
-    {
-        return EffectRegistry.Instance;
-    }
 }

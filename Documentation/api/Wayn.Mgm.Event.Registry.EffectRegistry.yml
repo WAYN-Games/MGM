@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.EffectRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.EffectRegistry
+  id: EffectRegistry
+  parent: Wayn.Mgm.Event.Registry
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EffectRegistry
+  nameWithType: EffectRegistry
+  fullName: Wayn.Mgm.Event.Registry.EffectRegistry
+  type: Class
+  source:
+    id: EffectRegistry
+    path: ''
+    startLine: 701
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: 'public class EffectRegistry : Registry<EffectRegistry>, IRegistry'
+    content.vb: >-
+      Public Class EffectRegistry
+          Inherits Registry(Of EffectRegistry)
+          Implements IRegistry
+  inheritance:
+  - System.Object
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  implements:
+  - Wayn.Mgm.Event.Registry.IRegistry
+  inheritedMembers:
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.OnNewElementRegistered
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.Instance
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.registar
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.SubscribeToElementRegisteredEvent(EventHandler)
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.UnsubscribeToElementRegisteredEvent(EventHandler)
+  - Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.GetRegisteredEffects``1(NativeHashMap{System.Int32,{EVENT_TYPE}}@)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  commentId: T:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  parent: Wayn.Mgm.Event.Registry
+  definition: Wayn.Mgm.Event.Registry.Registry`1
+  name: Registry<EffectRegistry>
+  nameWithType: Registry<EffectRegistry>
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>
+  nameWithType.vb: Registry(Of EffectRegistry)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry)
+  name.vb: Registry(Of EffectRegistry)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry
+    nameWithType: Registry
+    fullName: Wayn.Mgm.Event.Registry.Registry
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Wayn.Mgm.Event.Registry.EffectRegistry
+    name: EffectRegistry
+    nameWithType: EffectRegistry
+    fullName: Wayn.Mgm.Event.Registry.EffectRegistry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry
+    nameWithType: Registry
+    fullName: Wayn.Mgm.Event.Registry.Registry
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Wayn.Mgm.Event.Registry.EffectRegistry
+    name: EffectRegistry
+    nameWithType: EffectRegistry
+    fullName: Wayn.Mgm.Event.Registry.EffectRegistry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.IRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistry
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistry
+  nameWithType: IRegistry
+  fullName: Wayn.Mgm.Event.Registry.IRegistry
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.OnNewElementRegistered
+  commentId: M:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.OnNewElementRegistered
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+  name: OnNewElementRegistered()
+  nameWithType: Registry<EffectRegistry>.OnNewElementRegistered()
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.OnNewElementRegistered()
+  nameWithType.vb: Registry(Of EffectRegistry).OnNewElementRegistered()
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).OnNewElementRegistered()
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+    name: OnNewElementRegistered
+    nameWithType: Registry<EffectRegistry>.OnNewElementRegistered
+    fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.OnNewElementRegistered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+    name: OnNewElementRegistered
+    nameWithType: Registry(Of EffectRegistry).OnNewElementRegistered
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).OnNewElementRegistered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.Instance
+  commentId: P:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.Instance
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.Instance
+  name: Instance
+  nameWithType: Registry<EffectRegistry>.Instance
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.Instance
+  nameWithType.vb: Registry(Of EffectRegistry).Instance
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).Instance
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.registar
+  commentId: F:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.registar
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.registar
+  name: registar
+  nameWithType: Registry<EffectRegistry>.registar
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.registar
+  nameWithType.vb: Registry(Of EffectRegistry).registar
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).registar
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  name: AddEventInstance(IRegistryEvent)
+  nameWithType: Registry<EffectRegistry>.AddEventInstance(IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  nameWithType.vb: Registry(Of EffectRegistry).AddEventInstance(IRegistryEvent)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+    name: AddEventInstance
+    nameWithType: Registry<EffectRegistry>.AddEventInstance
+    fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.AddEventInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+    nameWithType: IRegistryEvent
+    fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+    name: AddEventInstance
+    nameWithType: Registry(Of EffectRegistry).AddEventInstance
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).AddEventInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+    nameWithType: IRegistryEvent
+    fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.SubscribeToElementRegisteredEvent(EventHandler)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.SubscribeToElementRegisteredEvent(EventHandler)
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+  name: SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: Registry<EffectRegistry>.SubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType.vb: Registry(Of EffectRegistry).SubscribeToElementRegisteredEvent(EventHandler)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).SubscribeToElementRegisteredEvent(EventHandler)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+    name: SubscribeToElementRegisteredEvent
+    nameWithType: Registry<EffectRegistry>.SubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.SubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+    name: SubscribeToElementRegisteredEvent
+    nameWithType: Registry(Of EffectRegistry).SubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).SubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.UnsubscribeToElementRegisteredEvent(EventHandler)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.UnsubscribeToElementRegisteredEvent(EventHandler)
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+  name: UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: Registry<EffectRegistry>.UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType.vb: Registry(Of EffectRegistry).UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).UnsubscribeToElementRegisteredEvent(EventHandler)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+    name: UnsubscribeToElementRegisteredEvent
+    nameWithType: Registry<EffectRegistry>.UnsubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.UnsubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+    name: UnsubscribeToElementRegisteredEvent
+    nameWithType: Registry(Of EffectRegistry).UnsubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).UnsubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.GetRegisteredEffects``1(NativeHashMap{System.Int32,{EVENT_TYPE}}@)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+  parent: Wayn.Mgm.Event.Registry.Registry{Wayn.Mgm.Event.Registry.EffectRegistry}
+  definition: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+  name: GetRegisteredEffects<EVENT_TYPE>(NativeHashMap<Int32, EVENT_TYPE>)
+  nameWithType: Registry<EffectRegistry>.GetRegisteredEffects<EVENT_TYPE>(NativeHashMap<Int32, EVENT_TYPE>)
+  fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.GetRegisteredEffects<EVENT_TYPE>(NativeHashMap<System.Int32, EVENT_TYPE>)
+  nameWithType.vb: Registry(Of EffectRegistry).GetRegisteredEffects(Of EVENT_TYPE)(NativeHashMap(Of Int32, EVENT_TYPE))
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).GetRegisteredEffects(Of EVENT_TYPE)(NativeHashMap(Of System.Int32, EVENT_TYPE))
+  name.vb: GetRegisteredEffects(Of EVENT_TYPE)(NativeHashMap(Of Int32, EVENT_TYPE))
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+    name: GetRegisteredEffects<EVENT_TYPE>
+    nameWithType: Registry<EffectRegistry>.GetRegisteredEffects<EVENT_TYPE>
+    fullName: Wayn.Mgm.Event.Registry.Registry<Wayn.Mgm.Event.Registry.EffectRegistry>.GetRegisteredEffects<EVENT_TYPE>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EVENT_TYPE
+    nameWithType: EVENT_TYPE
+    fullName: EVENT_TYPE
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+    name: GetRegisteredEffects(Of EVENT_TYPE)
+    nameWithType: Registry(Of EffectRegistry).GetRegisteredEffects(Of EVENT_TYPE)
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of Wayn.Mgm.Event.Registry.EffectRegistry).GetRegisteredEffects(Of EVENT_TYPE)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EVENT_TYPE
+    nameWithType: EVENT_TYPE
+    fullName: EVENT_TYPE
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Wayn.Mgm.Event.Registry.Registry`1
+  commentId: T:Wayn.Mgm.Event.Registry.Registry`1
+  name: Registry<T>
+  nameWithType: Registry<T>
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>
+  nameWithType.vb: Registry(Of T)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T)
+  name.vb: Registry(Of T)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry
+    nameWithType: Registry
+    fullName: Wayn.Mgm.Event.Registry.Registry
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry
+    nameWithType: Registry
+    fullName: Wayn.Mgm.Event.Registry.Registry
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+  name: OnNewElementRegistered()
+  nameWithType: Registry<T>.OnNewElementRegistered()
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.OnNewElementRegistered()
+  nameWithType.vb: Registry(Of T).OnNewElementRegistered()
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).OnNewElementRegistered()
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+    name: OnNewElementRegistered
+    nameWithType: Registry<T>.OnNewElementRegistered
+    fullName: Wayn.Mgm.Event.Registry.Registry<T>.OnNewElementRegistered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.OnNewElementRegistered
+    name: OnNewElementRegistered
+    nameWithType: Registry(Of T).OnNewElementRegistered
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of T).OnNewElementRegistered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry`1.Instance
+  commentId: P:Wayn.Mgm.Event.Registry.Registry`1.Instance
+  name: Instance
+  nameWithType: Registry<T>.Instance
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.Instance
+  nameWithType.vb: Registry(Of T).Instance
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).Instance
+- uid: Wayn.Mgm.Event.Registry.Registry`1.registar
+  commentId: F:Wayn.Mgm.Event.Registry.Registry`1.registar
+  name: registar
+  nameWithType: Registry<T>.registar
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.registar
+  nameWithType.vb: Registry(Of T).registar
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).registar
+- uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  name: AddEventInstance(IRegistryEvent)
+  nameWithType: Registry<T>.AddEventInstance(IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  nameWithType.vb: Registry(Of T).AddEventInstance(IRegistryEvent)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+    name: AddEventInstance
+    nameWithType: Registry<T>.AddEventInstance
+    fullName: Wayn.Mgm.Event.Registry.Registry<T>.AddEventInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+    nameWithType: IRegistryEvent
+    fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+    name: AddEventInstance
+    nameWithType: Registry(Of T).AddEventInstance
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of T).AddEventInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+    nameWithType: IRegistryEvent
+    fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+  isExternal: true
+  name: SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: Registry<T>.SubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType.vb: Registry(Of T).SubscribeToElementRegisteredEvent(EventHandler)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).SubscribeToElementRegisteredEvent(EventHandler)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+    name: SubscribeToElementRegisteredEvent
+    nameWithType: Registry<T>.SubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry<T>.SubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.SubscribeToElementRegisteredEvent(EventHandler)
+    name: SubscribeToElementRegisteredEvent
+    nameWithType: Registry(Of T).SubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of T).SubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+  isExternal: true
+  name: UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: Registry<T>.UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType.vb: Registry(Of T).UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).UnsubscribeToElementRegisteredEvent(EventHandler)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+    name: UnsubscribeToElementRegisteredEvent
+    nameWithType: Registry<T>.UnsubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry<T>.UnsubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.UnsubscribeToElementRegisteredEvent(EventHandler)
+    name: UnsubscribeToElementRegisteredEvent
+    nameWithType: Registry(Of T).UnsubscribeToElementRegisteredEvent
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of T).UnsubscribeToElementRegisteredEvent
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.EventHandler
+    name: EventHandler
+    nameWithType: EventHandler
+    fullName: EventHandler
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+  commentId: M:Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+  isExternal: true
+  name: GetRegisteredEffects<EVENT_TYPE>(NativeHashMap<Int32, EVENT_TYPE>)
+  nameWithType: Registry<T>.GetRegisteredEffects<EVENT_TYPE>(NativeHashMap<Int32, EVENT_TYPE>)
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>.GetRegisteredEffects<EVENT_TYPE>(NativeHashMap<System.Int32, EVENT_TYPE>)
+  nameWithType.vb: Registry(Of T).GetRegisteredEffects(Of EVENT_TYPE)(NativeHashMap(Of Int32, EVENT_TYPE))
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T).GetRegisteredEffects(Of EVENT_TYPE)(NativeHashMap(Of System.Int32, EVENT_TYPE))
+  name.vb: GetRegisteredEffects(Of EVENT_TYPE)(NativeHashMap(Of Int32, EVENT_TYPE))
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+    name: GetRegisteredEffects<EVENT_TYPE>
+    nameWithType: Registry<T>.GetRegisteredEffects<EVENT_TYPE>
+    fullName: Wayn.Mgm.Event.Registry.Registry<T>.GetRegisteredEffects<EVENT_TYPE>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EVENT_TYPE
+    nameWithType: EVENT_TYPE
+    fullName: EVENT_TYPE
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1.GetRegisteredEffects``1(NativeHashMap{System.Int32,``0}@)
+    name: GetRegisteredEffects(Of EVENT_TYPE)
+    nameWithType: Registry(Of T).GetRegisteredEffects(Of EVENT_TYPE)
+    fullName: Wayn.Mgm.Event.Registry.Registry(Of T).GetRegisteredEffects(Of EVENT_TYPE)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EVENT_TYPE
+    nameWithType: EVENT_TYPE
+    fullName: EVENT_TYPE
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

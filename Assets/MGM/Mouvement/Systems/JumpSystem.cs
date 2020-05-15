@@ -15,14 +15,14 @@ public class JumpSystem : JobComponentSystem
     private EntityQuery m_ResetJumpCountQuery;
     protected override void OnCreate()
     {
-        var resetJumpCountQuery = new EntityQueryDesc
+        EntityQueryDesc resetJumpCountQuery = new EntityQueryDesc
         {
             All = new ComponentType[] {
                 ComponentType.ReadWrite<JumpCount>()}
         };
         m_ResetJumpCountQuery = GetEntityQuery(resetJumpCountQuery);
 
-        var jumpQuery = new EntityQueryDesc
+        EntityQueryDesc jumpQuery = new EntityQueryDesc
         {
             None = new ComponentType[] { typeof(Frozen) },
             All = new ComponentType[] {
@@ -42,11 +42,11 @@ public class JumpSystem : JobComponentSystem
 
         public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
-            var chunkJumpCount = chunk.GetNativeArray(JumpCount);
-     
-            for (var i = 0; i < chunk.Count; i++)
+            NativeArray<JumpCount> chunkJumpCount = chunk.GetNativeArray(JumpCount);
+
+            for (int i = 0; i < chunk.Count; i++)
             {
-                chunkJumpCount[i] = new JumpCount() { Value =  0};
+                chunkJumpCount[i] = new JumpCount() { Value = 0 };
             }
         }
     }
@@ -63,18 +63,18 @@ public class JumpSystem : JobComponentSystem
 
         public void Execute(ArchetypeChunk chunk, int chunkIndex, int firstEntityIndex)
         {
-            var chunkVelocities = chunk.GetNativeArray(Velocity);
-            var chunkJumpCount = chunk.GetNativeArray(JumpCount);
-            var chunkJumpForces = chunk.GetNativeArray(JumpForce);
-            var chunkMaxJumpCounts = chunk.GetNativeArray(MaxJumpCount);
-            var chunkJumpTrigger = chunk.GetNativeArray(JumpTrigger);
+            NativeArray<PhysicsVelocity> chunkVelocities = chunk.GetNativeArray(Velocity);
+            NativeArray<JumpCount> chunkJumpCount = chunk.GetNativeArray(JumpCount);
+            NativeArray<JumpForce> chunkJumpForces = chunk.GetNativeArray(JumpForce);
+            NativeArray<MaxJumpCount> chunkMaxJumpCounts = chunk.GetNativeArray(MaxJumpCount);
+            NativeArray<JumpTrigger> chunkJumpTrigger = chunk.GetNativeArray(JumpTrigger);
 
-            for (var i = 0; i < chunk.Count; i++)
+            for (int i = 0; i < chunk.Count; i++)
             {
                 if (!chunkJumpTrigger[i].Value) return;
 
                 chunkJumpTrigger[i] = new JumpTrigger() { Value = false };
-       
+
                 chunkJumpCount[i] = new JumpCount() { Value = chunkJumpCount[i].Value + 1 };
 
                 if (chunkJumpCount[i].Value > chunkMaxJumpCounts[i].Value) return;
@@ -91,19 +91,19 @@ public class JumpSystem : JobComponentSystem
         }
     }
 
-   
-    
+
+
     protected override JobHandle OnUpdate(JobHandle inputDependencies)
     {
 
-        var resetJumpCountJob = new ResetJumpCountSystemJob()
+        ResetJumpCountSystemJob resetJumpCountJob = new ResetJumpCountSystemJob()
         {
             JumpCount = GetArchetypeChunkComponentType<JumpCount>(false)
         };
 
         inputDependencies = resetJumpCountJob.Schedule(m_ResetJumpCountQuery, inputDependencies);
 
-        var jumpJob = new JumpSystemJob()
+        JumpSystemJob jumpJob = new JumpSystemJob()
         {
             Velocity = GetArchetypeChunkComponentType<PhysicsVelocity>(false),
             JumpCount = GetArchetypeChunkComponentType<JumpCount>(false),

@@ -1,0 +1,644 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  id: RegistryEventConsumerSystem`3
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._dispatcherSystem
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._eventTypeId
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registeredEvents
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registry
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._shouldRefreshCache
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob(NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator@,NativeHashMap{System.Int32,`2}@)
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  type: Class
+  source:
+    id: RegistryEventConsumerSystem
+    path: ''
+    startLine: 1905
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nBase class for any registry based event consumer.\n"
+  example: []
+  syntax:
+    content: 'public abstract class RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT> : SystemBase where DISPATCHER : RegistryEventDispatcher<COMMAND> where COMMAND : struct, IEventRegistryCommand where ELEMENT : struct, IRegistryEvent'
+    typeParameters:
+    - id: DISPATCHER
+      description: The type of the dispatcher for the registry based event system..
+    - id: COMMAND
+      description: The type of the command for the registry based event system.
+    - id: ELEMENT
+      description: The type of the event consumed by the system.
+    content.vb: >-
+      Public MustInherit Class RegistryEventConsumerSystem(Of DISPATCHER As RegistryEventDispatcher(Of COMMAND), COMMAND As {Structure, IEventRegistryCommand}, ELEMENT As {Structure, IRegistryEvent})
+          Inherits SystemBase
+  inheritance:
+  - System.Object
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  name.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._dispatcherSystem
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._dispatcherSystem
+  id: _dispatcherSystem
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: _dispatcherSystem
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._dispatcherSystem
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._dispatcherSystem
+  type: Field
+  source:
+    id: _dispatcherSystem
+    path: ''
+    startLine: 1913
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nSystem that takes care of dispatching the event based on their type.\n"
+  example: []
+  syntax:
+    content: protected DISPATCHER _dispatcherSystem
+    return:
+      type: '{DISPATCHER}'
+    content.vb: Protected _dispatcherSystem As DISPATCHER
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._dispatcherSystem
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._dispatcherSystem
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registry
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registry
+  id: _registry
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: _registry
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registry
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registry
+  type: Field
+  source:
+    id: _registry
+    path: ''
+    startLine: 1917
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nThe registry containing all the registered event types and instances.\n"
+  example: []
+  syntax:
+    content: protected IRegistry _registry
+    return:
+      type: Wayn.Mgm.Event.Registry.IRegistry
+    content.vb: Protected _registry As IRegistry
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registry
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registry
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registeredEvents
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._registeredEvents
+  id: _registeredEvents
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: _registeredEvents
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registeredEvents
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._registeredEvents
+  type: Field
+  source:
+    id: _registeredEvents
+    path: ''
+    startLine: 1921
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nA cached map of all the event instanced handled by this consumer.\n"
+  example: []
+  syntax:
+    content: protected NativeHashMap<int, ELEMENT> _registeredEvents
+    return:
+      type: Global.NativeHashMap{System.Int32,{ELEMENT}}
+    content.vb: Protected _registeredEvents As NativeHashMap(Of Integer, ELEMENT)
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registeredEvents
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._registeredEvents
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._shouldRefreshCache
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._shouldRefreshCache
+  id: _shouldRefreshCache
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: _shouldRefreshCache
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._shouldRefreshCache
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._shouldRefreshCache
+  type: Field
+  source:
+    id: _shouldRefreshCache
+    path: ''
+    startLine: 1926
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nIndicated whether the _registeredEvents should be refreshed in hte next Onpdate loop.\n"
+  example: []
+  syntax:
+    content: protected bool _shouldRefreshCache
+    return:
+      type: System.Boolean
+    content.vb: Protected _shouldRefreshCache As Boolean
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._shouldRefreshCache
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._shouldRefreshCache
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._eventTypeId
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3._eventTypeId
+  id: _eventTypeId
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: _eventTypeId
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._eventTypeId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>._eventTypeId
+  type: Field
+  source:
+    id: _eventTypeId
+    path: ''
+    startLine: 1928
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected int _eventTypeId
+    return:
+      type: System.Int32
+    content.vb: Protected _eventTypeId As Integer
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._eventTypeId
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)._eventTypeId
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  id: OnUpdate
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate()
+  type: Method
+  source:
+    id: OnUpdate
+    path: ''
+    startLine: 1933
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nSealed so the derived class can&apos;t override the cache refresh and dependency logic.\n"
+  example: []
+  syntax:
+    content: protected override sealed void OnUpdate()
+    content.vb: Protected NotOverridable Overrides Sub OnUpdate
+  overload: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate*
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate()
+  modifiers.csharp:
+  - protected
+  - override
+  - sealed
+  modifiers.vb:
+  - Protected
+  - Overrides
+  - NotOverridable
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob(NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator@,NativeHashMap{System.Int32,`2}@)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob(NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator@,NativeHashMap{System.Int32,`2}@)
+  id: ScheduleJob(NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator@,NativeHashMap{System.Int32,`2}@)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: ScheduleJob(NativeMultiHashMap<MapKey, COMMAND>.Enumerator, NativeHashMap<Int32, ELEMENT>)
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob(NativeMultiHashMap<MapKey, COMMAND>.Enumerator, NativeHashMap<Int32, ELEMENT>)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob(NativeMultiHashMap<Wayn.Mgm.Event.Registry.MapKey, COMMAND>.Enumerator, NativeHashMap<System.Int32, ELEMENT>)
+  type: Method
+  source:
+    id: ScheduleJob
+    path: ''
+    startLine: 1961
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nMethod to schedule the event processing job.\n"
+  example: []
+  syntax:
+    content: protected abstract JobHandle ScheduleJob(in NativeMultiHashMap<MapKey, COMMAND>.Enumerator effectCommandEnumerator, in NativeHashMap<int, ELEMENT> m_RegisteredEffects)
+    parameters:
+    - id: effectCommandEnumerator
+      type: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,{COMMAND}}.Enumerator
+      description: An enumerator on all the events to porcess.
+    - id: m_RegisteredEffects
+      type: Global.NativeHashMap{System.Int32,{ELEMENT}}
+      description: A map of all instance of the processed event type.
+    return:
+      type: Global.JobHandle
+      description: ''
+    content.vb: Protected MustOverride Function ScheduleJob(ByRef effectCommandEnumerator As NativeMultiHashMap(Of MapKey, COMMAND).Enumerator, ByRef m_RegisteredEffects As NativeHashMap(Of Integer, ELEMENT)) As JobHandle
+  overload: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob*
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, COMMAND).Enumerator, ByRef NativeHashMap(Of Int32, ELEMENT))
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob(ByRef NativeMultiHashMap(Of Wayn.Mgm.Event.Registry.MapKey, COMMAND).Enumerator, ByRef NativeHashMap(Of System.Int32, ELEMENT))
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, COMMAND).Enumerator, ByRef NativeHashMap(Of Int32, ELEMENT))
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  id: GetRegistryInstance
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: GetRegistryInstance()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance()
+  type: Method
+  source:
+    id: GetRegistryInstance
+    path: ''
+    startLine: 1970
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nMethod to delegate the registery instance retreival to the child class\nbecause the singleton instance cant be retreived from the generic type.\n"
+  example: []
+  syntax:
+    content: protected abstract IRegistry GetRegistryInstance()
+    return:
+      type: Wayn.Mgm.Event.Registry.IRegistry
+      description: An instance of the registry containing all the registered event types and instances.
+    content.vb: Protected MustOverride Function GetRegistryInstance As IRegistry
+  overload: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance*
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance()
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  id: OnCreate
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: OnCreate()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate()
+  type: Method
+  source:
+    id: OnCreate
+    path: ''
+    startLine: 1985
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected override void OnCreate()
+    content.vb: Protected Overrides Sub OnCreate
+  overload: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate*
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  id: OnDestroy
+  parent: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy()
+  type: Method
+  source:
+    id: OnDestroy
+    path: ''
+    startLine: 2013
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected override void OnDestroy()
+    content.vb: Protected Overrides Sub OnDestroy
+  overload: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy*
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy()
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: '{DISPATCHER}'
+  commentId: '!:DISPATCHER'
+  definition: DISPATCHER
+  name: DISPATCHER
+  nameWithType: DISPATCHER
+  fullName: DISPATCHER
+- uid: DISPATCHER
+  commentId: '!:DISPATCHER'
+  name: DISPATCHER
+  nameWithType: DISPATCHER
+  fullName: DISPATCHER
+- uid: Wayn.Mgm.Event.Registry.IRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistry
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistry
+  nameWithType: IRegistry
+  fullName: Wayn.Mgm.Event.Registry.IRegistry
+- uid: Global.NativeHashMap{System.Int32,{ELEMENT}}
+  commentId: '!:Global.NativeHashMap{System.Int32,`2}'
+  definition: Global.NativeHashMap`2
+  name: NativeHashMap<Int32, ELEMENT>
+  nameWithType: NativeHashMap<Int32, ELEMENT>
+  fullName: NativeHashMap<System.Int32, ELEMENT>
+  nameWithType.vb: NativeHashMap(Of Int32, ELEMENT)
+  fullName.vb: NativeHashMap(Of System.Int32, ELEMENT)
+  name.vb: NativeHashMap(Of Int32, ELEMENT)
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap`2
+  isExternal: true
+  name: NativeHashMap<, >
+  nameWithType: NativeHashMap<, >
+  fullName: NativeHashMap<, >
+  nameWithType.vb: NativeHashMap(Of , )
+  fullName.vb: NativeHashMap(Of , )
+  name.vb: NativeHashMap(Of , )
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnUpdate
+  name: OnUpdate
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnUpdate
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnUpdate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.ScheduleJob
+  name: ScheduleJob
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.ScheduleJob
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).ScheduleJob
+- uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,{COMMAND}}.Enumerator
+  commentId: '!:Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator'
+  definition: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator
+  name: NativeMultiHashMap.Enumerator<>
+  nameWithType: NativeMultiHashMap.Enumerator<>
+  fullName: NativeMultiHashMap.Enumerator<>
+  nameWithType.vb: NativeMultiHashMap.Enumerator(Of )
+  fullName.vb: NativeMultiHashMap.Enumerator(Of )
+  name.vb: NativeMultiHashMap.Enumerator(Of )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.JobHandle
+  isExternal: true
+  name: JobHandle
+  nameWithType: JobHandle
+  fullName: JobHandle
+- uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator
+  commentId: '!:Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator'
+  isExternal: true
+  name: NativeMultiHashMap.Enumerator<>
+  nameWithType: NativeMultiHashMap.Enumerator<>
+  fullName: NativeMultiHashMap.Enumerator<>
+  nameWithType.vb: NativeMultiHashMap.Enumerator(Of )
+  fullName.vb: NativeMultiHashMap.Enumerator(Of )
+  name.vb: NativeMultiHashMap.Enumerator(Of )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`1}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.GetRegistryInstance
+  name: GetRegistryInstance
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.GetRegistryInstance
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).GetRegistryInstance
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnCreate
+  name: OnCreate
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnCreate
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnCreate
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3.OnDestroy
+  name: OnDestroy
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>.OnDestroy
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT).OnDestroy

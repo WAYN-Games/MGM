@@ -1,0 +1,392 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  id: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.EffectRegistry
+  - Wayn.Mgm.Event.Registry.IEventRegistryCommand
+  - Wayn.Mgm.Event.Registry.IRegistry
+  - Wayn.Mgm.Event.Registry.IRegistryEvent
+  - Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  - Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  - Wayn.Mgm.Event.Registry.MapKey
+  - Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  - Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  - Wayn.Mgm.Event.Registry.Registry`1
+  - Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  - Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  - Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  - Wayn.Mgm.Event.Registry.RegistryEventReference
+  - Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  langs:
+  - csharp
+  - vb
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Wayn.Mgm.Event.Registry.EffectRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.EffectRegistry
+  name: EffectRegistry
+  nameWithType: EffectRegistry
+  fullName: Wayn.Mgm.Event.Registry.EffectRegistry
+- uid: Wayn.Mgm.Event.Registry.IEventRegistryCommand
+  commentId: T:Wayn.Mgm.Event.Registry.IEventRegistryCommand
+  name: IEventRegistryCommand
+  nameWithType: IEventRegistryCommand
+  fullName: Wayn.Mgm.Event.Registry.IEventRegistryCommand
+- uid: Wayn.Mgm.Event.Registry.IRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistry
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistry
+  nameWithType: IRegistry
+  fullName: Wayn.Mgm.Event.Registry.IRegistry
+- uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryEvent
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistryEvent
+  nameWithType: IRegistryEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  name: IRegistryReferenceBuffer
+  nameWithType: IRegistryReferenceBuffer
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+- uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  commentId: T:Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+  parent: Wayn.Mgm.Event.Registry
+  name: ISelfRegistringAuhtoringComponent
+  nameWithType: ISelfRegistringAuhtoringComponent
+  fullName: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+- uid: Wayn.Mgm.Event.Registry.Registry`1
+  commentId: T:Wayn.Mgm.Event.Registry.Registry`1
+  name: Registry<T>
+  nameWithType: Registry<T>
+  fullName: Wayn.Mgm.Event.Registry.Registry<T>
+  nameWithType.vb: Registry(Of T)
+  fullName.vb: Wayn.Mgm.Event.Registry.Registry(Of T)
+  name.vb: Registry(Of T)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry
+    nameWithType: Registry
+    fullName: Wayn.Mgm.Event.Registry.Registry
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry
+    nameWithType: Registry
+    fullName: Wayn.Mgm.Event.Registry.Registry
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReference
+  parent: Wayn.Mgm.Event.Registry
+  name: RegistryEventReference
+  nameWithType: RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  commentId: T:Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  name: RegisteryReferenceAuthoring<ELEMENT>
+  nameWithType: RegisteryReferenceAuthoring<ELEMENT>
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring<ELEMENT>
+  nameWithType.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring(Of ELEMENT)
+  name.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+    name: RegisteryReferenceAuthoring
+    nameWithType: RegisteryReferenceAuthoring
+    fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+    name: RegisteryReferenceAuthoring
+    nameWithType: RegisteryReferenceAuthoring
+    fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  commentId: T:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  name: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  name.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+    name: RegisteryReferenceBufferAuthoring
+    nameWithType: RegisteryReferenceBufferAuthoring
+    fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: BUFFER
+    nameWithType: BUFFER
+    fullName: BUFFER
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: AUTHORING
+    nameWithType: AUTHORING
+    fullName: AUTHORING
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: REGISTRY
+    nameWithType: REGISTRY
+    fullName: REGISTRY
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EFFECT_COMPONENT_DATA_ELEMENT
+    nameWithType: EFFECT_COMPONENT_DATA_ELEMENT
+    fullName: EFFECT_COMPONENT_DATA_ELEMENT
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+    name: RegisteryReferenceBufferAuthoring
+    nameWithType: RegisteryReferenceBufferAuthoring
+    fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: BUFFER
+    nameWithType: BUFFER
+    fullName: BUFFER
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: AUTHORING
+    nameWithType: AUTHORING
+    fullName: AUTHORING
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: REGISTRY
+    nameWithType: REGISTRY
+    fullName: REGISTRY
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EFFECT_COMPONENT_DATA_ELEMENT
+    nameWithType: EFFECT_COMPONENT_DATA_ELEMENT
+    fullName: EFFECT_COMPONENT_DATA_ELEMENT
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+  name: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  nameWithType: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement<ELEMENT, BUFFER>
+  nameWithType.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  name.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+    name: RegistryEventComponentDataElement
+    nameWithType: RegistryEventComponentDataElement
+    fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: BUFFER
+    nameWithType: BUFFER
+    fullName: BUFFER
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+    name: RegistryEventComponentDataElement
+    nameWithType: RegistryEventComponentDataElement
+    fullName: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: BUFFER
+    nameWithType: BUFFER
+    fullName: BUFFER
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+  name: RegistryEventReferenceComponentData
+  nameWithType: RegistryEventReferenceComponentData
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+- uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+  name: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  nameWithType: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+  nameWithType.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  name.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+    name: RegistryEventConsumerSystem
+    nameWithType: RegistryEventConsumerSystem
+    fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: DISPATCHER
+    nameWithType: DISPATCHER
+    fullName: DISPATCHER
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: COMMAND
+    nameWithType: COMMAND
+    fullName: COMMAND
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+    name: RegistryEventConsumerSystem
+    nameWithType: RegistryEventConsumerSystem
+    fullName: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: DISPATCHER
+    nameWithType: DISPATCHER
+    fullName: DISPATCHER
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: COMMAND
+    nameWithType: COMMAND
+    fullName: COMMAND
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ELEMENT
+    nameWithType: ELEMENT
+    fullName: ELEMENT
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  name: RegistryEventDispatcher<COMMAND>
+  nameWithType: RegistryEventDispatcher<COMMAND>
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND)
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND)
+  name.vb: RegistryEventDispatcher(Of COMMAND)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+    name: RegistryEventDispatcher
+    nameWithType: RegistryEventDispatcher
+    fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: COMMAND
+    nameWithType: COMMAND
+    fullName: COMMAND
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+    name: RegistryEventDispatcher
+    nameWithType: RegistryEventDispatcher
+    fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: COMMAND
+    nameWithType: COMMAND
+    fullName: COMMAND
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.MapKey
+  commentId: T:Wayn.Mgm.Event.Registry.MapKey
+  parent: Wayn.Mgm.Event.Registry
+  name: MapKey
+  nameWithType: MapKey
+  fullName: Wayn.Mgm.Event.Registry.MapKey
+- uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+  name: RegistryEventInitializationSystem
+  nameWithType: RegistryEventInitializationSystem
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry

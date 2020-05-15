@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  commentId: T:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  id: KillLogEffectConsumer
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}@)
+  langs:
+  - csharp
+  - vb
+  name: KillLogEffectConsumer
+  nameWithType: KillLogEffectConsumer
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  type: Class
+  source:
+    id: KillLogEffectConsumer
+    path: ''
+    startLine: 639
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: 'public class KillLogEffectConsumer : EffectConsumerSystem<KillLogEffect>'
+    content.vb: >-
+      Public Class KillLogEffectConsumer
+          Inherits EffectConsumerSystem(Of KillLogEffect)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}@)
+  commentId: M:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}@)
+  id: ScheduleJob(NativeMultiHashMap{MapKey,EffectCommand}.Enumerator@,NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}@)
+  parent: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+  langs:
+  - csharp
+  - vb
+  name: ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, KillLogEffect>)
+  nameWithType: KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<Int32, KillLogEffect>)
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(NativeMultiHashMap<MapKey, EffectCommand>.Enumerator, NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.KillLogEffect>)
+  type: Method
+  source:
+    id: ScheduleJob
+    path: ''
+    startLine: 643
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: protected override JobHandle ScheduleJob(in NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator, in NativeHashMap<int, KillLogEffect> RegisteredEffects)
+    parameters:
+    - id: EffectCommandEnumerator
+      type: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    - id: RegisteredEffects
+      type: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}
+    return:
+      type: Global.JobHandle
+    content.vb: Protected Overrides Function ScheduleJob(ByRef EffectCommandEnumerator As NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef RegisteredEffects As NativeHashMap(Of Integer, KillLogEffect)) As JobHandle
+  overload: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob*
+  nameWithType.vb: KillLogEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, KillLogEffect))
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.KillLogEffect))
+  name.vb: ScheduleJob(ByRef NativeMultiHashMap(Of MapKey, EffectCommand).Enumerator, ByRef NativeHashMap(Of Int32, KillLogEffect))
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob*
+  commentId: Overload:Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob
+  name: ScheduleJob
+  nameWithType: KillLogEffectConsumer.ScheduleJob
+  fullName: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ScheduleJob
+- uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+  isExternal: true
+  name: NativeMultiHashMap.Enumerator<>
+  nameWithType: NativeMultiHashMap.Enumerator<>
+  fullName: NativeMultiHashMap.Enumerator<>
+  nameWithType.vb: NativeMultiHashMap.Enumerator(Of )
+  fullName.vb: NativeMultiHashMap.Enumerator(Of )
+  name.vb: NativeMultiHashMap.Enumerator(Of )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap{MapKey,EffectCommand}.Enumerator
+    name: NativeMultiHashMap.Enumerator
+    nameWithType: NativeMultiHashMap.Enumerator
+    fullName: NativeMultiHashMap.Enumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}
+  commentId: '!:Global.NativeHashMap{System.Int32,Wayn.Mgm.Combat.Effects.KillLogEffect}'
+  definition: Global.NativeHashMap`2
+  name: NativeHashMap<Int32, KillLogEffect>
+  nameWithType: NativeHashMap<Int32, KillLogEffect>
+  fullName: NativeHashMap<System.Int32, Wayn.Mgm.Combat.Effects.KillLogEffect>
+  nameWithType.vb: NativeHashMap(Of Int32, KillLogEffect)
+  fullName.vb: NativeHashMap(Of System.Int32, Wayn.Mgm.Combat.Effects.KillLogEffect)
+  name.vb: NativeHashMap(Of Int32, KillLogEffect)
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.KillLogEffect
+    name: KillLogEffect
+    nameWithType: KillLogEffect
+    fullName: Wayn.Mgm.Combat.Effects.KillLogEffect
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Wayn.Mgm.Combat.Effects.KillLogEffect
+    name: KillLogEffect
+    nameWithType: KillLogEffect
+    fullName: Wayn.Mgm.Combat.Effects.KillLogEffect
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.JobHandle
+  isExternal: true
+  name: JobHandle
+  nameWithType: JobHandle
+  fullName: JobHandle
+- uid: Global.NativeHashMap`2
+  isExternal: true
+  name: NativeHashMap<, >
+  nameWithType: NativeHashMap<, >
+  fullName: NativeHashMap<, >
+  nameWithType.vb: NativeHashMap(Of , )
+  fullName.vb: NativeHashMap(Of , )
+  name.vb: NativeHashMap(Of , )
+  spec.csharp:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeHashMap`2
+    name: NativeHashMap
+    nameWithType: NativeHashMap
+    fullName: NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

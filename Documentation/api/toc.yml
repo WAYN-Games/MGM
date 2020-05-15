@@ -1,0 +1,101 @@
+### YamlMime:TableOfContent
+- uid: Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  items:
+  - uid: Wayn.Mgm.Combat.Effects.AssignementStrategy
+    name: AssignementStrategy
+  - uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffect
+    name: AssignToTeamEffect
+  - uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer
+    name: AssignToTeamEffectConsumer
+  - uid: Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob
+    name: AssignToTeamEffectConsumer.ConsumerJob
+  - uid: Wayn.Mgm.Combat.Effects.ConquerEffect
+    name: ConquerEffect
+  - uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer
+    name: ConquerEffectConsumer
+  - uid: Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob
+    name: ConquerEffectConsumer.ConsumerJob
+  - uid: Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect
+    name: DestroyEntityHierarchyEffect
+  - uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem
+    name: DestroyEntityHirearchyEffectConsumerSystem
+  - uid: Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+    name: DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob
+  - uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect
+    name: DisableEntityHierarchyEffect
+  - uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem
+    name: DisableEntityHierarchyEffectConsumerSystem
+  - uid: Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+    name: DisableEntityHierarchyEffectConsumerSystem.ConsumerJob
+  - uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+    name: InflictDamageEffect
+  - uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer
+    name: InflictDamageEffectConsumer
+  - uid: Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob
+    name: InflictDamageEffectConsumer.ConsumerJob
+  - uid: Wayn.Mgm.Combat.Effects.KillLogEffect
+    name: KillLogEffect
+  - uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer
+    name: KillLogEffectConsumer
+  - uid: Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob
+    name: KillLogEffectConsumer.ConsumerJob
+- uid: Wayn.Mgm.Event
+  name: Wayn.Mgm.Event
+  items:
+  - uid: Wayn.Mgm.Event.EffectCommand
+    name: EffectCommand
+  - uid: Wayn.Mgm.Event.EffectConsumerSystem`1
+    name: EffectConsumerSystem<ELEMENT>
+    name.vb: EffectConsumerSystem(Of ELEMENT)
+  - uid: Wayn.Mgm.Event.EffectDisptacherSystem
+    name: EffectDisptacherSystem
+  - uid: Wayn.Mgm.Event.IEffect
+    name: IEffect
+- uid: Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  items:
+  - uid: Wayn.Mgm.Event.Registry.EffectRegistry
+    name: EffectRegistry
+  - uid: Wayn.Mgm.Event.Registry.IEventRegistryCommand
+    name: IEventRegistryCommand
+  - uid: Wayn.Mgm.Event.Registry.IRegistry
+    name: IRegistry
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+  - uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+    name: IRegistryReferenceBuffer
+  - uid: Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent
+    name: ISelfRegistringAuhtoringComponent
+  - uid: Wayn.Mgm.Event.Registry.MapKey
+    name: MapKey
+  - uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+    name: RegisteryReferenceAuthoring<ELEMENT>
+    name.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+  - uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+    name: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+    name.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  - uid: Wayn.Mgm.Event.Registry.Registry`1
+    name: Registry<T>
+    name.vb: Registry(Of T)
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement`2
+    name: RegistryEventComponentDataElement<ELEMENT, BUFFER>
+    name.vb: RegistryEventComponentDataElement(Of ELEMENT, BUFFER)
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem`3
+    name: RegistryEventConsumerSystem<DISPATCHER, COMMAND, ELEMENT>
+    name.vb: RegistryEventConsumerSystem(Of DISPATCHER, COMMAND, ELEMENT)
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+    name: RegistryEventDispatcher<COMMAND>
+    name.vb: RegistryEventDispatcher(Of COMMAND)
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem
+    name: RegistryEventInitializationSystem
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+    name: RegistryEventReference
+  - uid: Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData
+    name: RegistryEventReferenceComponentData
+- uid: Wayn.Mgm.Event.Registry.Editor
+  name: Wayn.Mgm.Event.Registry.Editor
+  items:
+  - uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+    name: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+    name.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)

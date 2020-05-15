@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  commentId: T:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  id: RegistryReferenceBufferAuthoringEditor`1
+  parent: Wayn.Mgm.Event.Registry.Editor
+  children:
+  - Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  - Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  langs:
+  - csharp
+  - vb
+  name: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  type: Class
+  source:
+    id: RegistryReferenceBufferAuthoringEditor
+    path: ''
+    startLine: 1419
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry.Editor
+  summary: "\nBase class for registry event authoring component.\nExtending this class allow to define an authoring component that handle a collection of registered event instance to use in your systems.\n"
+  example: []
+  syntax:
+    content: 'public abstract class RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE> : Editor where EVENT_INTERFACE : IRegistryEvent'
+    typeParameters:
+    - id: EVENT_INTERFACE
+      description: The interface that implement all event.
+    content.vb: >-
+      Public MustInherit Class RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE As IRegistryEvent)
+          Inherits Editor
+  inheritance:
+  - System.Object
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  name.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  commentId: M:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  id: OnEnable
+  parent: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable()
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable()
+  type: Method
+  source:
+    id: OnEnable
+    path: ''
+    startLine: 1449
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry.Editor
+  summary: "\nRetrieve and cache the list of all event types matching the <pre><code>EVENT_INTERFACE</code></pre>.\n"
+  example: []
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable
+  overload: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable*
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable()
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable()
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  commentId: M:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  id: OnInspectorGUI
+  parent: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  langs:
+  - csharp
+  - vb
+  name: OnInspectorGUI()
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI()
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI()
+  type: Method
+  source:
+    id: OnInspectorGUI
+    path: ''
+    startLine: 1470
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry.Editor
+  summary: "\nDraws :\n- the authoring script reference so that the user can click on it to edit it\n- a drop down list of all events type mathincg the <pre><code>EVENT_INTERFACE</code></pre> and propose to add a instance of the selected one to the list of events\n- each event instance and the properties with the possibilitiy to remove the instance from the list\n"
+  example: []
+  syntax:
+    content: public override void OnInspectorGUI()
+    content.vb: Public Overrides Sub OnInspectorGUI
+  overload: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI*
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI()
+references:
+- uid: Wayn.Mgm.Event.Registry.Editor
+  commentId: N:Wayn.Mgm.Event.Registry.Editor
+  name: Wayn.Mgm.Event.Registry.Editor
+  nameWithType: Wayn.Mgm.Event.Registry.Editor
+  fullName: Wayn.Mgm.Event.Registry.Editor
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable*
+  commentId: Overload:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnEnable
+  name: OnEnable
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnEnable
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnEnable
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI*
+  commentId: Overload:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1.OnInspectorGUI
+  name: OnInspectorGUI
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>.OnInspectorGUI
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE).OnInspectorGUI

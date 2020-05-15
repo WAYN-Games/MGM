@@ -1,12 +1,13 @@
 ﻿using System;
+
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
-using UnityEngine;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+
+using Wayn.Mgm.Event;
+using Wayn.Mgm.Event.Registry;
 
 namespace Wayn.Mgm.Combat.Effects
 {
@@ -54,7 +55,7 @@ namespace Wayn.Mgm.Combat.Effects
         [BurstCompile]
         public struct ConsumerJob : IJob
         {
-            
+
             [ReadOnly]
             public NativeMultiHashMap<MapKey, EffectCommand>.Enumerator EffectCommandEnumerator;
             [ReadOnly]
@@ -70,8 +71,7 @@ namespace Wayn.Mgm.Combat.Effects
                 while (EffectCommandEnumerator.MoveNext())
                 {
                     EffectCommand command = EffectCommandEnumerator.Current;
-                    DisableEntityHierarchyEffect effect;
-                    if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))
+                    if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out DisableEntityHierarchyEffect effect))
                     {
                         RecursiveChildEffect(command.Target, effect.ApplyRecursivelyToChildren);
                     }
@@ -84,7 +84,7 @@ namespace Wayn.Mgm.Combat.Effects
                 EntityCommandBuffer.AddComponent(target, new Disabled());
                 if (applyRecursivelyToChildren && Children.Exists(target))
                 {
-                    var enumerator = Children[target].GetEnumerator();
+                    NativeArray<Child>.Enumerator enumerator = Children[target].GetEnumerator();
                     while (enumerator.MoveNext())
                     {
                         Entity e = enumerator.Current.Value;
@@ -94,6 +94,6 @@ namespace Wayn.Mgm.Combat.Effects
             }
         }
 
-       
+
     }
 }

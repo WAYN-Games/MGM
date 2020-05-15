@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReference
+  id: RegistryEventReference
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  - Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  - Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  - Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventReference
+  nameWithType: RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference
+  type: Struct
+  source:
+    id: RegistryEventReference
+    path: ''
+    startLine: 1759
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public struct RegistryEventReference
+    content.vb: Public Structure RegistryEventReference
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  id: TypeId
+  parent: Wayn.Mgm.Event.Registry.RegistryEventReference
+  langs:
+  - csharp
+  - vb
+  name: TypeId
+  nameWithType: RegistryEventReference.TypeId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.TypeId
+  type: Field
+  source:
+    id: TypeId
+    path: ''
+    startLine: 1761
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public int TypeId
+    return:
+      type: System.Int32
+    content.vb: Public TypeId As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  id: VersionId
+  parent: Wayn.Mgm.Event.Registry.RegistryEventReference
+  langs:
+  - csharp
+  - vb
+  name: VersionId
+  nameWithType: RegistryEventReference.VersionId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.VersionId
+  type: Field
+  source:
+    id: VersionId
+    path: ''
+    startLine: 1762
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public int VersionId
+    return:
+      type: System.Int32
+    content.vb: Public VersionId As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  id: GetTypeId(Type)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventReference
+  langs:
+  - csharp
+  - vb
+  name: GetTypeId(Type)
+  nameWithType: RegistryEventReference.GetTypeId(Type)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId(Type)
+  type: Method
+  source:
+    id: GetTypeId
+    path: ''
+    startLine: 1764
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public static int GetTypeId(Type t)
+    parameters:
+    - id: t
+      type: Global.Type
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetTypeId(t As Type) As Integer
+  overload: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  id: GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventReference
+  langs:
+  - csharp
+  - vb
+  name: GetEffectInstanceId(IRegistryEvent)
+  nameWithType: RegistryEventReference.GetEffectInstanceId(IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  type: Method
+  source:
+    id: GetEffectInstanceId
+    path: ''
+    startLine: 1769
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public static int GetEffectInstanceId(IRegistryEvent effect)
+    parameters:
+    - id: effect
+      type: Wayn.Mgm.Event.Registry.IRegistryEvent
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetEffectInstanceId(effect As IRegistryEvent) As Integer
+  overload: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId
+  name: GetTypeId
+  nameWithType: RegistryEventReference.GetTypeId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetTypeId
+- uid: Global.Type
+  commentId: '!:Global.Type'
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId
+  name: GetEffectInstanceId
+  nameWithType: RegistryEventReference.GetEffectInstanceId
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference.GetEffectInstanceId
+- uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryEvent
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistryEvent
+  nameWithType: IRegistryEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistryEvent

@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  commentId: T:Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  id: RegisteryReferenceAuthoring`1
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1.Entry
+  langs:
+  - csharp
+  - vb
+  name: RegisteryReferenceAuthoring<ELEMENT>
+  nameWithType: RegisteryReferenceAuthoring<ELEMENT>
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring<ELEMENT>
+  type: Class
+  source:
+    id: RegisteryReferenceAuthoring
+    path: ''
+    startLine: 1782
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: >-
+      public abstract class RegisteryReferenceAuthoring<ELEMENT>
+          where ELEMENT : IRegistryEvent
+    typeParameters:
+    - id: ELEMENT
+    content.vb: Public MustInherit Class RegisteryReferenceAuthoring(Of ELEMENT As IRegistryEvent)
+  inheritance:
+  - System.Object
+  nameWithType.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring(Of ELEMENT)
+  name.vb: RegisteryReferenceAuthoring(Of ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1.Entry
+  commentId: F:Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1.Entry
+  id: Entry
+  parent: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring`1
+  langs:
+  - csharp
+  - vb
+  name: Entry
+  nameWithType: RegisteryReferenceAuthoring<ELEMENT>.Entry
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring<ELEMENT>.Entry
+  type: Field
+  source:
+    id: Entry
+    path: ''
+    startLine: 1786
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public ELEMENT Entry
+    return:
+      type: '{ELEMENT}'
+    content.vb: Public Entry As ELEMENT
+  nameWithType.vb: RegisteryReferenceAuthoring(Of ELEMENT).Entry
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring(Of ELEMENT).Entry
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: '{ELEMENT}'
+  commentId: '!:ELEMENT'
+  definition: ELEMENT
+  name: ELEMENT
+  nameWithType: ELEMENT
+  fullName: ELEMENT
+- uid: ELEMENT
+  name: ELEMENT
+  nameWithType: ELEMENT
+  fullName: ELEMENT

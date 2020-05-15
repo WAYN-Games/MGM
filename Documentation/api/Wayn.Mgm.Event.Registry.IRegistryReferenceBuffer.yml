@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  id: IRegistryReferenceBuffer
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  langs:
+  - csharp
+  - vb
+  name: IRegistryReferenceBuffer
+  nameWithType: IRegistryReferenceBuffer
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  type: Interface
+  source:
+    id: IRegistryReferenceBuffer
+    path: ''
+    startLine: 1630
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: 'public interface IRegistryReferenceBuffer : IBufferElementData'
+    content.vb: >-
+      Public Interface IRegistryReferenceBuffer
+          Inherits IBufferElementData
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  commentId: P:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  id: RegistryEventReference
+  parent: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventReference
+  nameWithType: IRegistryReferenceBuffer.RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  type: Property
+  source:
+    id: RegistryEventReference
+    path: ''
+    startLine: 1632
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: RegistryEventReference RegistryEventReference { get; set; }
+    parameters: []
+    return:
+      type: Wayn.Mgm.Event.Registry.RegistryEventReference
+    content.vb: Property RegistryEventReference As RegistryEventReference
+  overload: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference*
+  modifiers.csharp:
+  - get
+  - set
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference*
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+  name: RegistryEventReference
+  nameWithType: IRegistryReferenceBuffer.RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.RegistryEventReference
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReference
+  parent: Wayn.Mgm.Event.Registry
+  name: RegistryEventReference
+  nameWithType: RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference

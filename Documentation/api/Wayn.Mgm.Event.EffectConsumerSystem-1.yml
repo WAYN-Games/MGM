@@ -1,0 +1,106 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1
+  commentId: T:Wayn.Mgm.Event.EffectConsumerSystem`1
+  id: EffectConsumerSystem`1
+  parent: Wayn.Mgm.Event
+  children:
+  - Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  langs:
+  - csharp
+  - vb
+  name: EffectConsumerSystem<ELEMENT>
+  nameWithType: EffectConsumerSystem<ELEMENT>
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>
+  type: Class
+  source:
+    id: EffectConsumerSystem
+    path: ''
+    startLine: 801
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: 'public abstract class EffectConsumerSystem<ELEMENT> : RegistryEventConsumerSystem<EffectDisptacherSystem, EffectCommand, ELEMENT> where ELEMENT : struct, IEffect'
+    typeParameters:
+    - id: ELEMENT
+    content.vb: >-
+      Public MustInherit Class EffectConsumerSystem(Of ELEMENT As {Structure, IEffect})
+          Inherits RegistryEventConsumerSystem(Of EffectDisptacherSystem, EffectCommand, ELEMENT)
+  inheritance:
+  - System.Object
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT)
+  name.vb: EffectConsumerSystem(Of ELEMENT)
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  commentId: M:Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  id: GetRegistryInstance
+  parent: Wayn.Mgm.Event.EffectConsumerSystem`1
+  langs:
+  - csharp
+  - vb
+  name: GetRegistryInstance()
+  nameWithType: EffectConsumerSystem<ELEMENT>.GetRegistryInstance()
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>.GetRegistryInstance()
+  type: Method
+  source:
+    id: GetRegistryInstance
+    path: ''
+    startLine: 805
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: protected override IRegistry GetRegistryInstance()
+    return:
+      type: Global.IRegistry
+    content.vb: Protected Overrides Function GetRegistryInstance As IRegistry
+  overload: Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance*
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT).GetRegistryInstance()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT).GetRegistryInstance()
+references:
+- uid: Wayn.Mgm.Event
+  commentId: N:Wayn.Mgm.Event
+  name: Wayn.Mgm.Event
+  nameWithType: Wayn.Mgm.Event
+  fullName: Wayn.Mgm.Event
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance*
+  commentId: Overload:Wayn.Mgm.Event.EffectConsumerSystem`1.GetRegistryInstance
+  name: GetRegistryInstance
+  nameWithType: EffectConsumerSystem<ELEMENT>.GetRegistryInstance
+  fullName: Wayn.Mgm.Event.EffectConsumerSystem<ELEMENT>.GetRegistryInstance
+  nameWithType.vb: EffectConsumerSystem(Of ELEMENT).GetRegistryInstance
+  fullName.vb: Wayn.Mgm.Event.EffectConsumerSystem(Of ELEMENT).GetRegistryInstance
+- uid: Global.IRegistry
+  commentId: '!:Global.IRegistry'
+  isExternal: true
+  name: IRegistry
+  nameWithType: IRegistry
+  fullName: IRegistry

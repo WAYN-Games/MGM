@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryEvent
+  id: IRegistryEvent
+  parent: Wayn.Mgm.Event.Registry
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IRegistryEvent
+  nameWithType: IRegistryEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  type: Interface
+  source:
+    id: IRegistryEvent
+    path: ''
+    startLine: 1619
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public interface IRegistryEvent
+    content.vb: Public Interface IRegistryEvent
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry

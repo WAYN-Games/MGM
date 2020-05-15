@@ -1,4 +1,4 @@
-﻿using Wayn.Mgm.Events;
+﻿using Wayn.Mgm.Event;
 using Unity.Entities;
 using Unity.Jobs;
 

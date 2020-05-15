@@ -1,5 +1,5 @@
 ﻿using Unity.Entities;
-using Wayn.Mgm.Events;
+using Wayn.Mgm.Event;
 
 public class ApplyInitialisationEffectsSystem : SystemBase
 {

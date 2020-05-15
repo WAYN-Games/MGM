@@ -1,11 +1,11 @@
 ﻿using System;
 using Unity.Entities;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event;
+using Wayn.Mgm.Event.Registry;
 
 [Serializable]
 [InternalBufferCapacity(1)]
 public struct OnInitEffectBuffer : IRegistryReferenceBuffer
 {
-    public RegistryReference RegistryEventReference { get; set; }
+    public RegistryEventReference RegistryEventReference { get; set; }
 }

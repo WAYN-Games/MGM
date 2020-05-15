@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  commentId: T:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  id: RegisteryReferenceBufferAuthoring`5
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert(Entity,EntityManager,GameObjectConversionSystem)
+  - Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Entries
+  - Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  langs:
+  - csharp
+  - vb
+  name: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>
+  type: Class
+  source:
+    id: RegisteryReferenceBufferAuthoring
+    path: ''
+    startLine: 1806
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nThis class handle all the complexity of managing the population of the DynamicBuffer with the correct RegistryReference\n"
+  example: []
+  syntax:
+    content: 'public abstract class RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT> : MonoBehaviour, IConvertGameObjectToEntity where BUFFER : struct, IRegistryReferenceBuffer where ELEMENT : IRegistryEvent where AUTHORING : RegisteryReferenceAuthoring<ELEMENT> where REGISTRY : Registry<REGISTRY> where EFFECT_COMPONENT_DATA_ELEMENT : RegistryEventComponentDataElement<ELEMENT, BUFFER>, new()'
+    typeParameters:
+    - id: BUFFER
+      description: ''
+    - id: ELEMENT
+      description: ''
+    - id: AUTHORING
+      description: ''
+    - id: REGISTRY
+      description: ''
+    - id: EFFECT_COMPONENT_DATA_ELEMENT
+    content.vb: >-
+      Public MustInherit Class RegisteryReferenceBufferAuthoring(Of BUFFER As {Structure, IRegistryReferenceBuffer}, ELEMENT As IRegistryEvent, AUTHORING As RegisteryReferenceAuthoring(Of ELEMENT), REGISTRY As Registry(Of REGISTRY), EFFECT_COMPONENT_DATA_ELEMENT As {RegistryEventComponentDataElement(Of ELEMENT, BUFFER), New})
+          Inherits MonoBehaviour
+          Implements IConvertGameObjectToEntity
+  inheritance:
+  - System.Object
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+  name.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT)
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Entries
+  commentId: F:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Entries
+  id: Entries
+  parent: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Entries
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Entries
+  type: Field
+  source:
+    id: Entries
+    path: ''
+    startLine: 1814
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public List<AUTHORING> Entries
+    return:
+      type: Global.List{{AUTHORING}}
+    content.vb: Public Entries As List(Of AUTHORING)
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Entries
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Entries
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  commentId: M:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  id: GetRegisteryInstance
+  parent: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  langs:
+  - csharp
+  - vb
+  name: GetRegisteryInstance()
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance()
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance()
+  type: Method
+  source:
+    id: GetRegisteryInstance
+    path: ''
+    startLine: 1816
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected abstract REGISTRY GetRegisteryInstance()
+    return:
+      type: '{REGISTRY}'
+    content.vb: Protected MustOverride Function GetRegisteryInstance As REGISTRY
+  overload: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance*
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance()
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance()
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert(Entity,EntityManager,GameObjectConversionSystem)
+  commentId: M:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert(Entity,EntityManager,GameObjectConversionSystem)
+  id: Convert(Entity,EntityManager,GameObjectConversionSystem)
+  parent: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5
+  langs:
+  - csharp
+  - vb
+  name: Convert(Entity, EntityManager, GameObjectConversionSystem)
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert(Entity, EntityManager, GameObjectConversionSystem)
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert(Entity, EntityManager, GameObjectConversionSystem)
+  type: Method
+  source:
+    id: Convert
+    path: ''
+    startLine: 1818
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public void Convert(Entity entity, EntityManager dstManager, GameObjectConversionSystem conversionSystem)
+    parameters:
+    - id: entity
+      type: Global.Entity
+    - id: dstManager
+      type: Global.EntityManager
+    - id: conversionSystem
+      type: Global.GameObjectConversionSystem
+    content.vb: Public Sub Convert(entity As Entity, dstManager As EntityManager, conversionSystem As GameObjectConversionSystem)
+  overload: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert*
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert(Entity, EntityManager, GameObjectConversionSystem)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert(Entity, EntityManager, GameObjectConversionSystem)
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.List{{AUTHORING}}
+  commentId: '!:Global.List{`2}'
+  definition: Global.List`1
+  name: List<AUTHORING>
+  nameWithType: List<AUTHORING>
+  fullName: List<AUTHORING>
+  nameWithType.vb: List(Of AUTHORING)
+  fullName.vb: List(Of AUTHORING)
+  name.vb: List(Of AUTHORING)
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: AUTHORING
+    nameWithType: AUTHORING
+    fullName: AUTHORING
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: AUTHORING
+    nameWithType: AUTHORING
+    fullName: AUTHORING
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.GetRegisteryInstance
+  name: GetRegisteryInstance
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.GetRegisteryInstance
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).GetRegisteryInstance
+- uid: '{REGISTRY}'
+  commentId: '!:REGISTRY'
+  definition: REGISTRY
+  name: REGISTRY
+  nameWithType: REGISTRY
+  fullName: REGISTRY
+- uid: REGISTRY
+  commentId: '!:REGISTRY'
+  name: REGISTRY
+  nameWithType: REGISTRY
+  fullName: REGISTRY
+- uid: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring`5.Convert
+  name: Convert
+  nameWithType: RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert
+  fullName: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring<BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT>.Convert
+  nameWithType.vb: RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert
+  fullName.vb: Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring(Of BUFFER, ELEMENT, AUTHORING, REGISTRY, EFFECT_COMPONENT_DATA_ELEMENT).Convert
+- uid: Global.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: Entity
+  fullName: Entity
+- uid: Global.EntityManager
+  commentId: '!:Global.EntityManager'
+  isExternal: true
+  name: EntityManager
+  nameWithType: EntityManager
+  fullName: EntityManager
+- uid: Global.GameObjectConversionSystem
+  commentId: '!:Global.GameObjectConversionSystem'
+  isExternal: true
+  name: GameObjectConversionSystem
+  nameWithType: GameObjectConversionSystem
+  fullName: GameObjectConversionSystem

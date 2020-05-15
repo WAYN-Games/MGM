@@ -1,0 +1,83 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  commentId: T:Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  id: InflictDamageEffect
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  langs:
+  - csharp
+  - vb
+  name: InflictDamageEffect
+  nameWithType: InflictDamageEffect
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  type: Struct
+  source:
+    id: InflictDamageEffect
+    path: ''
+    startLine: 534
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  summary: "\nThis effect add the Amount the the Target entity&apos;s Health\n"
+  example: []
+  syntax:
+    content: 'public struct InflictDamageEffect : IEffect'
+    content.vb: >-
+      Public Structure InflictDamageEffect
+          Implements IEffect
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  commentId: F:Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  id: Amount
+  parent: Wayn.Mgm.Combat.Effects.InflictDamageEffect
+  langs:
+  - csharp
+  - vb
+  name: Amount
+  nameWithType: InflictDamageEffect.Amount
+  fullName: Wayn.Mgm.Combat.Effects.InflictDamageEffect.Amount
+  type: Field
+  source:
+    id: Amount
+    path: ''
+    startLine: 540
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  summary: "\nThe amount of health changed.\n"
+  example: []
+  syntax:
+    content: public float Amount
+    return:
+      type: System.Single
+    content.vb: Public Amount As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

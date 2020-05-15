@@ -1,0 +1,142 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.EffectCommand
+  commentId: T:Wayn.Mgm.Event.EffectCommand
+  id: EffectCommand
+  parent: Wayn.Mgm.Event
+  children:
+  - Wayn.Mgm.Event.EffectCommand.Emitter
+  - Wayn.Mgm.Event.EffectCommand.RegistryReference
+  - Wayn.Mgm.Event.EffectCommand.Target
+  langs:
+  - csharp
+  - vb
+  name: EffectCommand
+  nameWithType: EffectCommand
+  fullName: Wayn.Mgm.Event.EffectCommand
+  type: Struct
+  source:
+    id: EffectCommand
+    path: ''
+    startLine: 788
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: 'public struct EffectCommand : IEventRegistryCommand'
+    content.vb: >-
+      Public Structure EffectCommand
+          Implements IEventRegistryCommand
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Wayn.Mgm.Event.EffectCommand.Emitter
+  commentId: F:Wayn.Mgm.Event.EffectCommand.Emitter
+  id: Emitter
+  parent: Wayn.Mgm.Event.EffectCommand
+  langs:
+  - csharp
+  - vb
+  name: Emitter
+  nameWithType: EffectCommand.Emitter
+  fullName: Wayn.Mgm.Event.EffectCommand.Emitter
+  type: Field
+  source:
+    id: Emitter
+    path: ''
+    startLine: 790
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: public Entity Emitter
+    return:
+      type: Global.Entity
+    content.vb: Public Emitter As Entity
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Event.EffectCommand.Target
+  commentId: F:Wayn.Mgm.Event.EffectCommand.Target
+  id: Target
+  parent: Wayn.Mgm.Event.EffectCommand
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: EffectCommand.Target
+  fullName: Wayn.Mgm.Event.EffectCommand.Target
+  type: Field
+  source:
+    id: Target
+    path: ''
+    startLine: 791
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: public Entity Target
+    return:
+      type: Global.Entity
+    content.vb: Public Target As Entity
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Wayn.Mgm.Event.EffectCommand.RegistryReference
+  commentId: P:Wayn.Mgm.Event.EffectCommand.RegistryReference
+  id: RegistryReference
+  parent: Wayn.Mgm.Event.EffectCommand
+  langs:
+  - csharp
+  - vb
+  name: RegistryReference
+  nameWithType: EffectCommand.RegistryReference
+  fullName: Wayn.Mgm.Event.EffectCommand.RegistryReference
+  type: Property
+  source:
+    id: RegistryReference
+    path: ''
+    startLine: 792
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: public RegistryEventReference RegistryReference { get; set; }
+    parameters: []
+    return:
+      type: Global.RegistryEventReference
+    content.vb: Public Property RegistryReference As RegistryEventReference
+  overload: Wayn.Mgm.Event.EffectCommand.RegistryReference*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Wayn.Mgm.Event
+  commentId: N:Wayn.Mgm.Event
+  name: Wayn.Mgm.Event
+  nameWithType: Wayn.Mgm.Event
+  fullName: Wayn.Mgm.Event
+- uid: Global.Entity
+  isExternal: true
+  name: Entity
+  nameWithType: Entity
+  fullName: Entity
+- uid: Wayn.Mgm.Event.EffectCommand.RegistryReference*
+  commentId: Overload:Wayn.Mgm.Event.EffectCommand.RegistryReference
+  name: RegistryReference
+  nameWithType: EffectCommand.RegistryReference
+  fullName: Wayn.Mgm.Event.EffectCommand.RegistryReference
+- uid: Global.RegistryEventReference
+  commentId: '!:Global.RegistryEventReference'
+  isExternal: true
+  name: RegistryEventReference
+  nameWithType: RegistryEventReference
+  fullName: RegistryEventReference

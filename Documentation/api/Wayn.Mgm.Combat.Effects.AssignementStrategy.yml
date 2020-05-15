@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignementStrategy
+  id: AssignementStrategy
+  parent: Wayn.Mgm.Combat.Effects
+  children:
+  - Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  - Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  langs:
+  - csharp
+  - vb
+  name: AssignementStrategy
+  nameWithType: AssignementStrategy
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  type: Enum
+  source:
+    id: AssignementStrategy
+    path: ''
+    startLine: 188
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: public enum AssignementStrategy
+    content.vb: Public Enum AssignementStrategy
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  id: FewestMembers
+  parent: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  langs:
+  - csharp
+  - vb
+  name: FewestMembers
+  nameWithType: AssignementStrategy.FewestMembers
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy.FewestMembers
+  type: Field
+  source:
+    id: FewestMembers
+    path: ''
+    startLine: 190
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: FewestMembers = 0
+    return:
+      type: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  commentId: F:Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  id: LosingTeam
+  parent: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  langs:
+  - csharp
+  - vb
+  name: LosingTeam
+  nameWithType: AssignementStrategy.LosingTeam
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy.LosingTeam
+  type: Field
+  source:
+    id: LosingTeam
+    path: ''
+    startLine: 191
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Combat.Effects
+  syntax:
+    content: LosingTeam = 1
+    return:
+      type: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Wayn.Mgm.Combat.Effects
+  commentId: N:Wayn.Mgm.Combat.Effects
+  name: Wayn.Mgm.Combat.Effects
+  nameWithType: Wayn.Mgm.Combat.Effects
+  fullName: Wayn.Mgm.Combat.Effects
+- uid: Wayn.Mgm.Combat.Effects.AssignementStrategy
+  commentId: T:Wayn.Mgm.Combat.Effects.AssignementStrategy
+  parent: Wayn.Mgm.Combat.Effects
+  name: AssignementStrategy
+  nameWithType: AssignementStrategy
+  fullName: Wayn.Mgm.Combat.Effects.AssignementStrategy

@@ -1,6 +1,6 @@
-﻿using Wayn.Mgm.Events;
+﻿using Wayn.Mgm.Event;
 using System;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event.Registry;
 
 [Serializable]
 public class EffectAuthoring : RegisteryReferenceAuthoring<IEffect>

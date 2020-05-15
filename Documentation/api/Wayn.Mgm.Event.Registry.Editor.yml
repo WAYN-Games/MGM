@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.Editor
+  commentId: N:Wayn.Mgm.Event.Registry.Editor
+  id: Wayn.Mgm.Event.Registry.Editor
+  children:
+  - Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  langs:
+  - csharp
+  - vb
+  name: Wayn.Mgm.Event.Registry.Editor
+  nameWithType: Wayn.Mgm.Event.Registry.Editor
+  fullName: Wayn.Mgm.Event.Registry.Editor
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  commentId: T:Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+  name: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  nameWithType: RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor<EVENT_INTERFACE>
+  nameWithType.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  fullName.vb: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  name.vb: RegistryReferenceBufferAuthoringEditor(Of EVENT_INTERFACE)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+    name: RegistryReferenceBufferAuthoringEditor
+    nameWithType: RegistryReferenceBufferAuthoringEditor
+    fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: EVENT_INTERFACE
+    nameWithType: EVENT_INTERFACE
+    fullName: EVENT_INTERFACE
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor`1
+    name: RegistryReferenceBufferAuthoringEditor
+    nameWithType: RegistryReferenceBufferAuthoringEditor
+    fullName: Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: EVENT_INTERFACE
+    nameWithType: EVENT_INTERFACE
+    fullName: EVENT_INTERFACE
+  - name: )
+    nameWithType: )
+    fullName: )

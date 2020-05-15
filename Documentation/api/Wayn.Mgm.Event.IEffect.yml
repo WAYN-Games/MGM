@@ -1,0 +1,38 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.IEffect
+  commentId: T:Wayn.Mgm.Event.IEffect
+  id: IEffect
+  parent: Wayn.Mgm.Event
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IEffect
+  nameWithType: IEffect
+  fullName: Wayn.Mgm.Event.IEffect
+  type: Interface
+  source:
+    id: IEffect
+    path: ''
+    startLine: 778
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event
+  syntax:
+    content: 'public interface IEffect : IRegistryEvent'
+    content.vb: >-
+      Public Interface IEffect
+          Inherits IRegistryEvent
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Wayn.Mgm.Event
+  commentId: N:Wayn.Mgm.Event
+  name: Wayn.Mgm.Event
+  nameWithType: Wayn.Mgm.Event
+  fullName: Wayn.Mgm.Event

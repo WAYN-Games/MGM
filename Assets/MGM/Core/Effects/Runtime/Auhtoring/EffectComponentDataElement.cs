@@ -1,15 +1,15 @@
-﻿using Wayn.Mgm.Events;
+﻿using Wayn.Mgm.Event;
 using System;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event.Registry;
 
 [Serializable]
 public class EffectComponentDataElement<ELEMENT, BUFFER> : RegistryEventComponentDataElement<ELEMENT, BUFFER>
-     where ELEMENT : IRegistryElement
+     where ELEMENT : IRegistryEvent
      where BUFFER : struct, IRegistryReferenceBuffer
 {
 
-    protected override RegistryReference AddEventToRegistry(ELEMENT registeryEvent)
+    protected override RegistryEventReference AddEventToRegistry(ELEMENT registeryEvent)
     {
-        return EffectRegistry.Instance.AddEffect((IEffect)registeryEvent);
+        return EffectRegistry.Instance.AddEventInstance((IEffect)registeryEvent);
     }
 }

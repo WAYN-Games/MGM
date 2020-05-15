@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.IRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistry
+  id: IRegistry
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  - Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects``1(Unity.Collections.NativeHashMap{System.Int32,``0}@)
+  - Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  - Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  - Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  langs:
+  - csharp
+  - vb
+  name: IRegistry
+  nameWithType: IRegistry
+  fullName: Wayn.Mgm.Event.Registry.IRegistry
+  type: Interface
+  source:
+    id: IRegistry
+    path: ''
+    startLine: 1565
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public interface IRegistry
+    content.vb: Public Interface IRegistry
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  id: AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  langs:
+  - csharp
+  - vb
+  name: AddEventInstance(IRegistryEvent)
+  nameWithType: IRegistry.AddEventInstance(IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  type: Method
+  source:
+    id: AddEventInstance
+    path: ''
+    startLine: 1586
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nTry to add a new event to the registry.\n<p>\nIf registry already contain an identical event instance, the method : \n<ol><li>returns a reference to the instance stored int the registry.</li></ol>\n</p>\n<p>\nIf the registry does not contains an identical event instance, the method :\n<ol><li>adds the event instance to the registry</li><li>calls <xref href=\"Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered\" data-throw-if-not-resolved=\"false\"></xref></li><li>returns a reference to the stored instance.</li></ol>\n</p>\n"
+  example: []
+  syntax:
+    content: RegistryEventReference AddEventInstance(IRegistryEvent registryEventInstance)
+    parameters:
+    - id: registryEventInstance
+      type: Wayn.Mgm.Event.Registry.IRegistryEvent
+      description: A referenced to the stored intance in the registry.
+    return:
+      type: Wayn.Mgm.Event.Registry.RegistryEventReference
+      description: ''
+    content.vb: Function AddEventInstance(registryEventInstance As IRegistryEvent) As RegistryEventReference
+  overload: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance*
+- uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  id: OnNewElementRegistered
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  langs:
+  - csharp
+  - vb
+  name: OnNewElementRegistered()
+  nameWithType: IRegistry.OnNewElementRegistered()
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered()
+  type: Method
+  source:
+    id: OnNewElementRegistered
+    path: ''
+    startLine: 1592
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nRaise a C# event.\nThis should be called by <xref href=\"Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)\" data-throw-if-not-resolved=\"false\"></xref> whenever a new event instance is added to the registry.\n"
+  example: []
+  syntax:
+    content: void OnNewElementRegistered()
+    content.vb: Sub OnNewElementRegistered
+  overload: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered*
+- uid: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  id: SubscribeToElementRegisteredEvent(EventHandler)
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  langs:
+  - csharp
+  - vb
+  name: SubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent(EventHandler)
+  type: Method
+  source:
+    id: SubscribeToElementRegisteredEvent
+    path: ''
+    startLine: 1598
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nAdd a method to invoke when <xref href=\"Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered\" data-throw-if-not-resolved=\"false\"></xref> raise a C# event.\n"
+  example: []
+  syntax:
+    content: void SubscribeToElementRegisteredEvent(EventHandler method)
+    parameters:
+    - id: method
+      type: Global.EventHandler
+      description: The method to register for invokation when an event instance is added to the registry.
+    content.vb: Sub SubscribeToElementRegisteredEvent(method As EventHandler)
+  overload: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent*
+- uid: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  id: UnsubscribeToElementRegisteredEvent(EventHandler)
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  langs:
+  - csharp
+  - vb
+  name: UnsubscribeToElementRegisteredEvent(EventHandler)
+  nameWithType: IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent(EventHandler)
+  type: Method
+  source:
+    id: UnsubscribeToElementRegisteredEvent
+    path: ''
+    startLine: 1604
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nRemove a method from the list of invoked method when <xref href=\"Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered\" data-throw-if-not-resolved=\"false\"></xref> raise a C# event.\n"
+  example: []
+  syntax:
+    content: void UnsubscribeToElementRegisteredEvent(EventHandler method)
+    parameters:
+    - id: method
+      type: Global.EventHandler
+      description: The method to deregister for invokation when an event instance is added to the registry.
+    content.vb: Sub UnsubscribeToElementRegisteredEvent(method As EventHandler)
+  overload: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent*
+- uid: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects``1(Unity.Collections.NativeHashMap{System.Int32,``0}@)
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects``1(Unity.Collections.NativeHashMap{System.Int32,``0}@)
+  id: GetRegisteredEffects``1(Unity.Collections.NativeHashMap{System.Int32,``0}@)
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  langs:
+  - csharp
+  - vb
+  name: GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<Int32, EVENT_TYPE>)
+  nameWithType: IRegistry.GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<Int32, EVENT_TYPE>)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<System.Int32, EVENT_TYPE>)
+  type: Method
+  source:
+    id: GetRegisteredEffects
+    path: ''
+    startLine: 1612
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  summary: "\nExtract a copy of all event of a given type referenced by VersionId.\nCaching the result is advised.\n"
+  example: []
+  syntax:
+    content: >-
+      void GetRegisteredEffects<EVENT_TYPE>(ref Unity.Collections.NativeHashMap<int, EVENT_TYPE> registeredEvents)
+          where EVENT_TYPE : struct, IRegistryEvent
+    parameters:
+    - id: registeredEvents
+      type: Global.Unity.Collections.NativeHashMap{System.Int32,{EVENT_TYPE}}
+      description: The NativeHashmap to copy the effects to.
+    typeParameters:
+    - id: EVENT_TYPE
+      description: The type of event to extract.
+    content.vb: Sub GetRegisteredEffects(Of EVENT_TYPE As {Structure, IRegistryEvent})(ByRef registeredEvents As Unity.Collections.NativeHashMap(Of Integer, EVENT_TYPE))
+  overload: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects*
+  nameWithType.vb: IRegistry.GetRegisteredEffects(Of EVENT_TYPE)(ByRef Unity.Collections.NativeHashMap(Of Int32, EVENT_TYPE))
+  fullName.vb: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects(Of EVENT_TYPE)(ByRef Unity.Collections.NativeHashMap(Of System.Int32, EVENT_TYPE))
+  name.vb: GetRegisteredEffects(Of EVENT_TYPE)(ByRef Unity.Collections.NativeHashMap(Of Int32, EVENT_TYPE))
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  name: OnNewElementRegistered()
+  nameWithType: IRegistry.OnNewElementRegistered()
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered()
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+    name: OnNewElementRegistered
+    nameWithType: IRegistry.OnNewElementRegistered
+    fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+    name: OnNewElementRegistered
+    nameWithType: IRegistry.OnNewElementRegistered
+    fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance*
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance
+  name: AddEventInstance
+  nameWithType: IRegistry.AddEventInstance
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance
+- uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistryEvent
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistryEvent
+  nameWithType: IRegistryEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+- uid: Wayn.Mgm.Event.Registry.RegistryEventReference
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventReference
+  parent: Wayn.Mgm.Event.Registry
+  name: RegistryEventReference
+  nameWithType: RegistryEventReference
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventReference
+- uid: Wayn.Mgm.Event.Registry.IRegistry
+  commentId: T:Wayn.Mgm.Event.Registry.IRegistry
+  parent: Wayn.Mgm.Event.Registry
+  name: IRegistry
+  nameWithType: IRegistry
+  fullName: Wayn.Mgm.Event.Registry.IRegistry
+- uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  commentId: M:Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  parent: Wayn.Mgm.Event.Registry.IRegistry
+  name: AddEventInstance(IRegistryEvent)
+  nameWithType: IRegistry.AddEventInstance(IRegistryEvent)
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+  spec.csharp:
+  - uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+    name: AddEventInstance
+    nameWithType: IRegistry.AddEventInstance
+    fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+    nameWithType: IRegistryEvent
+    fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance(Wayn.Mgm.Event.Registry.IRegistryEvent)
+    name: AddEventInstance
+    nameWithType: IRegistry.AddEventInstance
+    fullName: Wayn.Mgm.Event.Registry.IRegistry.AddEventInstance
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Wayn.Mgm.Event.Registry.IRegistryEvent
+    name: IRegistryEvent
+    nameWithType: IRegistryEvent
+    fullName: Wayn.Mgm.Event.Registry.IRegistryEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered*
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+  name: OnNewElementRegistered
+  nameWithType: IRegistry.OnNewElementRegistered
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.OnNewElementRegistered
+- uid: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent*
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent
+  name: SubscribeToElementRegisteredEvent
+  nameWithType: IRegistry.SubscribeToElementRegisteredEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.SubscribeToElementRegisteredEvent
+- uid: Global.EventHandler
+  isExternal: true
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: EventHandler
+- uid: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent*
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent
+  name: UnsubscribeToElementRegisteredEvent
+  nameWithType: IRegistry.UnsubscribeToElementRegisteredEvent
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.UnsubscribeToElementRegisteredEvent
+- uid: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects*
+  commentId: Overload:Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects
+  name: GetRegisteredEffects
+  nameWithType: IRegistry.GetRegisteredEffects
+  fullName: Wayn.Mgm.Event.Registry.IRegistry.GetRegisteredEffects
+- uid: Global.Unity.Collections.NativeHashMap{System.Int32,{EVENT_TYPE}}
+  commentId: '!:Global.Unity.Collections.NativeHashMap{System.Int32,``0}'
+  definition: Global.Unity.Collections.NativeHashMap`2
+  name: Unity.Collections.NativeHashMap<Int32, EVENT_TYPE>
+  nameWithType: Unity.Collections.NativeHashMap<Int32, EVENT_TYPE>
+  fullName: Unity.Collections.NativeHashMap<System.Int32, EVENT_TYPE>
+  nameWithType.vb: Unity.Collections.NativeHashMap(Of Int32, EVENT_TYPE)
+  fullName.vb: Unity.Collections.NativeHashMap(Of System.Int32, EVENT_TYPE)
+  name.vb: Unity.Collections.NativeHashMap(Of Int32, EVENT_TYPE)
+  spec.csharp:
+  - uid: Global.Unity.Collections.NativeHashMap`2
+    name: Unity.Collections.NativeHashMap
+    nameWithType: Unity.Collections.NativeHashMap
+    fullName: Unity.Collections.NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EVENT_TYPE
+    nameWithType: EVENT_TYPE
+    fullName: EVENT_TYPE
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Unity.Collections.NativeHashMap`2
+    name: Unity.Collections.NativeHashMap
+    nameWithType: Unity.Collections.NativeHashMap
+    fullName: Unity.Collections.NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: EVENT_TYPE
+    nameWithType: EVENT_TYPE
+    fullName: EVENT_TYPE
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.Unity.Collections.NativeHashMap`2
+  commentId: '!:Global.Unity.Collections.NativeHashMap`2'
+  isExternal: true
+  name: Unity.Collections.NativeHashMap<, >
+  nameWithType: Unity.Collections.NativeHashMap<, >
+  fullName: Unity.Collections.NativeHashMap<, >
+  nameWithType.vb: Unity.Collections.NativeHashMap(Of , )
+  fullName.vb: Unity.Collections.NativeHashMap(Of , )
+  name.vb: Unity.Collections.NativeHashMap(Of , )
+  spec.csharp:
+  - uid: Global.Unity.Collections.NativeHashMap`2
+    name: Unity.Collections.NativeHashMap
+    nameWithType: Unity.Collections.NativeHashMap
+    fullName: Unity.Collections.NativeHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.Unity.Collections.NativeHashMap`2
+    name: Unity.Collections.NativeHashMap
+    nameWithType: Unity.Collections.NativeHashMap
+    fullName: Unity.Collections.NativeHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

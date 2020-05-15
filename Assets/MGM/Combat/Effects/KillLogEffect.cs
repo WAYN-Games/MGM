@@ -4,8 +4,8 @@ using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using UnityEngine;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+using Wayn.Mgm.Event;
+using Wayn.Mgm.Event.Registry;
 
 namespace Wayn.Mgm.Combat.Effects
 {

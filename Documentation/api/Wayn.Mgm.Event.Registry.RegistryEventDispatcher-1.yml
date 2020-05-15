@@ -1,0 +1,487 @@
+### YamlMime:ManagedReference
+items:
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  commentId: T:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  id: RegistryEventDispatcher`1
+  parent: Wayn.Mgm.Event.Registry
+  children:
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle(JobHandle)
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer(JobHandle)
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CommandsMap
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.finalJobHandle
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  - Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  langs:
+  - csharp
+  - vb
+  name: RegistryEventDispatcher<COMMAND>
+  nameWithType: RegistryEventDispatcher<COMMAND>
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>
+  type: Class
+  source:
+    id: RegistryEventDispatcher
+    path: ''
+    startLine: 2036
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: 'public abstract class RegistryEventDispatcher<COMMAND> : SystemBase where COMMAND : struct, IEventRegistryCommand'
+    typeParameters:
+    - id: COMMAND
+    content.vb: >-
+      Public MustInherit Class RegistryEventDispatcher(Of COMMAND As {Structure, IEventRegistryCommand})
+          Inherits SystemBase
+  inheritance:
+  - System.Object
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND)
+  name.vb: RegistryEventDispatcher(Of COMMAND)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CommandsMap
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CommandsMap
+  id: CommandsMap
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: CommandsMap
+  nameWithType: RegistryEventDispatcher<COMMAND>.CommandsMap
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.CommandsMap
+  type: Field
+  source:
+    id: CommandsMap
+    path: ''
+    startLine: 2040
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public NativeMultiHashMap<MapKey, COMMAND> CommandsMap
+    return:
+      type: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,{COMMAND}}
+    content.vb: Public CommandsMap As NativeMultiHashMap(Of MapKey, COMMAND)
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).CommandsMap
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).CommandsMap
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.finalJobHandle
+  commentId: F:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.finalJobHandle
+  id: finalJobHandle
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: finalJobHandle
+  nameWithType: RegistryEventDispatcher<COMMAND>.finalJobHandle
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.finalJobHandle
+  type: Field
+  source:
+    id: finalJobHandle
+    path: ''
+    startLine: 2045
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public JobHandle finalJobHandle
+    return:
+      type: Global.JobHandle
+    content.vb: Public finalJobHandle As JobHandle
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).finalJobHandle
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).finalJobHandle
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer(JobHandle)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer(JobHandle)
+  id: AddJobHandleFromProducer(JobHandle)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: AddJobHandleFromProducer(JobHandle)
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer(JobHandle)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer(JobHandle)
+  type: Method
+  source:
+    id: AddJobHandleFromProducer
+    path: ''
+    startLine: 2047
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public void AddJobHandleFromProducer(JobHandle jh)
+    parameters:
+    - id: jh
+      type: Global.JobHandle
+    content.vb: Public Sub AddJobHandleFromProducer(jh As JobHandle)
+  overload: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer*
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer(JobHandle)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer(JobHandle)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle(JobHandle)
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle(JobHandle)
+  id: AddConsumerJobHandle(JobHandle)
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: AddConsumerJobHandle(JobHandle)
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle(JobHandle)
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle(JobHandle)
+  type: Method
+  source:
+    id: AddConsumerJobHandle
+    path: ''
+    startLine: 2052
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public void AddConsumerJobHandle(JobHandle jh)
+    parameters:
+    - id: jh
+      type: Global.JobHandle
+    content.vb: Public Sub AddConsumerJobHandle(jh As JobHandle)
+  overload: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle*
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle(JobHandle)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle(JobHandle)
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  id: CreateCommandsQueue
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: CreateCommandsQueue()
+  nameWithType: RegistryEventDispatcher<COMMAND>.CreateCommandsQueue()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.CreateCommandsQueue()
+  type: Method
+  source:
+    id: CreateCommandsQueue
+    path: ''
+    startLine: 2057
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: public NativeQueue<COMMAND>.ParallelWriter CreateCommandsQueue()
+    return:
+      type: Global.NativeQueue{{COMMAND}}.ParallelWriter
+    content.vb: Public Function CreateCommandsQueue As NativeQueue(Of COMMAND).ParallelWriter
+  overload: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue*
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  id: OnDestroy
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: OnDestroy()
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnDestroy()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnDestroy()
+  type: Method
+  source:
+    id: OnDestroy
+    path: ''
+    startLine: 2064
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected override void OnDestroy()
+    content.vb: Protected Overrides Sub OnDestroy
+  overload: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy*
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnDestroy()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnDestroy()
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  commentId: M:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  id: OnUpdate
+  parent: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1
+  langs:
+  - csharp
+  - vb
+  name: OnUpdate()
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnUpdate()
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnUpdate()
+  type: Method
+  source:
+    id: OnUpdate
+    path: ''
+    startLine: 2125
+  assemblies:
+  - cs.temp.dll
+  namespace: Wayn.Mgm.Event.Registry
+  syntax:
+    content: protected override void OnUpdate()
+    content.vb: Protected Overrides Sub OnUpdate
+  overload: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate*
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnUpdate()
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnUpdate()
+references:
+- uid: Wayn.Mgm.Event.Registry
+  commentId: N:Wayn.Mgm.Event.Registry
+  name: Wayn.Mgm.Event.Registry
+  nameWithType: Wayn.Mgm.Event.Registry
+  fullName: Wayn.Mgm.Event.Registry
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,{COMMAND}}
+  commentId: '!:Global.NativeMultiHashMap{Wayn.Mgm.Event.Registry.MapKey,`0}'
+  definition: Global.NativeMultiHashMap`2
+  name: NativeMultiHashMap<MapKey, COMMAND>
+  nameWithType: NativeMultiHashMap<MapKey, COMMAND>
+  fullName: NativeMultiHashMap<Wayn.Mgm.Event.Registry.MapKey, COMMAND>
+  nameWithType.vb: NativeMultiHashMap(Of MapKey, COMMAND)
+  fullName.vb: NativeMultiHashMap(Of Wayn.Mgm.Event.Registry.MapKey, COMMAND)
+  name.vb: NativeMultiHashMap(Of MapKey, COMMAND)
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap`2
+    name: NativeMultiHashMap
+    nameWithType: NativeMultiHashMap
+    fullName: NativeMultiHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Wayn.Mgm.Event.Registry.MapKey
+    name: MapKey
+    nameWithType: MapKey
+    fullName: Wayn.Mgm.Event.Registry.MapKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: COMMAND
+    nameWithType: COMMAND
+    fullName: COMMAND
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap`2
+    name: NativeMultiHashMap
+    nameWithType: NativeMultiHashMap
+    fullName: NativeMultiHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Wayn.Mgm.Event.Registry.MapKey
+    name: MapKey
+    nameWithType: MapKey
+    fullName: Wayn.Mgm.Event.Registry.MapKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: COMMAND
+    nameWithType: COMMAND
+    fullName: COMMAND
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeMultiHashMap`2
+  commentId: '!:Global.NativeMultiHashMap`2'
+  isExternal: true
+  name: NativeMultiHashMap<, >
+  nameWithType: NativeMultiHashMap<, >
+  fullName: NativeMultiHashMap<, >
+  nameWithType.vb: NativeMultiHashMap(Of , )
+  fullName.vb: NativeMultiHashMap(Of , )
+  name.vb: NativeMultiHashMap(Of , )
+  spec.csharp:
+  - uid: Global.NativeMultiHashMap`2
+    name: NativeMultiHashMap
+    nameWithType: NativeMultiHashMap
+    fullName: NativeMultiHashMap
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeMultiHashMap`2
+    name: NativeMultiHashMap
+    nameWithType: NativeMultiHashMap
+    fullName: NativeMultiHashMap
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.JobHandle
+  isExternal: true
+  name: JobHandle
+  nameWithType: JobHandle
+  fullName: JobHandle
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddJobHandleFromProducer
+  name: AddJobHandleFromProducer
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddJobHandleFromProducer
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddJobHandleFromProducer
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.AddConsumerJobHandle
+  name: AddConsumerJobHandle
+  nameWithType: RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.AddConsumerJobHandle
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).AddConsumerJobHandle
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.CreateCommandsQueue
+  name: CreateCommandsQueue
+  nameWithType: RegistryEventDispatcher<COMMAND>.CreateCommandsQueue
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.CreateCommandsQueue
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).CreateCommandsQueue
+- uid: Global.NativeQueue{{COMMAND}}.ParallelWriter
+  commentId: '!:Global.NativeQueue{`0}.ParallelWriter'
+  definition: Global.NativeQueue{`0}.ParallelWriter
+  name: NativeQueue.ParallelWriter<>
+  nameWithType: NativeQueue.ParallelWriter<>
+  fullName: NativeQueue.ParallelWriter<>
+  nameWithType.vb: NativeQueue.ParallelWriter(Of )
+  fullName.vb: NativeQueue.ParallelWriter(Of )
+  name.vb: NativeQueue.ParallelWriter(Of )
+  spec.csharp:
+  - uid: Global.NativeQueue{`0}.ParallelWriter
+    name: NativeQueue.ParallelWriter
+    nameWithType: NativeQueue.ParallelWriter
+    fullName: NativeQueue.ParallelWriter
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeQueue{`0}.ParallelWriter
+    name: NativeQueue.ParallelWriter
+    nameWithType: NativeQueue.ParallelWriter
+    fullName: NativeQueue.ParallelWriter
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Global.NativeQueue{`0}.ParallelWriter
+  commentId: '!:Global.NativeQueue{`0}.ParallelWriter'
+  isExternal: true
+  name: NativeQueue.ParallelWriter<>
+  nameWithType: NativeQueue.ParallelWriter<>
+  fullName: NativeQueue.ParallelWriter<>
+  nameWithType.vb: NativeQueue.ParallelWriter(Of )
+  fullName.vb: NativeQueue.ParallelWriter(Of )
+  name.vb: NativeQueue.ParallelWriter(Of )
+  spec.csharp:
+  - uid: Global.NativeQueue{`0}.ParallelWriter
+    name: NativeQueue.ParallelWriter
+    nameWithType: NativeQueue.ParallelWriter
+    fullName: NativeQueue.ParallelWriter
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Global.NativeQueue{`0}.ParallelWriter
+    name: NativeQueue.ParallelWriter
+    nameWithType: NativeQueue.ParallelWriter
+    fullName: NativeQueue.ParallelWriter
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnDestroy
+  name: OnDestroy
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnDestroy
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnDestroy
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnDestroy
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnDestroy
+- uid: Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate*
+  commentId: Overload:Wayn.Mgm.Event.Registry.RegistryEventDispatcher`1.OnUpdate
+  name: OnUpdate
+  nameWithType: RegistryEventDispatcher<COMMAND>.OnUpdate
+  fullName: Wayn.Mgm.Event.Registry.RegistryEventDispatcher<COMMAND>.OnUpdate
+  nameWithType.vb: RegistryEventDispatcher(Of COMMAND).OnUpdate
+  fullName.vb: Wayn.Mgm.Event.Registry.RegistryEventDispatcher(Of COMMAND).OnUpdate

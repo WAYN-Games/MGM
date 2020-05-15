@@ -1,12 +1,13 @@
 ﻿using System;
+
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Transforms;
-using UnityEngine;
-using Wayn.Mgm.Events;
-using Wayn.Mgm.Events.Registry;
+
+using Wayn.Mgm.Event;
+using Wayn.Mgm.Event.Registry;
 
 namespace Wayn.Mgm.Combat.Effects
 {
@@ -67,8 +68,7 @@ namespace Wayn.Mgm.Combat.Effects
                 while (EffectCommandEnumerator.MoveNext())
                 {
                     EffectCommand command = EffectCommandEnumerator.Current;
-                    DestroyEntityHierarchyEffect effect;
-                    if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out effect))
+                    if (RegisteredEffects.TryGetValue(command.RegistryReference.VersionId, out DestroyEntityHierarchyEffect effect))
                     {
                         RecursiveChildEffect(command.Target, effect);
                     }
@@ -80,7 +80,7 @@ namespace Wayn.Mgm.Combat.Effects
                 EntityCommandBuffer.DestroyEntity(target);
                 if (effect.ApplyRecursivelyToChildren && Children.Exists(target))
                 {
-                    var enumerator = Children[target].GetEnumerator();
+                    NativeArray<Child>.Enumerator enumerator = Children[target].GetEnumerator();
                     while (enumerator.MoveNext())
                     {
                         Entity e = enumerator.Current.Value;

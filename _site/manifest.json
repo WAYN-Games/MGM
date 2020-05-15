@@ -1,0 +1,702 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://loaclhost/DocFxForUnity/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://loaclhost/DocFxForUnity/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "C:/Users/Marc HANICOT/Documents/GitHub/MGM/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.AssignToTeamEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.AssignToTeamEffect.html",
+          "hash": "M2dWXY89yyGAydl+lAsznA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.ConsumerJob.html",
+          "hash": "rDXjRMhdONCloH61Xvrb3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.AssignToTeamEffectConsumer.html",
+          "hash": "/dp3CRS8jZHkx216Rvgxpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.AssignementStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.AssignementStrategy.html",
+          "hash": "xh6BD22uNEBs+kPfl6XQcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.ConquerEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.ConquerEffect.html",
+          "hash": "jKGGGmIbaoUOAAQo3ar99A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.ConsumerJob.html",
+          "hash": "KcL2l1Bj4zNdPSEe4/YPpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.ConquerEffectConsumer.html",
+          "hash": "nZiQ12+/GgFj4o5uRjPf2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.DestroyEntityHierarchyEffect.html",
+          "hash": "tSXGT60lc2kFFtvuEE9bTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.ConsumerJob.html",
+          "hash": "rspvtpEPGCzK0v296pX6Bw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.DestroyEntityHirearchyEffectConsumerSystem.html",
+          "hash": "HEzGBFF4IQb+XIKuW22IsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffect.html",
+          "hash": "apF8QamokOPKR54ED2Dqow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.ConsumerJob.html",
+          "hash": "eIKpY7+19ItwyRLesA2cpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.DisableEntityHierarchyEffectConsumerSystem.html",
+          "hash": "xncQQkn/IiTDQp56/YnOzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.InflictDamageEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.InflictDamageEffect.html",
+          "hash": "P6gIvhmqmLnJuLNd3myipw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.ConsumerJob.html",
+          "hash": "PGhAYJwfbs2oqcmcrIDr8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.InflictDamageEffectConsumer.html",
+          "hash": "7aMa2M6pXhY4nMgaikQ3Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.KillLogEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.KillLogEffect.html",
+          "hash": "au+EXsGtJJMOj7jNFMz/yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.ConsumerJob.html",
+          "hash": "a92QLruk5cPjr/qye2Mhqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.KillLogEffectConsumer.html",
+          "hash": "4SaUYdIFN7Dccgpr+sFi8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Combat.Effects.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Combat.Effects.html",
+          "hash": "eFitcl1Uk+4ncAKWEgKIWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.EffectCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.EffectCommand.html",
+          "hash": "hAxgW8WgEtzZFNH0M4zhOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.EffectConsumerSystem-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.EffectConsumerSystem-1.html",
+          "hash": "ltNwP8Mwqpg4zTWpl2xMIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.EffectDisptacherSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.EffectDisptacherSystem.html",
+          "hash": "xY+3Y/CJ+FtCCDs0bgq7Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.IEffect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.IEffect.html",
+          "hash": "gK+W7/BSCAE+4pybmCXfMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.Editor.RegistryReferenceBufferAuthoringEditor-1.html",
+          "hash": "z29tB2wMyrw7hBk0L621lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.Editor.html",
+          "hash": "d4e2nbdShg1r6KAu5dFJwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.EffectRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.EffectRegistry.html",
+          "hash": "Wlj1OYyNDD0dQhfmmoWFlg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.IEventRegistryCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.IEventRegistryCommand.html",
+          "hash": "Jm9f/8o7zRZ6pynywMGvuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.IRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.IRegistry.html",
+          "hash": "pOplGGYTflhyKfAsI/lmsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.IRegistryEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.IRegistryEvent.html",
+          "hash": "XJPDmeQzlh13s4+YhWB3/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.IRegistryReferenceBuffer.html",
+          "hash": "9sdArEAQ92BVYyfz1WZ4uQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.ISelfRegistringAuhtoringComponent.html",
+          "hash": "Z1oMXP8lRbh37BIGqScpSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.MapKey.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.MapKey.html",
+          "hash": "B3WAUb7bOQh1FwmMJ2djtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegisteryReferenceAuthoring-1.html",
+          "hash": "AllxW7oaJCid4OlE9Wv6hA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegisteryReferenceBufferAuthoring-5.html",
+          "hash": "879JEN9SPJxhm88D2i5YvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.Registry-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.Registry-1.html",
+          "hash": "0Qiby53Dq0V5c6l+vlqldA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventComponentDataElement-2.html",
+          "hash": "A6tQoV1H+5jtvSAP5aLjVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventConsumerSystem-3.html",
+          "hash": "UDc8jeKFm/UvXp5AOscx8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventDispatcher-1.html",
+          "hash": "j0ZTHBDDrtkV4GVg8hOz3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventInitializationSystem.html",
+          "hash": "pzVOwd43REaHvrmTeH8DKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventReference.html",
+          "hash": "NV/ZDbXEuAnUmz9WdaWufw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.RegistryEventReferenceComponentData.html",
+          "hash": "pp6WT2dk1oPKtBqCaTCyWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.Registry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.Registry.html",
+          "hash": "adaTvWXXlna19Lwx/KRNEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Wayn.Mgm.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Wayn.Mgm.Event.html",
+          "hash": "bBFyy/+vOx9RQymP8AB1jQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "tzILAQlrHv7LRMLldfgYzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "UoetK1SI5AcKvRMYl17jXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/coniunctis.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/coniunctis.html",
+          "hash": "qjOkEh9JuaBHdr3TOuZmLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/etiam.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/etiam.html",
+          "hash": "0d4869XllcojWgtJFgvk6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "2q0qq03gpYNjYV8lSAAcVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleManual.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleManual.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleScriptingApi.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "AzIP1H5zphvc+vvJUTG9Dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 44,
+          "skipped_file_count": 34
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 using Unity.Entities;
 
-namespace Wayn.Mgm.Events.Registry
+namespace Wayn.Mgm.Event.Registry
 {
 
     public class EffectRegistry : Registry<EffectRegistry>
