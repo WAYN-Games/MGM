@@ -208,7 +208,7 @@ MonoBehaviour:
     00000000:
       type: {class: ConquerEffect, ns: Wayn.Mgm.Combat.Effects, asm: Assembly-CSharp}
       data:
-        Amount: 10
+        Amount: 50
 --- !u!114 &884668352
 MonoBehaviour:
   m_ObjectHideFlags: 0

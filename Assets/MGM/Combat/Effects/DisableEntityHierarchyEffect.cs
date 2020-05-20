@@ -80,7 +80,6 @@ namespace Wayn.Mgm.Combat.Effects
 
             private void RecursiveChildEffect(Entity target, bool applyRecursivelyToChildren)
             {
-
                 EntityCommandBuffer.AddComponent(target, new Disabled());
                 if (applyRecursivelyToChildren && Children.Exists(target))
                 {

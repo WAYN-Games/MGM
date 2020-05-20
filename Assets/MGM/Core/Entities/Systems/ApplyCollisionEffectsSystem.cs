@@ -36,8 +36,8 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
             Entity entityB = triggerEvent.Entities.EntityB;
             ApplyOnCollideEffectsOnOtherBuffer(entityA, entityB);
             ApplyOnCollideEffectsOnOtherBuffer(entityB, entityA);
-            ApplyOnCollideEffectsOnSelfBuffer(entityA, entityA);
-            ApplyOnCollideEffectsOnSelfBuffer(entityB, entityB);
+            ApplyOnCollideEffectsOnSelfBuffer(entityA, entityB);
+            ApplyOnCollideEffectsOnSelfBuffer(entityB, entityA);
 
         }
 
@@ -68,8 +68,8 @@ public class ApplyCollisionEffectsSystem : EffectJobSystem
                     EffectCommandQueue.Enqueue(new EffectCommand()
                     {
                         RegistryReference = enumerator.Current.RegistryEventReference,
-                        Emitter = emmiter,
-                        Target = target
+                        Emitter = target,
+                        Target = emmiter
                     });
                 }
 
